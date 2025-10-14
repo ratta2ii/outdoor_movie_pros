@@ -1,8 +1,7 @@
 {
     "name": "outdoor_movie_pros",
     "version": "0.1.0",
-    "homepage": "https://ratta2ii.github.io/outdoor_movie_pros",
-    "postbuild": "powershell -Command \"Copy-Item -Force build\\index.html build\\404.html\"",
+    "homepage": "",
     "private": false,
     "dependencies": {
         "@emailjs/browser": "^3.11.0",

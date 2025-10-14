@@ -1,5 +1,5 @@
 {
-  "name": "outdoor_movie_pros_functions",
+  "name": "outdoor-movie-pros-functions",
   "version": "1.0.0",
   "description": "Firebase Functions for Outdoor Movie Pros prerendering and route handling",
   "main": "index.js",
@@ -9,8 +9,8 @@
     "logs": "firebase functions:log",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["firebase", "functions", "movie-night-pros", "prerendering"],
-  "author": "Movie Night Pros",
+  "keywords": ["firebase", "functions", "outdoor-movie-pros", "prerendering"],
+  "author": "Outdoor Movie Pros",
   "license": "MIT",
   "dependencies": {
     "firebase-admin": "^13.2.0",
