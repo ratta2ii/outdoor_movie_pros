@@ -111,9 +111,11 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     cardPrice: {
+        display: 'inline-block',
         color: "#fff",
-        fontSize: '1.5em !important',
-        marginTop: "30px !important",
+        fontSize: '30px !important',
+        marginTop: "20px !important",
+        marginBottom: "6px !important",
     },
     quoteNote: {
         color: "#fff !important",

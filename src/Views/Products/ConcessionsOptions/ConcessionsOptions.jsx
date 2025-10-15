@@ -5,7 +5,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions, Box, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
-import PopcornImage from './../../../Assets/Images/product-cotton-candy.jpg';
+import PopcornImage from './../../../Assets/Images/product-popcorn5.jpg';
+import CottonCandyImage from './.././../../Assets/Images/product-cotton-candy.jpg';
 import CallToAction from "./../../../Components/CallToAction/CallToAction";
 import useStyles from './ConcessionsOptions.Styles';
 import { Link } from 'react-router-dom';
@@ -18,60 +19,30 @@ function ConcessionsOptions() {
             key: 'popcorn',
             to: '/concessions-options#popcorn',
             image: PopcornImage,
-            imageAlt: 'Fresh popcorn concession',
-            title: 'Popcorn',
+            imageAlt: 'Popcorn Machine Rentals Arizona',
+            title: 'Popcorn Machine',
             subtitle: 'Movie-theater style, fresh & hot',
-            price: '$175/event (includes ~50 servings)',
+            price: '$89',
             bullets: [
-                'Commercial popcorn machine & cart (as available)',
+                'Commercial Popcorn Machine',
                 'Supplies included (kernels, oil, bags)',
                 'On-site attendant optional',
-                'Great for any crowd size',
+                'Additional servings ($20 ea. 50 Servings)',
             ],
         },
         {
             key: 'cotton-candy',
             to: '/concessions-options#cotton-candy',
-            image: PopcornImage,
+            image: CottonCandyImage,
             imageAlt: 'Cotton candy concession',
             title: 'Cotton Candy',
             subtitle: 'Classic spun sugar fun',
-            price: '$175/event (includes ~50 servings)',
+            price: '$89',
             bullets: [
-                'Cotton candy machine & cones/bags',
-                'Assorted flavor options',
+                'Commercial Cotton Candy Machine',
+                '60 Cones and Floss Sugar',
                 'On-site attendant optional',
-                'Kid-approved, photo-friendly station',
-            ],
-        },
-        {
-            key: 'ice-cream',
-            to: '/concessions-options#ice-cream',
-            image: PopcornImage,
-            imageAlt: 'Ice cream concession',
-            title: 'Ice Cream',
-            subtitle: 'Novelties or scoop service',
-            price: 'Novelties from $299 / Scoop bar from $549',
-            bullets: [
-                'Pre-packed novelties or scoop bar',
-                'Freezer or truck service options',
-                'Toppings available',
-                'Dairy-free/vegan options on request',
-            ],
-        },
-        {
-            key: 'tables-chairs',
-            to: '/concessions-options#tables-chairs',
-            image: PopcornImage,
-            imageAlt: 'Event tables and chairs',
-            title: 'Tables & Chairs',
-            subtitle: 'Guest seating & staging',
-            price: 'Chairs $3 ea • Tables $12 ea • Packages from $99',
-            bullets: [
-                'Folding chairs, cocktail & banquet tables',
-                'Delivery & setup available',
-                'Layout guidance for best viewing',
-                'Linens available upon request',
+                'Additional servings ($20 ea. 50 Servings)',
             ],
         },
         {
@@ -81,27 +52,12 @@ function ConcessionsOptions() {
             imageAlt: 'Quiet inverter generator',
             title: 'Generators',
             subtitle: 'Quiet power for any venue',
-            price: '$149/event (up to 4 hours)',
+            price: '$69',
             bullets: [
                 'Quiet inverter generators',
-                'Power for projector, audio, and lights',
+                'Power for projector, audio, and screens',
                 'Cables & distro included',
                 'Fuel included for standard runtimes',
-            ],
-        },
-        {
-            key: 'additional-screens',
-            to: '/concessions-options#additional-screens',
-            image: PopcornImage,
-            imageAlt: 'Additional screen add-on',
-            title: 'Additional Screens',
-            subtitle: 'Second screen & overflow viewing',
-            price: 'Small from $249 / Medium from $349',
-            bullets: [
-                'Add a lobby/pre-show or gaming screen',
-                'Small and medium size options',
-                'Independent audio zone options',
-                'Perfect for sponsor slides & queues',
             ],
         },
     ];
@@ -164,19 +120,10 @@ function ConcessionsOptions() {
                                                 variant="h4"
                                                 component="p"
                                                 className={classes.cardPrice}
-                                                style={{
-                                                    display: 'inline-block',
-                                                    padding: '4px 12px',
-                                                    borderRadius: 999,
-                                                    background: '#e51433ff',
-                                                    color: '#fff',
-                                                    fontWeight: 700,
-                                                    fontSize: '0.95rem',
-                                                    marginBottom: 6
-                                                }}
-                                                aria-label={`Price: ${price}`}
+                 
+                                                aria-label={`${price}`}
                                             >
-                                                Price: {price}
+                                                {price}
                                             </Typography>
 
                                             <Typography

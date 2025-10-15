@@ -84,7 +84,7 @@ function Services() {
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h2" component="h2" className={classes.cardTitle} style={{fontFamily: 'inherit'}}>
-                                        Concessions
+                                        Concessions & Add On's
                                     </Typography>
                                     <Typography variant="h3" component="h3" className={classes.cardSubtitle}>
                                         Popcorn, Candy & Drinks
