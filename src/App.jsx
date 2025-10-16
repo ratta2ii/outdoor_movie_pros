@@ -8,7 +8,7 @@ import Gallery from "./Views/Gallery/Gallery";
 import Contact from "./Views/Contact/Contact";
 import MovieNightsOptions from "./Views/Products/MovieNightsOptions/MovieNightsOptions";
 import ConcessionsOptions from "./Views/Products/ConcessionsOptions/ConcessionsOptions";
-import IceCreamTruck from "./Views/Products/IceCreamTruck/IceCreamTruck";
+import IceCreamFoodTruck from "./Views/Products/IceCreamFoodTruck/IceCreamFoodTruck";
 import Error from './Components/Error/Error';
 import { Helmet } from "react-helmet";
 import ScrollToTop from "./Components/ScrollToTop";
@@ -35,26 +35,27 @@ function App() {
         <main style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
             <div className="root" style={{ flex: 1 }}>
                 {/* Global SEO Tags */}
-                <Helmet>
-                    <title>Outdoor Movie Pros | Outdoor Movies & Concessions in Phoenix</title>
-                    <meta name="description" content="Outdoor movies and concessions in Phoenix, AZ. Book your event today!" />
+                <Helmet defaultTitle="Outdoor Movie Pros" titleTemplate="%s | Outdoor Movie Pros">
+                    {/* Site-wide default description (pages override as needed) */}
                     <meta
-                        name="keywords"
-                        content="outdoor movies, concessions, Phoenix, AZ, movie nights, event rentals"
+                        name="description"
+                        content="Outdoor movie rentals, concessions, and a food truck with ice cream sundaes and coffee in Phoenix, AZ. HD projection, pro audio, full setup."
                     />
-                    <meta property="og:title" content="Outdoor Movies & Concessions in Phoenix | Outdoor Movie Pros" />
-                    <meta
-                        property="og:description"
-                        content="Outdoor movies and concessions in Phoenix, AZ. Book your event today!"
-                    />
-                    <meta name="author" content="Outdoor Movie Pros" />
-                    <meta property="og:image" content="https://outdoormoviepros.com/company-logo.webp" />
-                    <meta property="og:image:alt" content="Outdoor Movie Pros company logo" />
-                    <meta property="og:url" content="https://outdoormoviepros.com/" />
-                    <meta property="og:type" content="website" />
+
+                    {/* Indexing policy (pages can override) */}
                     <meta name="robots" content="index, follow" />
-                    <link rel="canonical" href="https://outdoormoviepros.com/" />
+
+                    {/* Open Graph defaults */}
+                    <meta property="og:site_name" content="Outdoor Movie Pros" />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:image" content="https://outdoormoviepros.com/company-logo.webp" />
+                    <meta property="og:image:alt" content="Outdoor Movie Pros logo" />
+                    <meta property="og:locale" content="en_US" />
+
+                    {/* Attribution */}
+                    <meta name="author" content="Outdoor Movie Pros" />
                 </Helmet>
+
                 <NavBar />
                 <ScrollToTop />
                 <Routes>
@@ -81,7 +82,7 @@ function App() {
                     <Route path="/faqs" element={<FAQs />} />
                     <Route path="/gallery" element={<Gallery />} />
                     <Route path="/contact" element={<Contact />} />
-                    <Route path="/ice-cream-food-truck" element={<IceCreamTruck />} />
+                    <Route path="/ice-cream-food-truck" element={<IceCreamFoodTruck />} />
                     <Route path="/concessions-options" element={<ConcessionsOptions />} />
                     <Route path="/movie-nights-options" element={<MovieNightsOptions />} />
                     <Route path="/" element={<Home />} />

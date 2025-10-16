@@ -12,6 +12,7 @@ import DoubleScreenImage from './../../../Assets/Images/double-movie-screen.webp
 import CallToAction from "./../../../Components/CallToAction/CallToAction";
 import useStyles from './MovieNightsOptions.Styles';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 function MovieNightsOptions() {
     const classes = useStyles();
@@ -41,7 +42,7 @@ function MovieNightsOptions() {
             price: '$349.00',
             subtitle: 'Perfect for home & small gatherings',
             bullets: [
-                '9\'x5′ screen ideal for up to 40 guests',
+                "9'x5′ screen ideal for up to 40 guests",
                 'Compact HD projector, easy media input',
                 '2-speaker audio for clear dialogue',
                 'Setup included—2 standard outlets needed',
@@ -99,6 +100,33 @@ function MovieNightsOptions() {
 
     return (
         <main>
+            <Helmet>
+                <title>Outdoor Movie Night Rental Options | Outdoor Movie Pros</title>
+                <meta
+                    name="description"
+                    content="Backyard to big-crowd outdoor movie packages in Phoenix—screens, HD projection, QSC sound, on-site tech, setup & teardown. Explore options for any event."
+                />
+                <meta name="robots" content="index, follow" />
+                <link rel="canonical" href="https://outdoormoviepros.com/movie-nights-options" />
+
+                {/* Open Graph */}
+                <meta property="og:title" content="Outdoor Movie Night Rental Options | Outdoor Movie Pros" />
+                <meta
+                    property="og:description"
+                    content="From backyard screens to double-screen events—browse outdoor movie packages with HD projection and pro audio in Phoenix."
+                />
+                <meta property="og:type" content="website" />
+                <meta property="og:site_name" content="Outdoor Movie Pros" />
+                <meta property="og:url" content="https://outdoormoviepros.com/movie-nights-options" />
+                <meta property="og:image" content="https://outdoormoviepros.com/company-logo.webp" />
+                <meta property="og:image:alt" content="Outdoor Movie Pros logo" />
+            </Helmet>
+
+            {/* sr-only heading for SEO/a11y */}
+            <h1 className="sr-only">
+                Outdoor movie night rental options in Phoenix — backyard, community, school, church, pool parties, and double screen packages
+            </h1>
+
             <Box className={classes.titleBox}>
                 <h1 className={classes.title}>
                     Outdoor Movie Nights — Backyard • Corporate • HOA • Pool Parties • Schools • Churches • Community Events
@@ -155,16 +183,6 @@ function MovieNightsOptions() {
                                                 variant="h4"
                                                 component="p"
                                                 className={classes.cardPrice}
-                                                // style={{
-                                                //     display: 'inline-block',
-                                                //     padding: '4px 12px',
-                                                //     borderRadius: 999,
-                                                //     background: '#e51433ff',
-                                                //     color: '#fff',
-                                                //     fontWeight: 700,
-                                                //     fontSize: '0.95rem',
-                                                //     marginBottom: 6
-                                                // }}
                                                 aria-label={`${price}`}
                                             >
                                                 {price}

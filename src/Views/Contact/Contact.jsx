@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import ContactForm from "../../Components/ContactForm/ContactForm";
 import useStyles from "./Contact.Styles";
@@ -11,36 +10,37 @@ function Contact() {
     return (
         <section>
             <Helmet>
-                <title>Contact Chinook Water Testing | North Idaho & Eastern Washington</title>
-                <meta name="description" content="Contact Chinook Water Testing for certified well water testing, flow rate testing (GPM), and system inspections. VA, FHA, USDA & HUD compliant." />
-
-                <meta name="keywords" content="well water testing, flow rate monitoring, water system inspections, North Idaho, Eastern Washington" />
+                <title>Contact Outdoor Movie Pros | Outdoor Movies, Concessions & Food Truck in Phoenix</title>
+                <meta
+                    name="description"
+                    content="Contact Outdoor Movie Pros for outdoor movie rentals, concessions, and a food truck serving ice cream sundaes and coffee in Phoenix, AZ. Fast quotes and friendly help."
+                />
                 <meta name="robots" content="index, follow" />
                 <link rel="canonical" href="https://outdoormoviepros.com/contact" />
 
-                <meta property="og:title" content="Contact Chinook Water Testing | North Idaho & Eastern Washington" />
+                {/* Open Graph */}
+                <meta property="og:title" content="Contact Outdoor Movie Pros | Outdoor Movies, Concessions & Food Truck in Phoenix" />
                 <meta
                     property="og:description"
-                    content="Contact Chinook Water Testing for certified well water testing, flow rate testing (GPM), and system inspections. VA, FHA, USDA & HUD compliant."
+                    content="Get in touch for outdoor movie rentals, concessions, and a food truck with ice cream sundaes and coffee in Phoenix. Fast quotes and friendly help."
                 />
-                <meta name="author" content="Chinook Water Testing" />
                 <meta property="og:type" content="website" />
-                <meta property="og:site_name" content="Chinook Water Testing" />
+                <meta property="og:site_name" content="Outdoor Movie Pros" />
                 <meta property="og:url" content="https://outdoormoviepros.com/contact" />
                 <meta property="og:image" content="https://outdoormoviepros.com/company-logo.webp" />
-                <meta property="og:image:alt" content="Chinook Water Testing company logo" />
+                <meta property="og:image:alt" content="Outdoor Movie Pros logo" />
+                <meta name="author" content="Outdoor Movie Pros" />
             </Helmet>
 
             <header className="sr-only">
-                <h1>Contact Chinook Water Testing for Well Water Testing & System Inspections in North Idaho & Eastern WA</h1>
-                <h2>VA, FHA, USDA & HUD Compliant Water Testing</h2>
+                <h1>Contact Outdoor Movie Pros — outdoor movie rentals, concessions, and a food truck with ice cream sundaes and coffee in Phoenix, AZ</h1>
+                <h2>Fast quotes for screens, HD projection, pro audio, and full setup & teardown across the Phoenix metro.</h2>
             </header>
-
 
             <main className={classes.root}>
                 <div className={classes.titleBox}>
                     <Typography variant="h1" className={classes.title}>
-                        Contact Outdoor Movie Pros today for fast service and competitive pricing!
+                        Contact Outdoor Movie Pros today for professional service and competitive pricing!
                     </Typography>
                     <Typography variant="h2" className={classes.subTitle}>
                         Get your free quote now! Fill out the form below, and our team will respond promptly.
@@ -65,9 +65,6 @@ function Contact() {
                             <strong>Email:</strong>{' '}
                             <a href="mailto:info@outdoormoviepros.com">info@outdoormoviepros.com</a>
                         </Typography>
-                        {/* <Typography variant="body1" className={classes.infoText}>
-                            <strong>Address:</strong> 7040 N Colfax St, Dalton Gardens, ID 83815
-                        </Typography> */}
                         <Typography variant="body1" className={classes.infoText}>
                             <strong>Website:</strong>{' '}
                             <a href="https://outdoormoviepros.com" target="_blank" rel="noopener noreferrer">outdoormoviepros.com</a>

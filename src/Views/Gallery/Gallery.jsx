@@ -1,7 +1,7 @@
-// src/components/Gallery.js
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 
 // Image imports
 import GalleryImage1 from './../../Assets/Images/GalleryImages/gallery1.webp';
@@ -19,22 +19,21 @@ import GalleryImage12 from './../../Assets/Images/GalleryImages/gallery12.webp';
 import GalleryImage13 from './../../Assets/Images/GalleryImages/gallery13.webp';
 import GalleryImage14 from './../../Assets/Images/GalleryImages/gallery14.webp';
 
-// Array of images with alt text
 const IMAGES = [
-    { src: GalleryImage1, alt: 'Gallery image 1' },
-    { src: GalleryImage2, alt: 'Gallery image 2' },
-    { src: GalleryImage3, alt: 'Gallery image 3' },
-    { src: GalleryImage4, alt: 'Gallery image 4' },
-    { src: GalleryImage5, alt: 'Gallery image 5' },
-    { src: GalleryImage6, alt: 'Gallery image 6' },
-    { src: GalleryImage7, alt: 'Gallery image 7' },
-    { src: GalleryImage8, alt: 'Gallery image 8' },
-    { src: GalleryImage9, alt: 'Gallery image 9' },
-    { src: GalleryImage10, alt: 'Gallery image 10' },
-    { src: GalleryImage11, alt: 'Gallery image 11' },
-    { src: GalleryImage12, alt: 'Gallery image 12' },
-    { src: GalleryImage13, alt: 'Gallery image 13' },
-    { src: GalleryImage14, alt: 'Gallery image 14' },
+  { src: GalleryImage1, alt: 'Outdoor Movie Pros gallery image 1' },
+  { src: GalleryImage2, alt: 'Outdoor Movie Pros gallery image 2' },
+  { src: GalleryImage3, alt: 'Outdoor Movie Pros gallery image 3' },
+  { src: GalleryImage4, alt: 'Outdoor Movie Pros gallery image 4' },
+  { src: GalleryImage5, alt: 'Outdoor Movie Pros gallery image 5' },
+  { src: GalleryImage6, alt: 'Outdoor Movie Pros gallery image 6' },
+  { src: GalleryImage7, alt: 'Outdoor Movie Pros gallery image 7' },
+  { src: GalleryImage8, alt: 'Outdoor Movie Pros gallery image 8' },
+  { src: GalleryImage9, alt: 'Outdoor Movie Pros gallery image 9' },
+  { src: GalleryImage10, alt: 'Outdoor Movie Pros gallery image 10' },
+  { src: GalleryImage11, alt: 'Outdoor Movie Pros gallery image 11' },
+  { src: GalleryImage12, alt: 'Outdoor Movie Pros gallery image 12' },
+  { src: GalleryImage13, alt: 'Outdoor Movie Pros gallery image 13' },
+  { src: GalleryImage14, alt: 'Outdoor Movie Pros gallery image 14' },
 ];
 
 // Styled components for the gallery
@@ -72,9 +71,7 @@ const GalleryGrid = styled(Box)`
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* lg: stays 3 columns (>=1200px) — no change needed */
-
-  /* xl: 4 columns (>=1536px) */
+  /* xl: 3 columns (>=1536px) — unchanged */
   @media (min-width: 1536px) {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -97,33 +94,60 @@ const GalleryItem = styled(Box)`
     height: 100%;
     object-fit: cover;
     display: block;
-    aspect-ratio: 1 / 1; /* square tiles */
+    aspect-ratio: 1 / 1;
   }
 `;
 
-const GalleryTitle = styled(Typography)`
-  text-align: center;
-  margin-bottom: 2rem;
-  font-weight: 700;
-  color: #333;
+// const GalleryTitle = styled(Typography)`
+//   text-align: center;
+//   margin-bottom: 2rem;
+//   font-weight: 700;
+//   color: #333;
 
-  @media (max-width: 600px) {
-    font-size: 1.5rem;
-  }
-`;
+//   @media (max-width: 600px) {
+//     font-size: 1.5rem;
+//   }
+// `;
 
 const Gallery = () => {
-    return (
-        <GalleryContainer style={{}}>
-            <GalleryGrid>
-                {IMAGES.map((image, index) => (
-                    <GalleryItem key={`gallery-item-${index}`}>
-                        <img src={image.src} alt={image.alt} loading="lazy" />
-                    </GalleryItem>
-                ))}
-            </GalleryGrid>
-        </GalleryContainer>
-    );
+  return (
+    <GalleryContainer>
+      <Helmet>
+        <title>Event Gallery | Outdoor Movie Pros</title>
+        <meta
+          name="description"
+          content="Photos from outdoor movie nights, concessions, and our food truck serving ice cream sundaes and coffee in Phoenix. See the outdoor movie magic in action."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://outdoormoviepros.com/gallery" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Event Gallery | Outdoor Movie Pros" />
+        <meta
+          property="og:description"
+          content="Outdoor movies, concessions, and a food truck with ice cream sundaes and coffee in Phoenix—browse our gallery."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Outdoor Movie Pros" />
+        <meta property="og:url" content="https://outdoormoviepros.com/gallery" />
+        <meta property="og:image" content="https://outdoormoviepros.com/company-logo.webp" />
+        <meta property="og:image:alt" content="Outdoor Movie Pros logo" />
+      </Helmet>
+
+      {/* sr-only heading for SEO/a11y (not visible) */}
+      <h1 className="sr-only">
+        Gallery — outdoor movie nights, concessions, and a food truck with ice cream sundaes and coffee in Phoenix Arizona
+      </h1>
+
+      <GalleryGrid>
+        {IMAGES.map((image, index) => (
+          <GalleryItem key={`gallery-item-${index}`}>
+            <img src={image.src} alt={image.alt} loading="lazy" />
+          </GalleryItem>
+        ))}
+      </GalleryGrid>
+    </GalleryContainer>
+  );
 };
 
 export default Gallery;

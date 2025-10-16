@@ -43,6 +43,12 @@ function Locations() {
       })()
     : null;
 
+  // For canonical/og:url
+  const pathForSeo = isGeneralAreaPage ? "/locations" : `/${city}`;
+
+  // Shorter title label (e.g., "Queen Creek" instead of "Queen Creek, Arizona")
+  const cityShort = formattedCity ? formattedCity.replace(", Arizona", "") : "Phoenix Metro";
+
   const regionLabel = "Phoenix Metro Area, including Maricopa, Pinal, and surrounding counties";
 
   const mainTitle = isGeneralAreaPage ? (
@@ -65,9 +71,56 @@ function Locations() {
 
   return (
     <section className={classes.root}>
+      {/* Dynamic SEO for city pages and the general service-area page */}
       <Helmet>
-        {/* Leaving your existing Helmet block as-is per your request */}
+        <title>
+          {isGeneralAreaPage
+            ? "Service Areas in Phoenix Metro | Outdoor Movie Pros"
+            : `Outdoor Movies in ${cityShort} | Outdoor Movie Pros`}
+        </title>
+
+        <meta
+          name="description"
+          content={
+            isGeneralAreaPage
+              ? "Outdoor Movie Pros serves the Phoenix metro with outdoor movie nights, concessions, and a food truck with ice cream sundaes and coffee. HD projection, pro audio, full setup."
+              : `Outdoor Movie Pros provides outdoor movie nights, concessions, and a food truck with ice cream sundaes and coffee in ${formattedCity}. HD projection, pro audio, full setup.`
+          }
+        />
+
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={`https://outdoormoviepros.com${pathForSeo}`} />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content={
+            isGeneralAreaPage
+              ? "Service Areas in Phoenix Metro | Outdoor Movie Pros"
+              : `Outdoor Movies in ${cityShort} | Outdoor Movie Pros`
+          }
+        />
+        <meta
+          property="og:description"
+          content={
+            isGeneralAreaPage
+              ? "Outdoor movies, concessions, and a food truck with ice cream sundaes and coffee across the Phoenix metro. HD projection, pro audio, full setup & teardown."
+              : `Outdoor movies, concessions, and a food truck with ice cream sundaes and coffee in ${formattedCity}. HD projection, pro audio, full setup & teardown.`
+          }
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Outdoor Movie Pros" />
+        <meta property="og:url" content={`https://outdoormoviepros.com${pathForSeo}`} />
+        <meta property="og:image" content="https://outdoormoviepros.com/company-logo.webp" />
+        <meta property="og:image:alt" content="Outdoor Movie Pros logo" />
       </Helmet>
+
+      {/* sr-only heading for SEO/a11y */}
+      <h1 className="sr-only">
+        {isGeneralAreaPage
+          ? "Outdoor movies, concessions, and a food truck with ice cream sundaes and coffee in the Phoenix metro area"
+          : `Outdoor movies, concessions, and a food truck with ice cream sundaes and coffee in ${formattedCity}`}
+      </h1>
 
       <header className={classes.header}>
         <Box className={classes.titleBox}>

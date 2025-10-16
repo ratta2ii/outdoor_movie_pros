@@ -18,6 +18,7 @@ import WaterBarrelImage from './.././../../Assets/Images/water-barrel.webp';
 import CallToAction from "./../../../Components/CallToAction/CallToAction";
 import useStyles from './ConcessionsOptions.Styles';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 function ConcessionsOptions() {
     const classes = useStyles();
@@ -151,9 +152,36 @@ function ConcessionsOptions() {
 
     return (
         <main>
+            <Helmet>
+                <title>Concessions & Add-Ons | Outdoor Movie Pros</title>
+                <meta
+                    name="description"
+                    content="Popcorn and cotton candy machines, generators, lighting, and more—everything to power your outdoor movie night in Phoenix."
+                />
+                <meta name="robots" content="index, follow" />
+                <link rel="canonical" href="https://outdoormoviepros.com/concessions-options" />
+
+                {/* Open Graph */}
+                <meta property="og:title" content="Concessions & Add-Ons | Outdoor Movie Pros" />
+                <meta
+                    property="og:description"
+                    content="From popcorn and cotton candy to generators and lighting—browse add-ons for your outdoor movie night in Phoenix."
+                />
+                <meta property="og:type" content="website" />
+                <meta property="og:site_name" content="Outdoor Movie Pros" />
+                <meta property="og:url" content="https://outdoormoviepros.com/concessions-options" />
+                <meta property="og:image" content="https://outdoormoviepros.com/company-logo.webp" />
+                <meta property="og:image:alt" content="Outdoor Movie Pros company logo" />
+            </Helmet>
+
+            {/* sr-only heading for SEO/a11y (not visible) */}
+            <h1 className="sr-only">
+                Concessions and add-ons for outdoor movie nights in Phoenix — popcorn, cotton candy, generators, lighting, and more
+            </h1>
+
             <Box className={classes.titleBox}>
                 <h1 className={classes.title}>
-                    Concessions & Add-Ons — Popcorn • Cotton Candy • Ice Cream • Tables & Chairs • Generators • Additional Screens
+                    Concessions & Add-Ons — Popcorn • Cotton Candy • Ice Cream • Generators • Additional Screens • And More
                 </h1>
             </Box>
 
@@ -208,7 +236,6 @@ function ConcessionsOptions() {
                                                 variant="h4"
                                                 component="p"
                                                 className={classes.cardPrice}
-
                                                 aria-label={`${price}`}
                                             >
                                                 {price}

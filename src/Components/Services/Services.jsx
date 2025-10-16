@@ -7,7 +7,7 @@ import { Button, CardActionArea, CardActions, Box, List, ListItem, ListItemIcon,
 import CheckCircleIcon from '@material-ui/icons/CheckCircle'; // Added for green check icons
 import GiantScreenImage from './../../Assets/Images/giant-screen.webp';
 import ConcessionsImage from './../../Assets/Images/concessions-image.webp';
-import IceCreamTruckImage from './../../Assets/Images/ice-cream-truck.webp';
+import IceCreamFoodTruckImage from './../../Assets/Images/ice-cream-truck.webp';
 import useStyles from './Services.Styles';
 import { Link } from 'react-router-dom';
 
@@ -132,7 +132,7 @@ function Services() {
                                 <CardMedia
                                     component="img"
                                     height="275"
-                                    image={IceCreamTruckImage}
+                                    image={IceCreamFoodTruckImage}
                                     alt="Our Services include well Water Testing and System Inspection"
                                     loading="lazy"
                                 />

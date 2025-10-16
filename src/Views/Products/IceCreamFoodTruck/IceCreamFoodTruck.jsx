@@ -9,9 +9,10 @@ import {
     ListItemText,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import IceCreamTruckImage from "./../../../Assets/Images/ice-cream-truck.jpg";
-import IceCreamTruckTwo from "./../../../Assets/Images/ice-cream-truck-two.jpg";
+import IceCreamFoodTruckImage from "./../../../Assets/Images/ice-cream-truck.jpg";
+import IceCreamFoodTruckTwo from "./../../../Assets/Images/ice-cream-truck-two.jpg";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const useStyles = makeStyles((theme) => ({
     sectionLight: {
@@ -66,7 +67,6 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        // backgroundColor: 'aliceblue',
         color: '#fff',
         padding: 10,
     },
@@ -78,7 +78,6 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: "system-ui !important",
         fontSize: "2rem",
         marginBottom: 10,
-        // color: "#1b2027",
         color: "#fff",
         [theme.breakpoints.down("sm")]: {
             fontSize: "2.2rem",
@@ -86,14 +85,12 @@ const useStyles = makeStyles((theme) => ({
     },
     subtext: {
         fontSize: "1.1rem",
-        // color: "#444",
         color: "#fff",
         marginBottom: 15,
         lineHeight: "1.4em",
     },
     italicSubtext: {
         fontSize: "1.1rem",
-        // color: "#444",
         color: "#fff",
         marginBottom: 15,
         fontStyle: "italic",
@@ -118,7 +115,6 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     listItemText: {
-        // color: "#444",
         color: "#fff",
         fontSize: "1rem",
         marginLeft: theme.spacing(2), // Indentation for hyphens
@@ -126,7 +122,6 @@ const useStyles = makeStyles((theme) => ({
     sectionHeader: {
         fontWeight: 600,
         fontSize: "1.2rem",
-        // color: "#1b2027",
         color: "#fff",
         marginTop: theme.spacing(2),
         marginBottom: theme.spacing(1),
@@ -134,7 +129,6 @@ const useStyles = makeStyles((theme) => ({
     sectionHeaderOptions: {
         fontWeight: 600,
         fontSize: "1.2rem",
-        // color: "#1b2027",
         color: "#fff",
         marginTop: -10,
         marginBottom: theme.spacing(1),
@@ -217,11 +211,38 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const IceCreamTruck = () => {
+const IceCreamFoodTruck = () => {
     const classes = useStyles();
 
     return (
         <>
+            <Helmet>
+                <title>Sundae Bar & Barista Coffee Food Truck in Phoenix | Outdoor Movie Pros</title>
+                <meta
+                    name="description"
+                    content="Book a food truck serving ice cream sundaes and barista coffee for events across Phoenix. Full-service setup, friendly staff, and crowd-pleasing treats."
+                />
+                <meta name="robots" content="index, follow" />
+                <link rel="canonical" href="https://outdoormoviepros.com/ice-cream-food-truck" />
+
+                {/* Open Graph */}
+                <meta property="og:title" content="Sundae Bar & Barista Coffee Food Truck in Phoenix | Outdoor Movie Pros" />
+                <meta
+                    property="og:description"
+                    content="Ice cream sundaes and barista coffee from our food truck—perfect for corporate events, schools, and parties across Phoenix."
+                />
+                <meta property="og:type" content="website" />
+                <meta property="og:site_name" content="Outdoor Movie Pros" />
+                <meta property="og:url" content="https://outdoormoviepros.com/ice-cream-food-truck" />
+                <meta property="og:image" content="https://outdoormoviepros.com/company-logo.webp" />
+                <meta property="og:image:alt" content="Outdoor Movie Pros logo" />
+            </Helmet>
+
+            {/* sr-only heading for SEO/a11y */}
+            <h1 className="sr-only">
+                Food truck with ice cream sundaes and barista coffee for events in Phoenix — full-service setup and friendly staff
+            </h1>
+
             <Box className={classes.sectionLight}>
                 <Box className={classes.titleBox}>
                     <Typography variant="h1" className={classes.mainTitle}>Sundae Bar & Barista Coffee Truck for Events in Phoenix</Typography>
@@ -231,15 +252,15 @@ const IceCreamTruck = () => {
                     <Grid item xs={12} md={6} className={classes.imageColLight}>
                         <Box className={classes.imageWrapper}>
                             <img
-                                src={IceCreamTruckImage}
-                                alt="Ice Cream Truck Exterior"
+                                src={IceCreamFoodTruckImage}
+                                alt="Food truck exterior"
                                 className={classes.oblongImage}
                             />
                         </Box>
                         <Box className={classes.imageWrapper}>
                             <img
-                                src={IceCreamTruckTwo}
-                                alt="Coffee and Ice Cream Service"
+                                src={IceCreamFoodTruckTwo}
+                                alt="Barista coffee and ice cream service at the food truck"
                                 className={classes.oblongImage}
                             />
                         </Box>
@@ -320,9 +341,9 @@ const IceCreamTruck = () => {
                                 {[
                                     "Build-your-own Sundae Bar",
                                     "Waffle Cones & Bowls",
+                                    "Toppings for Days",
+                                    "Vegan & Dairy-Free Options",
                                     "Italian Ice",
-                                    "Ice Cream Sandwiches & Bars",
-                                    "Classic Milkshakes",
                                 ].map((item, i) => (
                                     <ListItem key={`icecream-${i}`} className={classes.listItem}>
                                         <ListItemText
@@ -361,4 +382,4 @@ const IceCreamTruck = () => {
     );
 };
 
-export default IceCreamTruck;
+export default IceCreamFoodTruck;
