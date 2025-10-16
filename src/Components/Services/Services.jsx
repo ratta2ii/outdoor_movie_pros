@@ -15,7 +15,7 @@ function Services() {
     const classes = useStyles();
 
     return (
-        <main>
+        <main className={classes.root}>
             <Grid container spacing={4} alignItems="stretch" justifyContent="center">
                 {/* Sampling & Testing Card */}
                 <Grid item xs={12} md={4}>

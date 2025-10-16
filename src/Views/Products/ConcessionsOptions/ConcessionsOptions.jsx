@@ -5,9 +5,16 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions, Box, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
-import PopcornImage from './../../../Assets/Images/product-popcorn.jpg';
+import PopcornImage from './../../../Assets/Images/popcorn-machine.webp';
 import GeneratorImage from './../../../Assets/Images/generator.webp';
 import CottonCandyImage from './.././../../Assets/Images/product-cotton-candy.jpg';
+import ConcessionBoothImage from './.././../../Assets/Images/concession-booth.webp';
+import ConcessionStaffImage from './.././../../Assets/Images/concession-staff.webp';
+import LightTowersImage from './.././../../Assets/Images/light-tower.webp';
+import DrinkTroughImage from './.././../../Assets/Images/drink-trough.webp';
+import BottledWaterImage from './.././../../Assets/Images/bottled-water.webp';
+import GlowNecklacesImage from './.././../../Assets/Images/glow-necklaces.webp';
+import WaterBarrelImage from './.././../../Assets/Images/water-barrel.webp';
 import CallToAction from "./../../../Components/CallToAction/CallToAction";
 import useStyles from './ConcessionsOptions.Styles';
 import { Link } from 'react-router-dom';
@@ -18,7 +25,6 @@ function ConcessionsOptions() {
     const cards = [
         {
             key: 'popcorn',
-            to: '/concessions-options#popcorn',
             image: PopcornImage,
             imageAlt: 'Popcorn Machine Rentals Arizona',
             title: 'Popcorn Machine',
@@ -33,7 +39,6 @@ function ConcessionsOptions() {
         },
         {
             key: 'cotton-candy',
-            to: '/concessions-options#cotton-candy',
             image: CottonCandyImage,
             imageAlt: 'Cotton candy concession',
             title: 'Cotton Candy',
@@ -48,7 +53,6 @@ function ConcessionsOptions() {
         },
         {
             key: 'generators',
-            to: '/concessions-options#generators',
             image: GeneratorImage,
             imageAlt: 'Quiet inverter generator',
             title: 'Generators',
@@ -59,6 +63,88 @@ function ConcessionsOptions() {
                 'Power for projector, audio, and screens',
                 'Cables & distro included',
                 'Fuel included for standard runtimes',
+            ],
+        },
+        {
+            key: 'Concession Booth',
+            image: ConcessionBoothImage,
+            imageAlt: 'Concession Booth',
+            title: 'Concession Booth',
+            subtitle: 'Add Eye Appeal for Any Event',
+            price: '$99',
+            bullets: [
+                '10\'X10 Canopy',
+                'Includes Front and Backdrop',
+            ],
+        },
+        {
+            key: 'Concession Staff',
+            image: ConcessionStaffImage,
+            imageAlt: 'Quiet inverter generator',
+            title: 'Concession Staff',
+            subtitle: "We'll take care of it all",
+            price: '$150',
+            bullets: [
+                'Professional Staff for Concession',
+                '**movie screen includes staff**',
+            ],
+        },
+        {
+            key: 'Light Towers',
+            image: LightTowersImage,
+            imageAlt: 'Light Towers for Events',
+            title: 'Light Towers',
+            subtitle: 'ideal in dark areas',
+            price: '$150',
+            bullets: [
+                'Add on a generator if no outlet',
+            ],
+        },
+        {
+            key: 'Drink Trough',
+            image: DrinkTroughImage,
+            imageAlt: 'Drink Trough for Beverages',
+            title: 'Drink Trough',
+            subtitle: 'Holds up to 200 drinks',
+            price: '$49',
+            bullets: [
+                'Ice not included',
+            ],
+        },
+        {
+            key: 'Bottled Water / Soda',
+            image: BottledWaterImage,
+            imageAlt: 'Bottle Water or Soda addon',
+            title: 'Bottled Water / Soda',
+            subtitle: 'Quiet power for any venue',
+            price: '$.50 - $1.00',
+            bullets: [
+                'Minimum order required',
+                'Add a trough or cooler for cooling',
+                'Ice is additional charge',
+            ],
+        },
+        {
+            key: 'Glow Necklaces',
+            image: GlowNecklacesImage,
+            imageAlt: 'glow necklaces for party',
+            title: 'Glow Necklaces',
+            subtitle: 'Brighten up any party',
+            price: '$39',
+            bullets: [
+                '22" necklaces',
+                '100 pack per order',
+            ],
+        },
+        {
+            key: 'Water Barrel',
+            image: WaterBarrelImage,
+            imageAlt: 'Water Barrel for anchoring',
+            title: 'Water Barrel',
+            subtitle: 'for anchoring when sandbags and stakes do not work',
+            price: '$25',
+            bullets: [
+                'can bring pre-filled',
             ],
         },
     ];

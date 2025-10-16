@@ -123,7 +123,7 @@ function NavBar(props) {
                             >
                                 <Box sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>
                                     <CoffeeIcon fontSize='medium' style={{ marginRight: '10px', color: '#1a3890', flexShrink: 0 }} />
-                                    <p style={{ fontSize: "1em", fontWeight: 500, margin: 0, flexGrow: 1, textAlign: 'left' }}>Ice Cream Sundae's & Barista Food Truck</p>
+                                    <p style={{ fontSize: "1em", fontWeight: 500, margin: 0, flexGrow: 1, textAlign: 'left' }}>Ice Cream Sundae & Barista Coffee Food Truck</p>
                                 </Box>
                             </ListItemButton>
                         </Link>
@@ -220,7 +220,7 @@ function NavBar(props) {
     return (
         <nav style={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar component="nav" style={{ backgroundColor: '#0b0f18', minHeight: 75, paddingTop: 12, borderBottom: "5px solid #1c222a" }}>
+            <AppBar component="nav" style={{ backgroundColor: '#0b0f18', minHeight: 80, paddingTop: 12, borderBottom: "5px solid #1c222a" }}>
                 {isMobile ? (
                     <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
                         {/* Hamburger */}
@@ -232,13 +232,13 @@ function NavBar(props) {
                                 onClick={handleDrawerToggle}
                                 sx={{ ml: .5 }}
                             >
-                                <MenuIcon sx={{ fontSize: '2rem' }} />
+                                <MenuIcon sx={{ fontSize: '2.5rem' }} />
                             </IconButton>
                         </Box>
 
                         {/* Phone number centered */}
                         <Box sx={{ width: '66%', textAlign: 'center' }}>
-                            <Typography variant="body1" sx={{ fontFamily: 'sans-serif', fontSize: '1em' }}>
+                            <Typography variant="body1" sx={{ fontFamily: 'sans-serif', fontSize: '1.1em' }}>
                                 <a href="tel:+12083523909" style={{ textDecoration: "none", color: "inherit" }}>
                                     +1 (208) 352-3909
                                 </a>
@@ -250,9 +250,8 @@ function NavBar(props) {
                             <Link to="/">
                                 <img
                                     src={CompanyLogo}
-                                    width="60"
+                                    width="75"
                                     alt="Outdoor Movie Pros logo"
-                                    style={{}}
                                     loading="lazy"
                                 />
                             </Link>

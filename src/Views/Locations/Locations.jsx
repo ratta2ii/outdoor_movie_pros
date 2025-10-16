@@ -184,7 +184,7 @@ function Locations() {
 
             <Grid item xs={12} md={7} className={classes.sectionContent}>
               <Typography variant="h4" className={classes.sectionTitle}>
-                Concessions & Add On&apos;s
+                Concessions & Add-Ons
               </Typography>
               <Divider className={classes.divider} />
               <Typography variant="body1" className={classes.sectionText}>

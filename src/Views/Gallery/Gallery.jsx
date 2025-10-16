@@ -21,20 +21,20 @@ import GalleryImage14 from './../../Assets/Images/GalleryImages/gallery14.webp';
 
 // Array of images with alt text
 const IMAGES = [
-  { src: GalleryImage1, alt: 'Gallery image 1' },
-  { src: GalleryImage2, alt: 'Gallery image 2' },
-  { src: GalleryImage3, alt: 'Gallery image 3' },
-  { src: GalleryImage4, alt: 'Gallery image 4' },
-  { src: GalleryImage5, alt: 'Gallery image 5' },
-  { src: GalleryImage6, alt: 'Gallery image 6' },
-  { src: GalleryImage7, alt: 'Gallery image 7' },
-  { src: GalleryImage8, alt: 'Gallery image 8' },
-  { src: GalleryImage9, alt: 'Gallery image 9' },
-  { src: GalleryImage10, alt: 'Gallery image 10' },
-  { src: GalleryImage11, alt: 'Gallery image 11' },
-  { src: GalleryImage12, alt: 'Gallery image 12' },
-  { src: GalleryImage13, alt: 'Gallery image 13' },
-  { src: GalleryImage14, alt: 'Gallery image 14' },
+    { src: GalleryImage1, alt: 'Gallery image 1' },
+    { src: GalleryImage2, alt: 'Gallery image 2' },
+    { src: GalleryImage3, alt: 'Gallery image 3' },
+    { src: GalleryImage4, alt: 'Gallery image 4' },
+    { src: GalleryImage5, alt: 'Gallery image 5' },
+    { src: GalleryImage6, alt: 'Gallery image 6' },
+    { src: GalleryImage7, alt: 'Gallery image 7' },
+    { src: GalleryImage8, alt: 'Gallery image 8' },
+    { src: GalleryImage9, alt: 'Gallery image 9' },
+    { src: GalleryImage10, alt: 'Gallery image 10' },
+    { src: GalleryImage11, alt: 'Gallery image 11' },
+    { src: GalleryImage12, alt: 'Gallery image 12' },
+    { src: GalleryImage13, alt: 'Gallery image 13' },
+    { src: GalleryImage14, alt: 'Gallery image 14' },
 ];
 
 // Styled components for the gallery
@@ -42,6 +42,16 @@ const GalleryContainer = styled(Box)`
   padding: 2rem;
   max-width: 1400px;
   margin: 0 auto;
+  margin-top: 220px;
+  margin-bottom: 100px;
+  @media (max-width: 850px) {
+    margin-top: 150px;  
+    margin-bottom: 75px;
+  }
+  @media (max-width: 600px) {
+    margin-top: 100px;  
+    margin-bottom: 25px;
+  }
 `;
 
 const GalleryGrid = styled(Box)`
@@ -103,17 +113,17 @@ const GalleryTitle = styled(Typography)`
 `;
 
 const Gallery = () => {
-  return (
-    <GalleryContainer style={{marginTop:200, marginBottom: 100}}>
-      <GalleryGrid>
-        {IMAGES.map((image, index) => (
-          <GalleryItem key={`gallery-item-${index}`}>
-            <img src={image.src} alt={image.alt} loading="lazy" />
-          </GalleryItem>
-        ))}
-      </GalleryGrid>
-    </GalleryContainer>
-  );
+    return (
+        <GalleryContainer style={{}}>
+            <GalleryGrid>
+                {IMAGES.map((image, index) => (
+                    <GalleryItem key={`gallery-item-${index}`}>
+                        <img src={image.src} alt={image.alt} loading="lazy" />
+                    </GalleryItem>
+                ))}
+            </GalleryGrid>
+        </GalleryContainer>
+    );
 };
 
 export default Gallery;

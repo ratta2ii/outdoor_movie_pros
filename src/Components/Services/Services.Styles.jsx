@@ -1,6 +1,14 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
+    root: {
+        [theme.breakpoints.down('sm')]: {
+            padding: "0px 12%",
+        },
+        [theme.breakpoints.down('xs')]: {
+            padding: 0
+        },
+    },
     card: {
         borderRadius: 10,
         padding: 20,
