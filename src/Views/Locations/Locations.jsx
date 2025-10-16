@@ -130,8 +130,8 @@ function Locations() {
           <Typography className={classes.subText}>
             Ready to schedule your event<span>{isGeneralAreaPage ? "" : ` in ${formattedCity}`}</span>?
             <br />
-            <a href="tel:+12083523909" className={`${classes.phoneLink}`}>
-              (208) 352-3909
+            <a href="tel:+16026386510" className={`${classes.phoneLink}`}>
+              (602) 638-6510
             </a>
           </Typography>
         </Box>

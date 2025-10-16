@@ -32,7 +32,7 @@ const ContactForm = () => {
             }, (error) => {
                 console.log(error.text);
                 setTimeout(() => {
-                    setFormMessage("There was a problem submitting your form. Please try again later or call us at (208) 352-3909.");
+                    setFormMessage("There was a problem submitting your form. Please try again later or call us at (602) 638-6510.");
                 }, 1000);
             });
 

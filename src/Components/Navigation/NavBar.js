@@ -239,8 +239,8 @@ function NavBar(props) {
                         {/* Phone number centered */}
                         <Box sx={{ width: '66%', textAlign: 'center' }}>
                             <Typography variant="body1" sx={{ fontFamily: 'sans-serif', fontSize: '1.1em' }}>
-                                <a href="tel:+12083523909" style={{ textDecoration: "none", color: "inherit" }}>
-                                    +1 (208) 352-3909
+                                <a href="tel:+16026386510" style={{ textDecoration: "none", color: "inherit" }}>
+                                    +1 (602) 638-6510
                                 </a>
                             </Typography>
                         </Box>
@@ -270,8 +270,8 @@ function NavBar(props) {
                                 />
                             </Link>
                             <Typography variant="body1" style={{ fontFamily: "sans-serif", fontSize: "1.2em" }}>
-                                <a href="tel:+12083523909" style={{ textDecoration: "none", color: "inherit" }}>
-                                    +1 (208) 352-3909
+                                <a href="tel:+16026386510" style={{ textDecoration: "none", color: "inherit" }}>
+                                    +1 (602) 638-6510
                                 </a>
                             </Typography>
                         </Box>

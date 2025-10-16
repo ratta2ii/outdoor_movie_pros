@@ -2,7 +2,6 @@ const functions = require('firebase-functions');
 
 exports.handleRequests = functions.https.onRequest((req, res) => {
   try {
-    // Define valid routes matching App.js
     const validRoutes = [
       '/',
       '/faqs',
@@ -29,13 +28,21 @@ exports.handleRequests = functions.https.onRequest((req, res) => {
       '/anthem',
     ];
 
-    // Normalize path by removing trailing slash
     const normalizedPath = req.path.replace(/\/$/, '') || '/';
     
-    // Log request for debugging
     functions.logger.info(`Received request for: ${req.path}`, { structuredData: true });
 
-    // Check if the path is valid
+    // Detect crawlers (basic check for common bots)
+    const userAgent = req.headers['user-agent'] || '';
+    const isCrawler = /bot|googlebot|crawler|spider|robot|crawling|facebookexternalhit|twitterbot|linkedinbot/i.test(userAgent) || req.query._escaped_fragment_ !== undefined;
+
+    if (isCrawler && validRoutes.includes(normalizedPath)) {
+      // Placeholder for Prerender.io (to be implemented when token is available)
+      // Add prerendering logic here later
+      res.redirect(302, '/index.html');
+      return;
+    }
+
     if (!validRoutes.includes(normalizedPath)) {
       res.status(404).send(`<!DOCTYPE html>
         <html lang="en">
@@ -52,10 +59,8 @@ exports.handleRequests = functions.https.onRequest((req, res) => {
       return;
     }
 
-    // Redirect to index.html for SPA rendering
     res.redirect(302, '/index.html');
   } catch (error) {
-    // Log errors and return a 500 response
     functions.logger.error('Error handling request:', error, { structuredData: true });
     res.status(500).send(`<!DOCTYPE html>
       <html lang="en">

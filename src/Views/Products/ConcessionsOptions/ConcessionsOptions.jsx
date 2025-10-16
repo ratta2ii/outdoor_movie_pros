@@ -263,15 +263,17 @@ function ConcessionsOptions() {
                                         size="small"
                                         className={classes.contactButton}
                                         component="a"
-                                        href="tel:+12083523909"
+                                        href="tel:+16026386510"
+                                        aria-label="Call Outdoor Movie Pros at 602-638-6510"
                                     >
-                                        (208) 352-3909
+                                        (602) 638-6510
                                     </Button>
                                     <Button
                                         size="small"
                                         className={classes.contactButton}
                                         component={Link}
                                         to="/contact"
+                                        aria-label="Contact Outdoor Movie Pros for a quote"
                                     >
                                         Get a Quote
                                     </Button>

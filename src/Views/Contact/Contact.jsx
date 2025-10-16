@@ -55,10 +55,10 @@ function Contact() {
                                 variant="contained"
                                 color="primary"
                                 size="small"
-                                href="tel:+12083523909"
+                                href="tel:+16026386510"
                                 className={classes.phoneButton}
                             >
-                                (208) 352-3909
+                                (602) 638-6510
                             </Button>
                         </Typography>
                         <Typography variant="body1" className={classes.infoText}>

@@ -139,9 +139,9 @@ function FAQs() {
                         size="large"
                         color="primary"
                         className={classes.ctaButton}
-                        href="tel:+12083523909"
+                        href="tel:+16026386510"
                     >
-                        (208) 352-3909
+                        (602) 638-6510
                     </Button>
                 </Box>
             </Box>
