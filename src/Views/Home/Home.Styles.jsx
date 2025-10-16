@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme) => ({
         // marginTop: 200,
         // marginBottom: 150,
         width: 985,
-        margin: '200px auto 120px',
+        margin: '230px auto 120px',
         [theme.breakpoints.down('md')]: {
             width: '80%',
             marginLeft: '10%',

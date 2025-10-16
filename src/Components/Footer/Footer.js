@@ -140,7 +140,7 @@ const Footer = (props) => {
 
             <Grid container className={classes.root}>
                 {/* Left side */}
-                <Grid item xs={12} lg={6} className={classes.customerCommentGridItm}>
+                <Grid item xs={12} md={6} className={classes.customerCommentGridItm}>
                     <Box className={classes.referenceBox}>
                         <Typography className={classes.reference}>
                             "Just wanted to say THANK YOU SO MUCH for making our company’s Ice Cream Social a Hit! We appreciate you being so accommodating and able to do our event, even with short notice. And we are so glad you were able to offer such a great event and more importantly stay within our budget. We look forward to the next one! Thank you again!"
@@ -155,7 +155,7 @@ const Footer = (props) => {
                 </Grid>
 
                 {/* Right side */}
-                <Grid item xs={12} lg={6} className={classes.aboutMeCardGridItm}>
+                <Grid item xs={12} md={6} className={classes.aboutMeCardGridItm}>
                     <Box className={classes.cardBox}>
                         {/* Email */}
                         <Box className={classes.infoLine}>

@@ -40,11 +40,7 @@ function Contact() {
             <main className={classes.root}>
                 <div className={classes.titleBox}>
                     <Typography variant="h1" className={classes.title}>
-                        Contact Outdoor Movie Pros today for fast service and{' '}
-                        <Link to="/faqs" style={{ color: '#fff', textDecoration: 'underline', fontWeight: 600 }}>
-                            competitive pricing
-                        </Link>
-                        !
+                        Contact Outdoor Movie Pros today for fast service and competitive pricing!
                     </Typography>
                     <Typography variant="h2" className={classes.subTitle}>
                         Get your free quote now! Fill out the form below, and our team will respond promptly.

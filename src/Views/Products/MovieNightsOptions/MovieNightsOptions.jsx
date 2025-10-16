@@ -113,7 +113,7 @@ function MovieNightsOptions() {
                                 <CardActionArea style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                                     <CardMedia
                                         component="img"
-                                        height="250"
+                                        height="275"
                                         image={image}
                                         alt={imageAlt}
                                     />
@@ -178,7 +178,7 @@ function MovieNightsOptions() {
                                             >
                                                 Final quote determined by event location and{' '}
                                                 <Link to="/concessions-options" className={classes.addOnsLink}>
-                                                    Concessions and Equipment ADD ON's
+                                                    Concessions and Equipment Add-Ons
                                                 </Link>
                                             </Typography>
                                         </Box>

@@ -147,7 +147,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     serviceSection: {
-        backgroundColor: 'rgb(12 15 24 / 50%)',
+        backgroundColor: 'rgb(12 15 24 / 100%)',
         padding: "60px !important",
         borderRadius: 10,
         marginBottom: 100,

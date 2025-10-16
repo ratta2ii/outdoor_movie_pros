@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions, Box, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle'; // Added for green check icons
 import GiantScreenImage from './../../Assets/Images/giant-screen.webp';
-import ConcessionsImage from './../../Assets/Images/e2.webp';
+import ConcessionsImage from './../../Assets/Images/concessions-image.webp';
 import IceCreamTruckImage from './../../Assets/Images/ice-cream-truck.webp';
 import useStyles from './Services.Styles';
 import { Link } from 'react-router-dom';
@@ -24,7 +24,7 @@ function Services() {
                             <CardActionArea>
                                 <CardMedia
                                     component="img"
-                                    height="250"
+                                    height="275"
                                     image={GiantScreenImage}
                                     alt="Our Services include State Certified Well Water Testing"
                                 />
@@ -77,14 +77,14 @@ function Services() {
                             <CardActionArea>
                                 <CardMedia
                                     component="img"
-                                    height="250"
+                                    height="275"
                                     image={ConcessionsImage}
                                     alt="Flow Rate Monitoring for Water Testing and Inspection Services"
                                     loading="lazy"
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h2" component="h2" className={classes.cardTitle} style={{fontFamily: 'inherit'}}>
-                                        Concessions & Add On's
+                                        Concessions & Add-Ons
                                     </Typography>
                                     <Typography variant="h3" component="h3" className={classes.cardSubtitle}>
                                         Popcorn, Candy & Drinks
@@ -131,7 +131,7 @@ function Services() {
                             <CardActionArea>
                                 <CardMedia
                                     component="img"
-                                    height="250"
+                                    height="275"
                                     image={IceCreamTruckImage}
                                     alt="Our Services include well Water Testing and System Inspection"
                                     loading="lazy"

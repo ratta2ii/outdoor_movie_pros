@@ -5,7 +5,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions, Box, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
-import PopcornImage from './../../../Assets/Images/product-popcorn5.jpg';
+import PopcornImage from './../../../Assets/Images/product-popcorn.jpg';
+import GeneratorImage from './../../../Assets/Images/generator.webp';
 import CottonCandyImage from './.././../../Assets/Images/product-cotton-candy.jpg';
 import CallToAction from "./../../../Components/CallToAction/CallToAction";
 import useStyles from './ConcessionsOptions.Styles';
@@ -48,7 +49,7 @@ function ConcessionsOptions() {
         {
             key: 'generators',
             to: '/concessions-options#generators',
-            image: PopcornImage,
+            image: GeneratorImage,
             imageAlt: 'Quiet inverter generator',
             title: 'Generators',
             subtitle: 'Quiet power for any venue',
@@ -66,7 +67,7 @@ function ConcessionsOptions() {
         <main>
             <Box className={classes.titleBox}>
                 <h1 className={classes.title}>
-                    Concessions & Add On's — Popcorn • Cotton Candy • Ice Cream • Tables & Chairs • Generators • Additional Screens
+                    Concessions & Add-Ons — Popcorn • Cotton Candy • Ice Cream • Tables & Chairs • Generators • Additional Screens
                 </h1>
             </Box>
 
@@ -78,9 +79,10 @@ function ConcessionsOptions() {
                                 <CardActionArea style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                                     <CardMedia
                                         component="img"
-                                        height="250"
+                                        height="275"
                                         image={image}
                                         alt={imageAlt}
+                                        aria-label={imageAlt}
                                     />
                                     <CardContent style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                                         <Typography
@@ -120,7 +122,7 @@ function ConcessionsOptions() {
                                                 variant="h4"
                                                 component="p"
                                                 className={classes.cardPrice}
-                 
+
                                                 aria-label={`${price}`}
                                             >
                                                 {price}
@@ -132,9 +134,9 @@ function ConcessionsOptions() {
                                                 className={classes.quoteNote}
                                                 style={{ color: '#444', marginBottom: 0 }}
                                             >
-                                                Final quote determined by event location and{' '}
-                                                <Link to="/concessions-options" className={classes.addOnsLink}>
-                                                    Concessions and Equipment ADD ON's
+                                                Final quote determined by event location.{' '}Don't forget to check out our{' '}
+                                                <Link to="/movie-nights-options" className={classes.movieEventsLink}>
+                                                    Outdoor Movie Event Options
                                                 </Link>
                                             </Typography>
                                         </Box>

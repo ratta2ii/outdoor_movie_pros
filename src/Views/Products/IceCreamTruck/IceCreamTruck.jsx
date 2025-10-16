@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     sectionLight: {
-        backgroundColor: 'rgb(12 15 24 / 75%)',
+        backgroundColor: 'rgb(12 15 24 / 100%)',
         marginTop: 200,
         marginBottom: 100, // Update responsive margins TODO:
         padding: "150px 8%",
@@ -23,7 +23,9 @@ const useStyles = makeStyles((theme) => ({
             padding: "100px 12% 150px",
         },
         [theme.breakpoints.down("xs")]: {
-            padding: "75px 12%",
+            padding: "75px 6%",
+            marginTop: 100,
+            marginBottom: 20,
         },
     },
     imageColLight: {
@@ -55,6 +57,21 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
+    },
+    titleBox: {
+        width: "100%",
+        height: 150,
+        border: "5px solid hotpink",
+        marginBottom: 80,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        // backgroundColor: 'aliceblue',
+        color: '#fff',
+        padding: 10,
+    },
+    mainTitle: {
+        fontSize: "1.8rem",
     },
     title: {
         fontWeight: 700,
@@ -141,35 +158,58 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
         transition: "all 0.3s ease",
         width: "calc(48% - 8px)",
+        lineHeight: 1.2,
+        whiteSpace: "nowrap",
+        minHeight: 40,
         "&:hover": {
             color: "#358cfd",
             backgroundColor: "#000000",
-
             boxShadow: "0 6px 18px rgba(0,0,0,0.2)",
         },
+        [theme.breakpoints.down("sm")]: {
+            width: "100%",         // stack on mobile
+            padding: "10px 16px",
+            fontSize: "0.95rem",
+            minHeight: 38,
+        },
         [theme.breakpoints.down("xs")]: {
-            width: "calc(50% - 8px)",
+            width: "100%",
+            padding: "10px 14px",
+            fontSize: "0.9rem",
+            minHeight: 36,
         },
     },
+
     secondaryButton: {
         color: "#358cfd",
         border: "2px solid #358cfd",
-        // backgroundColor: "#000000",
         textTransform: "none",
         fontWeight: 500,
         padding: "10px 24px",
         borderRadius: 8,
         transition: "all 0.3s ease",
         width: "calc(48% - 8px)",
+        lineHeight: 1.2,
+        whiteSpace: "nowrap",
+        minHeight: 40,
         "&:hover": {
             backgroundColor: "#1b2027",
-            // color: "#fff",
             boxShadow: "0 6px 18px rgba(0,0,0,0.2)",
         },
+        [theme.breakpoints.down("sm")]: {
+            width: "100%",         // stack on mobile
+            padding: "10px 16px",
+            fontSize: "0.95rem",
+            minHeight: 38,
+        },
         [theme.breakpoints.down("xs")]: {
-            width: "calc(50% - 8px)",
+            width: "100%",
+            padding: "10px 14px",
+            fontSize: "0.9rem",
+            minHeight: 36,
         },
     },
+
     eventOptionsWrapper: {
         maxWidth: 475,
         width: "100%",
@@ -183,19 +223,8 @@ const IceCreamTruck = () => {
     return (
         <>
             <Box className={classes.sectionLight}>
-                <Box
-                    style={{
-                        width: "100%",
-                        height: 150,
-                        border: "5px solid hotpink",
-                        marginBottom: 80,
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        // backgroundColor: 'aliceblue',
-                        color: '#fff',
-                    }} >
-                    <Typography variant="h1" style={{fontSize: "1.8em"}}>Sundae Bar & Barista Coffee Truck for Events in Phoenix</Typography>
+                <Box className={classes.titleBox}>
+                    <Typography variant="h1" className={classes.mainTitle}>Sundae Bar & Barista Coffee Truck for Events in Phoenix</Typography>
                 </Box>
                 <Grid container spacing={4} alignItems="center" justifyContent="center">
                     {/* Images and Flexible Event Options on left */}

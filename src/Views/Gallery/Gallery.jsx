@@ -105,9 +105,6 @@ const GalleryTitle = styled(Typography)`
 const Gallery = () => {
   return (
     <GalleryContainer style={{marginTop:200, marginBottom: 100}}>
-      <GalleryTitle variant="h4" component="h2" style={{color: "#fff"}}>
-        Our Gallery
-      </GalleryTitle>
       <GalleryGrid>
         {IMAGES.map((image, index) => (
           <GalleryItem key={`gallery-item-${index}`}>

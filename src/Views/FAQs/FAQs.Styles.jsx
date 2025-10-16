@@ -11,26 +11,28 @@ const useStyles = makeStyles((theme) => ({
         color: "#fff",
         maxWidth: 935,
         margin: "auto",
-        marginTop: 200,
+        marginTop: 180,
         marginBottom: 50,
         [theme.breakpoints.down("sm")]: {
             padding: theme.spacing(2),
         },
         [theme.breakpoints.down("xs")]: {
-            marginTop: theme.spacing(13),
+            marginTop: 80,
         },
     },
     title: {
-        fontSize: "2em",
-        fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+        fontSize: "3.5em",
         fontWeight: 600,
         color: "#fff",
-        marginBottom: theme.spacing(2),
+        textAlign: "center",
+        marginBottom: 50,
         [theme.breakpoints.down("sm")]: {
-            fontSize: "1.5em",
+            fontSize: "3em",
         },
         [theme.breakpoints.down("xs")]: {
-            marginTop: 30,
+            fontSize: "2em",
+            marginTop: 40,
+            marginBottom: 0,
         },
     },
     subheading: {
@@ -47,6 +49,9 @@ const useStyles = makeStyles((theme) => ({
     ctaBox: {
         marginTop: 35,
         marginBottom: 40,
+        [theme.breakpoints.down("xs")]: {
+            marginBottom: 0,
+        },
     },
     ctaText: {
         fontWeight: 600,

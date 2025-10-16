@@ -4,7 +4,7 @@ import { Grid, Typography, Box, Divider, Button, List, ListItem, ListItemIcon, L
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import useStyles from "./Locations.Styles";
 import GiantScreenImage from "../../Assets/Images/GalleryImages/gallery6.webp";
-import ConcessionsImage from "../../Assets/Images/e2.webp";
+import ConcessionsImage from "../../Assets/Images/concessions-image.webp";
 import FoodTruckImage from "../../Assets/Images/ice-cream-truck-two.webp";
 import CallToAction from "../../Components/CallToAction/CallToAction";
 import { Helmet } from "react-helmet";
