@@ -9,6 +9,7 @@ import GiantScreenImage from './../../../Assets/Images/giant-screen.jpg';
 import PoolImage from './../../../Assets/Images/pool.webp';
 import SmallScreenImage from './../../../Assets/Images/GalleryImages/gallery2.webp';
 import DoubleScreenImage from './../../../Assets/Images/double-movie-screen.webp';
+import SoundSystemImage from './../../../Assets/Images/sound.webp';
 import CallToAction from "./../../../Components/CallToAction/CallToAction";
 import useStyles from './MovieNightsOptions.Styles';
 import { Link } from 'react-router-dom';
@@ -34,22 +35,6 @@ function MovieNightsOptions() {
             ],
         },
         {
-            key: 'backyard',
-            to: '/movie-nights-options#backyard',
-            image: SmallScreenImage,
-            imageAlt: 'Inflatable Movie Screen for Rent AZ',
-            title: 'Backyard Movie Screen Rentals',
-            price: '$349.00',
-            subtitle: 'Perfect for home & small gatherings',
-            bullets: [
-                "9'x5′ screen ideal for up to 40 guests",
-                'Compact HD projector, easy media input',
-                '2-speaker audio for clear dialogue',
-                'Setup included—2 standard outlets needed',
-                'Plug-and-play: laptop/streaming ready',
-            ],
-        },
-        {
             key: 'small-event',
             to: '/movie-nights-options#small-event',
             image: SmallScreenImage,
@@ -63,7 +48,7 @@ function MovieNightsOptions() {
                 'Blu-Ray DVD Player & Mixer',
                 'Professional Staff for Event',
                 'Plug-and-play: laptop/streaming ready',
-            ],  
+            ],
         },
         {
             key: 'double-screen',
@@ -82,6 +67,22 @@ function MovieNightsOptions() {
             ],
         },
         {
+            key: 'backyard',
+            to: '/movie-nights-options#backyard',
+            image: SmallScreenImage,
+            imageAlt: 'Inflatable Movie Screen for Rent AZ',
+            title: 'Backyard Movie Screen Rentals',
+            price: '$349.00',
+            subtitle: 'Perfect for home & small gatherings',
+            bullets: [
+                "9'x5′ screen ideal for up to 40 guests",
+                'Compact HD projector, easy media input',
+                '2-speaker audio for clear dialogue',
+                'Setup included—2 standard outlets needed',
+                'Plug-and-play: laptop/streaming ready',
+            ],
+        },
+        {
             key: 'dive-in',
             to: '/movie-nights-options#dive-in',
             image: PoolImage,
@@ -94,6 +95,21 @@ function MovieNightsOptions() {
                 'Cable management & GFCI-safe setup',
                 'Optimized audio for pool environments',
                 'Full setup, On-Site Tech, Teardown',
+            ],
+        },
+        {
+            key: 'sound-system',
+            to: '/movie-nights-options#sound-system',
+            image: SoundSystemImage,
+            imageAlt: 'Sound system for rent Scottsdale, AZ',
+            title: 'Sound System Rental',
+            price: '$249.00',
+            subtitle: 'Powerful audio for any event',
+            bullets: [
+                'Pair of powered speakers',
+                'Wireless handheld microphone',
+                'Mixer + all necessary cables',
+                'Setup and basic sound check',
             ],
         },
     ];

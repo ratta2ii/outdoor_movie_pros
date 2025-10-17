@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        borderRight: "1px solid #1c222a",
+        borderRight: "1px solid #182134",
         [theme.breakpoints.down("md")]: { border: "none" },
         [theme.breakpoints.down("sm")]: { display: "none" },
     },
@@ -90,7 +90,7 @@ const useStyles = makeStyles((theme) => ({
     },
     copyrightGridItm: {
         backgroundColor: "#0d1117",
-        borderTop: "2px solid #1c222a",
+        borderTop: "2px solid #182134",
         height: 60,
         width: "100%",
         display: "flex",
@@ -100,7 +100,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("xs")]: { height: 60, marginTop: -50 },
     },
     copyrightSig: {
-        color: "#ffffff52",
+        color: "#485162",
         fontSize: 16,
         fontFamily: "monospace",
         [theme.breakpoints.down("xs")]: { fontSize: 12 },

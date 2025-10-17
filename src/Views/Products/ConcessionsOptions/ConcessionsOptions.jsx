@@ -6,14 +6,15 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions, Box, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import PopcornImage from './../../../Assets/Images/popcorn-machine.webp';
-import GeneratorImage from './../../../Assets/Images/generator.webp';
 import CottonCandyImage from './.././../../Assets/Images/product-cotton-candy.jpg';
 import ConcessionBoothImage from './.././../../Assets/Images/concession-booth.webp';
 import ConcessionStaffImage from './.././../../Assets/Images/concession-staff.webp';
+import SoundSystemImage from './.././../../Assets/Images/sound.webp';
 import LightTowersImage from './.././../../Assets/Images/light-tower.webp';
-import DrinkTroughImage from './.././../../Assets/Images/drink-trough.webp';
-import BottledWaterImage from './.././../../Assets/Images/bottled-water.webp';
+import GeneratorImage from './../../../Assets/Images/generator.webp';
 import GlowNecklacesImage from './.././../../Assets/Images/glow-necklaces.webp';
+import BottledWaterImage from './.././../../Assets/Images/bottled-water.webp';
+import DrinkTroughImage from './.././../../Assets/Images/drink-trough.webp';
 import WaterBarrelImage from './.././../../Assets/Images/water-barrel.webp';
 import CallToAction from "./../../../Components/CallToAction/CallToAction";
 import useStyles from './ConcessionsOptions.Styles';
@@ -53,21 +54,7 @@ function ConcessionsOptions() {
             ],
         },
         {
-            key: 'generators',
-            image: GeneratorImage,
-            imageAlt: 'Quiet inverter generator',
-            title: 'Generators',
-            subtitle: 'Quiet power for any venue',
-            price: '$69',
-            bullets: [
-                'Quiet inverter generators',
-                'Power for projector, audio, and screens',
-                'Cables & distro included',
-                'Fuel included for standard runtimes',
-            ],
-        },
-        {
-            key: 'Concession Booth',
+            key: 'concession-booth',
             image: ConcessionBoothImage,
             imageAlt: 'Concession Booth',
             title: 'Concession Booth',
@@ -79,7 +66,7 @@ function ConcessionsOptions() {
             ],
         },
         {
-            key: 'Concession Staff',
+            key: 'concession-staff',
             image: ConcessionStaffImage,
             imageAlt: 'Quiet inverter generator',
             title: 'Concession Staff',
@@ -87,7 +74,21 @@ function ConcessionsOptions() {
             price: '$150',
             bullets: [
                 'Professional Staff for Concession',
-                '**movie screen includes staff**',
+                '** Movie screen rentals include staff **',
+            ],
+        },
+        {
+            key: 'sound-system-addon',
+            image: SoundSystemImage,
+            imageAlt: 'Sound system for rent Scottsdale, AZ',
+            title: 'Sound System Rental',
+            price: '$249.00',
+            subtitle: 'Powerful audio for any event',
+            bullets: [
+                'Pair of powered speakers',
+                'Wireless handheld microphone',
+                'Mixer + all necessary cables',
+                'Setup and basic sound check',
             ],
         },
         {
@@ -102,14 +103,29 @@ function ConcessionsOptions() {
             ],
         },
         {
-            key: 'Drink Trough',
-            image: DrinkTroughImage,
-            imageAlt: 'Drink Trough for Beverages',
-            title: 'Drink Trough',
-            subtitle: 'Holds up to 200 drinks',
-            price: '$49',
+            key: 'generators',
+            image: GeneratorImage,
+            imageAlt: 'Quiet inverter generator',
+            title: 'Generators',
+            subtitle: 'Quiet power for any venue',
+            price: '$69',
             bullets: [
-                'Ice not included',
+                'Quiet inverter generators',
+                'Power for projector, audio, and screens',
+                'Cables & distro included',
+                'Fuel included for standard runtimes',
+            ],
+        },
+        {
+            key: 'Glow Necklaces',
+            image: GlowNecklacesImage,
+            imageAlt: 'glow necklaces for party',
+            title: 'Glow Necklaces',
+            subtitle: 'Brighten up any party',
+            price: '$39',
+            bullets: [
+                '22" necklaces',
+                '100 pack per order',
             ],
         },
         {
@@ -126,15 +142,15 @@ function ConcessionsOptions() {
             ],
         },
         {
-            key: 'Glow Necklaces',
-            image: GlowNecklacesImage,
-            imageAlt: 'glow necklaces for party',
-            title: 'Glow Necklaces',
-            subtitle: 'Brighten up any party',
-            price: '$39',
+            key: 'Drink Trough',
+            image: DrinkTroughImage,
+            imageAlt: 'Drink Trough for Beverages',
+            title: 'Drink Trough',
+            subtitle: 'Holds up to 200 drinks',
+            price: '$49',
             bullets: [
-                '22" necklaces',
-                '100 pack per order',
+                'Ice not included',
+                'Ice is an additional charge',
             ],
         },
         {
@@ -142,10 +158,10 @@ function ConcessionsOptions() {
             image: WaterBarrelImage,
             imageAlt: 'Water Barrel for anchoring',
             title: 'Water Barrel',
-            subtitle: 'for anchoring when sandbags and stakes do not work',
+            subtitle: 'Anchoring when sandbags and stakes do not work',
             price: '$25',
             bullets: [
-                'can bring pre-filled',
+                'We can bring pre-filled (upon request)',
             ],
         },
     ];

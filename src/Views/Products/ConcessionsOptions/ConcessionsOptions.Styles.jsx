@@ -81,6 +81,7 @@ const useStyles = makeStyles((theme) => ({
             padding: 40
         },
         [theme.breakpoints.down('xs')]: {
+            backgroundColor: "#101623 !important",
             padding: 20
         },
     },

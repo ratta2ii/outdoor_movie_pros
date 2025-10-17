@@ -220,7 +220,7 @@ function NavBar(props) {
     return (
         <nav style={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar component="nav" style={{ backgroundColor: '#0b0f18', minHeight: 80, paddingTop: 12, borderBottom: "5px solid #1c222a" }}>
+            <AppBar component="nav" style={{ backgroundColor: '#0b0f18', minHeight: 80, paddingTop: 12, borderBottom: "5px solid #182134" }}>
                 {isMobile ? (
                     <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
                         {/* Hamburger */}
