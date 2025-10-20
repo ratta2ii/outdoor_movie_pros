@@ -1,7 +1,7 @@
 {
     "name": "outdoor_movie_pros",
     "version": "0.1.0",
-    "homepage": "",
+    "homepage": "https://outdoormoviepros.com",
     "private": false,
     "dependencies": {
         "@emailjs/browser": "^3.11.0",
@@ -33,6 +33,7 @@
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
+        "postbuild": "react-snap",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "predeploy": "npm run build",
@@ -59,6 +60,36 @@
     },
     "devDependencies": {
         "ajv": "^8.17.1",
-        "env-cmd": "^10.1.0"
+        "env-cmd": "^10.1.0",
+        "react-snap": "^1.23.0"
+    },
+    "reactSnap": {
+        "include": [
+            "/",
+            "/faqs",
+            "/contact",
+            "/locations",
+            "/gallery",
+            "/movie-nights-options",
+            "/concessions-options",
+            "/ice-cream-food-truck",
+            "/mesa",
+            "/scottsdale",
+            "/tempe",
+            "/phoenix",
+            "/gilbert",
+            "/chandler",
+            "/paradise-valley",
+            "/glendale",
+            "/peoria",
+            "/queen-creek",
+            "/san-tan-valley",
+            "/tolleson",
+            "/buckeye",
+            "/goodyear",
+            "/anthem"
+        ],
+        "puppeteerArgs": ["--no-sandbox"],
+        "inlineCss": true
     }
 }

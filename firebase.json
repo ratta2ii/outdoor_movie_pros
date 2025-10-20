@@ -37,15 +37,6 @@
             "value": "max-age=31536000"
           }
         ]
-      },
-      {
-        "source": "**",
-        "headers": [
-          {
-            "key": "X-Prerender-Token",
-            "value": "TODO:ADD_NEW_TOKEN_HERE"
-          }
-        ]
       }
     ]
   },

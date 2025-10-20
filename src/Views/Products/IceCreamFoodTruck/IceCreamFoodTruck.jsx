@@ -369,10 +369,10 @@ const IceCreamFoodTruck = () => {
                                     variant="outlined"
                                     color="primary"
                                     className={classes.secondaryButton}
-                                    href="tel:4802861664"
+                                    href="tel:6026386510"
                                     aria-label="Call now to book the Food Truck Experience"
                                 >
-                                    (480) 286-1664
+                                    (602) 638-6510
                                 </Button>
                             </Box>
                         </Box>

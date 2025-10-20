@@ -171,7 +171,7 @@ function Locations() {
               </Typography>
               <Divider className={classes.divider} />
               <Typography variant="body1" className={classes.sectionText}>
-                Outdoor Movie Pros provides turnkey outdoor cinema experiences in{" "}
+                Outdoor Movie Pros provides outdoor movie screen rentals in{" "}
                 <span>{isGeneralAreaPage ? "the Phoenix metro area" : `${formattedCity}, and nearby areas`}</span>.
                 We bring the screen, bright HD projector, pro audio, and an on-site technician to set up, run, and tear
                 down your event. Choose front or rear projection, time the show around sunset, and enjoy a smooth,

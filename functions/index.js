@@ -25,30 +25,20 @@ exports.handleRequests = functions.https.onRequest((req, res) => {
       '/tolleson',
       '/buckeye',
       '/goodyear',
-      '/anthem',
+      '/anthem'
     ];
 
     const normalizedPath = req.path.replace(/\/$/, '') || '/';
     
     functions.logger.info(`Received request for: ${req.path}`, { structuredData: true });
 
-    // Detect crawlers (basic check for common bots)
-    const userAgent = req.headers['user-agent'] || '';
-    const isCrawler = /bot|googlebot|crawler|spider|robot|crawling|facebookexternalhit|twitterbot|linkedinbot/i.test(userAgent) || req.query._escaped_fragment_ !== undefined;
-
-    if (isCrawler && validRoutes.includes(normalizedPath)) {
-      // Placeholder for Prerender.io (to be implemented when token is available)
-      // Add prerendering logic here later
-      res.redirect(302, '/index.html');
-      return;
-    }
-
+    // For invalid routes, return 404
     if (!validRoutes.includes(normalizedPath)) {
       res.status(404).send(`<!DOCTYPE html>
         <html lang="en">
         <head>
           <meta charset="UTF-8">
-          <title>404 Not Found</title>
+          <title>404 Not Found - Outdoor Movie Pros</title>
           <meta name="robots" content="noindex, nofollow" />
         </head>
         <body style="font-family:sans-serif;text-align:center;padding:50px;">
@@ -59,6 +49,8 @@ exports.handleRequests = functions.https.onRequest((req, res) => {
       return;
     }
 
+    // For valid routes, rely on Firebase Hosting to serve react-snap static files
+    // or redirect to /index.html for SPA routing
     res.redirect(302, '/index.html');
   } catch (error) {
     functions.logger.error('Error handling request:', error, { structuredData: true });
@@ -66,7 +58,7 @@ exports.handleRequests = functions.https.onRequest((req, res) => {
       <html lang="en">
       <head>
         <meta charset="UTF-8">
-        <title>500 Internal Server Error</title>
+        <title>500 Internal Server Error - Outdoor Movie Pros</title>
         <meta name="robots" content="noindex, nofollow" />
       </head>
       <body style="font-family:sans-serif;text-align:center;padding:50px;">

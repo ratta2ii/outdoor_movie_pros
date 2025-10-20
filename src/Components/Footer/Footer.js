@@ -171,8 +171,8 @@ const Footer = (props) => {
                         <Box className={classes.infoLine}>
                             <i className={`fas fa-phone ${classes.infoIcon}`}></i>
                             <Typography className={classes.infoText}>
-                                <a href="tel:4802861664" style={{ color: "#efefef", textDecoration: "none", fontSize: 18 }}>
-                                    480-286-1664
+                                <a href="tel:6026386510" style={{ color: "#efefef", textDecoration: "none", fontSize: 18 }}>
+                                    602-638-6510
                                 </a>
                             </Typography>
                         </Box>
