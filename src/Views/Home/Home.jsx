@@ -4,61 +4,69 @@ import CallToAction from './../../Components/CallToAction/CallToAction';
 import { Box } from '@mui/material';
 import useStyles from './Home.Styles';
 
-
 function Home() {
-    const classes = useStyles();
-    return (
-        <section>
-            <Helmet>
-                <title>Outdoor Movie Nights in Phoenix | Outdoor Movie Pros</title>
-                <meta
-                    name="description"
-                    content="Outdoor Movie Pros offers outdoor movie rentals, concessions, and a food truck with ice cream sundaes and coffee in Phoenix, AZ. Bring outdoor movie magic with HD projection, pro audio, and full setup."
-                />
-                <meta name="robots" content="index, follow" />
-                <link rel="canonical" href="https://outdoormoviepros.com" />
+  const classes = useStyles();
 
-                {/* Open Graph */}
-                <meta property="og:title" content="Outdoor Movie Nights in Phoenix | Outdoor Movie Pros" />
-                <meta
-                    property="og:description"
-                    content="Outdoor movie rentals, concessions, and a food truck with ice cream sundaes and coffee in Phoenix. HD projection, pro audio, full setup & teardown."
-                />
-                <meta property="og:type" content="website" />
-                <meta property="og:site_name" content="Outdoor Movie Pros" />
-                <meta property="og:url" content="https://outdoormoviepros.com" />
-                <meta property="og:image" content="https://outdoormoviepros.com/company-logo.webp" />
-                <meta property="og:image:alt" content="Outdoor Movie Pros company logo" />
+  return (
+    <section>
+      <Helmet>
+        {/* Title uses App.js titleTemplate to append the brand */}
+        <title>Inflatable Outdoor Movie Screen Rentals in Phoenix</title>
 
-                {/* Twitter */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Outdoor Movie Nights in Phoenix | Outdoor Movie Pros" />
-                <meta
-                    name="twitter:description"
-                    content="Outdoor movie rentals, concessions, and a food truck with ice cream sundaes and coffee in Phoenix. HD projection, pro audio, setup & teardown."
-                />
-                <meta name="twitter:image" content="https://outdoormoviepros.com/company-logo.webp" />
-                <meta name="author" content="Outdoor Movie Pros" />
-            </Helmet>
+        <meta
+          name="description"
+          content="Inflatable outdoor movie screen rentals in Phoenix and nearby cities. Full-service backyard and park movie nights with HD projector, pro sound, setup and teardown."
+        />
+        <meta name="robots" content="index,follow" />
 
-            <header className="sr-only">
-                Outdoor movie nights with big screens, HD projection & pro audio—plus concessions and a food truck serving ice cream sundaes and coffee in Phoenix, AZ.
-            </header>
-            <main>
-                <Box className={classes.titleBox}>
-                    <h1 className={classes.title}>
-                        Outdoor Movie Nights • Concessions • Ice Cream Sundaes & Coffee Food Truck
-                    </h1>
-                    <h2 className={classes.subTitle}>
-                        Perfect for homeowners, corporate events, HOAs, schools, churches, parks & rec, apartment communities, festivals, fundraisers, birthdays, graduations, block parties & more.
-                    </h2>
-                </Box>
-                <Services />
-                {/* Call to Action */}
-                <CallToAction />
-            </main>
-        </section>
-    );
+        {/* Canonical: no trailing slash */}
+        <link rel="canonical" href="https://outdoormoviepros.com" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Outdoor Movie Pros" />
+        <meta property="og:url" content="https://outdoormoviepros.com" />
+        <meta property="og:title" content="Inflatable Outdoor Movie Screen Rentals in Phoenix" />
+        <meta
+          property="og:description"
+          content="Full-service outdoor movie night rentals—inflatable screens, HD projector, and pro audio for backyards, parks, schools, and HOAs."
+        />
+        <meta property="og:image" content="https://outdoormoviepros.com/company-logo.webp" />
+        <meta property="og:image:alt" content="Outdoor Movie Pros company logo" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Inflatable Outdoor Movie Screen Rentals in Phoenix" />
+        <meta
+          name="twitter:description"
+          content="Backyard & park movie night packages with inflatable screens, projector, and pro sound. We deliver, set up, and run the show."
+        />
+        <meta name="twitter:image" content="https://outdoormoviepros.com/company-logo.webp" />
+
+        <meta name="author" content="Outdoor Movie Pros" />
+      </Helmet>
+
+      {/* Accessible, SEO-aligned headings (no concessions/food-truck here) */}
+      <header className="sr-only">
+        Inflatable outdoor movie screen rentals with HD projection and professional audio in Phoenix, AZ and nearby cities.
+      </header>
+
+      <main>
+        <Box className={classes.titleBox}>
+          <h1 className={classes.title}>
+            Inflatable Outdoor Movie Screen Rentals in Phoenix
+          </h1>
+          <h2 className={classes.subTitle}>
+            Backyard & park movie nights with HD projector, pro sound, delivery, setup, on-site tech, and teardown.
+            Serving Phoenix, Scottsdale, Mesa, Chandler, Gilbert, Tempe, Glendale & Peoria.
+          </h2>
+        </Box>
+
+        <Services />
+        <CallToAction />
+      </main>
+    </section>
+  );
 }
 
 export default Home;

@@ -53,7 +53,7 @@ function MovieNightsOptions() {
         {
             key: 'double-screen',
             to: '/movie-nights-options#double-screen',
-            image: DoubleScreenImage, // Fixed typo: GiantScasdfreenImage -> GiantScreenImage
+            image: DoubleScreenImage,
             imageAlt: 'Big Inflatable Movie Screens for Large Events in Arizona',
             title: 'Double Screen Movie Night',
             price: '$1,099.00',
@@ -117,66 +117,67 @@ function MovieNightsOptions() {
     return (
         <main>
             <Helmet>
-                <title>Outdoor Movie Night Rental Options | Outdoor Movie Pros</title>
+                {/* Title uses App.js titleTemplate to append brand automatically */}
+                <title>Outdoor Movie Night & Inflatable Screen Packages in Phoenix</title>
+
                 <meta
                     name="description"
-                    content="Backyard to big-crowd outdoor movie packages in Phoenix—screens, HD projection, QSC sound, on-site tech, setup & teardown. Explore options for any event."
+                    content="Browse outdoor movie packages in Phoenix: backyard screens, giant inflatable screens, dive-in pool movies, and double-screen events. HD projector, pro sound, delivery, setup, on-site tech, and teardown."
                 />
-                <meta name="robots" content="index, follow" />
+                <meta name="robots" content="index,follow" />
                 <link rel="canonical" href="https://outdoormoviepros.com/movie-nights-options" />
 
                 {/* Open Graph */}
-                <meta property="og:title" content="Outdoor Movie Night Rental Options | Outdoor Movie Pros" />
-                <meta
-                    property="og:description"
-                    content="From backyard screens to double-screen events—browse outdoor movie packages with HD projection and pro audio in Phoenix."
-                />
                 <meta property="og:type" content="website" />
                 <meta property="og:site_name" content="Outdoor Movie Pros" />
                 <meta property="og:url" content="https://outdoormoviepros.com/movie-nights-options" />
+                <meta property="og:title" content="Backyard Movie Night & Inflatable Screen Packages in Phoenix" />
+                <meta
+                    property="og:description"
+                    content="Outdoor movie night packages with inflatable screens, HD projector, and pro audio. Options for backyards, parks, schools, churches, HOAs, and pool parties."
+                />
                 <meta property="og:image" content="https://outdoormoviepros.com/company-logo.webp" />
                 <meta property="og:image:alt" content="Outdoor Movie Pros logo" />
+
+                {/* Twitter */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Backyard Movie Night & Inflatable Screen Packages in Phoenix" />
+                <meta
+                    name="twitter:description"
+                    content="Choose from backyard screens to giant inflatable and double-screen setups. Projector, sound, delivery, setup, and on-site tech included."
+                />
+                <meta name="twitter:image" content="https://outdoormoviepros.com/company-logo.webp" />
             </Helmet>
 
-            {/* sr-only heading for SEO/a11y */}
+            {/* sr-only heading for SEO/a11y (tight, keyword-aligned) */}
             <h1 className="sr-only">
-                Outdoor movie night rental options in Phoenix — backyard, community, school, church, pool parties, and double screen packages
+                Inflatable outdoor movie screen packages in Phoenix for parks, schools, churches, HOAs, backyards, and pool parties.
             </h1>
 
+            {/* Visible page title */}
             <Box className={classes.titleBox}>
                 <h1 className={classes.title}>
-                    Outdoor Movie Nights — Backyard • Corporate • HOA • Pool Parties • Schools • Churches • Community Events
+                    Outdoor Movie Night Packages in Phoenix Arizona and the surrounding areas.
                 </h1>
+                <h2 className={classes.subTitle}>
+                    Outdoor park movie nights, backyard movie nights, giant inflatable screens, dive-in pool movies, and double-screen movie events. HD projector, pro sound, delivery, setup, on-site tech, and teardown.
+                </h2>
             </Box>
 
+            {/* Packages grid */}
             <Grid container spacing={4} alignItems="stretch" justifyContent="center" className={classes.gridContainer}>
                 {cards.map(({ key, to, image, imageAlt, title, price, subtitle, bullets }) => (
                     <Grid item xs={12} md={4} key={key}>
                         <Card className={classes.card} style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                             <Link to={to} style={{ textDecoration: 'none', flexGrow: 1, display: 'flex' }}>
                                 <CardActionArea style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-                                    <CardMedia
-                                        component="img"
-                                        height="275"
-                                        image={image}
-                                        alt={imageAlt}
-                                    />
+                                    <CardMedia component="img" height="275" image={image} alt={imageAlt} />
                                     <CardContent style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-                                        <Typography
-                                            gutterBottom
-                                            variant="h2"
-                                            component="h2"
-                                            className={classes.cardTitle}
-                                            style={{ fontFamily: 'inherit' }}
-                                        >
+                                        <Typography gutterBottom variant="h2" component="h2" className={classes.cardTitle} style={{ fontFamily: 'inherit' }}>
                                             {title}
                                         </Typography>
 
-                                        <Typography
-                                            variant="h3"
-                                            component="h3"
-                                            className={classes.cardSubtitle}
-                                        >
+                                        <Typography variant="h3" component="h3" className={classes.cardSubtitle}>
                                             {subtitle}
                                         </Typography>
 
@@ -195,24 +196,14 @@ function MovieNightsOptions() {
 
                                         {/* Bottom block pinned above the buttons */}
                                         <Box style={{ marginTop: 'auto' }}>
-                                            <Typography
-                                                variant="h4"
-                                                component="p"
-                                                className={classes.cardPrice}
-                                                aria-label={`${price}`}
-                                            >
+                                            <Typography variant="h4" component="p" className={classes.cardPrice} aria-label={`${price}`}>
                                                 {price}
                                             </Typography>
 
-                                            <Typography
-                                                variant="body2"
-                                                component="p"
-                                                className={classes.quoteNote}
-                                                style={{ color: '#444', marginBottom: 0 }}
-                                            >
+                                            <Typography variant="body2" component="p" className={classes.quoteNote} style={{ color: '#444', marginBottom: 0 }}>
                                                 Final quote determined by event location and{' '}
                                                 <Link to="/concessions-options" className={classes.addOnsLink}>
-                                                    Concessions and Equipment Add-Ons
+                                                    Equipment Add-Ons & Concessions
                                                 </Link>
                                             </Typography>
                                         </Box>
@@ -246,6 +237,23 @@ function MovieNightsOptions() {
                     </Grid>
                 ))}
             </Grid>
+
+            {/* Outdoor Movie Nights explanatory section (keyword-supporting, human-first) */}
+            <Box component="section" className={classes.infoSection} sx={{ maxWidth: 1100, mx: 'auto', mt: 6, px: 2, color: '#fff' }}>
+                <Typography variant="h2" component="h2" className={classes.infoTitle} gutterBottom>
+                    What’s Included with Our Outdoor Movie Night Rentals
+                </Typography>
+                <Typography variant="body1" component="p" paragraph style={{  }}>
+                    Every inflatable outdoor movie screen package includes an HD projector matched to your screen size, professional QSC audio, delivery and complete setup, an on-site technician to run the show, and teardown after the credits. We service backyards, parks, schools, churches, HOAs, and community venues across the Phoenix metro.
+                </Typography>
+                <List className={classes.infoList}>
+                    <ListItem><ListItemIcon><CheckCircleIcon className={classes.icon} /></ListItemIcon><ListItemText primary="Inflatable movie screen sized for your crowd and viewing distance" /></ListItem>
+                    <ListItem><ListItemIcon><CheckCircleIcon className={classes.icon} /></ListItemIcon><ListItemText primary="HD projector brightness tuned for outdoor viewing" /></ListItem>
+                    <ListItem><ListItemIcon><CheckCircleIcon className={classes.icon} /></ListItemIcon><ListItemText primary="Pro audio with mixer and pre-show music" /></ListItem>
+                    <ListItem><ListItemIcon><CheckCircleIcon className={classes.icon} /></ListItemIcon><ListItemText primary="On-site tech from setup through teardown" /></ListItem>
+                    <ListItem><ListItemIcon><CheckCircleIcon className={classes.icon} /></ListItemIcon><ListItemText primary="Simple media hookup: laptop, streaming device, or Blu-ray" /></ListItem>
+                </List>
+            </Box>
 
             <CallToAction />
         </main>

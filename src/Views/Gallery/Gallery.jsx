@@ -20,20 +20,20 @@ import GalleryImage13 from './../../Assets/Images/GalleryImages/gallery13.webp';
 import GalleryImage14 from './../../Assets/Images/GalleryImages/gallery14.webp';
 
 const IMAGES = [
-  { src: GalleryImage1, alt: 'Outdoor Movie Pros gallery image 1' },
-  { src: GalleryImage2, alt: 'Outdoor Movie Pros gallery image 2' },
-  { src: GalleryImage3, alt: 'Outdoor Movie Pros gallery image 3' },
-  { src: GalleryImage4, alt: 'Outdoor Movie Pros gallery image 4' },
-  { src: GalleryImage5, alt: 'Outdoor Movie Pros gallery image 5' },
-  { src: GalleryImage6, alt: 'Outdoor Movie Pros gallery image 6' },
-  { src: GalleryImage7, alt: 'Outdoor Movie Pros gallery image 7' },
-  { src: GalleryImage8, alt: 'Outdoor Movie Pros gallery image 8' },
-  { src: GalleryImage9, alt: 'Outdoor Movie Pros gallery image 9' },
-  { src: GalleryImage10, alt: 'Outdoor Movie Pros gallery image 10' },
-  { src: GalleryImage11, alt: 'Outdoor Movie Pros gallery image 11' },
-  { src: GalleryImage12, alt: 'Outdoor Movie Pros gallery image 12' },
-  { src: GalleryImage13, alt: 'Outdoor Movie Pros gallery image 13' },
-  { src: GalleryImage14, alt: 'Outdoor Movie Pros gallery image 14' },
+  { src: GalleryImage1, alt: 'Outdoor movie night setup in Phoenix' },
+  { src: GalleryImage2, alt: 'Inflatable outdoor movie screen at a community event' },
+  { src: GalleryImage3, alt: 'Backyard outdoor movie night with projector and screen' },
+  { src: GalleryImage4, alt: 'Large inflatable screen for park movie night' },
+  { src: GalleryImage5, alt: 'Outdoor cinema audience enjoying a movie in Phoenix' },
+  { src: GalleryImage6, alt: 'Outdoor movie screen and audio setup at sunset' },
+  { src: GalleryImage7, alt: 'Neighborhood outdoor movie night with inflatable screen' },
+  { src: GalleryImage8, alt: 'Outdoor projector and screen rental in use' },
+  { src: GalleryImage9, alt: 'Inflatable movie screen at a school field' },
+  { src: GalleryImage10, alt: 'Outdoor movie night with professional audio' },
+  { src: GalleryImage11, alt: 'Backyard inflatable movie screen during evening' },
+  { src: GalleryImage12, alt: 'Community outdoor movie with large screen' },
+  { src: GalleryImage13, alt: 'Outdoor cinema setup with HD projector' },
+  { src: GalleryImage14, alt: 'Park movie night using inflatable screen' },
 ];
 
 // Styled components for the gallery
@@ -98,45 +98,36 @@ const GalleryItem = styled(Box)`
   }
 `;
 
-// const GalleryTitle = styled(Typography)`
-//   text-align: center;
-//   margin-bottom: 2rem;
-//   font-weight: 700;
-//   color: #333;
-
-//   @media (max-width: 600px) {
-//     font-size: 1.5rem;
-//   }
-// `;
-
 const Gallery = () => {
   return (
     <GalleryContainer>
       <Helmet>
-        <title>Event Gallery | Outdoor Movie Pros</title>
+        {/* Title uses App.js titleTemplate to append brand automatically */}
+        <title>Outdoor Movie Night Photos | Phoenix Inflatable Movie Screens</title>
+
         <meta
           name="description"
-          content="Photos from outdoor movie nights, concessions, and our food truck serving ice cream sundaes and coffee in Phoenix. See the outdoor movie magic in action."
+          content="See photos of outdoor movie nights across Phoenix—inflatable movie screens, HD projection, professional audio, and full-service setups."
         />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="index,follow" />
         <link rel="canonical" href="https://outdoormoviepros.com/gallery" />
 
         {/* Open Graph */}
-        <meta property="og:title" content="Event Gallery | Outdoor Movie Pros" />
-        <meta
-          property="og:description"
-          content="Outdoor movies, concessions, and a food truck with ice cream sundaes and coffee in Phoenix—browse our gallery."
-        />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Outdoor Movie Pros" />
         <meta property="og:url" content="https://outdoormoviepros.com/gallery" />
+        <meta property="og:title" content="Outdoor Movie Night Photos | Phoenix Inflatable Screens" />
+        <meta
+          property="og:description"
+          content="Browse outdoor movie night images from Phoenix events: inflatable screens, HD projectors, and pro audio setups."
+        />
         <meta property="og:image" content="https://outdoormoviepros.com/company-logo.webp" />
         <meta property="og:image:alt" content="Outdoor Movie Pros logo" />
       </Helmet>
 
-      {/* sr-only heading for SEO/a11y (not visible) */}
+      {/* sr-only heading focused strictly on outdoor movie nights */}
       <h1 className="sr-only">
-        Gallery — outdoor movie nights, concessions, and a food truck with ice cream sundaes and coffee in Phoenix Arizona
+        Outdoor movie night photo gallery for Phoenix and nearby cities
       </h1>
 
       <GalleryGrid>

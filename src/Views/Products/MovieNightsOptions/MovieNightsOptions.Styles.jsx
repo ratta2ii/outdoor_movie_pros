@@ -181,6 +181,26 @@ const useStyles = makeStyles((theme) => ({
             height: 40,
         }
     },
+    infoSection: {
+        marginTop: "115px !important",
+        marginBottom: "-40px !important",
+        [theme.breakpoints.down('xs')]: {
+            marginTop: "60px !important",
+        }
+    },
+    infoTitle: {
+        fontSize: '2.4em !important',
+        marginBottom: "25px !important",
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '2em !important',
+            marginBottom: "25px !important",
+
+        }
+    },
+    infoList: {
+        margin: "0px !important",
+        padding: "0px !important",
+    },
 }));
 
 export default useStyles;

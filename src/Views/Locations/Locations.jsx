@@ -39,96 +39,98 @@ function Locations() {
           )
           .join(" ")
           .replace("d' ", "d'");
-        return `${formatted}, Arizona`;
+        return `${formatted}, AZ`;
       })()
     : null;
 
-  // For canonical/og:url
+  // For canonical/og:url (no trailing slash policy)
   const pathForSeo = isGeneralAreaPage ? "/locations" : `/${city}`;
 
-  // Shorter title label (e.g., "Queen Creek" instead of "Queen Creek, Arizona")
-  const cityShort = formattedCity ? formattedCity.replace(", Arizona", "") : "Phoenix Metro";
+  // Shorter label (e.g., "Queen Creek")
+  const cityShort = formattedCity ? formattedCity.replace(", AZ", "") : "Phoenix Metro";
 
   const regionLabel = "Phoenix Metro Area, including Maricopa, Pinal, and surrounding counties";
 
-  const mainTitle = isGeneralAreaPage ? (
-    <>
-      Outdoor Movie Pros offers Outdoor Movie Nights, Concessions, and an Ice Cream Food Truck.{" "}
-      <span style={{ color: "#fff798", textDecoration: "underline", fontWeight: 600 }}>
-        Our Service Areas include all of {regionLabel}
-      </span>
-      .
-    </>
-  ) : (
-    <>
-      Outdoor Movie Pros offers Outdoor Movie Nights, Concessions, and an Ice Cream Food Truck in{" "}
-      <span style={{ color: "#fff798", textDecoration: "underline", fontWeight: 600 }}>
-        {formattedCity}, and the Surrounding Areas
-      </span>
-      . Our Service Areas include all of {regionLabel}.
-    </>
-  );
+  // Visible H1 text (keyword-forward but still human)
+  const visibleH1 = isGeneralAreaPage
+    ? "Outdoor Movie Screen Rentals Near Me — Phoenix Metro"
+    : `Inflatable Outdoor Movie Screen Rentals in ${formattedCity}`;
+
+  // Subhead / intro (can mention concessions/food truck; not in SEO)
+  const introCopy = isGeneralAreaPage
+    ? (
+      <>
+        We serve the entire {regionLabel}. Book an outdoor movie night, add concessions, or bring our ice cream sundae & coffee food truck to your next event.
+      </>
+    ) : (
+      <>
+        We serve {formattedCity} and nearby communities. Book an outdoor movie night, add concessions, or bring our ice cream sundae & coffee food truck to your next event.
+      </>
+    );
 
   return (
     <section className={classes.root}>
-      {/* Dynamic SEO for city pages and the general service-area page */}
+      {/* Dynamic SEO for city pages and the general service-area page (movie-rental focused only) */}
       <Helmet>
         <title>
           {isGeneralAreaPage
-            ? "Service Areas in Phoenix Metro | Outdoor Movie Pros"
-            : `Outdoor Movies in ${cityShort} | Outdoor Movie Pros`}
+            ? "Outdoor Movie Screen Rentals Near Me | Phoenix Metro Locations"
+            : `Inflatable Outdoor Movie Screen Rentals in ${cityShort}, AZ`}
         </title>
 
         <meta
           name="description"
           content={
             isGeneralAreaPage
-              ? "Outdoor Movie Pros serves the Phoenix metro with outdoor movie nights, concessions, and a food truck with ice cream sundaes and coffee. HD projection, pro audio, full setup."
-              : `Outdoor Movie Pros provides outdoor movie nights, concessions, and a food truck with ice cream sundaes and coffee in ${formattedCity}. HD projection, pro audio, full setup.`
+              ? "Find inflatable outdoor movie screen rentals near you across the Phoenix metro. Full-service backyard and park movie nights with HD projector, pro sound, setup, on-site tech, and teardown."
+              : `Inflatable outdoor movie screen rentals in ${formattedCity}. Full-service backyard and park movie nights with HD projector, pro sound, setup, on-site tech, and teardown.`
           }
         />
-
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="index,follow" />
         <link rel="canonical" href={`https://outdoormoviepros.com${pathForSeo}`} />
 
         {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Outdoor Movie Pros" />
+        <meta property="og:url" content={`https://outdoormoviepros.com${pathForSeo}`} />
         <meta
           property="og:title"
           content={
             isGeneralAreaPage
-              ? "Service Areas in Phoenix Metro | Outdoor Movie Pros"
-              : `Outdoor Movies in ${cityShort} | Outdoor Movie Pros`
+              ? "Outdoor Movie Screen Rentals Near Me | Phoenix Metro Locations"
+              : `Inflatable Outdoor Movie Screen Rentals in ${cityShort}, AZ`
           }
         />
         <meta
           property="og:description"
           content={
             isGeneralAreaPage
-              ? "Outdoor movies, concessions, and a food truck with ice cream sundaes and coffee across the Phoenix metro. HD projection, pro audio, full setup & teardown."
-              : `Outdoor movies, concessions, and a food truck with ice cream sundaes and coffee in ${formattedCity}. HD projection, pro audio, full setup & teardown.`
+              ? "Inflatable outdoor movie screen rentals across Phoenix metro—HD projector, pro sound, delivery, setup, on-site tech, and teardown."
+              : `Inflatable outdoor movie screen rentals in ${formattedCity}—HD projector, pro sound, delivery, setup, on-site tech, and teardown.`
           }
         />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Outdoor Movie Pros" />
-        <meta property="og:url" content={`https://outdoormoviepros.com${pathForSeo}`} />
         <meta property="og:image" content="https://outdoormoviepros.com/company-logo.webp" />
         <meta property="og:image:alt" content="Outdoor Movie Pros logo" />
       </Helmet>
 
-      {/* sr-only heading for SEO/a11y */}
+      {/* sr-only heading for SEO/a11y: strict to rentals & near-me intent */}
       <h1 className="sr-only">
         {isGeneralAreaPage
-          ? "Outdoor movies, concessions, and a food truck with ice cream sundaes and coffee in the Phoenix metro area"
-          : `Outdoor movies, concessions, and a food truck with ice cream sundaes and coffee in ${formattedCity}`}
+          ? "Inflatable outdoor movie screen rentals near me in the Phoenix metro area"
+          : `Inflatable outdoor movie screen rentals in ${formattedCity}`}
       </h1>
 
+      {/* Visible header */}
       <header className={classes.header}>
         <Box className={classes.titleBox}>
           <Typography variant="h1" className={classes.title}>
-            {mainTitle}
+            {visibleH1}
           </Typography>
           <Typography className={classes.subText}>
-            Ready to schedule your event<span>{isGeneralAreaPage ? "" : ` in ${formattedCity}`}</span>?
+            {introCopy}
+            <br />
+            <br />
+            Ready to schedule your event{isGeneralAreaPage ? "" : ` in ${cityShort}`}?
             <br />
             <a href="tel:+16026386510" className={`${classes.phoneLink}`}>
               (602) 638-6510
@@ -143,22 +145,13 @@ function Locations() {
           <Grid container spacing={6} alignItems="center">
             <Grid item xs={12} md={5}>
               <Box className={classes.imageButtonWrapper}>
-                {/* alt updated: outdoor movie screen context + dynamic geography */}
                 <img
                   src={GiantScreenImage}
-                  alt={`Outdoor movie screen setup${
-                    isGeneralAreaPage ? " in the Phoenix metro area" : ` in ${formattedCity}`
-                  }`}
+                  alt={`Outdoor movie screen setup${isGeneralAreaPage ? " in the Phoenix metro area" : ` in ${formattedCity}`}`}
                   className={classes.sectionImage}
                 />
                 <Box className={classes.buttonContainerDesktop}>
-                  {/* CHANGED: single CTA */}
-                  <Button
-                    size="medium"
-                    className={classes.contactButton}
-                    component={Link}
-                    to="/movie-nights-options"
-                  >
+                  <Button size="medium" className={classes.contactButton} component={Link} to="/movie-nights-options">
                     View Options
                   </Button>
                 </Box>
@@ -171,18 +164,17 @@ function Locations() {
               </Typography>
               <Divider className={classes.divider} />
               <Typography variant="body1" className={classes.sectionText}>
-                Outdoor Movie Pros provides outdoor movie screen rentals in{" "}
-                <span>{isGeneralAreaPage ? "the Phoenix metro area" : `${formattedCity}, and nearby areas`}</span>.
-                We bring the screen, bright HD projector, pro audio, and an on-site technician to set up, run, and tear
-                down your event. Choose front or rear projection, time the show around sunset, and enjoy a smooth,
-                professional presentation guests will love.
+                Book an outdoor movie night {isGeneralAreaPage ? "anywhere in the Phoenix metro" : `in ${formattedCity} and nearby areas`}.
+                We provide the inflatable screen, bright HD projector, professional audio, delivery and setup,
+                an on-site technician to run the show, and teardown after the credits. It’s the easiest way to host a
+                backyard, school, church, HOA, or park movie night near you.
               </Typography>
               <List className={classes.bulletList}>
                 {[
-                  "Multiple screen sizes for any crowd",
-                  "HD projector with easy media hookup",
-                  "Pro PA speakers & pre-show music",
-                  "Full setup, on-site tech & teardown",
+                  "Inflatable screen sizes for small yards to large crowds",
+                  "HD projector with simple laptop/streaming hookup",
+                  "Pro PA speakers, mixer & pre-show music",
+                  "Delivery, setup, on-site tech & teardown included",
                 ].map((item, i) => (
                   <ListItem key={i} className={classes.listItem}>
                     <ListItemIcon>
@@ -193,13 +185,7 @@ function Locations() {
                 ))}
               </List>
               <Box className={classes.buttonContainerMobile}>
-                {/* CHANGED: single CTA (mobile) */}
-                <Button
-                  size="medium"
-                  className={classes.contactButton}
-                  component={Link}
-                  to="/movie-nights-options"
-                >
+                <Button size="medium" className={classes.contactButton} component={Link} to="/movie-nights-options">
                   View Options
                 </Button>
               </Box>
@@ -207,28 +193,19 @@ function Locations() {
           </Grid>
         </Grid>
 
-        {/* Section 2: Concessions & Add-Ons */}
+        {/* Section 2: Concessions & Add-Ons (content OK here, not in SEO) */}
         <Grid item xs={12} id="productivity-section" className={classes.serviceSection}>
           <Grid container spacing={6} alignItems="center">
             <Grid item xs={12} md={5}>
               <Box className={classes.imageButtonWrapper}>
-                {/* alt updated: concessions table context + dynamic geography */}
                 <img
                   src={ConcessionsImage}
-                  alt={`Concessions setup (popcorn, candy, drinks)${
-                    isGeneralAreaPage ? " in the Phoenix metro area" : ` in ${formattedCity}`
-                  }`}
+                  alt={`Concessions setup (popcorn, candy, drinks)${isGeneralAreaPage ? " in the Phoenix metro area" : ` in ${formattedCity}`}`}
                   className={classes.sectionImage}
                   loading="lazy"
                 />
                 <Box className={classes.buttonContainerDesktop}>
-                  {/* CHANGED: single CTA */}
-                  <Button
-                    size="medium"
-                    className={classes.contactButton}
-                    component={Link}
-                    to="/concessions-options"
-                  >
+                  <Button size="medium" className={classes.contactButton} component={Link} to="/concessions-options">
                     View Options
                   </Button>
                 </Box>
@@ -241,11 +218,9 @@ function Locations() {
               </Typography>
               <Divider className={classes.divider} />
               <Typography variant="body1" className={classes.sectionText}>
-                Elevate your movie night with fresh popcorn, sweet treats, and convenient equipment add-ons. We offer
-                concessions, seating, generators, microphones, sponsor slides, and more—everything you need to keep the
-                crowd happy in{" "}
-                <span>{isGeneralAreaPage ? "the Phoenix metro area" : `${formattedCity}`}</span>. Build a package that
-                fits your audience, venue, and budget.
+                Elevate your movie night with fresh popcorn, sweet treats, and helpful equipment add-ons.
+                Choose concessions, seating, generators, microphones, sponsor slides, and more—available
+                {isGeneralAreaPage ? " across the Phoenix metro." : ` in ${formattedCity}.`}
               </Typography>
               <List className={classes.bulletList}>
                 {[
@@ -263,13 +238,7 @@ function Locations() {
                 ))}
               </List>
               <Box className={classes.buttonContainerMobile}>
-                {/* CHANGED: single CTA (mobile) */}
-                <Button
-                  size="medium"
-                  className={classes.contactButton}
-                  component={Link}
-                  to="/concessions-options"
-                >
+                <Button size="medium" className={classes.contactButton} component={Link} to="/concessions-options">
                   View Options
                 </Button>
               </Box>
@@ -277,28 +246,19 @@ function Locations() {
           </Grid>
         </Grid>
 
-        {/* Section 3: Ice Cream & Coffee Food Truck */}
+        {/* Section 3: Ice Cream & Coffee Food Truck (content OK here, not in SEO) */}
         <Grid item xs={12} id="system-inspection-section" className={classes.serviceSection} style={{ marginBottom: -15 }}>
           <Grid container spacing={6} alignItems="center">
             <Grid item xs={12} md={5}>
               <Box className={classes.imageButtonWrapper}>
-                {/* alt updated: ice cream & coffee truck context + dynamic geography */}
                 <img
                   src={FoodTruckImage}
-                  alt={`Ice cream & coffee food truck serving events${
-                    isGeneralAreaPage ? " in the Phoenix metro area" : ` in ${formattedCity}`
-                  }`}
+                  alt={`Ice cream & coffee food truck serving events${isGeneralAreaPage ? " in the Phoenix metro area" : ` in ${formattedCity}`}`}
                   className={classes.sectionImage}
                   loading="lazy"
                 />
                 <Box className={classes.buttonContainerDesktop}>
-                  {/* CHANGED: single CTA */}
-                  <Button
-                    size="medium"
-                    className={classes.contactButton}
-                    component={Link}
-                    to="/ice-cream-food-truck"
-                  >
+                  <Button size="medium" className={classes.contactButton} component={Link} to="/ice-cream-food-truck">
                     Learn More
                   </Button>
                 </Box>
@@ -311,11 +271,9 @@ function Locations() {
               </Typography>
               <Divider className={classes.divider} />
               <Typography variant="body1" className={classes.sectionText}>
-                Add a memorable treat to your movie night with our full-service ice cream and coffee truck. From
-                build-your-own sundaes and novelties to espresso, lattes, and cold brew, we serve guests quickly and
-                professionally in{" "}
-                <span>{isGeneralAreaPage ? "the Phoenix metro area" : `${formattedCity} and the surrounding areas`}</span>.
-                Dairy-free options are available.
+                Add a memorable treat with our full-service ice cream and coffee truck—sundaes, novelties, espresso,
+                lattes, and cold brew. We serve guests quickly and professionally
+                {isGeneralAreaPage ? " across the Phoenix metro." : ` in ${formattedCity} and surrounding areas.`} Dairy-free options available.
               </Typography>
               <List className={classes.bulletList}>
                 {[
@@ -333,13 +291,7 @@ function Locations() {
                 ))}
               </List>
               <Box className={classes.buttonContainerMobile}>
-                {/* CHANGED: single CTA (mobile) */}
-                <Button
-                  size="medium"
-                  className={classes.contactButton}
-                  component={Link}
-                  to="/ice-cream-food-truck"
-                >
+                <Button size="medium" className={classes.contactButton} component={Link} to="/ice-cream-food-truck">
                   Learn More
                 </Button>
               </Box>

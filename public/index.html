@@ -5,9 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Outdoor Movie Pros | Outdoor Movie Nights in Phoenix Arizona</title>
+    <title>Inflatable Outdoor Movie Screen Rentals in Phoenix, AZ</title>
     <meta name="description"
-        content="Outdoor Movie Pros offers outdoor movie rentals, concessions, and a food truck with ice cream sundaes and coffee in Phoenix, Arizona. HD projection, pro audio." />
+        content="Inflatable outdoor movie screen rentals in Phoenix and nearby cities. Full-service backyard and park movie nights with HD projector, pro sound, setup and teardown." />
 
     <!-- Icons / Manifest -->
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -27,27 +27,17 @@
 
     <!-- Preload hero/background assets -->
     <link rel="preload" as="image" href="%PUBLIC_URL%/company-logo.webp" type="image/webp" />
-    <link rel="preload" as="image" href="%PUBLIC_URL%/stars3.webp" type="image/webp" />
+    <link rel="preload" as="image" href="%PUBLIC_URL%/background-stars.webp" type="image/webp" />
 
     <style>
         body {
             margin: 0;
             min-height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/stars3.webp');
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/background-stars.webp');
             background-attachment: fixed;
             background-size: cover;
             background-repeat: no-repeat;
             font-family: Arial, sans-serif;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/stars3.webp');
-                /* Use a different image for mobile */
-                background-attachment: fixed;
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
         }
 
         #root {
@@ -55,50 +45,57 @@
         }
     </style>
 
+    <!-- LocalBusiness schema (global; page-specific SEO handled via Helmet) -->
     <script type="application/ld+json">
-        {
+    {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "@id": "https://outdoormoviepros.com/#business",
         "name": "Outdoor Movie Pros",
-        "description": "Outdoor movie night rentals, concessions, and ice cream sundaes and coffee food truck service across the Phoenix metro area. Screens, HD projection, pro audio, full setup and teardown.",
-        "url": "https://outdoormoviepros.com/",
+        "description": "Inflatable outdoor movie screen rentals across the Phoenix metro area. Screens, HD projection, pro audio, full setup and teardown.",
+        "url": "https://outdoormoviepros.com",
         "logo": { "@type": "ImageObject", "url": "https://outdoormoviepros.com/company-logo.webp" },
         "image": "https://outdoormoviepros.com/company-logo.webp",
         "telephone": "+1-602-638-6510",
         "email": "info@outdoormoviepros.com",
         "areaServed": {
-            "@type": "GeoCircle",
-            "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 33.4617, "longitude": -111.9146 },
-            "geoRadius": 80467
+        "@type": "GeoCircle",
+        "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 33.4617, "longitude": -111.9146 },
+        "geoRadius": 80467
         },
         "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "7726 E Portland St",
-            "addressLocality": "Scottsdale",
-            "addressRegion": "AZ",
-            "postalCode": "85257",
-            "addressCountry": "US"
+        "@type": "PostalAddress",
+        "streetAddress": "7726 E Portland St",
+        "addressLocality": "Scottsdale",
+        "addressRegion": "AZ",
+        "postalCode": "85257",
+        "addressCountry": "US"
         },
         "openingHoursSpecification": [{
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            "opens": "08:00",
-            "closes": "18:00"
-        }]
-        }
-    </script>
-
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "18:00"
+        }],
+        "knowsAbout": [
+        "Inflatable movie screens",
+        "Outdoor movie screen rentals",
+        "Backyard movie nights",
+        "Projector and screen rentals",
+        "Event audio systems"
+        ]
+   }
+   </script>
 </head>
 
 <body>
     <header>
         <h1 class="sr-only">
-            Outdoor movie nights with big screens, HD projection & pro audio—plus concessions and a food truck serving ice cream sundaes and coffee in Phoenix, AZ.
+            Inflatable outdoor movie screen rentals with HD projection and pro audio in Phoenix, AZ.
         </h1>
         <h2 class="sr-only">
-            Serving the Phoenix metro—Scottsdale, Mesa, Chandler, Gilbert, Tempe, Glendale, Peoria, and beyond. Full
-            setup and teardown for any event.
+            Serving Phoenix, Scottsdale, Mesa, Chandler, Gilbert, Tempe, Glendale, Peoria, and nearby. Full setup and
+            teardown for backyards, parks, schools, HOAs, and events.
         </h2>
     </header>
     <div id="root"></div>
