@@ -9,8 +9,7 @@ function FAQs() {
   return (
     <section className={classes.root}>
       <Helmet>
-        {/* Title uses App.js titleTemplate to append brand */}
-        <title>Outdoor Movie Rental FAQs | Phoenix Inflatable Screens</title>
+        <title>Outdoor Movie Rental FAQs | Phoenix Inflatable Movie Screens</title>
 
         <meta
           name="description"

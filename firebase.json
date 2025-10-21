@@ -6,31 +6,11 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [
-      {
-        "source": "/{,faqs,contact,locations,gallery,movie-nights-options,concessions-options,ice-cream-food-truck,mesa,scottsdale,tempe,phoenix,gilbert,chandler,paradise-valley,glendale,peoria,queen-creek,san-tan-valley,tolleson,buckeye,goodyear,anthem}",
-        "destination": "/index.html"
-      },
-      {
-        "source": "**",
-        "function": "handleRequests"
-      }
-    ],
-    "redirects": [
-      {
-        "source": "/index.html",
-        "destination": "/",
-        "type": 301
-      },
-      {
-        "source": "https://www.outdoormoviepros.com/**",
-        "destination": "https://outdoormoviepros.com",
-        "type": 301
-      }
-    ],
+    "cleanUrls": true,
+    "trailingSlash": false,
     "headers": [
       {
-        "source": "**/*.@(js|css|jpg|jpeg|gif|png|svg|ico)",
+        "source": "**/*.@(js|css|jpg|jpeg|gif|png|svg|ico|webp|woff|woff2)",
         "headers": [
           {
             "key": "Cache-Control",
@@ -38,10 +18,12 @@
           }
         ]
       }
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
-  },
-  "functions": {
-    "source": "functions",
-    "runtime": "nodejs20"
   }
 }

@@ -180,8 +180,7 @@ function ConcessionsOptions() {
   return (
     <main>
       <Helmet>
-        {/* Title uses App.js titleTemplate to append brand automatically */}
-        <title>Concessions & Add-Ons for Outdoor Movie Nights in Phoenix</title>
+        <title>Concessions & Add-Ons for Outdoor Movie Night Events in Phoenix</title>
         <meta
           name="description"
           content="Popcorn and cotton candy machines, generators, light towers, sound systems, and more—everything to power your outdoor movie night in Phoenix."

@@ -75,7 +75,7 @@ function Locations() {
         <title>
           {isGeneralAreaPage
             ? "Outdoor Movie Screen Rentals Near Me | Phoenix Metro Locations"
-            : `Inflatable Outdoor Movie Screen Rentals in ${cityShort}, AZ`}
+            : `Outdoor Movie Screen Rental in ${cityShort}, AZ`}
         </title>
 
         <meta
@@ -83,7 +83,7 @@ function Locations() {
           content={
             isGeneralAreaPage
               ? "Find inflatable outdoor movie screen rentals near you across the Phoenix metro. Full-service backyard and park movie nights with HD projector, pro sound, setup, on-site tech, and teardown."
-              : `Inflatable outdoor movie screen rentals in ${formattedCity}. Full-service backyard and park movie nights with HD projector, pro sound, setup, on-site tech, and teardown.`
+              : `Outdoor movie screen rentals in ${formattedCity}. Full-service backyard and park movie nights with large inflatable screens, HD projector, pro sound, setup, on-site tech, and teardown included.`
           }
         />
         <meta name="robots" content="index,follow" />

@@ -52,14 +52,14 @@ function Contact() {
             <main className={classes.root}>
                 <div className={classes.titleBox}>
                     <Typography variant="h1" className={classes.title}>
-                        Contact Outdoor Movie Pros today for professional service and competitive pricing!
+                        Contact Outdoor Movie Pros — Phoenix Outdoor Movie Screen Rentals
                     </Typography>
                     <Typography variant="h2" className={classes.subTitle}>
-                        Get your free quote now! Fill out the form below, and our team will respond promptly.    Looking for extras? See our{" "}
-                        <a href="/concessions-options" style={{color: "#4d7cc2ff", textDecoration: "underline"}}>Concessions & Add-Ons</a>{" "}
-                        or the{" "}
-                        <a href="/ice-cream-food-truck" style={{color: "#4d7cc2ff", textDecoration: "underline"}}>Ice Cream Sundae & Coffee Food Truck</a>
-                    </Typography>   
+                        Request a quote or ask about setup options for your backyard, park, or corporate movie night. Looking for extras? See our{" "}
+                        <a href="/concessions-options" style={{ color: "#4d7cc2ff", textDecoration: "underline" }}>Concessions & Add-Ons</a>{" "}
+                        and{" "}
+                        <a href="/ice-cream-food-truck" style={{ color: "#4d7cc2ff", textDecoration: "underline" }}>Ice Cream & Coffee Food Truck</a>.
+                    </Typography>
 
                     <Box className={classes.infoBox}>
                         <Typography variant="body1" className={classes.infoText}>

@@ -35,8 +35,7 @@ function App() {
         <main style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
             <div className="root" style={{ flex: 1 }}>
                 <Helmet
-                    defaultTitle="Inflatable Outdoor Movie Screen Rentals in Phoenix"
-                    titleTemplate="%s | Outdoor Movie Pros Phoenix"
+                    defaultTitle="Outdoor Movie Screen Rental in Phoenix | Inflatable Movie Screen Rental"
                 >
                     {/* Canonical (each page should override with its own path where applicable) */}
                     <link rel="canonical" href="https://outdoormoviepros.com" />
@@ -44,7 +43,7 @@ function App() {
                     {/* Global description (route components can override) */}
                     <meta
                         name="description"
-                        content="Inflatable outdoor movie screen rentals in Phoenix and nearby cities. Full-service backyard and park movie nights with HD projector, pro sound, setup and teardown."
+                        content="Outdoor movie screen rentals in Phoenix and nearby cities. Full-service backyard and park movie nights with giant inflatable movie screens, HD projector, pro sound, setup and teardown."
                     />
 
                     {/* Indexing policy */}
@@ -67,7 +66,7 @@ function App() {
                     <meta name="twitter:title" content="Inflatable Outdoor Movie Screen Rentals in Phoenix" />
                     <meta
                         name="twitter:description"
-                        content="Backyard & park movie night packages with inflatable screens, projector, and pro sound. We deliver, set up, and run the show."
+                        content="Backyard & park movie night packages with large inflatable screens, projector, and pro sound. We deliver, set up, and run the show."
                     />
                     <meta name="twitter:image" content="https://outdoormoviepros.com/company-logo.webp" />
 
@@ -85,7 +84,7 @@ function App() {
                         "inLanguage":"en-US"
                     }`}</script>
                 </Helmet>
-                
+
                 <NavBar />
                 <ScrollToTop />
                 <Routes>

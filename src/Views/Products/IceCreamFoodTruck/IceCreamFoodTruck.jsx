@@ -216,7 +216,6 @@ const IceCreamFoodTruck = () => {
   return (
     <>
       <Helmet>
-        {/* Title uses App.js titleTemplate to append brand automatically */}
         <title>Ice Cream & Coffee Food Truck Catering in Phoenix</title>
 
         <meta

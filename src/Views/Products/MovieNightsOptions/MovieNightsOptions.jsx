@@ -117,8 +117,7 @@ function MovieNightsOptions() {
     return (
         <main>
             <Helmet>
-                {/* Title uses App.js titleTemplate to append brand automatically */}
-                <title>Outdoor Movie Night & Inflatable Screen Packages in Phoenix</title>
+                <title>Inflatable Movie Screen Rental in Phoenix | Outdoor Movie Packages</title>
 
                 <meta
                     name="description"
@@ -157,10 +156,10 @@ function MovieNightsOptions() {
             {/* Visible page title */}
             <Box className={classes.titleBox}>
                 <h1 className={classes.title}>
-                    Outdoor Movie Night Packages in Phoenix Arizona and the surrounding areas.
+                    Outdoor Movie Night Packages in Phoenix and the Surrounding Areas
                 </h1>
                 <h2 className={classes.subTitle}>
-                    Outdoor park movie nights, backyard movie nights, giant inflatable screens, dive-in pool movies, and double-screen movie events. HD projector, pro sound, delivery, setup, on-site tech, and teardown.
+                    At the park movie nights, backyard movie nights, giant inflatable screens, dive-in pool movies, and double-screen movie events. HD projector, pro sound, delivery, setup, on-site tech, and teardown included.
                 </h2>
             </Box>
 
