@@ -166,11 +166,65 @@ function MovieNightsOptions() {
             {/* Packages grid */}
             <Grid container spacing={4} alignItems="stretch" justifyContent="center" className={classes.gridContainer}>
                 {cards.map(({ key, to, image, imageAlt, title, price, subtitle, bullets }) => (
-                    <Grid item xs={12} md={4} key={key}>
+                    <Grid item xs={12} md={6} lg={4} key={key}>
                         <Card className={classes.card} style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                             <Link to={to} style={{ textDecoration: 'none', flexGrow: 1, display: 'flex' }}>
                                 <CardActionArea style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-                                    <CardMedia component="img" height="275" image={image} alt={imageAlt} />
+                                    <CardMedia
+                                        component="img"
+                                        image={image}
+                                        alt={imageAlt}
+                                        sx={{
+                                            // 1. Fluid width (fills container)
+                                            width: '100%',
+                                            height: 'auto',
+
+                                            // 2. Responsive max width & height
+                                            maxWidth: {
+                                                xs: 450,
+                                                sm: 515,
+                                            },
+                                            minHeight: {
+                                                xs: 223,
+                                                sm: 283,
+                                                md: 325,
+                                                lg: 275,
+                                                xl: 339,
+                                            },
+
+                                            // 3. Media queries for specific breakpoints
+                                            '@media (min-width: 600px) and (max-width: 660px)': {
+                                                minHeight: 225,
+                                            },
+
+                                            '@media (min-width: 960px) and (max-width: 1060px)': {
+                                                minHeight: 272,
+                                            },
+
+                                            '@media (min-width: 1200px) and (max-width: 1280px)': {
+                                                minHeight: 342,
+                                            },
+
+                                            '@media (min-width: 1279px) and (max-width: 1380px)': {
+                                                minHeight: "240px !important"
+                                            },
+
+                                            '@media (min-width: 1536px) and (max-width: 1736px)': {
+                                                minHeight: "315px !important"
+                                            },
+
+                                            '@media (min-width: 1920px) and (max-width: 2020px)': {
+                                                minHeight: 292
+                                            },
+
+                                            // 4. Object fit (crop/zoom if needed)
+                                            objectFit: 'cover',
+
+                                            // 5. Rounded corners, shadow, etc.
+                                            borderRadius: 2,
+                                            boxShadow: 3,
+                                        }}
+                                    />
                                     <CardContent style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                                         <Typography gutterBottom variant="h2" component="h2" className={classes.cardTitle} style={{ fontFamily: 'inherit' }}>
                                             {title}
@@ -242,7 +296,7 @@ function MovieNightsOptions() {
                 <Typography variant="h2" component="h2" className={classes.infoTitle} gutterBottom>
                     What’s Included with Our Outdoor Movie Night Rentals
                 </Typography>
-                <Typography variant="body1" component="p" paragraph style={{  }}>
+                <Typography variant="body1" component="p" paragraph style={{}}>
                     Every inflatable outdoor movie screen package includes an HD projector matched to your screen size, professional QSC audio, delivery and complete setup, an on-site technician to run the show, and teardown after the credits. We service backyards, parks, schools, churches, HOAs, and community venues across the Phoenix metro.
                 </Typography>
                 <List className={classes.infoList}>

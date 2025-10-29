@@ -1,10 +1,19 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-
 const useStyles = makeStyles((theme) => ({
     gridContainer: {
-        padding: '0 18%',
+        padding: '0 14%',
+        // 1200px – 2300px
+        '@media (min-width: 1200px) and (max-width: 2500px)': {
+            padding: '0 10%', // equivalent to ~6% at 1200px
+        },
         [theme.breakpoints.down('lg')]: {
+            padding: 0,
+        },
+        [theme.breakpoints.down('sm')]: {
+            padding: '0 10%',
+        },
+        [theme.breakpoints.down('xs')]: {
             padding: 0,
         },
     },
@@ -73,16 +82,15 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         justifyContent: 'space-between',
         height: '100%',
-        backgroundColor: 'rgb(12 15 24 / 100%) !important',
+        backgroundColor: '#101623  !important',
         [theme.breakpoints.down('md')]: {
-            padding: 5
+            padding: 30
         },
         [theme.breakpoints.down('sm')]: {
             padding: 40
         },
         [theme.breakpoints.down('xs')]: {
-            backgroundColor: "#101623 !important",
-            padding: 20
+            padding: 20,
         },
     },
     cardTitle: {

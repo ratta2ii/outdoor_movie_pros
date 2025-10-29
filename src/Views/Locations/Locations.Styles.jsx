@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
             height: "250px",
         },
         [theme.breakpoints.down('sm')]: {
-            border: "1px solid #ffffff",
+           
         },
     },
     sectionContent: {
@@ -145,10 +145,11 @@ const useStyles = makeStyles((theme) => ({
         marginTop: 40,
         [theme.breakpoints.down('xs')]: {
             fontSize: '1.2em',
+            textAlign: 'left',
         },
     },
     serviceSection: {
-        backgroundColor: 'rgb(12 15 24 / 100%)',
+        backgroundColor: '#101623',
         padding: "60px !important",
         borderRadius: 10,
         marginBottom: 100,
@@ -164,7 +165,6 @@ const useStyles = makeStyles((theme) => ({
             padding: "50px !important",
         },
         [theme.breakpoints.down('xs')]: {
-            backgroundColor: 'rgb(12 15 24 / 100%)',
             boxShadow: "none",
             border: 'none',
             padding: "30px !important",
