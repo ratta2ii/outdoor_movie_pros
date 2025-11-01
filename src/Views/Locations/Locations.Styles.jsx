@@ -21,6 +21,9 @@ const useStyles = makeStyles((theme) => ({
     header: {
         marginBottom: theme.spacing(6),
         textAlign: "center",
+        [theme.breakpoints.down('xs')]: {
+            textAlign: "left",
+        },
     },
     titleBox: {
         width: 985,
@@ -58,77 +61,8 @@ const useStyles = makeStyles((theme) => ({
     sectionContainer: {
         marginBottom: theme.spacing(6),
     },
-    sectionImage: {
-        width: "100%",
-        height: "315px",
-        objectFit: "cover",
-        borderRadius: "5px",
-        // boxShadow: theme.shadows[1],
-        [theme.breakpoints.down('lg')]: {
-            height: "265px",
-        },
-        [theme.breakpoints.down('md')]: {
-            height: "250px",
-        },
-        [theme.breakpoints.down('sm')]: {
-           
-        },
-    },
-    sectionContent: {
-        padding: "50px !important",
-        [theme.breakpoints.down('xs')]: {
-            padding: "25px !important",
-        },
-    },
-    sectionTitle: {
-        fontWeight: 600,
-        marginBottom: theme.spacing(2),
-        fontSize: "2em",
-        color: "antiqueWhite",
-        // fontFamily: 'serif',
-        [theme.breakpoints.down('xs')]: {
-            fontSize: "1.7em",
-            marginTop: -25,
-            textAlign: 'center',
-        },
-    },
-    sectionText: {
-        marginBottom: theme.spacing(2),
-        fontSize: "1.1em",
-    },
-    bulletList: {
-        marginBottom: 25,
-        paddingLeft: 16, // Increased for subsection look
-        marginTop: 15,
-        fontSize: '1.1em',
-        [theme.breakpoints.down('xs')]: {
-            paddingLeft: 8, // Adjusted for mobile
-        },
-    },
-    listItem: {
-        padding: 0,
-        paddingBottom: 5,
-        alignItems: 'center', // Center text with icon
-        '& .MuiListItemText-primary': {
-            lineHeight: '1.3em',
-        },
-        [theme.breakpoints.down('xs')]: {
-            marginLeft: -20,
-        },
-    },
-    icon: {
-        // color: "#66bb6a",
-        color: "#fff",
-        fontSize: '1.2rem', // Match text size
-        minWidth: 24, // Reduce gap between icon and text
-        marginLeft: 20,
-    },
-    divider: {
-        width: "100%",
-        margin: "0px auto 20px",
-        backgroundColor: "rgb(0 165 205 / 30%)",
-        height: "2px"
-    },
+
+    /* used in hero intro link */
     phoneLink: {
         color: '#fff',
         textDecoration: 'none',
@@ -137,6 +71,14 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'serif',
         [theme.breakpoints.down('xs')]: {
             fontSize: '1.2em',
+        },
+    },
+    subTextBox: {
+        width: '86%',
+        marginLeft: '7%',
+        [theme.breakpoints.down('xs')]: {
+            width: '100%',
+            marginLeft: '0%',
         },
     },
     subText: {
@@ -148,102 +90,183 @@ const useStyles = makeStyles((theme) => ({
             textAlign: 'left',
         },
     },
-    serviceSection: {
-        backgroundColor: '#101623',
-        padding: "60px !important",
-        borderRadius: 10,
-        marginBottom: 100,
-        // boxShadow: "rgb(255 255 255 / 40%) -6px 6px 0px",
-        boxShadow: "rgb(0 165 205 / 30%) -6px 6px 0px",
-        [theme.breakpoints.down('lg')]: {
-            padding: "50px !important",
-        },
+
+    /* styled card container */
+    mainGridContainer: {
+        borderRadius: 8,
+        overflow: 'hidden',
+        boxShadow: '0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)',
         [theme.breakpoints.down('md')]: {
-            padding: "40px !important",
+            maxWidth: 850,
         },
         [theme.breakpoints.down('sm')]: {
-            padding: "50px !important",
+            marginTop: 0,
+            marginBottom: 0,
         },
         [theme.breakpoints.down('xs')]: {
-            boxShadow: "none",
-            border: 'none',
-            padding: "30px !important",
-            marginBottom: 65,
+            marginBottom: 0,
         },
     },
-    buttonContainerDesktop: {
+    topGridItem: {
+        backgroundColor: 'white',
+        background: 'linear-gradient(90deg, #2063cc 0%, #2166d3 40%, #2c85ea 100%)',
+        padding: '20px 30px',
+        borderBottom: '2px solid #efefef',
+        color: '#ecececff',
+        height: 80,
         display: 'flex',
-        justifyContent: 'center',
         alignItems: 'center',
-        width: '100%',
-        height: 60,
-        gap: '2px',
-        flexWrap: 'wrap',
-        padding: 0,
-        // marginTop: 20,
-        [theme.breakpoints.down('sm')]: {
+        position: 'relative',
+        fontSize: '.8rem',
+        [theme.breakpoints.down('xs')]: {
+            // padding: '20px 20px',
+            // height: 60,
             display: 'none',
         },
     },
-    buttonContainerMobile: {
-        display: 'none',
+    viewOptions: {
+        cursor: 'pointer',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: 'smaller'
+        },
+    },
+    imageGridContainer: {
+        minWidth: '300px',
+        borderRight: '2px solid #efefef',
+        padding: 50,
+        backgroundColor: 'white',
+        display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        width: '100%',
-        height: 60,
-        gap: '2%',
-        flexWrap: 'wrap',
-        padding: 0,
-        marginTop: 30,
-        [theme.breakpoints.down('sm')]: {
-            display: 'flex',
-        },
-    },
-    contactButton: {
-        color: '#fff !important',
-        fontWeight: 500,
-        textTransform: "none",
-        minWidth: 130,
-        width: '100%',
-        height: 45,
-        borderRadius: 5,
-        '&:first-of-type': {
-            background: '#1d293d',
-            '&:hover, &:focus': {
-                backgroundColor: '#101927',
-            },
-        },
-        '&:last-of-type': {
-            backgroundColor: '#114796',
-            '&:hover, &:focus': {
-                backgroundColor: '#0b3879',
-            },
+        [theme.breakpoints.down('md')]: {
+            padding: '25px 25px 10px'
         },
         [theme.breakpoints.down('sm')]: {
-            height: 40,
-        }
+            padding: '50px 50px 10px'
+        },
+        [theme.breakpoints.down('xs')]: {
+            padding: '25px 25px 0px',
+            borderRight: 'none !important',
+        },
     },
-    imageButtonWrapper: {
-        backgroundColor: '#ffffff',
+    imageStyles: {
+        width: '100%',
+        maxHeight: 300,
+        objectFit: 'contain',
         borderRadius: 8,
-        padding: '15px',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
-        textAlign: 'center',
-        overflow: 'hidden',
-        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-        '&:hover': {
-            transform: 'scale(1.02)',
-            boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
-        },
+    },
+    descriptionContainer: {
+        fontFamily: 'Raleway, sans-serif',
+        padding: 39,
+        fontSize: '.8rem',
+        color: "black",
         [theme.breakpoints.down('sm')]: {
-            padding: '10px',
-            backgroundColor: 'transparent',
-            boxShadow: 'none',
-            transition: 'none',
-            '&:hover': {
-                transform: 'none',
-                boxShadow: 'none',
-            },
+            paddingTop: '10px',
+            paddingLeft: '50px',
+        },
+        [theme.breakpoints.down('xs')]: {
+            paddingLeft: '25px',
+        },
+    },
+    /* sectionTitle used inside each card */
+    sectionTitle: {
+        color: '#393838',
+        fontFamily: 'Raleway, sans-serif',
+        fontWeight: '600',
+        paddingTop: '15px',
+        margin: '0',
+        fontSize: '2rem',
+        lineHeight: '1',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '2rem',
+        },
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '1.4rem',
+        },
+    },
+    subTitle: {
+        margin: '6px 0 0px 0',
+        fontFamily: 'Raleway, sans-serif',
+        fontSize: '.8rem',
+        color: '#515151',
+        fontStyle: 'italic',
+    },
+    description: {
+        fontFamily: 'Raleway, sans-serif',
+        paddingLeft: "0px !important",
+        paddingRight: "0px !important",
+        paddingBottom: 8,
+        fontSize: '1rem',
+    },
+
+    /* bullets within cards */
+    bulletList: {
+        marginBottom: 0,
+        paddingLeft: 5,
+        marginTop: 15,
+        fontSize: '1.1em',
+        [theme.breakpoints.down('xs')]: {
+            marginTop: 5,
+            paddingLeft: 20,
+            marginBottom: -15
+        },
+    },
+    lastCard: {
+        paddingBottom: '0px !important',
+        [theme.breakpoints.down('xs')]: {
+            paddingBottom: '10px !important',
+        },
+    },
+    listItem: {
+        padding: 0,
+        paddingBottom: 5,
+        alignItems: 'center',
+        '& .MuiListItemText-primary': {
+            lineHeight: '1.2em',
+            fontSize: '1em',
+        },
+        [theme.breakpoints.down('xs')]: {
+            marginLeft: -20,
+        },
+    },
+    icon: {
+        color: "#66bb6a",
+        fontSize: '1.2rem',
+        minWidth: 24,
+        marginLeft: 20,
+    },
+
+    /* bottom button bar */
+    buttonView: {
+        height: 85,
+        backgroundColor: '#edf0f8',
+        borderTop: '2px solid #efefef',
+        display: 'flex',
+        justifyItems: 'center',
+        alignItems: 'center',
+    },
+    buttonGroup: {
+        display: 'flex',
+        justifyContent: 'right',
+        marginRight: '30px !important',
+        [theme.breakpoints.down('sm')]: {
+            justifyContent: 'center',
+            marginRight: "0px !important",
+        },
+    },
+    viewOptionsButton: {
+        width: 160,
+        height: 40,
+        fontSize: '.7em',
+        color: '#ffffff',
+        borderRadius: 5,
+        boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.15)',
+        background: 'linear-gradient(90deg, #2063cc 0%, #2166d3 40%, #2c85ea 100%)',
+        backgroundColor: '#3240ff',
+        '&:hover': {
+            background: 'linear-gradient(90deg, #0D47A1 0%, #0D47A1 40%, #1565C0 100%)',
+            boxShadow: 'unset',
+            border: 0,
         },
     },
 }));

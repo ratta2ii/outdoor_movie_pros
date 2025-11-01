@@ -133,7 +133,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '0.9em',
     },
     addOnsLink: {
-        color: "#4d7cc2ff",
+        color: "#67adfc",
         textDecoration: 'underline',
         marginBottom: -10,
     },
@@ -163,37 +163,38 @@ const useStyles = makeStyles((theme) => ({
         padding: 0,
     },
     contactButton: {
-        color: '#fff !important',
-        fontWeight: 600,
-        textTransform: "none",
-        minWidth: 130,
         width: '50%',
-        height: 37,
-        borderRadius: 0,
+        minWidth: 130,
+        textDecoration: 'none',
+        color: '#fff !important',
+        height: 35,
+        fontSize: '.7em !important',
+        borderRadius: 5,
+        boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.15) !important',
         '&:first-of-type': {
-            background: 'linear-gradient(45deg, #1f4898, #1365b7)',
+            background: 'linear-gradient(90deg, #2063cc 0%, #2166d3 40%, #2c85ea 100%)',
             borderRight: '3px solid rgb(12 15 24 / 75%)',
-            // borderBottomLeftRadius: '8px',
-            // borderTopLeftRadius: '8px',
+            '&:hover, &:focus': {
+                background: 'linear-gradient(90deg, #0D47A1 0%, #0D47A1 40%, #1565C0 100%)',
+                boxShadow: 'none !important',
+            },
+
         },
         '&:last-of-type': {
-            backgroundColor: '#114796',
+            background: 'linear-gradient(90deg, #0D47A1 0%, #0D47A1 40%, #1565C0 100%)',
             borderLeft: '3px solid rgb(12 15 24 / 75%)',
-            // borderBottomRightRadius: '8px',
-            // borderTopRightRadius: '8px',
             '&:hover, &:focus': {
-                backgroundColor: '#0b3879',
+                background: 'linear-gradient(90deg, #2063cc 0%, #2166d3 40%, #2c85ea 100%)',
+                boxShadow: 'none !important',
             },
         },
-        [theme.breakpoints.down('sm')]: {
-            height: 40,
-        }
     },
     infoSection: {
         marginTop: "115px !important",
         marginBottom: "-40px !important",
         [theme.breakpoints.down('xs')]: {
             marginTop: "60px !important",
+            marginBottom: "50px !important",
         }
     },
     infoTitle: {

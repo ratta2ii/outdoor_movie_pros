@@ -11,6 +11,8 @@ import SmallScreenImage from './../../../Assets/Images/GalleryImages/gallery2.we
 import DoubleScreenImage from './../../../Assets/Images/double-movie-screen.webp';
 import SoundSystemImage from './../../../Assets/Images/sound.webp';
 import CallToAction from "./../../../Components/CallToAction/CallToAction";
+import CallIcon from '@mui/icons-material/Call';
+import RequestQuoteIcon from '@mui/icons-material/RequestQuoteTwoTone';
 import useStyles from './MovieNightsOptions.Styles';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
@@ -146,6 +148,94 @@ function MovieNightsOptions() {
                     content="Choose from backyard screens to giant inflatable and double-screen setups. Projector, sound, delivery, setup, and on-site tech included."
                 />
                 <meta name="twitter:image" content="https://outdoormoviepros.com/company-logo.webp" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "OfferCatalog",
+                        "name": "Outdoor Movie Night Packages & Add-Ons",
+                        "url": "https://outdoormoviepros.com/movie-nights-options",
+                        "itemListElement": [
+                            {
+                                "@type": "Offer",
+                                "price": "699.00",
+                                "priceCurrency": "USD",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Outdoor Movie Night for Rent",
+                                    "category": "Outdoor Movie Night Package",
+                                    "description": "Big-crowd outdoor cinema package — Giant Inflatable Movie Screen; Bright HD projector & media hookup; Concert Grade QSC Sound + Pre-Show Music; Full setup, On-Site Tech, Teardown.",
+                                    "image": "https://outdoormoviepros.com/assets/giant-inflatable.webp",
+                                    "url": "https://outdoormoviepros.com/movie-nights-options#giant-inflatable"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "price": "479.00",
+                                "priceCurrency": "USD",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Small Event Movie Screen",
+                                    "category": "Outdoor Movie Night Package",
+                                    "description": "Community, school, & church friendly — QSC Powered Speakers; Upgraded brightness HD projection; Blu-Ray DVD Player & Mixer; Professional Staff; Plug-and-play: laptop/streaming ready.",
+                                    "image": "https://outdoormoviepros.com/assets/small-event.webp",
+                                    "url": "https://outdoormoviepros.com/movie-nights-options#small-event"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "price": "1099.00",
+                                "priceCurrency": "USD",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Double Screen Movie Night",
+                                    "category": "Outdoor Movie Night Package",
+                                    "description": "Two screens, one event — Double of everything; Two synchronized screens; Concert Grade QSC Sound + Pre-Show Music; Bright HD projector & media hookup; Full setup, On-Site Tech, Teardown.",
+                                    "image": "https://outdoormoviepros.com/assets/double-screen.webp",
+                                    "url": "https://outdoormoviepros.com/movie-nights-options#double-screen"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "price": "349.00",
+                                "priceCurrency": "USD",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Backyard Movie Screen Rentals",
+                                    "category": "Outdoor Movie Night Package",
+                                    "description": "Perfect for home & small gatherings — 9'x5′ screen (to ~40 guests); Compact HD projector; 2-speaker audio; Setup included (needs two standard outlets); Plug-and-play: laptop/streaming ready.",
+                                    "image": "https://outdoormoviepros.com/assets/backyard.webp",
+                                    "url": "https://outdoormoviepros.com/movie-nights-options#backyard"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "price": "699.00",
+                                "priceCurrency": "USD",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Dive-In Movie Night",
+                                    "category": "Outdoor Movie Night Package",
+                                    "description": "Pool party screening with splash-safe layout — Rear projection near water; Cable management & GFCI-safe setup; Optimized audio for pool environments; Full setup, On-Site Tech, Teardown.",
+                                    "image": "https://outdoormoviepros.com/assets/dive-in.webp",
+                                    "url": "https://outdoormoviepros.com/movie-nights-options#dive-in"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "price": "249.00",
+                                "priceCurrency": "USD",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Sound System Rental",
+                                    "category": "Audio Equipment Rental",
+                                    "description": "Powerful audio for any event — Pair of powered speakers; Wireless handheld mic; Mixer + all cables; Setup and basic sound check.",
+                                    "image": "https://outdoormoviepros.com/assets/sound-system.webp",
+                                    "url": "https://outdoormoviepros.com/movie-nights-options#sound-system"
+                                }
+                            }
+                        ]
+                    })}
+                </script>
             </Helmet>
 
             {/* sr-only heading for SEO/a11y (tight, keyword-aligned) */}
@@ -271,6 +361,7 @@ function MovieNightsOptions() {
                                         className={classes.contactButton}
                                         component="a"
                                         href="tel:+16026386510"
+                                        startIcon={<CallIcon />}
                                         aria-label="Call Outdoor Movie Pros at 602-638-6510"
                                     >
                                         (602) 638-6510
@@ -280,6 +371,7 @@ function MovieNightsOptions() {
                                         className={classes.contactButton}
                                         component={Link}
                                         to="/contact"
+                                        startIcon={<RequestQuoteIcon />}
                                         aria-label="Contact Outdoor Movie Pros for a quote"
                                     >
                                         Get a Quote

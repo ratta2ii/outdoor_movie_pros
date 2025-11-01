@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
     root: {
         [theme.breakpoints.down('sm')]: {
-            padding: "0px 12%",
+            padding: "0px 8%",
         },
         [theme.breakpoints.down('xs')]: {
             padding: 0
@@ -16,9 +16,6 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         justifyContent: 'space-between',
         height: '100%',
-        [theme.breakpoints.down('md')]: {
-            padding: 5
-        },
         [theme.breakpoints.down('sm')]: {
             padding: 40
         },
@@ -78,28 +75,35 @@ const useStyles = makeStyles((theme) => ({
     contactButton: {
         color: '#fff !important',
         fontWeight: 600,
-        textTransform: "none",
-        minWidth: 130,
-        width: '50%',
-        height: 45,
-        borderRadius: 0,
-        '&:first-of-type': {
-            background: 'linear-gradient(45deg, #1f4898, #1365b7)',
-            borderRight: '2px solid #fff',
-            // borderBottomLeftRadius: '8px',
-            // borderTopLeftRadius: '8px',
+        height: 40,
+        fontSize: '.7em !important',
+        borderRadius: 5,
+        width: '95% !important',
+        boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.15) !important',
+        background: 'linear-gradient(90deg, #2063cc 0%, #2166d3 40%, #2c85ea 100%)',
+        '&:hover, &:focus': {
+            background: 'linear-gradient(90deg, #0D47A1 0%, #0D47A1 40%, #1565C0 100%)',
+            boxShadow: 'none !important',
         },
-        '&:last-of-type': {
-            backgroundColor: '#114796',
-            // borderBottomRightRadius: '8px',
-            // borderTopRightRadius: '8px',
-            '&:hover, &:focus': {
-                backgroundColor: '#0b3879',
-            },
+    },
+    images: {
+        width: '100%',
+        borderRadius: 8,
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+        height: 339,
+        objectFit: 'cover',
+        objectPosition: 'center',
+        [theme.breakpoints.down('lg')]: {
+            height: 270,
+        },
+        [theme.breakpoints.down('md')]: {
+            height: 285,
         },
         [theme.breakpoints.down('sm')]: {
-            height: 40,
-        }
+        },
+        [theme.breakpoints.down('xs')]: {
+            height: 220,
+        },
     },
 }));
 

@@ -20,20 +20,20 @@ import GalleryImage13 from './../../Assets/Images/GalleryImages/gallery13.webp';
 import GalleryImage14 from './../../Assets/Images/GalleryImages/gallery14.webp';
 
 const IMAGES = [
-  { src: GalleryImage1, alt: 'Outdoor movie night setup in Phoenix' },
-  { src: GalleryImage2, alt: 'Inflatable outdoor movie screen at a community event' },
-  { src: GalleryImage3, alt: 'Backyard outdoor movie night with projector and screen' },
-  { src: GalleryImage4, alt: 'Large inflatable screen for park movie night' },
-  { src: GalleryImage5, alt: 'Outdoor cinema audience enjoying a movie in Phoenix' },
-  { src: GalleryImage6, alt: 'Outdoor movie screen and audio setup at sunset' },
-  { src: GalleryImage7, alt: 'Neighborhood outdoor movie night with inflatable screen' },
-  { src: GalleryImage8, alt: 'Outdoor projector and screen rental in use' },
-  { src: GalleryImage9, alt: 'Inflatable movie screen at a school field' },
-  { src: GalleryImage10, alt: 'Outdoor movie night with professional audio' },
-  { src: GalleryImage11, alt: 'Backyard inflatable movie screen during evening' },
-  { src: GalleryImage12, alt: 'Community outdoor movie with large screen' },
-  { src: GalleryImage13, alt: 'Outdoor cinema setup with HD projector' },
-  { src: GalleryImage14, alt: 'Park movie night using inflatable screen' },
+    { src: GalleryImage1, alt: 'Outdoor movie night setup in Phoenix' },
+    { src: GalleryImage2, alt: 'Inflatable outdoor movie screen at a community event' },
+    { src: GalleryImage3, alt: 'Backyard outdoor movie night with projector and screen' },
+    { src: GalleryImage4, alt: 'Large inflatable screen for park movie night' },
+    { src: GalleryImage5, alt: 'Outdoor cinema audience enjoying a movie in Phoenix' },
+    { src: GalleryImage6, alt: 'Outdoor movie screen and audio setup at sunset' },
+    { src: GalleryImage7, alt: 'Neighborhood outdoor movie night with inflatable screen' },
+    { src: GalleryImage8, alt: 'Outdoor projector and screen rental in use' },
+    { src: GalleryImage9, alt: 'Inflatable movie screen at a school field' },
+    { src: GalleryImage10, alt: 'Outdoor movie night with professional audio' },
+    { src: GalleryImage11, alt: 'Backyard inflatable movie screen during evening' },
+    { src: GalleryImage12, alt: 'Community outdoor movie with large screen' },
+    { src: GalleryImage13, alt: 'Outdoor cinema setup with HD projector' },
+    { src: GalleryImage14, alt: 'Park movie night using inflatable screen' },
 ];
 
 // Styled components for the gallery
@@ -99,46 +99,59 @@ const GalleryItem = styled(Box)`
 `;
 
 const Gallery = () => {
-  return (
-    <GalleryContainer>
-      <Helmet>
-        {/* Title uses App.js titleTemplate to append brand automatically */}
-        <title>Outdoor Movie Night Photos | Phoenix Inflatable Movie Screens</title>
+    return (
+        <GalleryContainer>
+            <Helmet>
+                {/* Title uses App.js titleTemplate to append brand automatically */}
+                <title>Outdoor Movie Night Photos | Phoenix Inflatable Movie Screens</title>
 
-        <meta
-          name="description"
-          content="See photos of outdoor movie nights across Phoenix—inflatable movie screens, HD projection, professional audio, and full-service setups."
-        />
-        <meta name="robots" content="index,follow" />
-        <link rel="canonical" href="https://outdoormoviepros.com/gallery" />
+                <meta
+                    name="description"
+                    content="See photos of outdoor movie nights across Phoenix—inflatable movie screens, HD projection, professional audio, and full-service setups."
+                />
+                <meta name="robots" content="index,follow" />
+                <link rel="canonical" href="https://outdoormoviepros.com/gallery" />
 
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Outdoor Movie Pros" />
-        <meta property="og:url" content="https://outdoormoviepros.com/gallery" />
-        <meta property="og:title" content="Outdoor Movie Night Photos | Phoenix Inflatable Screens" />
-        <meta
-          property="og:description"
-          content="Browse outdoor movie night images from Phoenix events: inflatable screens, HD projectors, and pro audio setups."
-        />
-        <meta property="og:image" content="https://outdoormoviepros.com/company-logo.webp" />
-        <meta property="og:image:alt" content="Outdoor Movie Pros logo" />
-      </Helmet>
+                {/* Open Graph */}
+                <meta property="og:type" content="website" />
+                <meta property="og:site_name" content="Outdoor Movie Pros" />
+                <meta property="og:url" content="https://outdoormoviepros.com/gallery" />
+                <meta property="og:title" content="Outdoor Movie Night Photos | Phoenix Inflatable Screens" />
+                <meta
+                    property="og:description"
+                    content="Browse outdoor movie night images from Phoenix events: inflatable screens, HD projectors, and pro audio setups."
+                />
+                <meta property="og:image" content="https://outdoormoviepros.com/company-logo.webp" />
+                <meta property="og:image:alt" content="Outdoor Movie Pros logo" />
+            </Helmet>
 
-      {/* sr-only heading focused strictly on outdoor movie nights */}
-      <h1 className="sr-only">
-        Outdoor movie night photo gallery for Phoenix and nearby cities
-      </h1>
+            {/* sr-only heading focused strictly on outdoor movie nights */}
+            <h1 className="sr-only">
+                Outdoor movie night photo gallery for Phoenix and nearby cities
+            </h1>
 
-      <GalleryGrid>
-        {IMAGES.map((image, index) => (
-          <GalleryItem key={`gallery-item-${index}`}>
-            <img src={image.src} alt={image.alt} loading="lazy" />
-          </GalleryItem>
-        ))}
-      </GalleryGrid>
-    </GalleryContainer>
-  );
+            <GalleryGrid>
+                {IMAGES.map((image, index) => (
+                    <GalleryItem key={`gallery-item-${index}`}>
+                        <a
+                            href={image.src}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Open full-size: ${image.alt}`}
+                            title="Open full-size"
+                        >
+                            <img
+                                src={image.src}
+                                alt={image.alt}
+                                loading="lazy"
+                                referrerPolicy="no-referrer"
+                            />
+                        </a>
+                    </GalleryItem>
+                ))}
+            </GalleryGrid>
+        </GalleryContainer>
+    );
 };
 
 export default Gallery;

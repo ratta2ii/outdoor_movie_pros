@@ -42,6 +42,26 @@ function Home() {
                 <meta name="twitter:image" content="https://outdoormoviepros.com/company-logo.webp" />
 
                 <meta name="author" content="Outdoor Movie Pros" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@graph": [
+                            {
+                                "@type": "Organization",
+                                "name": "Outdoor Movie Pros",
+                                "url": "https://outdoormoviepros.com",
+                                "logo": "https://outdoormoviepros.com/company-logo.webp",
+                                "contactPoint": { "telephone": "+1-602-638-6510", "contactType": "Customer Service" }
+                            },
+                            {
+                                "@type": "BreadcrumbList",
+                                "itemListElement": [
+                                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://outdoormoviepros.com" }
+                                ]
+                            }
+                        ]
+                    })}
+                </script>
             </Helmet>
 
             {/* Accessible, SEO-aligned headings (no concessions/food-truck here) */}

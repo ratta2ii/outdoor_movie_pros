@@ -57,7 +57,7 @@ function NavBar(props) {
                                     textAlign: 'center',
                                     borderLeft: location.pathname === '/' ? '8px solid red' : '8px solid transparent',
                                     backgroundColor: location.pathname === '/' ? '#e0e0e0' : 'transparent',
-                              padding: '20px 15px',
+                                    padding: '15px 15px',
                                     textTransform: 'none',
                                 }}
                             >
@@ -77,7 +77,7 @@ function NavBar(props) {
                                     textAlign: 'center',
                                     borderLeft: location.pathname === '/movie-nights-options' ? '8px solid red' : '8px solid transparent',
                                     backgroundColor: location.pathname === '/movie-nights-options' ? '#e0e0e0' : 'transparent',
-                              padding: '20px 15px',
+                                    padding: '15px 15px',
                                     textTransform: 'none',
                                 }}
                             >
@@ -97,7 +97,7 @@ function NavBar(props) {
                                     textAlign: 'center',
                                     borderLeft: location.pathname === '/concessions-options' ? '8px solid red' : '8px solid transparent',
                                     backgroundColor: location.pathname === '/concessions-options' ? '#e0e0e0' : 'transparent',
-                              padding: '20px 15px',
+                                    padding: '15px 15px',
                                     textTransform: 'none',
                                 }}
                             >
@@ -117,7 +117,7 @@ function NavBar(props) {
                                     textAlign: 'center',
                                     borderLeft: location.pathname === '/ice-cream-food-truck' ? '8px solid red' : '8px solid transparent',
                                     backgroundColor: location.pathname === '/ice-cream-food-truck' ? '#e0e0e0' : 'transparent',
-                              padding: '20px 15px',
+                                    padding: '15px 15px',
                                     textTransform: 'none',
                                 }}
                             >
@@ -137,7 +137,7 @@ function NavBar(props) {
                                     textAlign: 'center',
                                     borderLeft: location.pathname === '/faqs' ? '8px solid red' : '8px solid transparent',
                                     backgroundColor: location.pathname === '/faqs' ? '#e0e0e0' : 'transparent',
-                              padding: '20px 15px',
+                                    padding: '15px 15px',
                                     textTransform: 'none',
                                 }}
                             >
@@ -157,7 +157,7 @@ function NavBar(props) {
                                     textAlign: 'center',
                                     borderLeft: location.pathname === '/gallery' ? '8px solid red' : '8px solid transparent',
                                     backgroundColor: location.pathname === '/gallery' ? '#e0e0e0' : 'transparent',
-                              padding: '20px 15px',
+                                    padding: '15px 15px',
                                     textTransform: 'none',
                                 }}
                             >
@@ -177,7 +177,7 @@ function NavBar(props) {
                                     textAlign: 'center',
                                     borderLeft: location.pathname === '/contact' ? '8px solid red' : '8px solid transparent',
                                     backgroundColor: location.pathname === '/contact' ? '#e0e0e0' : 'transparent',
-                              padding: '20px 15px',
+                                    padding: '15px 15px',
                                     textTransform: 'none',
                                 }}
                             >
@@ -200,7 +200,7 @@ function NavBar(props) {
                                 textAlign: 'center',
                                 borderLeft: '8px solid transparent',
                                 backgroundColor: 'transparent',
-                          padding: '20px 15px',
+                          padding: '15px 15px',
                                 textTransform: 'none',
                             }}
                         >
@@ -279,6 +279,18 @@ function NavBar(props) {
                         {/* Desktop links (no Locations) */}
                         <Box sx={{ display: 'flex' }}>
                             <Link to='/'><Button sx={{ color: '#fff', mx: 1 }}>Home</Button></Link>
+                            <Link to="/movie-nights-options">
+                                <Button
+                                    sx={{
+                                        color: "#fff",
+                                        mx: 1,
+                                        display: "inline-flex",
+                                        "@media (max-width:920px)": { display: "none" },
+                                    }}
+                                >
+                                    Movie Night Packages
+                                </Button>
+                            </Link>
                             <Link to='/faqs'><Button sx={{ color: '#fff', mx: 1 }}>FAQs</Button></Link>
                             <Link to='/gallery'><Button sx={{ color: '#fff', mx: 1 }}>Gallery</Button></Link>
                             <Link to='/contact'><Button sx={{ color: '#fff', mx: 1 }}>Contact</Button></Link>

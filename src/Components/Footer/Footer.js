@@ -197,21 +197,21 @@ const Footer = (props) => {
                                 keepMounted
                                 MenuListProps={{ "aria-labelledby": "service-areas-button" }}
                             >
-                                <MenuItem onClick={handleCloseLocations} component={Link} to="/phoenix">Phoenix</MenuItem>
-                                <MenuItem onClick={handleCloseLocations} component={Link} to="/mesa">Mesa</MenuItem>
-                                <MenuItem onClick={handleCloseLocations} component={Link} to="/scottsdale">Scottsdale</MenuItem>
-                                <MenuItem onClick={handleCloseLocations} component={Link} to="/gilbert">Gilbert</MenuItem>
+                                <MenuItem onClick={handleCloseLocations} component={Link} to="/anthem">Anthem</MenuItem>
+                                <MenuItem onClick={handleCloseLocations} component={Link} to="/buckeye">Buckeye</MenuItem>
                                 <MenuItem onClick={handleCloseLocations} component={Link} to="/chandler">Chandler</MenuItem>
-                                <MenuItem onClick={handleCloseLocations} component={Link} to="/tempe">Tempe</MenuItem>
-                                <MenuItem onClick={handleCloseLocations} component={Link} to="/paradise-valley">Paradise Valley</MenuItem>
+                                <MenuItem onClick={handleCloseLocations} component={Link} to="/gilbert">Gilbert</MenuItem>
                                 <MenuItem onClick={handleCloseLocations} component={Link} to="/glendale">Glendale</MenuItem>
+                                <MenuItem onClick={handleCloseLocations} component={Link} to="/goodyear">Goodyear</MenuItem>
+                                <MenuItem onClick={handleCloseLocations} component={Link} to="/mesa">Mesa</MenuItem>
+                                <MenuItem onClick={handleCloseLocations} component={Link} to="/paradise-valley">Paradise Valley</MenuItem>
                                 <MenuItem onClick={handleCloseLocations} component={Link} to="/peoria">Peoria</MenuItem>
+                                <MenuItem onClick={handleCloseLocations} component={Link} to="/phoenix">Phoenix</MenuItem>
                                 <MenuItem onClick={handleCloseLocations} component={Link} to="/queen-creek">Queen Creek</MenuItem>
                                 <MenuItem onClick={handleCloseLocations} component={Link} to="/san-tan-valley">San Tan Valley</MenuItem>
+                                <MenuItem onClick={handleCloseLocations} component={Link} to="/scottsdale">Scottsdale</MenuItem>
+                                <MenuItem onClick={handleCloseLocations} component={Link} to="/tempe">Tempe</MenuItem>
                                 <MenuItem onClick={handleCloseLocations} component={Link} to="/tolleson">Tolleson</MenuItem>
-                                <MenuItem onClick={handleCloseLocations} component={Link} to="/buckeye">Buckeye</MenuItem>
-                                <MenuItem onClick={handleCloseLocations} component={Link} to="/goodyear">Goodyear</MenuItem>
-                                <MenuItem onClick={handleCloseLocations} component={Link} to="/anthem">Anthem</MenuItem>
                                 <Divider />
                                 <MenuItem onClick={handleCloseLocations} component={Link} to="/locations">
                                     Other Locations

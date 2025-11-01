@@ -6,6 +6,7 @@ import { Paper } from '@material-ui/core';
 import { Grid } from '@material-ui/core';
 import { Button } from '@material-ui/core';
 import Box from '@material-ui/core/Box';
+import SendRoundedIcon from '@material-ui/icons/SendRounded';
 import "./styles.css";
 import useStyles from './ContactFormStyles';
 
@@ -205,6 +206,7 @@ const ContactForm = () => {
                                             variant="contained"
                                             type="submit"
                                             disabled={submitting}
+                                            endIcon={<SendRoundedIcon />}
                                             className={classes.formSubmitButton}
                                         >
                                             Submit

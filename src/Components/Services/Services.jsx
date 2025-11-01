@@ -8,6 +8,8 @@ import CheckCircleIcon from '@material-ui/icons/CheckCircle'; // Added for green
 import GiantScreenImage from './../../Assets/Images/giant-screen.webp';
 import ConcessionsImage from './../../Assets/Images/concessions-image.webp';
 import IceCreamFoodTruckImage from './../../Assets/Images/ice-cream-truck.webp';
+import TuneRoundedIcon from '@material-ui/icons/TuneRounded';
+import IceCreamIcon from '@mui/icons-material/Icecream';
 import useStyles from './Services.Styles';
 import { Link } from 'react-router-dom';
 
@@ -18,18 +20,18 @@ function Services() {
         <main className={classes.root}>
             <Grid container spacing={4} alignItems="stretch" justifyContent="center">
                 {/* Sampling & Testing Card */}
-                <Grid item xs={12} md={4}>
+                <Grid item xs={12} md={6} lg={4}>
                     <Card className={classes.card}>
                         <Link to="/movie-nights-options" style={{ textDecoration: 'none' }}>
                             <CardActionArea>
                                 <CardMedia
                                     component="img"
-                                    height="275"
+                                    className={classes.images}
                                     image={GiantScreenImage}
                                     alt="Our Services include State Certified Well Water Testing"
                                 />
                                 <CardContent>
-                                    <Typography gutterBottom variant="h2" component="h2" className={classes.cardTitle} style={{fontFamily: 'inherit'}}>
+                                    <Typography gutterBottom variant="h2" component="h2" className={classes.cardTitle} style={{ fontFamily: 'inherit' }}>
                                         Outdoor Movie Nights
                                     </Typography>
                                     <Typography variant="h3" component="h3" className={classes.cardSubtitle}>
@@ -61,7 +63,7 @@ function Services() {
                                     className={classes.contactButton}
                                     component={Link}
                                     to="/movie-nights-options"
-                                    style={{ width: '100%' }}
+                                       startIcon={<TuneRoundedIcon />}
                                 >
                                     View Options
                                 </Button>
@@ -70,20 +72,19 @@ function Services() {
                     </Card>
                 </Grid>
 
-                {/* Flow Rate / Productivity Card */}
-                <Grid item xs={12} md={4}>
+                <Grid item xs={12} md={6} lg={4}>
                     <Card className={classes.card}>
                         <Link to="/concessions-options" style={{ textDecoration: 'none' }}>
                             <CardActionArea>
                                 <CardMedia
                                     component="img"
-                                    height="275"
+                                    className={classes.images}
                                     image={ConcessionsImage}
                                     alt="Flow Rate Monitoring for Water Testing and Inspection Services"
                                     loading="lazy"
                                 />
                                 <CardContent>
-                                    <Typography gutterBottom variant="h2" component="h2" className={classes.cardTitle} style={{fontFamily: 'inherit'}}>
+                                    <Typography gutterBottom variant="h2" component="h2" className={classes.cardTitle} style={{ fontFamily: 'inherit' }}>
                                         Concessions & Add-Ons
                                     </Typography>
                                     <Typography variant="h3" component="h3" className={classes.cardSubtitle}>
@@ -115,7 +116,7 @@ function Services() {
                                     className={classes.contactButton}
                                     component={Link}
                                     to="/concessions-options"
-                                    style={{ width: '100%' }}
+                                       startIcon={<TuneRoundedIcon />}
                                 >
                                     View Options
                                 </Button>
@@ -125,19 +126,19 @@ function Services() {
                 </Grid>
 
                 {/* System Inspection Card */}
-                <Grid item xs={12} md={4}>
+                <Grid item xs={12} md={6} lg={4}>
                     <Card className={classes.card}>
                         <Link to="/ice-cream-food-truck" style={{ textDecoration: 'none' }}>
                             <CardActionArea>
                                 <CardMedia
                                     component="img"
-                                    height="275"
+                                    className={classes.images}
                                     image={IceCreamFoodTruckImage}
                                     alt="Our Services include well Water Testing and System Inspection"
                                     loading="lazy"
                                 />
                                 <CardContent>
-                                    <Typography gutterBottom variant="h2" component="h2" className={classes.cardTitle} style={{fontFamily: 'inherit'}}>
+                                    <Typography gutterBottom variant="h2" component="h2" className={classes.cardTitle} style={{ fontFamily: 'inherit' }}>
                                         Ice Cream Sundaes & Coffee Food Truck
                                     </Typography>
                                     <Typography variant="h3" component="h3" className={classes.cardSubtitle}>
@@ -169,7 +170,7 @@ function Services() {
                                     className={classes.contactButton}
                                     component={Link}
                                     to="/ice-cream-food-truck"
-                                    style={{ width: '100%' }}
+                                       startIcon={<IceCreamIcon />}
                                 >
                                     Learn More
                                 </Button>

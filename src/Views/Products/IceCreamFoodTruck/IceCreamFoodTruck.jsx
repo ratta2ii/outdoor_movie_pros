@@ -261,24 +261,80 @@ const IceCreamFoodTruck = () => {
                     name="twitter:description"
                     content="Hire a dessert and coffee food truck: build-your-own sundaes, espresso drinks, and professional staff. Serving events across Phoenix."
                 />
+                <meta name="twitter:image" content="https://outdoormoviepros.com/company-logo.webp" />
+                <meta name="author" content="Outdoor Movie Pros" />
 
-                {/* Service schema for this page (scoped to food truck catering) */}
-                <script type="application/ld+json">{`
-        {
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "serviceType": "Ice Cream and Coffee Food Truck Catering",
-          "provider": {
-            "@type": "LocalBusiness",
-            "name": "Outdoor Movie Pros",
-            "url": "https://outdoormoviepros.com"
-          },
-          "areaServed": ["Phoenix AZ","Scottsdale AZ","Mesa AZ","Chandler AZ","Gilbert AZ","Tempe AZ","Glendale AZ","Peoria AZ"],
-          "offers": {
-            "@type": "Offer",
-            "availability": "https://schema.org/InStock"
-          }
-        }`}</script>
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "OfferCatalog",
+                        "name": "Ice Cream & Coffee Food Truck Services",
+                        "url": "https://outdoormoviepros.com/ice-cream-food-truck",
+                        "provider": {
+                            "@type": "LocalBusiness",
+                            "name": "Outdoor Movie Pros",
+                            "url": "https://outdoormoviepros.com"
+                        },
+                        "itemListElement": [
+                            {
+                                "@type": "Offer",
+                                "availability": "https://schema.org/InStock",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Sundae Bar Catering",
+                                    "category": "Dessert Catering",
+                                    "description":
+                                        "Build-your-own sundaes with waffle cones & bowls, lots of toppings, and vegan/dairy-free options. Full-service setup with friendly staff.",
+                                    "image": IceCreamFoodTruckImage,
+                                    "areaServed": ["Phoenix AZ", "Scottsdale AZ", "Mesa AZ", "Chandler AZ", "Gilbert AZ", "Tempe AZ", "Glendale AZ", "Peoria AZ"],
+                                    "url": "https://outdoormoviepros.com/ice-cream-food-truck"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "availability": "https://schema.org/InStock",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Barista Coffee Service",
+                                    "category": "Coffee Catering",
+                                    "description":
+                                        "Espresso drinks made to order — lattes, cappuccinos, macchiatos, frappes, and espresso shots. Great for corporate mornings and late-night events.",
+                                    "image": IceCreamFoodTruckTwo,
+                                    "areaServed": ["Phoenix AZ", "Scottsdale AZ", "Mesa AZ", "Chandler AZ", "Gilbert AZ", "Tempe AZ", "Glendale AZ", "Peoria AZ"],
+                                    "url": "https://outdoormoviepros.com/ice-cream-food-truck"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "availability": "https://schema.org/InStock",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Full Truck Buyout (Pre-Pay)",
+                                    "category": "Food Truck Catering",
+                                    "description":
+                                        "Rent the truck and treat your team or guests. Pre-pay options for a seamless, all-inclusive dessert and coffee experience with full staffing.",
+                                    "image": IceCreamFoodTruckImage,
+                                    "areaServed": ["Phoenix AZ", "Scottsdale AZ", "Mesa AZ", "Chandler AZ", "Gilbert AZ", "Tempe AZ", "Glendale AZ", "Peoria AZ"],
+                                    "url": "https://outdoormoviepros.com/ice-cream-food-truck"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "availability": "https://schema.org/InStock",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Pay-As-You-Go Service",
+                                    "category": "Food Truck Service",
+                                    "description":
+                                        "Perfect for public festivals and schools — we sell directly to attendees. Premium ice cream and coffee with no upfront cost to the organizer.",
+                                    "image": IceCreamFoodTruckTwo,
+                                    "areaServed": ["Phoenix AZ", "Scottsdale AZ", "Mesa AZ", "Chandler AZ", "Gilbert AZ", "Tempe AZ", "Glendale AZ", "Peoria AZ"],
+                                    "url": "https://outdoormoviepros.com/ice-cream-food-truck"
+                                }
+                            }
+                        ]
+                    })}
+                </script>
             </Helmet>
 
             {/* sr-only heading for SEO/a11y */}

@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import ContactForm from "../../Components/ContactForm/ContactForm";
 import useStyles from "./Contact.Styles";
 import { Typography, Box, Button } from "@material-ui/core";
+import CallIcon from '@mui/icons-material/Call';
 
 function Contact() {
     const classes = useStyles();
@@ -41,6 +42,28 @@ function Contact() {
                 />
 
                 <meta name="author" content="Outdoor Movie Pros" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@graph": [
+                            {
+                                "@type": "LocalBusiness",
+                                "name": "Outdoor Movie Pros",
+                                "telephone": "+1-602-638-6510",
+                                "url": "https://outdoormoviepros.com",
+                                "address": { "addressLocality": "Phoenix", "addressRegion": "AZ" },
+                                "openingHours": "Mo-Su 08:00-20:00"
+                            },
+                            {
+                                "@type": "BreadcrumbList",
+                                "itemListElement": [
+                                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://outdoormoviepros.com" },
+                                    { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://outdoormoviepros.com/contact" }
+                                ]
+                            }
+                        ]
+                    })}
+                </script>
             </Helmet>
 
             {/* sr-only header focused strictly on rentals for SEO */}
@@ -56,9 +79,9 @@ function Contact() {
                     </Typography>
                     <Typography variant="h2" className={classes.subTitle}>
                         Request a quote or ask about setup options for your backyard, park, or corporate movie night. Looking for extras? See our{" "}
-                        <a href="/concessions-options" style={{ color: "#4d7cc2ff", textDecoration: "underline" }}>Concessions & Add-Ons</a>{" "}
+                        <a href="/concessions-options" style={{ color: "#67adfcff", textDecoration: "underline" }}>Concessions & Add-Ons</a>{" "}
                         and{" "}
-                        <a href="/ice-cream-food-truck" style={{ color: "#4d7cc2ff", textDecoration: "underline" }}>Ice Cream & Coffee Food Truck</a>.
+                        <a href="/ice-cream-food-truck" style={{ color: "#67adfcff", textDecoration: "underline" }}>Ice Cream & Coffee Food Truck</a>.
                     </Typography>
 
                     <Box className={classes.infoBox}>
@@ -74,6 +97,7 @@ function Contact() {
                                 size="small"
                                 href="tel:+16026386510"
                                 className={classes.phoneButton}
+                                   startIcon={<CallIcon />}
                             >
                                 (602) 638-6510
                             </Button>

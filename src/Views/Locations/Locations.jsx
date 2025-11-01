@@ -1,13 +1,20 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
-import { Grid, Typography, Box, Divider, Button, List, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
+import { Grid, Typography, Box, Button, List, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import useStyles from "./Locations.Styles";
 import GiantScreenImage from "../../Assets/Images/GalleryImages/gallery6.webp";
-import ConcessionsImage from "../../Assets/Images/concessions-image.webp";
+
+import ConcessionBoothImage from '../../Assets/Images/concession-booth.webp';
 import FoodTruckImage from "../../Assets/Images/ice-cream-truck-two.webp";
 import CallToAction from "../../Components/CallToAction/CallToAction";
 import { Helmet } from "react-helmet";
+
+import CardContent from "@material-ui/core/CardContent";
+import IceCreamIcon from '@mui/icons-material/Icecream';
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import TuneRoundedIcon from '@material-ui/icons/TuneRounded';
+import ShareIcon from "@material-ui/icons/Share";
 
 /**
  * Cities supported (exactly the routes you listed) + /locations:
@@ -24,13 +31,13 @@ const cityData = {
         formattedCity: null,
         cityShort: "Phoenix Metro",
         regionLabel: "Phoenix Metro Area, including Maricopa, Pinal, and surrounding counties",
-        visibleH1: "Outdoor Movie Screen Rentals Near Me — Phoenix Metro",
+        visibleH1: "Outdoor Movie Screen Rental Near Me – Phoenix Metro",
         introCopy:
             "We serve the entire Phoenix Metro Area, including Maricopa, Pinal, and surrounding counties. Book an unforgettable outdoor movie night, enhance it with concessions, or bring our ice cream sundae & coffee food truck to your next gathering under the stars. Discover top-rated outdoor movie screen rentals near me for backyard cinema, community dive-in pool parties, and movies in the park across the Valley.",
         readyToSchedule: "Ready to schedule your event?",
         phoneText: "(602) 638-6510",
         srOnlyH1: "Inflatable outdoor movie screen rentals near me in the Phoenix metro area",
-        title: "Outdoor Movie Screen Rental Near Me | Phoenix Metro Locations",
+        title: "Outdoor Movie Screen Rental Near Me | Phoenix Metro, AZ",
         description:
             "Find inflatable outdoor movie screen rentals near you across the Phoenix metro. Full-service backyard and park movie nights with bright HD projector, pro sound, setup, on-site tech, and teardown. Ideal for dive-in pool parties, movies in the park, and outdoor cinema events in Arizona’s desert nights.",
         ogTitle: "Outdoor Movie Screen Rentals Near Me | Phoenix Metro Locations",
@@ -50,13 +57,13 @@ const cityData = {
         formattedCity: "Phoenix, AZ",
         cityShort: "Phoenix",
         regionLabel: "Phoenix, AZ and nearby communities",
-        visibleH1: "Outdoor Movie Screen Rentals in Phoenix, AZ",
+        visibleH1: "Inflatable Movie Screen Rental Phoenix, AZ – Backyard & Park",
         introCopy:
             "We serve Phoenix, AZ and nearby communities. Bring the magic of outdoor movie nights to your backyard or local park with our inflatable screens, bright projectors, and pro sound systems. Add concessions for that theater vibe or our ice cream sundae & coffee food truck for a sweet twist. From downtown rooftops to North Phoenix pool parties, we tailor each setup to your space.",
         readyToSchedule: "Ready to schedule your event in Phoenix?",
         phoneText: "(602) 638-6510",
         srOnlyH1: "Inflatable outdoor movie screen rental in Phoenix, AZ",
-        title: "Outdoor Movie Screen Rental in Phoenix, AZ",
+        title: "Inflatable Movie Screen Rental Phoenix, AZ – Backyard & Park",
         description:
             "Outdoor movie screen rentals in Phoenix, AZ. Full-service backyard and park movie nights with large inflatable screens, HD projector, pro sound, setup, on-site tech, and teardown included. Perfect for dive-in movies and outdoor cinema under the desert stars.",
         ogTitle: "Outdoor Movie Screen Rental in Phoenix, AZ",
@@ -76,13 +83,13 @@ const cityData = {
         formattedCity: "Scottsdale, AZ",
         cityShort: "Scottsdale",
         regionLabel: "Scottsdale, AZ and nearby communities",
-        visibleH1: "Inflatable Movie Screen Rental in Scottsdale, AZ",
+        visibleH1: "Outdoor Movie Screen Rental Scottsdale, AZ – Resort & Dive-In",
         introCopy:
             "We serve Scottsdale, AZ and nearby communities. Create an elegant outdoor cinema at home, a resort, or a community green. Our team sizes the screen, tunes audio for your space, and keeps the run-of-show on track. Add concessions or our ice cream & coffee food truck for a polished experience.",
         readyToSchedule: "Ready to schedule your event in Scottsdale?",
         phoneText: "(602) 638-6510",
         srOnlyH1: "Inflatable movie screen rental in Scottsdale, AZ",
-        title: "Inflatable Movie Screen Rental in Scottsdale, AZ",
+        title: "Outdoor Movie Screen Rental Scottsdale, AZ – Resort & Dive-In",
         description:
             "Inflatable movie screen rentals in Scottsdale, AZ. Full-service setups for luxury backyard parties and resort events with giant inflatable screens, HD projector, pro audio, delivery, setup, on-site tech, and teardown.",
         ogTitle: "Inflatable Movie Screen Rental in Scottsdale, AZ",
@@ -102,13 +109,13 @@ const cityData = {
         formattedCity: "Mesa, AZ",
         cityShort: "Mesa",
         regionLabel: "Mesa, AZ and nearby communities",
-        visibleH1: "Backyard Movie Night Rental in Mesa, AZ",
+        visibleH1: "Backyard Movie Night Rental Mesa, AZ – Family & School",
         introCopy:
             "We serve Mesa, AZ and nearby communities. Family-friendly neighborhoods and school fields are perfect for outdoor movies. We match the screen to your yard or park space and keep the sound comfortable for nearby homes.",
         readyToSchedule: "Ready to schedule your event in Mesa?",
         phoneText: "(602) 638-6510",
         srOnlyH1: "Backyard movie night rental in Mesa, AZ",
-        title: "Backyard Movie Night Rental in Mesa, AZ",
+        title: "Backyard Movie Night Rental Mesa, AZ – Family & School Events",
         description:
             "Backyard movie night rentals in Mesa, AZ. Complete packages for park movie nights and school events featuring large inflatable screens, HD projector, professional sound, full setup, on-site tech, and teardown.",
         ogTitle: "Backyard Movie Night Rental in Mesa, AZ",
@@ -128,13 +135,13 @@ const cityData = {
         formattedCity: "Chandler, AZ",
         cityShort: "Chandler",
         regionLabel: "Chandler, AZ and nearby communities",
-        visibleH1: "Movies in the Park Rental in Chandler, AZ",
+        visibleH1: "Movies in the Park Rental Chandler, AZ – HOA & Dive-In",
         introCopy:
             "We serve Chandler, AZ and nearby communities. From HOA lawns to city park nights, we plan power, layout, and sightlines so every guest can see and hear clearly.",
         readyToSchedule: "Ready to schedule your event in Chandler?",
         phoneText: "(602) 638-6510",
         srOnlyH1: "Movies in the park rental in Chandler, AZ",
-        title: "Movies in the Park Rental in Chandler, AZ",
+        title: "Movies in the Park Rental Chandler, AZ – HOA & Pool Dive-In",
         description:
             "Movies in the park rentals in Chandler, AZ. Full-service for HOA events and corporate gatherings with giant inflatable screens, HD projector, pro sound, setup, on-site tech, and teardown.",
         ogTitle: "Movies in the Park Rental in Chandler, AZ",
@@ -154,13 +161,13 @@ const cityData = {
         formattedCity: "Gilbert, AZ",
         cityShort: "Gilbert",
         regionLabel: "Gilbert, AZ and nearby communities",
-        visibleH1: "Backyard Cinema Rental in Gilbert, AZ",
+        visibleH1: "Dive-In Movie Rental Gilbert, AZ – Backyard & Pool",
         introCopy:
             "We serve Gilbert, AZ and nearby communities. Backyard lawns and clubhouse lawns make comfortable viewing areas. We help with projector placement and screen angles so people can mingle and still see the film.",
         readyToSchedule: "Ready to schedule your event in Gilbert?",
         phoneText: "(602) 638-6510",
         srOnlyH1: "Backyard cinema rental in Gilbert, AZ",
-        title: "Backyard Cinema Rental in Gilbert, AZ",
+        title: "Dive-In Movie Rental Gilbert, AZ – Backyard & Pool Cinema",
         description:
             "Backyard cinema rentals in Gilbert, AZ. Hassle-free packages for backyard movie nights and local festivals with large inflatable screens, HD projector, pro audio, delivery, setup, on-site tech, and teardown.",
         ogTitle: "Backyard Cinema Rental in Gilbert, AZ",
@@ -175,17 +182,18 @@ const cityData = {
         foodTruckText:
             "Coffee for parents, scoops for kids. We offer espresso, oat-milk lattes, classic cones and allergy-friendly choices—an easy upgrade for neighborhood movie nights across Gilbert.",
     },
+
     tempe: {
         formattedCity: "Tempe, AZ",
         cityShort: "Tempe",
         regionLabel: "Tempe, AZ and nearby communities",
-        visibleH1: "Outdoor Cinema Rental in Tempe, AZ",
+        visibleH1: "Outdoor Cinema Rental Tempe, AZ – ASU & Park Events",
         introCopy:
             "We serve Tempe, AZ and nearby communities. Campus groups, clubs, and neighborhood parks use our packages for simple, reliable movie nights with plug-and-play streaming.",
         readyToSchedule: "Ready to schedule your event in Tempe?",
         phoneText: "(602) 638-6510",
         srOnlyH1: "Outdoor cinema rental in Tempe, AZ",
-        title: "Outdoor Cinema Rental in Tempe, AZ",
+        title: "Outdoor Cinema Rental Tempe, AZ – ASU & Park Screenings",
         description:
             "Outdoor cinema rentals in Tempe, AZ. Dynamic setups for university events and park screenings with giant inflatable screens, HD projector, pro sound, setup, on-site tech, and teardown.",
         ogTitle: "Outdoor Cinema Rental in Tempe, AZ",
@@ -205,13 +213,13 @@ const cityData = {
         formattedCity: "Paradise Valley, AZ",
         cityShort: "Paradise Valley",
         regionLabel: "Paradise Valley, AZ and nearby communities",
-        visibleH1: "Luxury Outdoor Movie Rental in Paradise Valley, AZ",
+        visibleH1: "Luxury Movie Screen Rental Paradise Valley, AZ – Estate",
         introCopy:
             "We serve Paradise Valley, AZ and nearby communities. Private estates and resort courtyards call for careful placement, discreet cabling, and balanced audio—our crew handles every detail.",
         readyToSchedule: "Ready to schedule your event in Paradise Valley?",
         phoneText: "(602) 638-6510",
         srOnlyH1: "Luxury outdoor movie rental in Paradise Valley, AZ",
-        title: "Luxury Outdoor Movie Rental in Paradise Valley, AZ",
+        title: "Luxury Movie Screen Rental Paradise Valley, AZ – Estate & Pool",
         description:
             "Luxury outdoor movie rentals in Paradise Valley, AZ. Tailored setups for private estates and resorts with giant inflatable screens, HD projector, refined audio, delivery, setup, on-site tech, and teardown.",
         ogTitle: "Luxury Outdoor Movie Rental in Paradise Valley, AZ",
@@ -231,13 +239,13 @@ const cityData = {
         formattedCity: "Glendale, AZ",
         cityShort: "Glendale",
         regionLabel: "Glendale, AZ and nearby communities",
-        visibleH1: "Dive-In Movie Rental in Glendale, AZ",
+        visibleH1: "Community Movie Night Rental Glendale, AZ – Sports & Park",
         introCopy:
             "We serve Glendale, AZ and nearby communities. Sports-themed watch parties and family films both work great with our inflatable screens and tuned audio.",
         readyToSchedule: "Ready to schedule your event in Glendale?",
         phoneText: "(602) 638-6510",
         srOnlyH1: "Dive-in movie rental in Glendale, AZ",
-        title: "Dive-In Movie Rental in Glendale, AZ",
+        title: "Community Movie Night Rental Glendale, AZ – Sports & Parks",
         description:
             "Dive-in movie rentals in Glendale, AZ. Sports-friendly packages for tailgates and park events with large inflatable screens, HD projector, pro audio, delivery, setup, on-site tech, and teardown.",
         ogTitle: "Dive-In Movie Rental in Glendale, AZ",
@@ -257,13 +265,13 @@ const cityData = {
         formattedCity: "Peoria, AZ",
         cityShort: "Peoria",
         regionLabel: "Peoria, AZ and nearby communities",
-        visibleH1: "Poolside Movie Rental in Peoria, AZ",
+        visibleH1: "Poolside Movie Rental Peoria, AZ – Neighborhood & Lake",
         introCopy:
             "We serve Peoria, AZ and nearby communities. Quiet neighborhoods and lakeside parks call for thoughtful audio and smart screen placement—our team handles it for you.",
         readyToSchedule: "Ready to schedule your event in Peoria?",
         phoneText: "(602) 638-6510",
         srOnlyH1: "Poolside movie rental in Peoria, AZ",
-        title: "Poolside Movie Rental in Peoria, AZ",
+        title: "Poolside Movie Rental Peoria, AZ – Neighborhood & Lake Events",
         description:
             "Poolside movie rentals in Peoria, AZ. Tranquil setups for neighborhood movie nights and park series with giant inflatable screens, HD projector, pro sound, setup, on-site tech, and teardown.",
         ogTitle: "Poolside Movie Rental in Peoria, AZ",
@@ -283,13 +291,13 @@ const cityData = {
         formattedCity: "Queen Creek, AZ",
         cityShort: "Queen Creek",
         regionLabel: "Queen Creek, AZ and nearby communities",
-        visibleH1: "Dive-In Pool Party Rental in Queen Creek, AZ",
+        visibleH1: "Dive-In Pool Party Rental Queen Creek, AZ – HOA & Farm",
         introCopy:
             "We serve Queen Creek, AZ and nearby communities. Larger lots and community pools are perfect for inflatable screens—our crew plans throw distance and safe cable routes.",
         readyToSchedule: "Ready to schedule your event in Queen Creek?",
         phoneText: "(602) 638-6510",
         srOnlyH1: "Dive-in pool party rental in Queen Creek, AZ",
-        title: "Dive-In Pool Party Rental in Queen Creek, AZ",
+        title: "Dive-In Pool Party Rental Queen Creek, AZ – HOA & Farmstead",
         description:
             "Dive-in pool party rentals in Queen Creek, AZ. Comfortable setups for farmstead movie nights and community pools with giant inflatable screens, HD projector, pro sound, setup, on-site tech, and teardown.",
         ogTitle: "Dive-In Pool Party Rental in Queen Creek, AZ",
@@ -309,13 +317,13 @@ const cityData = {
         formattedCity: "San Tan Valley, AZ",
         cityShort: "San Tan Valley",
         regionLabel: "San Tan Valley, AZ and nearby communities",
-        visibleH1: "Neighborhood Movie Night Rental in San Tan Valley, AZ",
+        visibleH1: "Neighborhood Movie Rental San Tan Valley, AZ – HOA & Park",
         introCopy:
             "We serve San Tan Valley, AZ and nearby communities. Greenbelts, clubhouses, and cul-de-sacs make great viewing areas—our crew keeps cables neat and audio comfortable.",
         readyToSchedule: "Ready to schedule your event in San Tan Valley?",
         phoneText: "(602) 638-6510",
         srOnlyH1: "Neighborhood movie night rental in San Tan Valley, AZ",
-        title: "Neighborhood Movie Night Rental in San Tan Valley, AZ",
+        title: "Neighborhood Movie Rental San Tan Valley, AZ – HOA & Park",
         description:
             "Neighborhood movie night rentals in San Tan Valley, AZ. Turnkey packages for HOA and community events with inflatable screens, HD projector, pro sound, delivery, setup, on-site tech, and teardown.",
         ogTitle: "Neighborhood Movie Night Rental in San Tan Valley, AZ",
@@ -335,13 +343,13 @@ const cityData = {
         formattedCity: "Tolleson, AZ",
         cityShort: "Tolleson",
         regionLabel: "Tolleson, AZ and nearby communities",
-        visibleH1: "Community Movie Night Rental in Tolleson, AZ",
+        visibleH1: "Community Movie Rental Tolleson, AZ – School & Park",
         introCopy:
             "We serve Tolleson, AZ and nearby communities. School fields and neighborhood parks make set-up straightforward—our tech handles timing, sound checks, and show flow.",
         readyToSchedule: "Ready to schedule your event in Tolleson?",
         phoneText: "(602) 638-6510",
         srOnlyH1: "Community movie night rental in Tolleson, AZ",
-        title: "Community Movie Night Rental in Tolleson, AZ",
+        title: "Community Movie Rental Tolleson, AZ – School & Park Nights",
         description:
             "Community movie night rentals in Tolleson, AZ. Simple, reliable packages for school and community events with inflatable screens, HD projector, pro audio, delivery, setup, on-site tech, and teardown.",
         ogTitle: "Community Movie Night Rental in Tolleson, AZ",
@@ -361,13 +369,13 @@ const cityData = {
         formattedCity: "Buckeye, AZ",
         cityShort: "Buckeye",
         regionLabel: "Buckeye, AZ and nearby communities",
-        visibleH1: "Rural Outdoor Movie Rental in Buckeye, AZ",
+        visibleH1: "Rural Movie Screen Rental Buckeye, AZ – Large Lot & Park",
         introCopy:
             "We serve Buckeye, AZ and nearby communities. Larger rural lots and community parks give you room for big screens—our crew sizes gear to your space.",
         readyToSchedule: "Ready to schedule your event in Buckeye?",
         phoneText: "(602) 638-6510",
         srOnlyH1: "Rural outdoor movie rental in Buckeye, AZ",
-        title: "Rural Outdoor Movie Rental in Buckeye, AZ",
+        title: "Rural Movie Screen Rental Buckeye, AZ – Large Lot & Park",
         description:
             "Rural outdoor movie rentals in Buckeye, AZ. Packages for frontier-style movie nights and community events with large inflatable screens, HD projector, pro audio, delivery, setup, on-site tech, and teardown.",
         ogTitle: "Rural Outdoor Movie Rental in Buckeye, AZ",
@@ -387,13 +395,13 @@ const cityData = {
         formattedCity: "Goodyear, AZ",
         cityShort: "Goodyear",
         regionLabel: "Goodyear, AZ and nearby communities",
-        visibleH1: "Outdoor Movie Event Rental in Goodyear, AZ",
+        visibleH1: "Outdoor Movie Event Rental Goodyear, AZ – Festival & Park",
         introCopy:
             "We serve Goodyear, AZ and nearby communities. Neighborhood festivals and park series benefit from simple logistics—clear power plans, clean cable runs, and reliable audio.",
         readyToSchedule: "Ready to schedule your event in Goodyear?",
         phoneText: "(602) 638-6510",
         srOnlyH1: "Outdoor movie event rental in Goodyear, AZ",
-        title: "Outdoor Movie Event Rental in Goodyear, AZ",
+        title: "Outdoor Movie Event Rental Goodyear, AZ – Festival & Park",
         description:
             "Outdoor movie event rentals in Goodyear, AZ. Packages for community festivals and park screenings with large inflatable screens, HD projector, pro audio, delivery, setup, on-site tech, and teardown.",
         ogTitle: "Outdoor Movie Event Rental in Goodyear, AZ",
@@ -413,13 +421,13 @@ const cityData = {
         formattedCity: "Anthem, AZ",
         cityShort: "Anthem",
         regionLabel: "Anthem, AZ and nearby communities",
-        visibleH1: "Outdoor Movie Night Rental in Anthem, AZ",
+        visibleH1: "HOA Movie Night Rental Anthem, AZ – Park & Pool",
         introCopy:
             "We serve Anthem, AZ and nearby communities. Community parks, club lawns, and cul-de-sacs make easy venues—our team plans layout, power, and projector throw so every seat has a view.",
         readyToSchedule: "Ready to schedule your event in Anthem?",
         phoneText: "(602) 638-6510",
         srOnlyH1: "Outdoor movie night rental in Anthem, AZ",
-        title: "Outdoor Movie Night Rental in Anthem, AZ",
+        title: "HOA Movie Night Rental Anthem, AZ – Park & Pool Events",
         description:
             "Outdoor movie night rentals in Anthem, AZ. Packages for neighborhood lawns and park events with inflatable screens, HD projector, pro audio, delivery, setup, on-site tech, and teardown.",
         ogTitle: "Outdoor Movie Night Rental in Anthem, AZ",
@@ -465,7 +473,7 @@ function Locations() {
             {data.introCopy}
             <br />
             <br />
-            {data.readyToSchedule}{' '}
+            {data.readyToSchedule}{" "}
             <a href="tel:+16026386510" className={`${classes.phoneLink}`}>
                 {data.phoneText}
             </a>
@@ -479,7 +487,6 @@ function Locations() {
         "Delivery, setup, on-site tech & teardown included",
     ];
 
-    // Seating/tables removed here (and anywhere in copy above)
     const concessionsBullets = [
         "Fresh popcorn machine & supplies",
         "Candy, cotton candy & cold drinks",
@@ -493,6 +500,30 @@ function Locations() {
         "Fast, friendly, uniformed staff",
         "Great for schools, HOAs & corporate",
     ];
+
+    const canonicalUrl = `https://outdoormoviepros.com${pathForSeo}`;
+
+    const handleShare = async () => {
+        const title = data.visibleH1 || "Outdoor Movie Pros";
+        const text = "Check this out from Outdoor Movie Pros";
+
+        console.log("Testing in Locations...");
+
+        if (navigator.share) {
+            try {
+                await navigator.share({ title, text, url: canonicalUrl });
+            } catch {
+                /* user canceled – no-op */
+            }
+        } else {
+            try {
+                await navigator.clipboard.writeText(canonicalUrl);
+                alert("Link copied to clipboard.");
+            } catch {
+                window.prompt("Copy this link:", canonicalUrl);
+            }
+        }
+    };
 
     return (
         <section className={classes.root}>
@@ -553,124 +584,305 @@ function Locations() {
                     <Typography variant="h1" className={classes.title}>
                         {data.visibleH1}
                     </Typography>
-                    <Typography className={classes.subText}>{introCopy}</Typography>
+                    <Box className={classes.subTextBox}>
+                        <Typography className={classes.subText}>{introCopy}</Typography>
+                    </Box>
                 </Box>
             </header>
 
-            <Grid container spacing={4} className={classes.sectionContainer}>
+            <Grid container spacing={10} className={classes.sectionContainer}>
+
                 {/* Section 1: Outdoor Movie Nights */}
-                <Grid item xs={12} id="sampling-section" className={classes.serviceSection}>
-                    <Grid container spacing={6} alignItems="center">
-                        <Grid item xs={12} md={5}>
-                            <Box className={classes.imageButtonWrapper}>
-                                <img src={GiantScreenImage} alt={data.movieSectionAlt} className={classes.sectionImage} />
-                                <Box className={classes.buttonContainerDesktop}>
-                                    <Button size="medium" className={classes.contactButton} component={Link} to="/movie-nights-options">
-                                        View Options
-                                    </Button>
-                                </Box>
+                <Grid item xs={12} id="movie-section">
+                    <Grid
+                        container
+                        className={classes.mainGridContainer}
+                        alignContent="center"
+                        justifyContent="center"
+                    >
+                        <Grid item xs={12} className={classes.topGridItem}>
+                            <Box
+                                component={Link}
+                                to="/movie-nights-options"
+                                style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}
+                                aria-label="View options for movie nights"
+                            >
+                                <span className={classes.viewOptions}>GO TO OPTIONS</span>
+                                <ArrowForwardIosIcon style={{ cursor: 'pointer' }} />
                             </Box>
+                            <ShareIcon
+                                onClick={handleShare}
+                                aria-label="Share this page"
+                                style={{
+                                    position: "absolute",
+                                    right: "35",
+                                    color: "white",
+                                    cursor: 'pointer',
+                                }}
+                            />
                         </Grid>
-                        <Grid item xs={12} md={7} className={classes.sectionContent}>
-                            <Typography variant="h4" className={classes.sectionTitle}>Outdoor Movie Nights</Typography>
-                            <Divider className={classes.divider} />
-                            <Typography variant="body1" className={classes.sectionText}>
-                                {data.movieSectionText}
-                            </Typography>
-                            <List className={classes.bulletList}>
-                                {movieBullets.map((item, i) => (
-                                    <ListItem key={i} className={classes.listItem}>
-                                        <ListItemIcon><CheckCircleIcon className={classes.icon} /></ListItemIcon>
-                                        <ListItemText primary={item} />
-                                    </ListItem>
-                                ))}
-                            </List>
-                            <Box className={classes.buttonContainerMobile}>
-                                <Button size="medium" className={classes.contactButton} component={Link} to="/movie-nights-options">
-                                    View Options
-                                </Button>
-                            </Box>
-                        </Grid>
-                    </Grid>
-                </Grid>
-
-                {/* Section 2: Concessions & Add-Ons */}
-                <Grid item xs={12} id="productivity-section" className={classes.serviceSection}>
-                    <Grid container spacing={6} alignItems="center">
-                        <Grid item xs={12} md={5}>
-                            <Box className={classes.imageButtonWrapper}>
+                        {/* Image Container */}
+                        <Grid
+                            item
+                            xs={12}
+                            md={6}
+                            className={classes.imageGridContainer}
+                        >
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={GiantScreenImage}
+                            >
                                 <img
-                                    src={ConcessionsImage}
-                                    alt="Concessions and add-ons for outdoor movie nights"
-                                    className={classes.sectionImage}
-                                    loading="lazy"
+                                    className={classes.imageStyles}
+                                    src={GiantScreenImage}
+                                    alt={data.movieSectionAlt}
                                 />
-                                <Box className={classes.buttonContainerDesktop}>
-                                    <Button size="medium" className={classes.contactButton} component={Link} to="/concessions-options">
-                                        View Options
-                                    </Button>
-                                </Box>
+                            </a>
+                        </Grid>
+                        {/* Main Content */}
+                        <Grid item xs={12} md={6} style={{ backgroundColor: "white" }}>
+                            <Box className={classes.descriptionContainer}>
+                                <Typography className={classes.sectionTitle}>
+                                    Outdoor Movie Nights
+                                </Typography>
+                                <Typography className={classes.subTitle}>
+                                    Full setup and teardown inclcuded!
+                                </Typography>
+
+                                <CardContent className={classes.description}>
+                                    {data.movieSectionText}
+                                </CardContent>
+                                <List className={classes.bulletList}>
+                                    {movieBullets.map((item, i) => (
+                                        <ListItem key={i} className={classes.listItem}>
+                                            <ListItemIcon><CheckCircleIcon className={classes.icon} /></ListItemIcon>
+                                            <ListItemText primary={item} />
+                                        </ListItem>
+                                    ))}
+                                </List>
                             </Box>
                         </Grid>
+                        {/* Button view */}
+                        <Grid item xs={12}>
+                            <Grid container alignItems="center" className={classes.buttonView}>
+                                <Grid item sm={2} md={6}></Grid>
+                                <Grid item xs={12} sm={8} md={6}>
+                                    <Box className={classes.buttonGroup}>
+                                        <Button
+                                            className={classes.viewOptionsButton}
 
-                        <Grid item xs={12} md={7} className={classes.sectionContent}>
-                            <Typography variant="h4" className={classes.sectionTitle}>Concessions & Add-Ons</Typography>
-                            <Divider className={classes.divider} />
-                            <Typography variant="body1" className={classes.sectionText}>
-                                {data.concessionsText}
-                            </Typography>
-                            <List className={classes.bulletList}>
-                                {concessionsBullets.map((item, i) => (
-                                    <ListItem key={i} className={classes.listItem}>
-                                        <ListItemIcon><CheckCircleIcon className={classes.icon} /></ListItemIcon>
-                                        <ListItemText primary={item} />
-                                    </ListItem>
-                                ))}
-                            </List>
-                            <Box className={classes.buttonContainerMobile}>
-                                <Button size="medium" className={classes.contactButton} component={Link} to="/concessions-options">
-                                    View Options
-                                </Button>
-                            </Box>
+                                            name="View Options"
+                                            startIcon={<TuneRoundedIcon />}
+                                            component={Link}
+                                            to="/movie-nights-options"
+                                        >
+                                            View Options
+                                        </Button>
+                                    </Box>
+                                </Grid>
+                            </Grid>
                         </Grid>
                     </Grid>
+
                 </Grid>
 
-                {/* Section 3: Ice Cream & Coffee Food Truck */}
-                <Grid item xs={12} id="system-inspection-section" className={classes.serviceSection} style={{ marginBottom: -15 }}>
-                    <Grid container spacing={6} alignItems="center">
-                        <Grid item xs={12} md={5}>
-                            <Box className={classes.imageButtonWrapper}>
-                                <img src={FoodTruckImage} alt={data.foodTruckAlt} className={classes.sectionImage} loading="lazy" />
-                                <Box className={classes.buttonContainerDesktop}>
-                                    <Button size="medium" className={classes.contactButton} component={Link} to="/ice-cream-food-truck">
-                                        Learn More
-                                    </Button>
-                                </Box>
+                {/* Section 2: Concessions & Add-ons */}
+                <Grid item xs={12} id="concessions-section">
+                    <Grid
+                        container
+                        className={classes.mainGridContainer}
+                        alignContent="center"
+                        justifyContent="center"
+                    >
+                        <Grid item xs={12} className={classes.topGridItem}>
+                            <Box
+                                component={Link}
+                                to="/concessions-options"
+                                style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}
+                                aria-label="View options for concessions and add-ons"
+                            >
+                                <span className={classes.viewOptions}>GO TO OPTIONS</span>
+                                <ArrowForwardIosIcon style={{ cursor: 'pointer' }} />
+                            </Box>
+                                  <ShareIcon
+                                onClick={handleShare}
+                                aria-label="Share this page"
+                                style={{
+                                    position: "absolute",
+                                    right: "35",
+                                    color: "white",
+                                    cursor: 'pointer',
+                                }}
+                            />
+                        </Grid>
+                        {/* Image Container */}
+                        <Grid
+                            item
+                            xs={12}
+                            md={6}
+                            className={classes.imageGridContainer}
+                        >
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={ConcessionBoothImage}
+                            >
+                                <img
+                                    className={classes.imageStyles}
+                                    src={ConcessionBoothImage}
+                                    alt={data.concessionsSectionAlt}
+                                />
+                            </a>
+                        </Grid>
+                        {/* Main Content */}
+                        <Grid item xs={12} md={6} style={{ backgroundColor: "white" }}>
+                            <Box className={classes.descriptionContainer}>
+                                <Typography className={classes.sectionTitle}>
+                                    Concessions & Add-Ons
+                                </Typography>
+                                <Typography className={classes.subTitle}>
+                                    Popcorn, cotton candy, chilled drinks, and more...
+                                </Typography>
+                                <CardContent className={classes.description}>
+                                    {data.concessionsText}
+                                </CardContent>
+                                {/* <ul>
+                            {movieBullets.map((bullet) => {
+                                return <li key={bullet}>{bullet}</li>;
+                            })}
+                        </ul> */}
+                                <List className={classes.bulletList}>
+                                    {concessionsBullets.map((item, i) => (
+                                        <ListItem key={i} className={classes.listItem}>
+                                            <ListItemIcon><CheckCircleIcon className={classes.icon} /></ListItemIcon>
+                                            <ListItemText primary={item} />
+                                        </ListItem>
+                                    ))}
+                                </List>
                             </Box>
                         </Grid>
+                        {/* Button view */}
+                        <Grid item xs={12}>
+                            <Grid container alignItems="center" className={classes.buttonView}>
+                                <Grid item sm={2} md={6}></Grid>
+                                <Grid item xs={12} sm={8} md={6}>
+                                    <Box className={classes.buttonGroup}>
+                                        <Button
+                                            className={classes.viewOptionsButton}
 
-                        <Grid item xs={12} md={7} className={classes.sectionContent}>
-                            <Typography variant="h4" className={classes.sectionTitle}>Ice Cream & Coffee Food Truck</Typography>
-                            <Divider className={classes.divider} />
-                            <Typography variant="body1" className={classes.sectionText}>
-                                {data.foodTruckText}
-                            </Typography>
-                            <List className={classes.bulletList}>
-                                {foodTruckBullets.map((item, i) => (
-                                    <ListItem key={i} className={classes.listItem}>
-                                        <ListItemIcon><CheckCircleIcon className={classes.icon} /></ListItemIcon>
-                                        <ListItemText primary={item} />
-                                    </ListItem>
-                                ))}
-                            </List>
-                            <Box className={classes.buttonContainerMobile}>
-                                <Button size="medium" className={classes.contactButton} component={Link} to="/ice-cream-food-truck">
-                                    Learn More
-                                </Button>
-                            </Box>
+                                            name="View Options"
+                                            startIcon={<TuneRoundedIcon />}
+                                            component={Link}
+                                            to="/concessions-options"
+                                        >
+                                            View Options
+                                        </Button>
+                                    </Box>
+                                </Grid>
+                            </Grid>
                         </Grid>
                     </Grid>
+
+                </Grid>
+
+                {/* Section 3: Ice Cream Sundae & Coffee Food Truck */}
+                <Grid item xs={12} id="concessions-section" className={classes.lastCard}>
+                    <Grid
+                        container
+                        className={classes.mainGridContainer}
+                        alignContent="center"
+                        justifyContent="center"
+                    >
+                        <Grid item xs={12} className={classes.topGridItem}>
+                            <Box
+                                component={Link}
+                                to="/ice-cream-food-truck"
+                                style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}
+                                aria-label="View options for ice cream food truck"
+                            >
+                                <span className={classes.viewOptions}>LEARN MORE</span>
+                                <ArrowForwardIosIcon style={{ cursor: 'pointer' }} />
+                            </Box>
+                            <ShareIcon
+                                onClick={handleShare}
+                                aria-label="Share this page"
+                                style={{
+                                    position: "absolute",
+                                    right: "35",
+                                    color: "white",
+                                    cursor: 'pointer',
+                                }}
+                            />
+                        </Grid>
+                        {/* Image Container */}
+                        <Grid
+                            item
+                            xs={12}
+                            md={6}
+                            className={classes.imageGridContainer}
+                        >
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={FoodTruckImage}
+                            >
+                                <img
+                                    className={classes.imageStyles}
+                                    src={FoodTruckImage}
+                                    alt={data.foodTruckAlt}
+                                />
+                            </a>
+                        </Grid>
+                        {/* Main Content */}
+                        <Grid item xs={12} md={6} style={{ backgroundColor: "white" }}>
+                            <Box className={classes.descriptionContainer}>
+                                <Typography className={classes.sectionTitle}>
+                                    Ice Cream Sundae & Coffee Food Truck
+                                </Typography>
+                                <Typography className={classes.subTitle}>
+                                    Perfect for schools, HOAs, and corporate events
+                                </Typography>
+                                <CardContent className={classes.description}>
+                                    {data.foodTruckText}
+                                </CardContent>
+                                {/* <ul>
+                            {movieBullets.map((bullet) => {
+                                return <li key={bullet}>{bullet}</li>;
+                            })}
+                        </ul> */}
+                                <List className={classes.bulletList}>
+                                    {foodTruckBullets.map((item, i) => (
+                                        <ListItem key={i} className={classes.listItem}>
+                                            <ListItemIcon><CheckCircleIcon className={classes.icon} /></ListItemIcon>
+                                            <ListItemText primary={item} />
+                                        </ListItem>
+                                    ))}
+                                </List>
+                            </Box>
+                        </Grid>
+                        {/* Button view */}
+                        <Grid item xs={12}>
+                            <Grid container alignItems="center" className={classes.buttonView}>
+                                <Grid item sm={2} md={6}></Grid>
+                                <Grid item xs={12} sm={8} md={6}>
+                                    <Box className={classes.buttonGroup}>
+                                        <Button
+                                            className={classes.viewOptionsButton}
+
+                                            name="Learn More"
+                                            startIcon={<IceCreamIcon />}
+                                            component={Link}
+                                            to="/ice-cream-food-truck"
+                                        >
+                                            Learn More
+                                        </Button>
+                                    </Box>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+
                 </Grid>
             </Grid>
 
