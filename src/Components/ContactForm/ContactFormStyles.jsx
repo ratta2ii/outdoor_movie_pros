@@ -67,7 +67,6 @@ const useStyles = makeStyles((theme) => ({
             boxShadow: 'none !important',
         },
         [theme.breakpoints.down('xs')]: {
-            height: 35,
             marginRight: 0,
             width: '100%',
         },

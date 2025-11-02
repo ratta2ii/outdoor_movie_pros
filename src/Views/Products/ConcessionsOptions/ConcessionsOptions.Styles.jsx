@@ -167,7 +167,7 @@ const useStyles = makeStyles((theme) => ({
         minWidth: 130,
         textDecoration: 'none',
         color: '#fff !important',
-        height: 35,
+        height: 40,
         fontSize: '.7em !important',
         borderRadius: 5,
         boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.15) !important',

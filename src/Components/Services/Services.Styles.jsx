@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     },
     listItem: {
         padding: 0,
-        paddingBottom: 5,
+        paddingBottom: '0px !important',
         alignItems: 'center',
         '& .MuiListItemText-primary': {
             marginLeft: -30,
@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
     },
     icon: {
         color: "#66bb6a",
-        fontSize: '1.4rem',
+        fontSize: '1.3rem',
         minWidth: 24,
         marginLeft: -10,
     },
@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
     contactButton: {
         color: '#fff !important',
         fontWeight: 600,
-        height: 40,
+        height: 45,
         fontSize: '.7em !important',
         borderRadius: 5,
         width: '95% !important',
@@ -84,6 +84,9 @@ const useStyles = makeStyles((theme) => ({
         '&:hover, &:focus': {
             background: 'linear-gradient(90deg, #0D47A1 0%, #0D47A1 40%, #1565C0 100%)',
             boxShadow: 'none !important',
+        },
+        [theme.breakpoints.down('xs')]: {
+            height: 40,
         },
     },
     images: {

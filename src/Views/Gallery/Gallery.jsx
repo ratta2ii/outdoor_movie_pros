@@ -133,20 +133,12 @@ const Gallery = () => {
             <GalleryGrid>
                 {IMAGES.map((image, index) => (
                     <GalleryItem key={`gallery-item-${index}`}>
-                        <a
-                            href={image.src}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`Open full-size: ${image.alt}`}
-                            title="Open full-size"
-                        >
-                            <img
-                                src={image.src}
-                                alt={image.alt}
-                                loading="lazy"
-                                referrerPolicy="no-referrer"
-                            />
-                        </a>
+                        <img
+                            src={image.src}
+                            alt={image.alt}
+                            loading="lazy"
+                            referrerPolicy="no-referrer"
+                        />
                     </GalleryItem>
                 ))}
             </GalleryGrid>

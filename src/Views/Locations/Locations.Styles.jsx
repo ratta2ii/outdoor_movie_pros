@@ -165,7 +165,8 @@ const useStyles = makeStyles((theme) => ({
             paddingLeft: '50px',
         },
         [theme.breakpoints.down('xs')]: {
-            paddingLeft: '25px',
+            paddingLeft: 25,
+            paddingRight: 25,
         },
     },
     /* sectionTitle used inside each card */
@@ -206,9 +207,9 @@ const useStyles = makeStyles((theme) => ({
         marginTop: 15,
         fontSize: '1.1em',
         [theme.breakpoints.down('xs')]: {
-            marginTop: 5,
+            marginTop: 0,
             paddingLeft: 20,
-            marginBottom: -15
+            marginBottom: -17
         },
     },
     lastCard: {

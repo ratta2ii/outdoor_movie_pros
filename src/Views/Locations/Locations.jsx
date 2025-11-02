@@ -630,7 +630,7 @@ function Locations() {
                         >
                             <a
                                 target="_blank"
-                                rel="noopener noreferrer"
+                                rel="noopener noreferrer nofollow nofollow"
                                 href={GiantScreenImage}
                             >
                                 <img
@@ -647,7 +647,7 @@ function Locations() {
                                     Outdoor Movie Nights
                                 </Typography>
                                 <Typography className={classes.subTitle}>
-                                    Full setup and teardown inclcuded!
+                                    FULL SETUP AND TEARDOWN INCLUDED
                                 </Typography>
 
                                 <CardContent className={classes.description}>
@@ -725,7 +725,7 @@ function Locations() {
                         >
                             <a
                                 target="_blank"
-                                rel="noopener noreferrer"
+                                rel="noopener noreferrer nofollow nofollow"
                                 href={ConcessionBoothImage}
                             >
                                 <img
@@ -742,16 +742,11 @@ function Locations() {
                                     Concessions & Add-Ons
                                 </Typography>
                                 <Typography className={classes.subTitle}>
-                                    Popcorn, cotton candy, chilled drinks, and more...
+                                    POPCORN, COTTON CANDY, CHILLED DRINKS & MORE...
                                 </Typography>
                                 <CardContent className={classes.description}>
                                     {data.concessionsText}
                                 </CardContent>
-                                {/* <ul>
-                            {movieBullets.map((bullet) => {
-                                return <li key={bullet}>{bullet}</li>;
-                            })}
-                        </ul> */}
                                 <List className={classes.bulletList}>
                                     {concessionsBullets.map((item, i) => (
                                         <ListItem key={i} className={classes.listItem}>
@@ -824,7 +819,7 @@ function Locations() {
                         >
                             <a
                                 target="_blank"
-                                rel="noopener noreferrer"
+                                rel="noopener noreferrer nofollow nofollow"
                                 href={FoodTruckImage}
                             >
                                 <img
@@ -841,16 +836,11 @@ function Locations() {
                                     Ice Cream Sundae & Coffee Food Truck
                                 </Typography>
                                 <Typography className={classes.subTitle}>
-                                    Perfect for schools, HOAs, and corporate events
+                                    PERFECT FOR SCHOOLS, HOAs, AND CORPORATE EVENTS
                                 </Typography>
                                 <CardContent className={classes.description}>
                                     {data.foodTruckText}
                                 </CardContent>
-                                {/* <ul>
-                            {movieBullets.map((bullet) => {
-                                return <li key={bullet}>{bullet}</li>;
-                            })}
-                        </ul> */}
                                 <List className={classes.bulletList}>
                                     {foodTruckBullets.map((item, i) => (
                                         <ListItem key={i} className={classes.listItem}>

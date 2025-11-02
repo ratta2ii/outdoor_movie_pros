@@ -67,15 +67,21 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     ctaButton: {
-        fontSize: '1em',
-        backgroundColor: '#114796',
+        color: '#fff !important',
+        height: 45,
+        fontSize: '.8em !important',
+        borderRadius: 5,
+        boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.15) !important',
+        background: 'linear-gradient(90deg, #2063cc 0%, #2166d3 40%, #2c85ea 100%)',
         '&:hover, &:focus': {
-            backgroundColor: '#0b3879',
+            background: 'linear-gradient(90deg, #0D47A1 0%, #0D47A1 40%, #1565C0 100%)',
+            boxShadow: 'none !important',
         },
-        [theme.breakpoints.down("xs")]: {
-            marginBottom: 30,
+        [theme.breakpoints.down('xs')]: {
+            height: 40,
         },
     }
+
 }));
 
 export default useStyles;
