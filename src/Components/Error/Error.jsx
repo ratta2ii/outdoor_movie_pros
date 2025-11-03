@@ -4,7 +4,7 @@ export default function Error() {
     return (
         <div id="error-page" style={{ padding: 40, textAlign: "center", color: '#fff' }}>
             <Helmet>
-                <title>404 Page Not Found | Chinook Water Testing</title>
+                <title>404 Page Not Found | Outdoor Movie Pros</title>
                 <meta name="description" content="Oops! The page you are looking for doesn't exist. Please return to the homepage or contact us for further assistance." />
                 <meta name="robots" content="noindex, nofollow" />
             </Helmet>

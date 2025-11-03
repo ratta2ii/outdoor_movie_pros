@@ -15,6 +15,10 @@ html, body {
 * { box-sizing: border-box; }
 img, video, canvas { max-width: 100%; height: auto; }
 
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

@@ -25,7 +25,7 @@ Firebase Hosting is used to deploy and serve the frontend React application over
 
 **Configuration**
 - `firebase.json`: Rewrites, redirects, headers, and hosting behavior.
-- `.firebaserc`: Firebase project alias (`chinook-water-testing`).
+- `.firebaserc`: Firebase project alias (`outdoor-movie-pros`).
 
 ---
 

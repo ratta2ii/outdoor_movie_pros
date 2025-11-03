@@ -153,7 +153,7 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         maxHeight: 300,
         objectFit: 'contain',
-        borderRadius: 8,
+        borderRadius: '8px !important',
     },
     descriptionContainer: {
         fontFamily: 'Raleway, sans-serif',

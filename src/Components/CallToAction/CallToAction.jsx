@@ -18,9 +18,8 @@ function CallToAction() {
                 <Grid item>
                     <img
                         src={InsuranceSeal}
-                        alt="Chinook Water Testing is Licensed and Insured"
+                        alt="Outdoor Movie Pros is Licensed and Insured"
                         className={classes.ctaImage}
-                        style={{ width: 100, height: 100 }} // Adjust size as needed
                     />
                 </Grid>
                 <Grid item>

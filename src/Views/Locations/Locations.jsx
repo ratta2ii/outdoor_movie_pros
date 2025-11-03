@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { Grid, Typography, Box, Button, List, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
-import useStyles from "./Locations.Styles";
 import GiantScreenImage from "../../Assets/Images/GalleryImages/gallery6.webp";
 
 import ConcessionBoothImage from '../../Assets/Images/concession-booth.webp';
@@ -15,17 +14,15 @@ import IceCreamIcon from '@mui/icons-material/Icecream';
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import TuneRoundedIcon from '@material-ui/icons/TuneRounded';
 import ShareIcon from "@material-ui/icons/Share";
+import useStyles from "./Locations.Styles";
 
 /**
- * Cities supported (exactly the routes you listed) + /locations:
+ * Cities supported + /locations:
  * phoenix, mesa, scottsdale, gilbert, chandler, tempe, paradise-valley,
  * glendale, peoria, queen-creek, san-tan-valley, tolleson, buckeye,
  * goodyear, anthem, and the general /locations page.
- *
- * Fallback for unknown slugs -> /locations (prevents title/copy mixups).
- * Each city has expanded, unique copy for movie/concessions/food-truck sections.
- * Seating/tables references removed system-wide.
  */
+
 const cityData = {
     locations: {
         formattedCity: null,
@@ -46,6 +43,7 @@ const cityData = {
         movieSectionAlt: "Outdoor movie screen setup in the Phoenix metro area",
         movieSectionText:
             "Book an outdoor movie night anywhere in the Phoenix metro. We provide the inflatable screen, bright HD projector, professional audio, delivery and setup, an on-site technician to run the show, and teardown after the credits. Popular spots include backyard lawns, community parks, rooftop decks, and poolside dive-ins. Whether you’re in downtown Phoenix, North Scottsdale, East Mesa, or West Chandler, we tailor each setup to your space and crowd size for a seamless movie night experience.",
+        concessionsSectionAlt: "Concessions and add-ons available in the Phoenix metro area",
         concessionsText:
             "Add the finishing touch with concessions and helpful add-ons. Choose popcorn, cotton candy, bottled drinks, generators, microphones, sponsor slides, and more—available across the Phoenix metro. Neighborhood festivals and park series benefit from clean cable runs, pre-show music, and straightforward power planning for consistent playback in warm desert evenings.",
         foodTruckAlt: "Ice cream & coffee food truck serving events in the Phoenix metro area",
@@ -72,6 +70,7 @@ const cityData = {
         movieSectionAlt: "Outdoor movie screen setup in Phoenix, AZ",
         movieSectionText:
             "Host an outdoor movie night in Phoenix with a package sized for your crowd and space. Our tech runs the show end-to-end—screen, projector, audio, and timing—so you can relax with your guests. Popular Phoenix spots include Encanto Park lawns, Roosevelt Row rooftops, the green spaces around Central Ave, and pool decks in Arcadia and Ahwatukee. For larger community nights near South Mountain or Papago Park, we tune audio for open fields and set long-throw projections for sharp, bright images. From backyard premieres to school fundraisers and church gatherings, we make outdoor cinema simple across the city.",
+        concessionsSectionAlt: "Concessions and add-ons available in Phoenix, AZ",
         concessionsText:
             "Make it feel like a theater with concessions and event add-ons: popcorn, cotton candy, sweets, drinks, glow necklaces, generators, mic kits, and more. In Phoenix downtown and Midtown, sponsor slides and short announcements help recognize partners; in North Phoenix and Desert Ridge neighborhoods, pre-show music keeps the energy up while guests settle in. We keep cable runs neat and power reliable so your feature starts right on time.",
         foodTruckAlt: "Ice cream & coffee food truck serving events in Phoenix, AZ",
@@ -98,6 +97,7 @@ const cityData = {
         movieSectionAlt: "Outdoor movie screen setup in Scottsdale, AZ",
         movieSectionText:
             "Scottsdale screenings often mean polished spaces—pool decks, turf lawns, and resort courtyards. We plan sightlines and projector throw for clear, bright viewing. Neighborhoods and venues we frequently support include DC Ranch, McCormick Ranch, Old Town rooftops, and community greens near the McCormick-Stillman Railroad Park. For boutique resorts and private estates, our crew uses discreet cabling and quiet setup/teardown windows to keep your event refined from first frame to credits.",
+        concessionsSectionAlt: "Concessions and add-ons available in Scottsdale, AZ",
         concessionsText:
             "Offer upscale touches: popcorn, chilled beverages, sponsor slides, and a compact mic kit for brief welcomes. For resort pool series and neighborhood socials, we align timing with golden-hour lighting so photos and reels look great without delaying your feature.",
         foodTruckAlt: "Ice cream & coffee food truck serving events in Scottsdale, AZ",
@@ -124,6 +124,7 @@ const cityData = {
         movieSectionAlt: "Outdoor movie screen setup in Mesa, AZ",
         movieSectionText:
             "Mesa favorites include neighborhood greens and school lawns near Pioneer Park, Riverview, and Red Mountain Park. We bring the screen, projector, and PA, handle show timing, and take care of laptop/streaming hookups. Eastmark block parties, Downtown Mesa community nights, and church youth events all benefit from crisp images, pro audio, and full service movie nights.",
+        concessionsSectionAlt: "Concessions and add-ons available in Mesa, AZ",
         concessionsText:
             "Keep it simple and fun: popcorn, candy, bottled drinks, generators, and a small mic for announcements. For PTA nights, we can roll pre-show slides to thank sponsors or promote upcoming school events—while keeping lines short so families get to the feature quickly.",
         foodTruckAlt: "Ice cream & coffee food truck serving events in Mesa, AZ",
@@ -150,6 +151,7 @@ const cityData = {
         movieSectionAlt: "Outdoor movie screen setup in Chandler, AZ",
         movieSectionText:
             "For Chandler park series, HOA socials, and more, we right-size the screen, manage cable runs, and balance audio for open spaces. Ideal for Tumbleweed Park festivals, Veterans Oasis Lake evenings, and greenbelts across Ocotillo and Fulton Ranch. Corporate events along the Price Corridor benefit from sponsor slides, tight cues, and a polished pre-roll sequence.",
+        concessionsSectionAlt: "Concessions and add-ons available in Chandler, AZ",
         concessionsText:
             "Round out the event with popcorn, cotton candy, cold drinks, generator planning, and a simple mic kit. We’ll coordinate quick announcements and raffle winners between trailers so pacing stays lively and family-friendly.",
         foodTruckAlt: "Ice cream & coffee food truck serving events in Chandler, AZ",
@@ -176,6 +178,7 @@ const cityData = {
         movieSectionAlt: "Outdoor movie screen setup in Gilbert, AZ",
         movieSectionText:
             "From Power Ranch to Agritopia and neighborhoods near Freestone Park, we set up quick and clean—screen, projector, audio, and show control. HOA socials, birthday watch parties, and small festivals get bright, sharp visuals without overwhelming nearby homes. We’ll map cable routes around walkways and keep the run-of-show on time so families can plan the night.",
+        concessionsSectionAlt: "Concessions and add-ons available in Gilbert, AZ",
         concessionsText:
             "Popcorn, cotton candy, and bottled drinks are easy crowd-pleasers. Add sponsor slides or a quick mic welcome for HOA boards and school organizers. We keep concession logistics compact so backyard events stay cozy and relaxed.",
         foodTruckAlt: "Ice cream & coffee food truck serving events in Gilbert, AZ",
@@ -202,6 +205,7 @@ const cityData = {
         movieSectionAlt: "Outdoor movie screen setup in Tempe, AZ",
         movieSectionText:
             "We support student orgs and community groups with easy tech: HDMI from our laptop/console, clear audio for open lawns, and a tech to keep timing tight. Great for Tempe Beach Park series, Kiwanis Park, and ASU club events around campus greens. For neighborhood associations, we balance volume and plan neat cable paths so families can spread out comfortably.",
+        concessionsSectionAlt: "Concessions and add-ons available in Tempe, AZ",
         concessionsText:
             "We can bring the popcorn, cotton candy and cool beverages to your next event. Add a small mic for announcements or pre-show trivia—perfect for campus energy and club fundraisers. We can roll sponsor slides to recognize partners between trailers and feature.",
         foodTruckAlt: "Ice cream & coffee food truck serving events in Tempe, AZ",
@@ -228,6 +232,7 @@ const cityData = {
         movieSectionAlt: "Outdoor movie screen setup in Paradise Valley, AZ",
         movieSectionText:
             "We plan sightlines around view corridors and landscaping, optimize throw distance for crisp images, and keep audio tasteful for quiet neighborhoods. Popular settings include estate lawns off Lincoln Dr., intimate resort courtyards, and pool decks with dramatic Camelback Mountain backdrops. Our crew arrives in a tidy footprint and coordinates timing to align with sunset for a seamless, elegant experience.",
+        concessionsSectionAlt: "Concessions and add-ons available in Paradise Valley, AZ",
         concessionsText:
             "Offer elevated touches—popcorn, cotton candy, chilled beverages, sponsor slides, and a compact mic for brief remarks. We keep logistics discreet so your gathering feels effortless from pre-roll to credits.",
         foodTruckAlt: "Ice cream & coffee food truck serving events in Paradise Valley, AZ",
@@ -254,6 +259,7 @@ const cityData = {
         movieSectionAlt: "Outdoor movie screen setup in Glendale, AZ",
         movieSectionText:
             "We set up clear sightlines for big groups and tune audio to open fields. Great for HOA lawns, school quads, and family events near Westgate, Sahuaro Ranch Park, and more.... For pool-friendly dive-ins, we plan safe cable paths and projector placement so everyone can see—even from the shallow end.",
+        concessionsSectionAlt: "Concessions and add-ons available in Glendale, AZ",
         concessionsText:
             "Popcorn, candy, and bottled drinks keep things simple. Add sponsor slides or a mic for halftime shout-outs and raffle winners at community nights and youth-league celebrations.",
         foodTruckAlt: "Ice cream & coffee food truck serving events in Glendale, AZ",
@@ -280,6 +286,7 @@ const cityData = {
         movieSectionAlt: "Outdoor movie screen setup in Peoria, AZ",
         movieSectionText:
             "From Vistancia to Lake Pleasant and Rio Vista Park, we tailor throw distance and volume for comfortable viewing. Church fellowships, HOA lawns, and pool decks get a cinema feel without overpowering nearby homes. Our tech keeps the schedule tight so families can wrap up on time.",
+        concessionsSectionAlt: "Concessions and add-ons available in Peoria, AZ",
         concessionsText:
             "Light, kid-friendly snacks and simple beverages work well for Peoria’s family nights. We can add sponsor slides and a compact mic kit for quick welcomes and thank-yous—perfect for HOA and school organizers.",
         foodTruckAlt: "Ice cream & coffee food truck serving events in Peoria, AZ",
@@ -306,6 +313,7 @@ const cityData = {
         movieSectionAlt: "Outdoor movie screen setup in Queen Creek, AZ",
         movieSectionText:
             "We size screens for wide backyards and plan pool-safe layouts for dive-ins. Great for church picnics, PTO nights, and neighborhood socials near Schnepf Farms, Mansel Carter Oasis Park, and Founders’ Park. With careful projector placement and cable routing, everyone gets a clear view without cluttering your yard or pool deck.",
+        concessionsSectionAlt: "Concessions and add-ons available in Queen Creek, AZ",
         concessionsText:
             "Popcorn and cotton candy are summer staples in Queen Creek. Add candy, bottled drinks, pre-show music, sponsors on screen, and a compact mic for quick announcements—simple touches that make a big difference for family events.",
         foodTruckAlt: "Ice cream & coffee food truck serving events in Queen Creek, AZ",
@@ -332,6 +340,7 @@ const cityData = {
         movieSectionAlt: "Outdoor movie screen setup in San Tan Valley, AZ",
         movieSectionText:
             "We match screen size to your viewing area and plan projector throw for sharp images. Ideal for Johnson Ranch, Ironwood Crossing, Skyline Ranch, and community spaces off Hunt Highway. Our tech manages timing, pre-show content, and volume so neighbors can relax and enjoy the film.",
+        concessionsSectionAlt: "Concessions and add-ons available in San Tan Valley, AZ",
         concessionsText:
             "Popcorn, cotton candy, candy packs, and bottled drinks keep lines moving. We can include sponsor slides and a quick mic welcome for HOA boards and youth-group leaders—simple, effective, and budget-friendly.",
         foodTruckAlt: "Ice cream & coffee food truck serving events in San Tan Valley, AZ",
@@ -358,6 +367,7 @@ const cityData = {
         movieSectionAlt: "Outdoor movie screen setup in Tolleson, AZ",
         movieSectionText:
             "We plan seating areas and viewing angles (bring blankets!) so families settle in comfortably. Great fit for neighborhood lawns, school fields, and small park gatherings near Tolleson High and Veterans Park. Our crew keeps cues tight so raffles and shout-outs don’t delay the show.",
+        concessionsSectionAlt: "Concessions and add-ons available in Tolleson, AZ",
         concessionsText:
             "Popcorn and simple packaged snacks plus bottled drinks make lines quick. Add pre-show music, sponsor slides, and a compact mic kit for community announcements between trailers.",
         foodTruckAlt: "Ice cream & coffee food truck serving events in Tolleson, AZ",
@@ -384,6 +394,7 @@ const cityData = {
         movieSectionAlt: "Outdoor movie screen setup in Buckeye, AZ",
         movieSectionText:
             "We plan for longer throw distances and wind considerations common to open areas. Perfect for homesteads, HOA greens around Verrado and Sundance, and school fields near downtown Buckeye. Our power plans and cable routes keep things tidy even for larger crowd layouts.",
+        concessionsSectionAlt: "Concessions and add-ons available in Buckeye, AZ",
         concessionsText:
             "Portable concession setups work well: popcorn, candy, bottled drinks, pre-show music, sponsor slides, and a compact mic kit. Generators are available for remote lots where outlets are limited.",
         foodTruckAlt: "Ice cream & coffee food truck serving events in Buckeye, AZ",
@@ -410,6 +421,7 @@ const cityData = {
         movieSectionAlt: "Outdoor movie screen setup in Goodyear, AZ",
         movieSectionText:
             "We support events across Estrella and Palm Valley with screens sized for lawns and amphitheater-style slopes. Goodyear Community Park and local HOA greens are great for family nights—our tech keeps timing tight so sponsor reels and pre-show content play smoothly.",
+        concessionsSectionAlt: "Concessions and add-ons available in Goodyear, AZ",
         concessionsText:
             "Choose popcorn, cotton candy, and drinks, plus generator planning, sponsor slides, and a mic kit for quick announcements. We keep lines efficient so families are back at their blankets before lights-down.",
         foodTruckAlt: "Ice cream & coffee food truck serving events in Goodyear, AZ",
@@ -436,6 +448,7 @@ const cityData = {
         movieSectionAlt: "Outdoor movie screen setup in Anthem, AZ",
         movieSectionText:
             "We set clear sightlines for greenbelts and plan cable paths around walkways. Great for Anthem Community Park and HOA greens throughout the area. Dive-in movies are popular—our projector placement and audio balance make it easy for families to watch from blankets or poolside without hotspots or echoes.",
+        concessionsSectionAlt: "Concessions and add-ons available in Anthem, AZ",
         concessionsText:
             "Popcorn and bottled drinks keep lines moving. Add sponsor slides, pre-show music, and a quick mic welcome—simple, polished touches that help HOA organizers run a smooth evening.",
         foodTruckAlt: "Ice cream & coffee food truck serving events in Anthem, AZ",
@@ -628,17 +641,11 @@ function Locations() {
                             md={6}
                             className={classes.imageGridContainer}
                         >
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer nofollow nofollow"
-                                href={GiantScreenImage}
-                            >
-                                <img
-                                    className={classes.imageStyles}
-                                    src={GiantScreenImage}
-                                    alt={data.movieSectionAlt}
-                                />
-                            </a>
+                            <img
+                                src={GiantScreenImage}
+                                alt={data.movieSectionAlt}
+                                className={classes.imageStyles}
+                            />
                         </Grid>
                         {/* Main Content */}
                         <Grid item xs={12} md={6} style={{ backgroundColor: "white" }}>
@@ -705,7 +712,7 @@ function Locations() {
                                 <span className={classes.viewOptions}>GO TO OPTIONS</span>
                                 <ArrowForwardIosIcon style={{ cursor: 'pointer' }} />
                             </Box>
-                                  <ShareIcon
+                            <ShareIcon
                                 onClick={handleShare}
                                 aria-label="Share this page"
                                 style={{
@@ -723,17 +730,11 @@ function Locations() {
                             md={6}
                             className={classes.imageGridContainer}
                         >
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer nofollow nofollow"
-                                href={ConcessionBoothImage}
-                            >
-                                <img
-                                    className={classes.imageStyles}
-                                    src={ConcessionBoothImage}
-                                    alt={data.concessionsSectionAlt}
-                                />
-                            </a>
+                            <img
+                                src={ConcessionBoothImage}
+                                alt={data.concessionsSectionAlt}
+                                className={classes.imageStyles}
+                            />
                         </Grid>
                         {/* Main Content */}
                         <Grid item xs={12} md={6} style={{ backgroundColor: "white" }}>
@@ -782,7 +783,7 @@ function Locations() {
                 </Grid>
 
                 {/* Section 3: Ice Cream Sundae & Coffee Food Truck */}
-                <Grid item xs={12} id="concessions-section" className={classes.lastCard}>
+                <Grid item xs={12} id="food-truck-section" className={classes.lastCard}>
                     <Grid
                         container
                         className={classes.mainGridContainer}
@@ -817,17 +818,11 @@ function Locations() {
                             md={6}
                             className={classes.imageGridContainer}
                         >
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer nofollow nofollow"
-                                href={FoodTruckImage}
-                            >
-                                <img
-                                    className={classes.imageStyles}
-                                    src={FoodTruckImage}
-                                    alt={data.foodTruckAlt}
-                                />
-                            </a>
+                            <img
+                                src={FoodTruckImage}
+                                alt={data.foodTruckAlt}
+                                className={classes.imageStyles}
+                            />
                         </Grid>
                         {/* Main Content */}
                         <Grid item xs={12} md={6} style={{ backgroundColor: "white" }}>

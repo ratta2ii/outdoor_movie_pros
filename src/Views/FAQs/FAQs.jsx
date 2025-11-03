@@ -160,7 +160,7 @@ function FAQs() {
                 <Typography variant="body1" className={classes.paragraph}>
                     Yes. Outdoor projection works like a movie theater, except the “lights out” is sunset.
                     To know when you can start, check{" "}
-                    <a href="https://www.timeanddate.com/astronomy/usa" style={{ color: '#3f51b5' }} target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.timeanddate.com/astronomy/usa" style={{ color: '#67adfc', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">
                         local sunset times here
                     </a>.
                 </Typography>
