@@ -4,10 +4,14 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Outdoor Movie Pros" />
 
     <title>Outdoor Movie Screen Rental in Phoenix, AZ</title>
     <meta name="description"
         content="Outdoor movie screen rentals in Phoenix and nearby cities. Full-service backyard and park movie nights with giant inflatable screens, HD projector, pro sound, setup and teardown." />
+    <meta name="keywords"
+        content="outdoor movie rental phoenix, inflatable movie screen phoenix, backyard movie night phoenix, dive in movie phoenix, giant movie screen rental, phoenix outdoor cinema, movie in the park phoenix, inflatable screen rental az" />
 
     <!-- Icons / Manifest -->
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -29,6 +33,14 @@
     <link rel="preload" as="image" href="%PUBLIC_URL%/company-logo.webp" type="image/webp" />
     <link rel="preload" as="image" href="%PUBLIC_URL%/background-stars.webp" type="image/webp" />
 
+    <!-- Global OG/Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Outdoor Movie Pros" />
+    <meta property="og:image" content="https://outdoormoviepros.com/company-logo.webp" />
+    <meta property="og:image:alt" content="Outdoor Movie Pros logo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://outdoormoviepros.com/company-logo.webp" />
+
     <style>
         body {
             margin: 0;
@@ -44,26 +56,19 @@
             min-height: 95vh;
         }
     </style>
-
     <script type="application/ld+json">
-    {
+        {
         "@context": "https://schema.org",
         "@graph": [
             {
             "@type": "LocalBusiness",
             "@id": "https://outdoormoviepros.com/#business",
             "name": "Outdoor Movie Pros",
-            "description": "Inflatable outdoor movie screen rentals across the Phoenix metro area. Screens, HD projection, pro audio, full setup and teardown.",
+            "description": "Inflatable outdoor movie screen rentals across the Phoenix metro area. Full-service packages include giant screens, HD projection, pro audio, delivery, setup, on-site tech, and teardown.",
             "url": "https://outdoormoviepros.com",
-            "logo": { "@type": "ImageObject", "url": "https://outdoormoviepros.com/company-logo.webp" },
-            "image": "https://outdoormoviepros.com/company-logo.webp",
-            "telephone": "+1-602-638-6510",
+            "telephone": "+16026386510",
+            "priceRange": "$$",
             "email": "info@outdoormoviepros.com",
-            "areaServed": {
-                "@type": "GeoCircle",
-                "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 33.4617, "longitude": -111.9146 },
-                "geoRadius": 80467
-            },
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "7726 E Portland St",
@@ -72,38 +77,84 @@
                 "postalCode": "85257",
                 "addressCountry": "US"
             },
-            "openingHoursSpecification": [{
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-                "opens": "08:00",
-                "closes": "18:00"
-            }],
-            "knowsAbout": [
-                "Outdoor movie screen rentals",
-                "Inflatable movie screen rentals",
-                "Backyard movie nights",
-                "Projector and screen rentals",
-                "Event audio systems"
-            ]
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 33.4617,
+                "longitude": -111.9146
             },
+          "areaServed": [
             {
-            "@type": "Organization",
-            "@id": "https://outdoormoviepros.com/#organization",
-            "name": "Outdoor Movie Pros",
-            "url": "https://outdoormoviepros.com",
-            "logo": { "@type": "ImageObject", "url": "https://outdoormoviepros.com/company-logo.webp" }
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 33.4617,
+                "longitude": -111.9146
+              },
+              "geoRadius": 80467
             },
+            { "@type": "City", "name": "Phoenix" },
+            { "@type": "City", "name": "Scottsdale" },
+            { "@type": "City", "name": "Mesa" },
+            { "@type": "City", "name": "Chandler" },
+            { "@type": "City", "name": "Gilbert" },
+            { "@type": "City", "name": "Tempe" },
+            { "@type": "City", "name": "Glendale" },
+            { "@type": "City", "name": "Peoria" },
+            { "@type": "City", "name": "Queen Creek" },
+            { "@type": "City", "name": "San Tan Valley" },
+            { "@type": "City", "name": "Tolleson" },
+            { "@type": "City", "name": "Buckeye" },
+            { "@type": "City", "name": "Goodyear" },
+            { "@type": "City", "name": "Anthem" }
+          ],
+          "openingHoursSpecification": [
             {
-            "@type": "WebSite",
-            "@id": "https://outdoormoviepros.com/#website",
-            "name": "Outdoor Movie Pros",
-            "url": "https://outdoormoviepros.com",
-            "publisher": { "@id": "https://outdoormoviepros.com/#organization" }
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+              ],
+              "opens": "08:00",
+              "closes": "18:00"
             }
-        ]
+          ],
+          "image": "https://outdoormoviepros.com/company-logo.webp",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://outdoormoviepros.com/company-logo.webp"
+          },
+          "knowsAbout": [
+            "outdoor movie screen rental",
+            "inflatable movie screen",
+            "backyard movie night",
+            "dive-in movie",
+            "projector and sound rental",
+            "movies in the park",
+            "giant movie screen phoenix",
+            "phoenix outdoor cinema"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://outdoormoviepros.com/#organization",
+          "name": "Outdoor Movie Pros",
+          "url": "https://outdoormoviepros.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://outdoormoviepros.com/company-logo.webp"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://outdoormoviepros.com/#website",
+          "url": "https://outdoormoviepros.com",
+          "name": "Outdoor Movie Pros",
+          "publisher": {
+            "@id": "https://outdoormoviepros.com/#organization"
+          }
+        }
+      ]
     }
     </script>
-
 </head>
 
 <body>

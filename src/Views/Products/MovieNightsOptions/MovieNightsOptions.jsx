@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions, Box, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
-import GiantScreenImage from './../../../Assets/Images/giant-screen.jpg';
+import GiantScreenImage from './../../../Assets/Images/giant-screen.webp';
 import PoolImage from './../../../Assets/Images/pool.webp';
 import SmallScreenImage from './../../../Assets/Images/GalleryImages/gallery2.webp';
 import DoubleScreenImage from './../../../Assets/Images/double-movie-screen.webp';
@@ -19,6 +19,7 @@ import { Helmet } from 'react-helmet';
 
 function MovieNightsOptions() {
     const classes = useStyles();
+    const canonicalUrl = "https://outdoormoviepros.com/movie-nights-options";
 
     const cards = [
         {
@@ -119,119 +120,129 @@ function MovieNightsOptions() {
     return (
         <main>
             <Helmet>
+                {/* Core SEO */}
                 <title>Inflatable Movie Screen Rental in Phoenix | Outdoor Movie Packages</title>
-
                 <meta
                     name="description"
                     content="Browse outdoor movie packages in Phoenix: backyard screens, giant inflatable screens, dive-in pool movies, and double-screen events. HD projector, pro sound, delivery, setup, on-site tech, and teardown."
                 />
-                <meta name="robots" content="index,follow" />
-                <link rel="canonical" href="https://outdoormoviepros.com/movie-nights-options" />
+                <meta name="keywords" content="outdoor movie packages phoenix, inflatable screen rental phoenix, backyard movie night phoenix, dive in movie phoenix, movies in the park phoenix" />
+                <link rel="canonical" href={canonicalUrl} />
 
-                {/* Open Graph */}
-                <meta property="og:type" content="website" />
-                <meta property="og:site_name" content="Outdoor Movie Pros" />
-                <meta property="og:url" content="https://outdoormoviepros.com/movie-nights-options" />
+                {/* Open Graph — MINIMAL OVERRIDE */}
+                <meta property="og:url" content={canonicalUrl} />
                 <meta property="og:title" content="Backyard Movie Night & Inflatable Screen Packages in Phoenix" />
                 <meta
                     property="og:description"
                     content="Outdoor movie night packages with inflatable screens, HD projector, and pro audio. Options for backyards, parks, schools, churches, HOAs, and pool parties."
                 />
-                <meta property="og:image" content="https://outdoormoviepros.com/company-logo.webp" />
-                <meta property="og:image:alt" content="Outdoor Movie Pros logo" />
 
-                {/* Twitter */}
-                <meta name="twitter:card" content="summary_large_image" />
+                {/* Twitter — MINIMAL OVERRIDE */}
                 <meta name="twitter:title" content="Backyard Movie Night & Inflatable Screen Packages in Phoenix" />
                 <meta
                     name="twitter:description"
                     content="Choose from backyard screens to giant inflatable and double-screen setups. Projector, sound, delivery, setup, and on-site tech included."
                 />
-                <meta name="twitter:image" content="https://outdoormoviepros.com/company-logo.webp" />
+
+                {/* JSON-LD: WebPage + OfferCatalog — SLASH BEFORE # */}
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
-                        "@type": "OfferCatalog",
-                        "name": "Outdoor Movie Night Packages & Add-Ons",
-                        "url": "https://outdoormoviepros.com/movie-nights-options",
-                        "itemListElement": [
+                        "@graph": [
                             {
-                                "@type": "Offer",
-                                "price": "699.00",
-                                "priceCurrency": "USD",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Outdoor Movie Night for Rent",
-                                    "category": "Outdoor Movie Night Package",
-                                    "description": "Big-crowd outdoor cinema package — Giant Inflatable Movie Screen; Bright HD projector & media hookup; Concert Grade QSC Sound + Pre-Show Music; Full setup, On-Site Tech, Teardown.",
-                                    "image": "https://outdoormoviepros.com/assets/giant-inflatable.webp",
-                                    "url": "https://outdoormoviepros.com/movie-nights-options#giant-inflatable"
+                                "@type": "WebPage",
+                                "@id": `${canonicalUrl}/#webpage`,
+                                "url": canonicalUrl,
+                                "name": "Inflatable Movie Screen Rental in Phoenix | Outdoor Movie Packages",
+                                "description": "Browse outdoor movie packages in Phoenix: backyard screens, giant inflatable screens, dive-in pool movies, and double-screen events. HD projector, pro sound, delivery, setup, on-site tech, and teardown.",
+                                "isPartOf": { "@id": "https://outdoormoviepros.com/#website" },
+                                "about": { "@id": "https://outdoormoviepros.com/#business" },
+                                "breadcrumb": {
+                                    "@type": "BreadcrumbList",
+                                    "itemListElement": [
+                                        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://outdoormoviepros.com" },
+                                        { "@type": "ListItem", "position": 2, "name": "Movie Night Packages", "item": canonicalUrl }
+                                    ]
                                 }
                             },
                             {
-                                "@type": "Offer",
-                                "price": "479.00",
-                                "priceCurrency": "USD",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Small Event Movie Screen",
-                                    "category": "Outdoor Movie Night Package",
-                                    "description": "Community, school, & church friendly — QSC Powered Speakers; Upgraded brightness HD projection; Blu-Ray DVD Player & Mixer; Professional Staff; Plug-and-play: laptop/streaming ready.",
-                                    "image": "https://outdoormoviepros.com/assets/small-event.webp",
-                                    "url": "https://outdoormoviepros.com/movie-nights-options#small-event"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "price": "1099.00",
-                                "priceCurrency": "USD",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Double Screen Movie Night",
-                                    "category": "Outdoor Movie Night Package",
-                                    "description": "Two screens, one event — Double of everything; Two synchronized screens; Concert Grade QSC Sound + Pre-Show Music; Bright HD projector & media hookup; Full setup, On-Site Tech, Teardown.",
-                                    "image": "https://outdoormoviepros.com/assets/double-screen.webp",
-                                    "url": "https://outdoormoviepros.com/movie-nights-options#double-screen"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "price": "349.00",
-                                "priceCurrency": "USD",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Backyard Movie Screen Rentals",
-                                    "category": "Outdoor Movie Night Package",
-                                    "description": "Perfect for home & small gatherings — 9'x5′ screen (to ~40 guests); Compact HD projector; 2-speaker audio; Setup included (needs two standard outlets); Plug-and-play: laptop/streaming ready.",
-                                    "image": "https://outdoormoviepros.com/assets/backyard.webp",
-                                    "url": "https://outdoormoviepros.com/movie-nights-options#backyard"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "price": "699.00",
-                                "priceCurrency": "USD",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Dive-In Movie Night",
-                                    "category": "Outdoor Movie Night Package",
-                                    "description": "Pool party screening with splash-safe layout — Rear projection near water; Cable management & GFCI-safe setup; Optimized audio for pool environments; Full setup, On-Site Tech, Teardown.",
-                                    "image": "https://outdoormoviepros.com/assets/dive-in.webp",
-                                    "url": "https://outdoormoviepros.com/movie-nights-options#dive-in"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "price": "249.00",
-                                "priceCurrency": "USD",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Sound System Rental",
-                                    "category": "Audio Equipment Rental",
-                                    "description": "Powerful audio for any event — Pair of powered speakers; Wireless handheld mic; Mixer + all cables; Setup and basic sound check.",
-                                    "image": "https://outdoormoviepros.com/assets/sound-system.webp",
-                                    "url": "https://outdoormoviepros.com/movie-nights-options#sound-system"
-                                }
+                                "@type": "OfferCatalog",
+                                "name": "Outdoor Movie Night Packages",
+                                "url": canonicalUrl,
+                                "itemListElement": [
+                                    {
+                                        "@type": "Offer",
+                                        "price": "699.00",
+                                        "priceCurrency": "USD",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Outdoor Movie Night for Rent",
+                                            "description": "Big-crowd outdoor cinema package — Giant Inflatable Movie Screen; Bright HD projector & media hookup; Concert Grade QSC Sound + Pre-Show Music; Full setup, On-Site Tech, Teardown.",
+                                            "image": "https://outdoormoviepros.com/images/giant-screen.webp",
+                                            "url": `${canonicalUrl}/#giant-inflatable`
+                                        }
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        "price": "479.00",
+                                        "priceCurrency": "USD",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Small Event Movie Screen",
+                                            "description": "Community, school, & church friendly — QSC Powered Speakers; Upgraded brightness HD projection; Blu-Ray DVD Player & Mixer; Professional Staff; Plug-and-play: laptop/streaming ready.",
+                                            "image": "https://outdoormoviepros.com/images/gallery2.webp",
+                                            "url": `${canonicalUrl}/#small-event`
+                                        }
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        "price": "1099.00",
+                                        "priceCurrency": "USD",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Double Screen Movie Night",
+                                            "description": "Two screens, one event — Double of everything; Two synchronized screens; Concert Grade QSC Sound + Pre-Show Music; Bright HD projector & media hookup; Full setup, On-Site Tech, Teardown.",
+                                            "image": "https://outdoormoviepros.com/images/double-movie-screen.webp",
+                                            "url": `${canonicalUrl}/#double-screen`
+                                        }
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        "price": "349.00",
+                                        "priceCurrency": "USD",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Backyard Movie Screen Rentals",
+                                            "description": "Perfect for home & small gatherings — 9'x5′ screen (to ~40 guests); Compact HD projector; 2-speaker audio; Setup included (needs two standard outlets); Plug-and-play: laptop/streaming ready.",
+                                            "image": "https://outdoormoviepros.com/images/gallery2.webp",
+                                            "url": `${canonicalUrl}/#backyard`
+                                        }
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        "price": "699.00",
+                                        "priceCurrency": "USD",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Dive-In Movie Night",
+                                            "description": "Pool party screening with splash-safe layout — Rear projection near water; Cable management & GFCI-safe setup; Optimized audio for pool environments; Full setup, On-Site Tech, Teardown.",
+                                            "image": "https://outdoormoviepros.com/images/pool.webp",
+                                            "url": `${canonicalUrl}/#dive-in`
+                                        }
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        "price": "249.00",
+                                        "priceCurrency": "USD",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Sound System Rental",
+                                            "description": "Powerful audio for any event — Pair of powered speakers; Wireless handheld mic; Mixer + all cables; Setup and basic sound check.",
+                                            "image": "https://outdoormoviepros.com/images/sound.webp",
+                                            "url": `${canonicalUrl}/#sound-system`
+                                        }
+                                    }
+                                ]
                             }
                         ]
                     })}

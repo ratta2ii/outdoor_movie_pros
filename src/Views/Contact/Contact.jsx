@@ -7,70 +7,65 @@ import CallIcon from '@mui/icons-material/Call';
 
 function Contact() {
     const classes = useStyles();
+    const canonicalUrl = "https://outdoormoviepros.com/contact";
 
     return (
         <section>
             <Helmet>
-                {/* Title uses App.js titleTemplate to append brand automatically */}
+                {/* Core SEO */}
                 <title>Get a Quote | Outdoor Movie Screen Rentals in Phoenix</title>
-
                 <meta
                     name="description"
                     content="Request a fast quote for inflatable outdoor movie screen rentals in Phoenix and nearby cities. HD projector, pro sound, delivery, setup, on-site tech, and teardown."
                 />
-                <meta name="robots" content="index,follow" />
-                <link rel="canonical" href="https://outdoormoviepros.com/contact" />
+                <meta name="keywords" content="outdoor movie quote phoenix, inflatable screen rental phoenix, backyard movie night phoenix, get quote phoenix" />
+                <link rel="canonical" href={canonicalUrl} />
 
-                {/* Open Graph */}
-                <meta property="og:type" content="website" />
-                <meta property="og:site_name" content="Outdoor Movie Pros" />
-                <meta property="og:url" content="https://outdoormoviepros.com/contact" />
+                {/* Open Graph — MINIMAL OVERRIDE (like all other pages) */}
+                <meta property="og:url" content={canonicalUrl} />
                 <meta property="og:title" content="Get a Quote | Outdoor Movie Screen Rentals in Phoenix" />
                 <meta
                     property="og:description"
-                    content="Contact us for inflatable outdoor movie screen rentals—HD projector, pro audio, delivery, setup, on-site tech, and teardown."
+                    content="Fast quote for inflatable outdoor movie screen rentals in Phoenix. HD projector, pro audio, delivery, setup, and on-site tech included."
                 />
-                <meta property="og:image" content="https://outdoormoviepros.com/company-logo.webp" />
-                <meta property="og:image:alt" content="Outdoor Movie Pros logo" />
 
-                {/* Twitter */}
-                <meta name="twitter:card" content="summary_large_image" />
+                {/* Twitter — MINIMAL OVERRIDE */}
                 <meta name="twitter:title" content="Get a Quote | Outdoor Movie Screen Rentals in Phoenix" />
                 <meta
                     name="twitter:description"
-                    content="Fast quote for inflatable outdoor movie screen rentals in Phoenix. Projector, sound, delivery, setup, and on-site tech included."
+                    content="Request a quote for outdoor movie rentals in Phoenix — full setup, projector, sound, and tech included."
                 />
 
-                <meta name="author" content="Outdoor Movie Pros" />
+                {/* JSON-LD: WebPage — SLASH BEFORE #, HARD-CODED */}
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
                         "@graph": [
                             {
-                                "@type": "LocalBusiness",
-                                "name": "Outdoor Movie Pros",
-                                "telephone": "+1-602-638-6510",
-                                "url": "https://outdoormoviepros.com",
-                                "address": { "addressLocality": "Phoenix", "addressRegion": "AZ" },
-                                "openingHours": "Mo-Su 08:00-20:00"
-                            },
-                            {
-                                "@type": "BreadcrumbList",
-                                "itemListElement": [
-                                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://outdoormoviepros.com" },
-                                    { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://outdoormoviepros.com/contact" }
-                                ]
+                                "@type": "WebPage",
+                                "@id": `${canonicalUrl}/#webpage`,
+                                "url": canonicalUrl,
+                                "name": "Get a Quote | Outdoor Movie Screen Rentals in Phoenix",
+                                "description": "Request a fast quote for inflatable outdoor movie screen rentals in Phoenix and nearby cities. HD projector, pro sound, delivery, setup, on-site tech, and teardown.",
+                                "isPartOf": { "@id": "https://outdoormoviepros.com/#website" },
+                                "about": { "@id": "https://outdoormoviepros.com/#business" },
+                                "breadcrumb": {
+                                    "@type": "BreadcrumbList",
+                                    "itemListElement": [
+                                        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://outdoormoviepros.com" },
+                                        { "@type": "ListItem", "position": 2, "name": "Contact", "item": canonicalUrl }
+                                    ]
+                                }
                             }
                         ]
                     })}
                 </script>
             </Helmet>
 
-            {/* sr-only header focused strictly on rentals for SEO */}
-            <header className="sr-only">
-                <h1>Contact us for inflatable outdoor movie screen rentals in Phoenix, AZ</h1>
-                <h2>Fast quotes for HD projector, pro sound, delivery, setup, on-site technician, and teardown</h2>
-            </header>
+            {/* sr-only heading for SEO/a11y */}
+            <h1 className="sr-only">
+                Contact us for inflatable outdoor movie screen rentals in Phoenix, AZ — fast quotes, full setup, HD projector, pro sound
+            </h1>
 
             <main className={classes.root}>
                 <div className={classes.titleBox}>
@@ -97,7 +92,7 @@ function Contact() {
                                 size="small"
                                 href="tel:+16026386510"
                                 className={classes.phoneButton}
-                                   startIcon={<CallIcon />}
+                                startIcon={<CallIcon />}
                             >
                                 (602) 638-6510
                             </Button>

@@ -9,8 +9,8 @@ import {
     ListItemText,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import IceCreamFoodTruckImage from "./../../../Assets/Images/ice-cream-truck.jpg";
-import IceCreamFoodTruckTwo from "./../../../Assets/Images/ice-cream-truck-two.jpg";
+import IceCreamFoodTruckImage from "./../../../Assets/Images/ice-cream-truck.webp";
+import IceCreamFoodTruckTwo from "./../../../Assets/Images/ice-cream-truck-two.webp";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
@@ -229,108 +229,126 @@ const useStyles = makeStyles((theme) => ({
 
 const IceCreamFoodTruck = () => {
     const classes = useStyles();
+    const canonicalUrl = "https://outdoormoviepros.com/ice-cream-food-truck";
 
     return (
         <>
             <Helmet>
+                {/* Core SEO */}
                 <title>Ice Cream & Coffee Food Truck Catering in Phoenix</title>
-
                 <meta
                     name="description"
                     content="Book an ice cream and coffee food truck for events across Phoenix—sundae bar, espresso drinks, friendly staff, full-service setup, and flexible payment options."
                 />
-                <meta name="robots" content="index,follow" />
-                <link rel="canonical" href="https://outdoormoviepros.com/ice-cream-food-truck" />
+                <meta name="keywords" content="ice cream food truck phoenix, coffee catering phoenix, sundae bar catering, corporate dessert truck, festival food truck phoenix" />
+                <link rel="canonical" href={canonicalUrl} />
 
-                {/* Open Graph */}
-                <meta property="og:type" content="website" />
-                <meta property="og:site_name" content="Outdoor Movie Pros" />
-                <meta property="og:url" content="https://outdoormoviepros.com/ice-cream-food-truck" />
+                {/* Open Graph — MINIMAL OVERRIDE */}
+                <meta property="og:url" content={canonicalUrl} />
                 <meta property="og:title" content="Ice Cream & Coffee Food Truck Catering in Phoenix" />
                 <meta
                     property="og:description"
                     content="Sundae bar and barista coffee food truck for corporate events, schools, festivals, and parties in Phoenix. Full-service team with fast, friendly service."
                 />
-                <meta property="og:image" content="https://outdoormoviepros.com/company-logo.webp" />
-                <meta property="og:image:alt" content="Outdoor Movie Pros logo" />
 
-                {/* Twitter */}
-                <meta name="twitter:card" content="summary_large_image" />
+                {/* Twitter — MINIMAL OVERRIDE */}
                 <meta name="twitter:title" content="Ice Cream & Coffee Food Truck Catering in Phoenix" />
                 <meta
                     name="twitter:description"
                     content="Hire a dessert and coffee food truck: build-your-own sundaes, espresso drinks, and professional staff. Serving events across Phoenix."
                 />
-                <meta name="twitter:image" content="https://outdoormoviepros.com/company-logo.webp" />
-                <meta name="author" content="Outdoor Movie Pros" />
 
+                {/* JSON-LD: WebPage + OfferCatalog — NO priceSpecification, NO availability */}
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
-                        "@type": "OfferCatalog",
-                        "name": "Ice Cream & Coffee Food Truck Services",
-                        "url": "https://outdoormoviepros.com/ice-cream-food-truck",
-                        "provider": {
-                            "@type": "LocalBusiness",
-                            "name": "Outdoor Movie Pros",
-                            "url": "https://outdoormoviepros.com"
-                        },
-                        "itemListElement": [
+                        "@graph": [
                             {
-                                "@type": "Offer",
-                                "availability": "https://schema.org/InStock",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Sundae Bar Catering",
-                                    "category": "Dessert Catering",
-                                    "description":
-                                        "Build-your-own sundaes with waffle cones & bowls, lots of toppings, and vegan/dairy-free options. Full-service setup with friendly staff.",
-                                    "image": IceCreamFoodTruckImage,
-                                    "areaServed": ["Phoenix AZ", "Scottsdale AZ", "Mesa AZ", "Chandler AZ", "Gilbert AZ", "Tempe AZ", "Glendale AZ", "Peoria AZ"],
-                                    "url": "https://outdoormoviepros.com/ice-cream-food-truck"
+                                "@type": "WebPage",
+                                "@id": `${canonicalUrl}/#webpage`,
+                                "url": canonicalUrl,
+                                "name": "Ice Cream & Coffee Food Truck Catering in Phoenix",
+                                "description": "Book an ice cream and coffee food truck for events across Phoenix—sundae bar, espresso drinks, friendly staff, full-service setup, and flexible payment options.",
+                                "isPartOf": { "@id": "https://outdoormoviepros.com/#website" },
+                                "about": { "@id": "https://outdoormoviepros.com/#business" },
+                                "breadcrumb": {
+                                    "@type": "BreadcrumbList",
+                                    "itemListElement": [
+                                        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://outdoormoviepros.com" },
+                                        { "@type": "ListItem", "position": 2, "name": "Ice Cream Food Truck", "item": canonicalUrl }
+                                    ]
                                 }
                             },
                             {
-                                "@type": "Offer",
-                                "availability": "https://schema.org/InStock",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Barista Coffee Service",
-                                    "category": "Coffee Catering",
-                                    "description":
-                                        "Espresso drinks made to order — lattes, cappuccinos, macchiatos, frappes, and espresso shots. Great for corporate mornings and late-night events.",
-                                    "image": IceCreamFoodTruckTwo,
-                                    "areaServed": ["Phoenix AZ", "Scottsdale AZ", "Mesa AZ", "Chandler AZ", "Gilbert AZ", "Tempe AZ", "Glendale AZ", "Peoria AZ"],
-                                    "url": "https://outdoormoviepros.com/ice-cream-food-truck"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "availability": "https://schema.org/InStock",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Full Truck Buyout (Pre-Pay)",
-                                    "category": "Food Truck Catering",
-                                    "description":
-                                        "Rent the truck and treat your team or guests. Pre-pay options for a seamless, all-inclusive dessert and coffee experience with full staffing.",
-                                    "image": IceCreamFoodTruckImage,
-                                    "areaServed": ["Phoenix AZ", "Scottsdale AZ", "Mesa AZ", "Chandler AZ", "Gilbert AZ", "Tempe AZ", "Glendale AZ", "Peoria AZ"],
-                                    "url": "https://outdoormoviepros.com/ice-cream-food-truck"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "availability": "https://schema.org/InStock",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Pay-As-You-Go Service",
-                                    "category": "Food Truck Service",
-                                    "description":
-                                        "Perfect for public festivals and schools — we sell directly to attendees. Premium ice cream and coffee with no upfront cost to the organizer.",
-                                    "image": IceCreamFoodTruckTwo,
-                                    "areaServed": ["Phoenix AZ", "Scottsdale AZ", "Mesa AZ", "Chandler AZ", "Gilbert AZ", "Tempe AZ", "Glendale AZ", "Peoria AZ"],
-                                    "url": "https://outdoormoviepros.com/ice-cream-food-truck"
-                                }
+                                "@type": "OfferCatalog",
+                                "name": "Ice Cream & Coffee Food Truck Services",
+                                "url": canonicalUrl,
+                                "itemListElement": [
+                                    {
+                                        "@type": "Offer",
+                                        "priceCurrency": "USD",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Ice Cream Sundae Bar Catering",
+                                            "category": "Dessert Catering",
+                                            "description": "Build-your-own sundaes with waffle cones & bowls, lots of toppings, and vegan/dairy-free options. Full-service setup with friendly staff.",
+                                            "image": "https://outdoormoviepros.com/images/ice-cream-truck.webp",
+                                            "areaServed": [
+                                                "Phoenix AZ", "Scottsdale AZ", "Mesa AZ", "Chandler AZ",
+                                                "Gilbert AZ", "Tempe AZ", "Glendale AZ", "Peoria AZ"
+                                            ],
+                                            "url": `${canonicalUrl}/#sundae-bar`
+                                        }
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        "priceCurrency": "USD",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Barista Coffee Service",
+                                            "category": "Coffee Catering",
+                                            "description": "Espresso drinks made to order — lattes, cappuccinos, macchiatos, frappes, and espresso shots. Great for corporate mornings and late-night events.",
+                                            "image": "https://outdoormoviepros.com/images/ice-cream-truck-two.webp",
+                                            "areaServed": [
+                                                "Phoenix AZ", "Scottsdale AZ", "Mesa AZ", "Chandler AZ",
+                                                "Gilbert AZ", "Tempe AZ", "Glendale AZ", "Peoria AZ"
+                                            ],
+                                            "url": `${canonicalUrl}/#barista-coffee`
+                                        }
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        "priceCurrency": "USD",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Full Truck Buyout (Pre-Pay)",
+                                            "category": "Food Truck Catering",
+                                            "description": "Rent the truck and treat your team or guests. Pre-pay options for a seamless, all-inclusive dessert and coffee experience with full staffing.",
+                                            "image": "https://outdoormoviepros.com/images/ice-cream-truck.webp",
+                                            "areaServed": [
+                                                "Phoenix AZ", "Scottsdale AZ", "Mesa AZ", "Chandler AZ",
+                                                "Gilbert AZ", "Tempe AZ", "Glendale AZ", "Peoria AZ"
+                                            ],
+                                            "url": `${canonicalUrl}/#full-buyout`
+                                        }
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        "priceCurrency": "USD",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Pay-As-You-Go Service",
+                                            "category": "Food Truck Service",
+                                            "description": "Perfect for public festivals and schools — we sell directly to attendees. Premium ice cream and coffee with no upfront cost to the organizer.",
+                                            "image": "https://outdoormoviepros.com/images/ice-cream-truck-two.webp",
+                                            "areaServed": [
+                                                "Phoenix AZ", "Scottsdale AZ", "Mesa AZ", "Chandler AZ",
+                                                "Gilbert AZ", "Tempe AZ", "Glendale AZ", "Peoria AZ"
+                                            ],
+                                            "url": `${canonicalUrl}/#pay-as-you-go`
+                                        }
+                                    }
+                                ]
                             }
                         ]
                     })}
@@ -415,7 +433,7 @@ const IceCreamFoodTruck = () => {
                             </Typography>
                             <List className={classes.bulletList}>
                                 <Typography className={classes.sectionHeader}>
-                                    ☕ Premium Coffee Offerings:
+                                    Premium Coffee Offerings:
                                 </Typography>
                                 {["Lattes", "Cappuccinos", "Frappuccinos", "Macchiatos", "Espresso Shots"].map((item, i) => (
                                     <ListItem key={`coffee-${i}`} className={classes.listItem}>
@@ -423,7 +441,7 @@ const IceCreamFoodTruck = () => {
                                     </ListItem>
                                 ))}
                                 <Typography className={classes.sectionHeader}>
-                                    🍦 Sundae Bar Delights:
+                                    Sundae Bar Delights:
                                 </Typography>
                                 {["Build-your-own Sundae Bar", "Waffle Cones & Bowls", "Toppings for Days", "Vegan & Dairy-Free Options", "Italian Ice"].map((item, i) => (
                                     <ListItem key={`icecream-${i}`} className={classes.listItem}>

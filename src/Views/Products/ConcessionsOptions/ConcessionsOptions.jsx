@@ -5,8 +5,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions, Box, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
-import PopcornImage from './../../../Assets/Images/product-popcorn5.jpg';
-import CottonCandyImage from './.././../../Assets/Images/product-cotton-candy.jpg';
+import PopcornImage from './../../../Assets/Images/product-popcorn5.webp';
+import CottonCandyImage from './.././../../Assets/Images/product-cotton-candy.webp';
 import ConcessionBoothImage from './.././../../Assets/Images/concession-booth.webp';
 import ConcessionStaffImage from './.././../../Assets/Images/concession-staff.webp';
 import SoundSystemImage from './.././../../Assets/Images/sound.webp';
@@ -23,6 +23,7 @@ import { Helmet } from 'react-helmet';
 
 function ConcessionsOptions() {
     const classes = useStyles();
+    const canonicalUrl = "https://outdoormoviepros.com/concessions-options";
 
     const cards = [
         {
@@ -180,192 +181,189 @@ function ConcessionsOptions() {
     return (
         <main>
             <Helmet>
-                <title>Concessions & Add-Ons for Outdoor Movie Night Events in Phoenix</title>
+                {/* Core SEO */}
+                <title>Concessions & Add-Ons for Outdoor Movie Nights in Phoenix</title>
                 <meta
                     name="description"
-                    content="Popcorn and cotton candy machines, generators, light towers, sound systems, and more—everything to power your outdoor movie night in Phoenix."
+                    content="Rent popcorn machines, cotton candy, generators, light towers, sound systems, and more for outdoor movie nights in Phoenix. Full setup and delivery included."
                 />
-                <meta name="robots" content="index,follow" />
-                <link rel="canonical" href="https://outdoormoviepros.com/concessions-options" />
+                <meta name="keywords" content="concessions phoenix, popcorn machine rental phoenix, cotton candy rental phoenix, generator rental phoenix, outdoor movie add-ons phoenix" />
+                <link rel="canonical" href={canonicalUrl} />
 
-                {/* Open Graph */}
-                <meta property="og:type" content="website" />
-                <meta property="og:site_name" content="Outdoor Movie Pros" />
-                <meta property="og:url" content="https://outdoormoviepros.com/concessions-options" />
+                {/* Open Graph — MINIMAL OVERRIDE */}
+                <meta property="og:url" content={canonicalUrl} />
                 <meta property="og:title" content="Concessions & Add-Ons for Outdoor Movie Nights in Phoenix" />
                 <meta
                     property="og:description"
-                    content="From popcorn and cotton candy to generators, lighting, and sound—browse add-ons for outdoor movie nights in Phoenix."
+                    content="Popcorn, cotton candy, generators, lighting, sound, and more — everything to enhance your outdoor movie night in Phoenix."
                 />
-                <meta property="og:image" content="https://outdoormoviepros.com/company-logo.webp" />
-                <meta property="og:image:alt" content="Outdoor Movie Pros company logo" />
 
-                {/* Twitter */}
-                <meta name="twitter:card" content="summary_large_image" />
+                {/* Twitter — MINIMAL OVERRIDE */}
+                <meta name="twitter:title" content="Concessions & Add-Ons for Outdoor Movie Nights in Phoenix" />
+                <meta
+                    name="twitter:description"
+                    content="Add popcorn, cotton candy, power, lighting, and sound to your Phoenix outdoor movie night. Full setup included."
+                />
+
+                {/* JSON-LD: WebPage + OfferCatalog — NO priceSpecification, NO availability */}
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
-                        "@type": "OfferCatalog",
-                        "name": "Concessions & Add-Ons",
-                        "url": "https://outdoormoviepros.com/concessions-options",
-                        "itemListElement": [
+                        "@graph": [
                             {
-                                "@type": "Offer",
-                                "price": "89.00",
-                                "priceCurrency": "USD",
-                                "availability": "https://schema.org/InStock",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Popcorn Machine",
-                                    "category": "Concessions",
-                                    "description": "Movie-theater style, fresh & hot — Commercial popcorn machine; supplies included (kernels, oil, bags). Additional servings $20 per 50; attendant optional.",
-                                    "image": PopcornImage,
-                                    "url": "https://outdoormoviepros.com/concessions-options#popcorn"
+                                "@type": "WebPage",
+                                "@id": `${canonicalUrl}/#webpage`,
+                                "url": canonicalUrl,
+                                "name": "Concessions & Add-Ons for Outdoor Movie Nights in Phoenix",
+                                "description": "Rent popcorn machines, cotton candy, generators, light towers, sound systems, and more for outdoor movie nights in Phoenix. Full setup and delivery included.",
+                                "isPartOf": { "@id": "https://outdoormoviepros.com/#website" },
+                                "about": { "@id": "https://outdoormoviepros.com/#business" },
+                                "breadcrumb": {
+                                    "@type": "BreadcrumbList",
+                                    "itemListElement": [
+                                        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://outdoormoviepros.com" },
+                                        { "@type": "ListItem", "position": 2, "name": "Concessions & Add-Ons", "item": canonicalUrl }
+                                    ]
                                 }
                             },
                             {
-                                "@type": "Offer",
-                                "price": "89.00",
-                                "priceCurrency": "USD",
-                                "availability": "https://schema.org/InStock",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Cotton Candy",
-                                    "category": "Concessions",
-                                    "description": "Classic spun sugar fun — Commercial cotton candy machine; 60 cones and floss sugar included. Additional servings $20 per 50; attendant optional.",
-                                    "image": CottonCandyImage,
-                                    "url": "https://outdoormoviepros.com/concessions-options#cotton-candy"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "price": "99.00",
-                                "priceCurrency": "USD",
-                                "availability": "https://schema.org/InStock",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Concession Booth",
-                                    "category": "Concessions",
-                                    "description": "10' x 10' canopy with front and backdrop to elevate presentation.",
-                                    "image": ConcessionBoothImage,
-                                    "url": "https://outdoormoviepros.com/concessions-options#concession-booth"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "price": "150.00",
-                                "priceCurrency": "USD",
-                                "availability": "https://schema.org/InStock",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Concession Staff",
-                                    "category": "Concessions",
-                                    "description": "Professional staff to operate your concession. (Movie screen rentals already include tech staff.)",
-                                    "image": ConcessionStaffImage,
-                                    "url": "https://outdoormoviepros.com/concessions-options#concession-staff"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "price": "249.00",
-                                "priceCurrency": "USD",
-                                "availability": "https://schema.org/InStock",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Sound System Rental",
-                                    "category": "Audio Equipment",
-                                    "description": "Powerful audio for any event — Pair of powered speakers; wireless handheld microphone; mixer and all necessary cables; setup and basic sound check.",
-                                    "image": SoundSystemImage,
-                                    "url": "https://outdoormoviepros.com/concessions-options#sound-system"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "price": "150.00",
-                                "priceCurrency": "USD",
-                                "availability": "https://schema.org/InStock",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Light Towers",
-                                    "category": "Lighting",
-                                    "description": "Portable lighting for dark areas, parking, or concessions. Add a generator if no outlet is available.",
-                                    "image": LightTowersImage,
-                                    "url": "https://outdoormoviepros.com/concessions-options#light-towers"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "price": "69.00",
-                                "priceCurrency": "USD",
-                                "availability": "https://schema.org/InStock",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Generators",
-                                    "category": "Power",
-                                    "description": "Quiet inverter generators — power for projector, audio, and screens. Cables & distribution included; fuel included for standard runtimes.",
-                                    "image": GeneratorImage,
-                                    "url": "https://outdoormoviepros.com/concessions-options#generators"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "price": "39.00",
-                                "priceCurrency": "USD",
-                                "availability": "https://schema.org/InStock",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Glow Necklaces",
-                                    "category": "Accessories",
-                                    "description": "22\" glow necklaces (100 pack) to add fun and visibility.",
-                                    "image": GlowNecklacesImage,
-                                    "url": "https://outdoormoviepros.com/concessions-options#glow-necklaces"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "priceSpecification": {
-                                    "@type": "PriceSpecification",
-                                    "priceCurrency": "USD",
-                                    "minPrice": 0.5,
-                                    "maxPrice": 1.0
-                                },
-                                "availability": "https://schema.org/InStock",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Bottled Water / Soda",
-                                    "category": "Beverages",
-                                    "description": "Chilled beverages for guests — Minimum order required; add a trough or cooler for chilling; ice is an additional charge.",
-                                    "image": BottledWaterImage,
-                                    "url": "https://outdoormoviepros.com/concessions-options#bottled-water-soda"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "price": "49.00",
-                                "priceCurrency": "USD",
-                                "availability": "https://schema.org/InStock",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Drink Trough",
-                                    "category": "Beverages",
-                                    "description": "Holds up to 200 drinks. Ice not included (available as an add-on).",
-                                    "image": DrinkTroughImage,
-                                    "url": "https://outdoormoviepros.com/concessions-options#drink-trough"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "price": "25.00",
-                                "priceCurrency": "USD",
-                                "availability": "https://schema.org/InStock",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Water Barrel (Anchoring)",
-                                    "category": "Rigging/Anchoring",
-                                    "description": "Anchoring solution where sandbags/stakes won’t work. Pre-filled barrels available upon request.",
-                                    "image": WaterBarrelImage,
-                                    "url": "https://outdoormoviepros.com/concessions-options#water-barrel"
-                                }
+                                "@type": "OfferCatalog",
+                                "name": "Concessions & Add-Ons",
+                                "url": canonicalUrl,
+                                "itemListElement": [
+                                    {
+                                        "@type": "Offer",
+                                        "price": "89.00",
+                                        "priceCurrency": "USD",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Popcorn Machine",
+                                            "description": "Commercial machine with supplies (kernels, oil, bags). Additional servings $20/50. Attendant optional.",
+                                            "image": "https://outdoormoviepros.com/images/product-popcorn5.webp",
+                                            "url": `${canonicalUrl}/#popcorn`
+                                        }
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        "price": "89.00",
+                                        "priceCurrency": "USD",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Cotton Candy",
+                                            "description": "Commercial machine with 60 cones and floss sugar. Additional servings $20/50. Attendant optional.",
+                                            "image": "https://outdoormoviepros.com/images/product-cotton-candy.webp",
+                                            "url": `${canonicalUrl}/#cotton-candy`
+                                        }
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        "price": "99.00",
+                                        "priceCurrency": "USD",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Concession Booth",
+                                            "description": "10' x 10' canopy with front and backdrop for professional presentation.",
+                                            "image": "https://outdoormoviepros.com/images/concession-booth.webp",
+                                            "url": `${canonicalUrl}/#concession-booth`
+                                        }
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        "price": "150.00",
+                                        "priceCurrency": "USD",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Concession Staff",
+                                            "description": "Professional staff to operate concessions. (Included with movie screen rentals.)",
+                                            "image": "https://outdoormoviepros.com/images/concession-staff.webp",
+                                            "url": `${canonicalUrl}/#concession-staff`
+                                        }
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        "price": "249.00",
+                                        "priceCurrency": "USD",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Sound System Rental",
+                                            "description": "Pair of powered speakers, wireless mic, mixer, cables, setup, and sound check.",
+                                            "image": "https://outdoormoviepros.com/images/sound.webp",
+                                            "url": `${canonicalUrl}/#sound-system`
+                                        }
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        "price": "150.00",
+                                        "priceCurrency": "USD",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Light Towers",
+                                            "description": "Portable lighting for dark areas. Add generator if no power.",
+                                            "image": "https://outdoormoviepros.com/images/light-tower.webp",
+                                            "url": `${canonicalUrl}/#light-towers`
+                                        }
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        "price": "69.00",
+                                        "priceCurrency": "USD",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Generators",
+                                            "description": "Quiet inverter generators with cables, distribution, and fuel for standard runtimes.",
+                                            "image": "https://outdoormoviepros.com/images/generator.webp",
+                                            "url": `${canonicalUrl}/#generators`
+                                        }
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        "price": "39.00",
+                                        "priceCurrency": "USD",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Glow Necklaces",
+                                            "description": "22\" glow necklaces (100 pack) for fun and visibility.",
+                                            "image": "https://outdoormoviepros.com/images/glow-necklaces.webp",
+                                            "url": `${canonicalUrl}/#glow-necklaces`
+                                        }
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        "price": "0.50",
+                                        "priceCurrency": "USD",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Bottled Water / Soda",
+                                            "description": "Chilled beverages. Minimum order required. Ice and cooling extra.",
+                                            "image": "https://outdoormoviepros.com/images/bottled-water.webp",
+                                            "url": `${canonicalUrl}/#bottled-water-soda`
+                                        }
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        "price": "49.00",
+                                        "priceCurrency": "USD",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Drink Trough",
+                                            "description": "Holds up to 200 drinks. Ice available as add-on.",
+                                            "image": "https://outdoormoviepros.com/images/drink-trough.webp",
+                                            "url": `${canonicalUrl}/#drink-trough`
+                                        }
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        "price": "25.00",
+                                        "priceCurrency": "USD",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Water Barrel (Anchoring)",
+                                            "description": "Anchoring solution where stakes/sandbags fail. Pre-filled available.",
+                                            "image": "https://outdoormoviepros.com/images/water-barrel.webp",
+                                            "url": `${canonicalUrl}/#water-barrel`
+                                        }
+                                    }
+                                ]
                             }
                         ]
                     })}
@@ -377,7 +375,6 @@ function ConcessionsOptions() {
                 Concessions and add-ons for outdoor movie nights in Phoenix — popcorn, cotton candy, generators, lighting, sound, and more
             </h1>
 
-            {/* Visible page title */}
             {/* Visible page title */}
             <Box className={classes.titleBox}>
                 <h1 className={classes.title}>

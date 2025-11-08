@@ -14,6 +14,7 @@ import IceCreamIcon from '@mui/icons-material/Icecream';
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import TuneRoundedIcon from '@material-ui/icons/TuneRounded';
 import ShareIcon from "@material-ui/icons/Share";
+
 import useStyles from "./Locations.Styles";
 
 /**
@@ -480,6 +481,7 @@ function Locations() {
     const data = cityData[pathSegment] || cityData.locations;
     const isGeneralAreaPage = pathSegment === "locations";
     const pathForSeo = isGeneralAreaPage ? "/locations" : `/${pathSegment}`;
+    const canonicalUrl = `https://outdoormoviepros.com${pathForSeo}`;
 
     const introCopy = (
         <>
@@ -514,7 +516,6 @@ function Locations() {
         "Great for schools, HOAs & corporate",
     ];
 
-    const canonicalUrl = `https://outdoormoviepros.com${pathForSeo}`;
 
     const handleShare = async () => {
         const title = data.visibleH1 || "Outdoor Movie Pros";
@@ -538,49 +539,84 @@ function Locations() {
         }
     };
 
+    const cityKeywords = data.cityShort
+        ? `outdoor movie rental ${data.cityShort}, inflatable screen ${data.cityShort}, backyard movie night ${data.cityShort}, dive in movie ${data.cityShort}, movies in the park ${data.cityShort}`
+        : "outdoor movie rental phoenix metro, inflatable screen near me, backyard cinema phoenix, dive in pool party, movies in the park arizona";
+
     return (
         <section className={classes.root}>
             <Helmet>
+                {/* Core */}
                 <title>{data.title}</title>
                 <meta name="description" content={data.description} />
-                <meta name="robots" content="index,follow" />
-                <link rel="canonical" href={`https://outdoormoviepros.com${pathForSeo}`} />
-                <meta property="og:type" content="website" />
-                <meta property="og:site_name" content="Outdoor Movie Pros" />
-                <meta property="og:url" content={`https://outdoormoviepros.com${pathForSeo}`} />
+                <meta name="keywords" content={cityKeywords} />
+                <link rel="canonical" href={canonicalUrl} />
+
+                {/* Open Graph (Minimal Override) */}
+                <meta property="og:url" content={canonicalUrl} />
                 <meta property="og:title" content={data.ogTitle} />
                 <meta property="og:description" content={data.ogDescription} />
-                <meta property="og:image" content="https://outdoormoviepros.com/company-logo.webp" />
-                <meta property="og:image:alt" content="Outdoor Movie Pros logo" />
-                {/* === DYNAMIC JSON-LD (Breadcrumb + FAQ) === */}
+
+                {/* Twitter (Minimal Override) */}
+                <meta name="twitter:title" content={data.ogTitle} />
+                <meta name="twitter:description" content={data.ogDescription} />
+
+                {/* JSON-LD: WebPage + Breadcrumb + FAQ + ItemList */}
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
                         "@graph": [
                             {
-                                "@type": "BreadcrumbList",
-                                "itemListElement": [
-                                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://outdoormoviepros.com" },
-                                    { "@type": "ListItem", "position": 2, "name": data.cityShort || "Phoenix Metro", "item": `https://outdoormoviepros.com${pathForSeo}` }
-                                ]
+                                "@type": "WebPage",
+                                "@id": `${canonicalUrl}/#webpage`, // ← CORRECT
+                                "url": canonicalUrl,
+                                "name": data.title,
+                                "description": data.description,
+                                "isPartOf": { "@id": "https://outdoormoviepros.com/#website" },
+                                "about": { "@id": "https://outdoormoviepros.com/#business" },
+                                "breadcrumb": {
+                                    "@type": "BreadcrumbList",
+                                    "itemListElement": [
+                                        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://outdoormoviepros.com" },
+                                        { "@type": "ListItem", "position": 2, "name": data.cityShort || "Phoenix Metro", "item": canonicalUrl }
+                                    ]
+                                }
                             },
                             {
-                                "@type": "FAQPage",
-                                "mainEntity": [
+                                "@type": "ItemList",
+                                "name": `Outdoor Movie Services in ${data.cityShort || "Phoenix Metro"}`,
+                                "itemListElement": [
                                     {
-                                        "@type": "Question",
-                                        "name": `How much is an outdoor movie night in ${data.cityShort || "the Phoenix metro"}?`,
-                                        "acceptedAnswer": {
-                                            "@type": "Answer",
-                                            "text": "Starts at $349. Includes inflatable screen, HD projector, pro sound, delivery, setup, on-site tech, and teardown."
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "item": {
+                                            "@type": "Service",
+                                            "name": "Outdoor Movie Night Rental",
+                                            "description": data.movieSectionText,
+                                            "image": "https://outdoormoviepros.com/images/gallery6.webp",
+                                            "url": `${canonicalUrl}#movie-section`
                                         }
                                     },
                                     {
-                                        "@type": "Question",
-                                        "name": `Do you serve ${data.cityShort || "all Phoenix metro cities"}?`,
-                                        "acceptedAnswer": {
-                                            "@type": "Answer",
-                                            "text": `Yes! We cover ${data.cityShort ? data.cityShort + " and all nearby communities" : "the entire Phoenix metro area"}.`
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "item": {
+                                            "@type": "Service",
+                                            "name": "Concessions & Add-Ons",
+                                            "description": data.concessionsText,
+                                            "image": "https://outdoormoviepros.com/images/concession-booth.webp",
+                                            "url": `${canonicalUrl}#concessions-section`
+                                        }
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 3,
+                                        "item": {
+                                            "@type": "Service",
+                                            "name": "Ice Cream & Coffee Food Truck",
+                                            "description": data.foodTruckText,
+                                            "image": "https://outdoormoviepros.com/images/ice-cream-truck-two.webp",
+                                            "url": `${canonicalUrl}#food-truck-section`
                                         }
                                     }
                                 ]

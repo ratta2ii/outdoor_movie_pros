@@ -6,110 +6,136 @@ import useStyles from "./FAQs.Styles";
 
 function FAQs() {
     const classes = useStyles();
+    const canonicalUrl = "https://outdoormoviepros.com/faqs";
 
     return (
         <section className={classes.root}>
             <Helmet>
+                {/* Core SEO */}
                 <title>Outdoor Movie Rental FAQs | Phoenix Inflatable Movie Screens</title>
-
                 <meta
                     name="description"
                     content="Answers to common outdoor movie rental questions in Phoenix: delivery and setup, projector and screen, start times at sunset, front vs rear projection, and wind safety."
                 />
-                <meta name="robots" content="index,follow" />
-                <link rel="canonical" href="https://outdoormoviepros.com/faqs" />
+                <meta name="keywords" content="outdoor movie faq phoenix, inflatable screen rental questions, movie night setup phoenix, wind safety outdoor movie" />
+                <link rel="canonical" href={canonicalUrl} />
 
-                {/* Open Graph */}
-                <meta property="og:type" content="website" />
-                <meta property="og:site_name" content="Outdoor Movie Pros" />
-                <meta property="og:url" content="https://outdoormoviepros.com/faqs" />
+                {/* Open Graph — MINIMAL OVERRIDE */}
+                <meta property="og:url" content={canonicalUrl} />
                 <meta property="og:title" content="Outdoor Movie Rental FAQs | Phoenix Inflatable Screens" />
                 <meta
                     property="og:description"
-                    content="Get details on outdoor movie rentals in Phoenix: delivery, setup, start times, projection options, and safe wind practices."
+                    content="Get answers on delivery, setup, start times, projection options, and wind safety for outdoor movie rentals in Phoenix."
                 />
-                <meta property="og:image" content="https://outdoormoviepros.com/company-logo.webp" />
-                <meta property="og:image:alt" content="Outdoor Movie Pros logo" />
 
-                {/* Twitter */}
-                <meta name="twitter:card" content="summary_large_image" />
+                {/* Twitter — MINIMAL OVERRIDE */}
+                <meta name="twitter:title" content="Outdoor Movie Rental FAQs | Phoenix Inflatable Screens" />
+                <meta
+                    name="twitter:description"
+                    content="Answers to top questions about outdoor movie rentals in Phoenix: setup, timing, projection, and safety."
+                />
 
-                {/* FAQPage schema based on visible content below */}
-                <script type="application/ld+json">{`
-        {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Does price include setup and delivery?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Setup and standard delivery are included. Additional charges may apply for farther locations or unusual setups (stairs, rooftops, etc.). Contact us to review your details in advance."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Do you deliver to other cities?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. We can travel anywhere and can provide a custom quote for your location."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Are permits needed for the height of the screen?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Generally no. Local requirements vary, but permits are uncommon for screens up to 24’. Very large screens in some states may require permits or engineering documents."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Does the standard 2.5 hour rental include setup time?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No. Setup and breakdown are on us. The 2.5 hours begins once setup is complete at the agreed-upon start time."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Does it have to be dark to see the picture?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Plan to start around sunset like a theater with lights out. Check local sunset times for the best start."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Does sunset direction affect screen placement?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Facing the audience west (screen faces east) can allow a slightly earlier start. Direct sunlight on the screen can delay the start because the reflective surface amplifies brightness."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How much brightness drop-off is there with rear vs. front projection?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Rear projection has a small brightness loss (around 10%). Front projection is brighter but places the projector in front of the audience; rear projection keeps gear behind the screen for a cleaner layout."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What about wind and wind rating?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "For safety, do not use screens in winds exceeding 15 mph. Use caution with approaching storms and lower the screen if severe weather appears."
-              }
-            }
-          ]
-        }`}</script>
+                {/* JSON-LD: WebPage + FAQPage — SLASH BEFORE #, HARD-CODED */}
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@graph": [
+                            {
+                                "@type": "WebPage",
+                                "@id": `${canonicalUrl}/#webpage`,
+                                "url": canonicalUrl,
+                                "name": "Outdoor Movie Rental FAQs | Phoenix Inflatable Movie Screens",
+                                "description": "Answers to common outdoor movie rental questions in Phoenix: delivery and setup, projector and screen, start times at sunset, front vs rear projection, and wind safety.",
+                                "isPartOf": { "@id": "https://outdoormoviepros.com/#website" },
+                                "about": { "@id": "https://outdoormoviepros.com/#business" },
+                                "breadcrumb": {
+                                    "@type": "BreadcrumbList",
+                                    "itemListElement": [
+                                        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://outdoormoviepros.com" },
+                                        { "@type": "ListItem", "position": 2, "name": "FAQs", "item": canonicalUrl }
+                                    ]
+                                }
+                            },
+                            {
+                                "@type": "FAQPage",
+                                "mainEntity": [
+                                    {
+                                        "@type": "Question",
+                                        "name": "Does price include setup and delivery?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Setup and standard delivery are included. Additional charges may apply for farther locations or unusual setups (stairs, rooftops, etc.). Contact us to review your details in advance."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "Do you deliver to other cities?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Yes. We can travel anywhere and can provide a custom quote for your location."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "Are permits needed for the height of the screen?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Generally no. Local requirements vary, but permits are uncommon for screens up to 24’. Very large screens in some states may require permits or engineering documents."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "Does the standard 2.5 hour rental include setup time?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "No. Setup and breakdown are on us. The 2.5 hours begins once setup is complete at the agreed-upon start time."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "Does it have to be dark to see the picture?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Yes. Plan to start around sunset like a theater with lights out. Check local sunset times for the best start."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "Does sunset direction affect screen placement?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Yes. Facing the audience west (screen faces east) can allow a slightly earlier start. Direct sunlight on the screen can delay the start because the reflective surface amplifies brightness."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "How much brightness drop-off is there with rear vs. front projection?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Rear projection has a small brightness loss (around 10%). Front projection is brighter but places the projector in front of the audience; rear projection keeps gear behind the screen for a cleaner layout."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "What about wind and wind rating?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "For safety, do not use screens in winds exceeding 15 mph. Use caution with approaching storms and lower the screen if severe weather appears."
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    })}
+                </script>
             </Helmet>
 
-            <header className="sr-only">Frequently Asked Questions about Outdoor Movie Rentals</header>
+            {/* sr-only heading for SEO/a11y */}
+            <h1 className="sr-only">
+                Outdoor movie rental FAQs in Phoenix — setup, delivery, projection, timing, and safety
+            </h1>
 
+            {/* Visible page title */}
             <Box className={classes.titleBox}>
                 <Typography variant="h1" className={classes.title}>
                     Frequently Asked Questions

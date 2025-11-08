@@ -22,13 +22,17 @@ function Services() {
                 {/* Sampling & Testing Card */}
                 <Grid item xs={12} md={6} lg={4}>
                     <Card className={classes.card}>
-                        <Link to="/movie-nights-options" style={{ textDecoration: 'none' }}>
+                        <Link
+                            to="/movie-nights-options"
+                            aria-label="Outdoor Movie Night Packages - View Options"
+                            style={{ textDecoration: 'none' }}>
                             <CardActionArea>
                                 <CardMedia
                                     component="img"
                                     className={classes.images}
                                     image={GiantScreenImage}
-                                    alt="Our Services include State Certified Well Water Testing"
+                                    alt="Giant inflatable outdoor movie screen rental in Phoenix"
+                                    loading="lazy"
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h2" component="h2" className={classes.cardTitle} style={{ fontFamily: 'inherit' }}>
@@ -63,7 +67,7 @@ function Services() {
                                     className={classes.contactButton}
                                     component={Link}
                                     to="/movie-nights-options"
-                                       startIcon={<TuneRoundedIcon />}
+                                    startIcon={<TuneRoundedIcon />}
                                 >
                                     View Options
                                 </Button>
@@ -74,13 +78,16 @@ function Services() {
 
                 <Grid item xs={12} md={6} lg={4}>
                     <Card className={classes.card}>
-                        <Link to="/concessions-options" style={{ textDecoration: 'none' }}>
+                        <Link
+                            to="/concessions-options"
+                            aria-label="Concessions & Add-Ons – View Options"
+                            style={{ textDecoration: 'none' }}>
                             <CardActionArea>
                                 <CardMedia
                                     component="img"
                                     className={classes.images}
                                     image={ConcessionsImage}
-                                    alt="Flow Rate Monitoring for Water Testing and Inspection Services"
+                                    alt="Popcorn machine and concession stand for outdoor movie events"
                                     loading="lazy"
                                 />
                                 <CardContent>
@@ -116,7 +123,7 @@ function Services() {
                                     className={classes.contactButton}
                                     component={Link}
                                     to="/concessions-options"
-                                       startIcon={<TuneRoundedIcon />}
+                                    startIcon={<TuneRoundedIcon />}
                                 >
                                     View Options
                                 </Button>
@@ -128,13 +135,16 @@ function Services() {
                 {/* System Inspection Card */}
                 <Grid item xs={12} md={6} lg={4}>
                     <Card className={classes.card}>
-                        <Link to="/ice-cream-food-truck" style={{ textDecoration: 'none' }}>
+                        <Link
+                            to="/ice-cream-food-truck"
+                            aria-label="Ice Cream Sundae & Coffee Food Truck – Learn More"
+                            style={{ textDecoration: 'none' }}>
                             <CardActionArea>
                                 <CardMedia
                                     component="img"
                                     className={classes.images}
                                     image={IceCreamFoodTruckImage}
-                                    alt="Our Services include well Water Testing and System Inspection"
+                                    alt="Ice cream sundae and coffee food truck for events in Phoenix"
                                     loading="lazy"
                                 />
                                 <CardContent>
@@ -170,9 +180,9 @@ function Services() {
                                     className={classes.contactButton}
                                     component={Link}
                                     to="/ice-cream-food-truck"
-                                       startIcon={<IceCreamIcon />}
+                                    startIcon={<IceCreamIcon />}
                                 >
-                                    Learn More
+                                    View Options
                                 </Button>
                             </Box>
                         </CardActions>

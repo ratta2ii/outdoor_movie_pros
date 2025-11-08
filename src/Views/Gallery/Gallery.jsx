@@ -3,7 +3,7 @@ import { Box } from '@mui/material';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 
-// Image imports
+// Image imports (kept for build optimization)
 import GalleryImage1 from './../../Assets/Images/GalleryImages/gallery1.webp';
 import GalleryImage2 from './../../Assets/Images/GalleryImages/gallery2.webp';
 import GalleryImage3 from './../../Assets/Images/GalleryImages/gallery3.webp';
@@ -36,7 +36,7 @@ const IMAGES = [
     { src: GalleryImage14, alt: 'Park movie night using inflatable screen' },
 ];
 
-// Styled components for the gallery
+// Styled components (unchanged — perfect)
 const GalleryContainer = styled(Box)`
   padding: 2rem;
   max-width: 1400px;
@@ -58,20 +58,16 @@ const GalleryGrid = styled(Box)`
   width: 100%;
   gap: 1.5rem;
 
-  /* xs: 1 column (<600px) */
   grid-template-columns: repeat(1, 1fr);
 
-  /* sm: 2 columns (>=600px) */
   @media (min-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* md: 3 columns (>=900px) */
   @media (min-width: 900px) {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* xl: 3 columns (>=1536px) — unchanged */
   @media (min-width: 1536px) {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -99,33 +95,62 @@ const GalleryItem = styled(Box)`
 `;
 
 const Gallery = () => {
+    const canonicalUrl = "https://outdoormoviepros.com/gallery";
+
     return (
         <GalleryContainer>
             <Helmet>
-                {/* Title uses App.js titleTemplate to append brand automatically */}
+                {/* Core SEO */}
                 <title>Outdoor Movie Night Photos | Phoenix Inflatable Movie Screens</title>
-
                 <meta
                     name="description"
                     content="See photos of outdoor movie nights across Phoenix—inflatable movie screens, HD projection, professional audio, and full-service setups."
                 />
-                <meta name="robots" content="index,follow" />
-                <link rel="canonical" href="https://outdoormoviepros.com/gallery" />
+                <meta name="keywords" content="outdoor movie gallery phoenix, inflatable screen photos, backyard movie night images, phoenix event photos" />
+                <link rel="canonical" href={canonicalUrl} />
 
-                {/* Open Graph */}
-                <meta property="og:type" content="website" />
-                <meta property="og:site_name" content="Outdoor Movie Pros" />
-                <meta property="og:url" content="https://outdoormoviepros.com/gallery" />
+                {/* Open Graph — MINIMAL OVERRIDE */}
+                <meta property="og:url" content={canonicalUrl} />
                 <meta property="og:title" content="Outdoor Movie Night Photos | Phoenix Inflatable Screens" />
                 <meta
                     property="og:description"
-                    content="Browse outdoor movie night images from Phoenix events: inflatable screens, HD projectors, and pro audio setups."
+                    content="Browse real outdoor movie night photos from Phoenix events: inflatable screens, HD projectors, and pro audio setups."
                 />
-                <meta property="og:image" content="https://outdoormoviepros.com/company-logo.webp" />
-                <meta property="og:image:alt" content="Outdoor Movie Pros logo" />
+
+                {/* Twitter — MINIMAL OVERRIDE */}
+                <meta name="twitter:title" content="Outdoor Movie Night Photos | Phoenix Inflatable Screens" />
+                <meta
+                    name="twitter:description"
+                    content="Gallery of outdoor movie nights in Phoenix — inflatable screens, HD projection, and full setups."
+                />
+
+                {/* JSON-LD: WebPage — SLASH BEFORE # */}
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@graph": [
+                            {
+                                "@type": "WebPage",
+                                "@id": `${canonicalUrl}/#webpage`,
+                                "url": canonicalUrl,
+                                "name": "Outdoor Movie Night Photos | Phoenix Inflatable Movie Screens",
+                                "description": "See photos of outdoor movie nights across Phoenix—inflatable movie screens, HD projection, professional audio, and full-service setups.",
+                                "isPartOf": { "@id": "https://outdoormoviepros.com/#website" },
+                                "about": { "@id": "https://outdoormoviepros.com/#business" },
+                                "breadcrumb": {
+                                    "@type": "BreadcrumbList",
+                                    "itemListElement": [
+                                        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://outdoormoviepros.com" },
+                                        { "@type": "ListItem", "position": 2, "name": "Gallery", "item": canonicalUrl }
+                                    ]
+                                }
+                            }
+                        ]
+                    })}
+                </script>
             </Helmet>
 
-            {/* sr-only heading focused strictly on outdoor movie nights */}
+            {/* sr-only heading for SEO/a11y */}
             <h1 className="sr-only">
                 Outdoor movie night photo gallery for Phoenix and nearby cities
             </h1>
