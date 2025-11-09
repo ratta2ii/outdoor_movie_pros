@@ -243,6 +243,59 @@ function MovieNightsOptions() {
                                         }
                                     }
                                 ]
+                            },
+                            {
+                                "@type": "FAQPage",
+                                "mainEntity": [
+                                    {
+                                        "@type": "Question",
+                                        "name": "What’s included with our outdoor movie night rentals?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Every inflatable outdoor movie screen package includes an HD projector matched to your screen size, professional QSC audio, delivery and complete setup, an on-site technician to run the show, and teardown after the credits."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "What size inflatable movie screen do I get?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Inflatable movie screen sized for your crowd and viewing distance."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "How bright is the projector?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "HD projector brightness tuned for outdoor viewing."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "What kind of sound system is provided?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Pro audio with mixer and pre-show music."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "Is there an on-site technician?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "On-site tech from setup through teardown."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "How do I connect my movie or streaming device?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Simple media hookup: laptop, streaming device, or Blu-ray."
+                                        }
+                                    }
+                                ]
                             }
                         ]
                     })}

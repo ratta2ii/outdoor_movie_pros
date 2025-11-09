@@ -364,6 +364,59 @@ function ConcessionsOptions() {
                                         }
                                     }
                                 ]
+                            },
+                            {
+                                "@type": "FAQPage",
+                                "mainEntity": [
+                                    {
+                                        "@type": "Question",
+                                        "name": "What’s included with concessions and add-ons?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Every concession or event add-on is designed to complement your outdoor movie experience — from the aroma of fresh popcorn and the fun of cotton candy to reliable power, sound, and lighting solutions. All rentals include delivery, setup, on-site tech, and removal by our team, with optional attendants available for small backyard events across the Phoenix metro area."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "Do you provide popcorn and cotton candy machines with supplies?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Fresh popcorn and cotton candy machines with supplies included."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "Can I get a concession booth and staff?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Optional concession booth and staff to run your stand."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "Do you offer generators, lighting, and sound equipment?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Generators, light towers, and audio gear for any size venue."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "Are there fun extras like glow necklaces and drinks?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Glow necklaces, bottled drinks, and other fun extras for guests."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "Do you handle delivery and setup?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Professional delivery, setup, and teardown handled by our crew."
+                                        }
+                                    }
+                                ]
                             }
                         ]
                     })}

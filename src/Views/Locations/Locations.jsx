@@ -620,6 +620,67 @@ function Locations() {
                                         }
                                     }
                                 ]
+                            },
+                            {
+                                "@type": "FAQPage",
+                                "mainEntity": [
+                                    {
+                                        "@type": "Question",
+                                        "name": `What’s included with outdoor movie night rentals in ${data.cityShort || "the Phoenix metro"}?`,
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Every movie night includes inflatable screen sizes for small yards to large crowds, HD projector with simple laptop/streaming hookup, pro PA speakers with mixer & pre-show music, plus delivery, setup, on-site tech, and teardown."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "What concessions and add-ons are available?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Fresh popcorn machine with supplies, candy, cotton candy, cold drinks, generators with safe cable management, microphone, pre-show music, and sponsor slides."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "What does the ice cream & coffee food truck offer?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Premium ice cream, sundaes, novelties, espresso drinks, fast friendly uniformed staff—perfect for schools, HOAs, and corporate events."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "Do you provide full setup and teardown?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Yes—delivery, complete setup, on-site technician for the entire event, and teardown after the credits are included with every rental."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "Can I bring my own laptop or streaming device?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Absolutely. We provide simple HDMI hookup for laptops, Apple TV, Roku, Fire Stick, Blu-ray—whatever you use to play the movie."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": `Do you serve ${data.cityShort || "my area"}?`,
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": `Yes! We proudly serve ${data.cityShort || "the entire Phoenix metro area"} and surrounding communities with full delivery and setup.`
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "Can I use voice search to find my city?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Yes! Scroll to the bottom right and tap the microphone. Say 'movie night in Gilbert' or any city we serve — you'll go straight to your local page."
+                                        }
+                                    }
+                                ]
                             }
                         ]
                     })}

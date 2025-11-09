@@ -171,7 +171,7 @@ const useStyles = makeStyles((theme) => ({
     },
     /* sectionTitle used inside each card */
     sectionTitle: {
-        color: '#393838',
+        color: '#000000',
         fontFamily: 'Raleway, sans-serif',
         fontWeight: '600',
         paddingTop: '15px',
@@ -183,6 +183,7 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.down('xs')]: {
             fontSize: '1.4rem',
+            marginBottom: 5,
         },
     },
     subTitle: {

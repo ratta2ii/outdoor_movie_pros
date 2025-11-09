@@ -7,8 +7,8 @@ import Typography from "@material-ui/core/Typography";
 import LogoCarousel from "../LogoCarousel/LogoCarousel";
 import AmericanFlagLogo from "./../../Assets/Images/american_flag.png";
 import { makeStyles } from "@material-ui/core/styles";
-// MUI v5 dropdown
 import { Button, Menu, MenuItem, Divider } from "@mui/material";
+import VoiceSearchMic from "../VoiceSearchMic/VoiceSearchMic";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
         height: "auto",
         color: "#eceff1",
         backgroundColor: "#0d1117",
+        position: "relative",
     },
     customerCommentGridItm: {
         width: "100%",
@@ -90,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
     },
     copyrightGridItm: {
         backgroundColor: "#0d1117",
-        borderTop: "2px solid #182134",
+        borderTop: "1px solid #182134",
         height: 60,
         width: "100%",
         display: "flex",
@@ -138,6 +139,8 @@ const Footer = (props) => {
         <>
             {showCarousel && <LogoCarousel />}
 
+            {/* ←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←← */}
+            {/* ROOT GRID NOW HAS position: relative */}
             <Grid container className={classes.root}>
                 {/* Left side */}
                 <Grid item xs={12} md={6} className={classes.customerCommentGridItm}>
@@ -171,13 +174,13 @@ const Footer = (props) => {
                         <Box className={classes.infoLine}>
                             <i className={`fas fa-phone ${classes.infoIcon}`}></i>
                             <Typography className={classes.infoText}>
-                                <a href="tel:6026386510" style={{ color: "#efefef", textDecoration: "none", fontSize: 18 }}>
+                                <a href="tel:+16026386510" style={{ color: "#efefef", textDecoration: "none", fontSize: 18 }}>
                                     602-638-6510
                                 </a>
                             </Typography>
                         </Box>
 
-                        {/* Locations (moved ABOVE the Get a Quote link, styled like others) */}
+                        {/* Locations */}
                         <Box className={classes.infoLine}>
                             <i className={`fas fa-map-marker-alt ${classes.infoIcon}`}></i>
                             <Typography className={classes.infoText} component="span">
@@ -219,7 +222,7 @@ const Footer = (props) => {
                             </Menu>
                         </Box>
 
-                        {/* Get a Quote Now (left as-is, now below Locations) */}
+                        {/* Get a Quote Now */}
                         <Box className={classes.infoLine} style={{ marginBottom: 0 }}>
                             <i className={`fas fa-paper-plane ${classes.infoIcon}`}></i>
                             <Typography className={classes.infoText}>
@@ -231,7 +234,7 @@ const Footer = (props) => {
                     </Box>
                 </Grid>
 
-                {/* Bottom bar */}
+                {/* Bottom bar — no inline style needed anymore */}
                 <Grid item className={classes.copyrightGridItm}>
                     <Box className={classes.copyrightSig}>
                         Presented By{" "}
@@ -242,6 +245,11 @@ const Footer = (props) => {
                         />{" "}
                         © 2025
                     </Box>
+
+                    {/* ←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←← */}
+                    {/* VOICE MIC — LOCKED IN PLACE */}
+                    <VoiceSearchMic />
+                    {/* ←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←← */}
                 </Grid>
             </Grid>
         </>

@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: '6px !important',
         color: "#212121",
         [theme.breakpoints.down('xs')]: {
-            fontSize: '2.3em !important',
+            fontSize: '1.9em !important',
 
         },
     },
