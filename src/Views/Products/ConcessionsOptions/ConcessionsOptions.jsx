@@ -190,6 +190,10 @@ function ConcessionsOptions() {
                 <meta name="keywords" content="concessions phoenix, popcorn machine rental phoenix, cotton candy rental phoenix, generator rental phoenix, outdoor movie add-ons phoenix" />
                 <link rel="canonical" href={canonicalUrl} />
 
+                {/* Voice Search */}
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="mobile-web-app-capable" content="yes" />
+
                 {/* Open Graph — MINIMAL OVERRIDE */}
                 <meta property="og:url" content={canonicalUrl} />
                 <meta property="og:title" content="Concessions & Add-Ons for Outdoor Movie Nights in Phoenix" />

@@ -1,5 +1,5 @@
 // src/Components/VoiceSearchMic/VoiceSearchMic.js
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Fab, Tooltip } from "@material-ui/core";
 import MicIcon from "@material-ui/icons/Mic";
@@ -18,8 +18,7 @@ const useStyles = makeStyles((theme) => ({
     height: 40,
     minWidth: 40,
     padding: 0,
-    borderRadius: "50%",        // ← FORCES PERFECT CIRCLE
-    // boxShadow: "0 3px 12px rgba(255,90,95,0.5)",
+    borderRadius: "50%",
     "&:hover": {
       backgroundColor: "#ff3b3f",
       transform: "scale(1.1)",
@@ -60,13 +59,14 @@ const CITY_MAP = {
   tolleson: "tolleson",
 };
 
-export default function VoiceSearchMic() {
+function VoiceSearchMic() {
   const classes = useStyles();
   const navigate = useNavigate();
   const [listening, setListening] = useState(false);
 
-  useEffect(() => {
-    if (!listening) return;
+  const startListening = () => {
+    if (listening) return;
+    setListening(true);
 
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SpeechRecognition) {
@@ -97,22 +97,34 @@ export default function VoiceSearchMic() {
       }
     };
 
-    recognition.onerror = () => setListening(false);
-    recognition.onend = () => setListening(false);
-    recognition.start();
+    recognition.onerror = (event) => {
+      if (event.error === "not-allowed") {
+        alert("Microphone access denied. Please allow it in your browser settings.");
+      }
+      setListening(false);
+    };
 
-    return () => recognition.abort();
-  }, [listening, navigate]);
+    recognition.onend = () => setListening(false);
+
+    try {
+      recognition.start();
+    } catch (err) {
+      setListening(false);
+    }
+  };
 
   return (
     <Tooltip title={listening ? "Listening..." : "Say your city"} placement="left">
       <Fab
-        onClick={() => setListening(true)}
+        onClick={startListening}
         className={`${classes.fab} ${listening ? classes.pulse : ""}`}
         aria-label="voice search"
+        disabled={listening}
       >
         {listening ? <MicIcon className={classes.icon} /> : <MicOffIcon className={classes.icon} />}
       </Fab>
     </Tooltip>
   );
 }
+
+export default VoiceSearchMic;

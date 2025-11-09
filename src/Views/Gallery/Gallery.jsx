@@ -109,6 +109,10 @@ const Gallery = () => {
                 <meta name="keywords" content="outdoor movie gallery phoenix, inflatable screen photos, backyard movie night images, phoenix event photos" />
                 <link rel="canonical" href={canonicalUrl} />
 
+                {/* Voice Search */}
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="mobile-web-app-capable" content="yes" />
+
                 {/* Open Graph — MINIMAL OVERRIDE */}
                 <meta property="og:url" content={canonicalUrl} />
                 <meta property="og:title" content="Outdoor Movie Night Photos | Phoenix Inflatable Screens" />

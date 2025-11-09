@@ -243,6 +243,10 @@ const IceCreamFoodTruck = () => {
                 <meta name="keywords" content="ice cream food truck phoenix, coffee catering phoenix, sundae bar catering, corporate dessert truck, festival food truck phoenix" />
                 <link rel="canonical" href={canonicalUrl} />
 
+                {/* Voice Search */}
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="mobile-web-app-capable" content="yes" />
+
                 {/* Open Graph — MINIMAL OVERRIDE */}
                 <meta property="og:url" content={canonicalUrl} />
                 <meta property="og:title" content="Ice Cream & Coffee Food Truck Catering in Phoenix" />

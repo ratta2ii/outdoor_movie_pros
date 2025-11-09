@@ -547,10 +547,30 @@ function Locations() {
         <section className={classes.root}>
             <Helmet>
                 {/* Core */}
-                <title>{data.title}</title>
-                <meta name="description" content={data.description} />
+                {/* <title>{data.title}</title> */}
+                {/* <meta name="description" content={data.description} /> */}
+                <title>
+                    {isGeneralAreaPage
+                        ? `Inflatable Movie Screen Rental Near Me Phoenix AZ | Backyard Movie Night Packages`
+                        : `Inflatable Movie Screen Rental ${data.formattedCity} | Backyard Movie Night Packages`}
+                </title>
+                <meta name="description" content={
+                    isGeneralAreaPage
+                        ? `Giant inflatable movie screen rentals near me in Phoenix metro. Full-service packages for backyards, parks, HOAs. Includes HD projector, pro sound, concessions, ice cream & coffee food truck. Serving Scottsdale, Mesa, Chandler, Gilbert & more.`
+                        : `Rent a giant inflatable movie screen in ${data.formattedCity}. Full-service backyard movie nights & dive-ins with HD projector, pro sound, popcorn, cotton candy, ice cream food truck. Setup & teardown included.`
+                } />
                 <meta name="keywords" content={cityKeywords} />
                 <link rel="canonical" href={canonicalUrl} />
+
+                {/* GEO TAGS - ONLY IN LOCATIONS */}
+                <meta name="geo.placename" content={data.cityShort || "Phoenix Metro Area"} />
+                <meta name="geo.region" content="US-AZ" />
+                <meta name="geo.position" content="33.4617;-111.9146" />
+                <meta name="telephone" content="+16026386510" />
+
+                {/* Voice Search */}
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="mobile-web-app-capable" content="yes" />
 
                 {/* Open Graph (Minimal Override) */}
                 <meta property="og:url" content={canonicalUrl} />
@@ -568,10 +588,14 @@ function Locations() {
                         "@graph": [
                             {
                                 "@type": "WebPage",
-                                "@id": `${canonicalUrl}/#webpage`, // ← CORRECT
+                                "@id": `${canonicalUrl}/#webpage`,
                                 "url": canonicalUrl,
-                                "name": data.title,
-                                "description": data.description,
+                                "name": isGeneralAreaPage
+                                    ? "Inflatable Movie Screen Rental Near Me Phoenix AZ | Backyard Movie Night Packages"
+                                    : `Inflatable Movie Screen Rental ${data.formattedCity} | Backyard Movie Night Packages`,
+                                "description": isGeneralAreaPage
+                                    ? "Giant inflatable movie screen rentals near me in Phoenix metro. Full-service packages for backyards, parks, HOAs. Includes HD projector, pro sound, concessions, ice cream & coffee food truck."
+                                    : `Rent a giant inflatable movie screen in ${data.formattedCity}. Full-service backyard movie nights & dive-ins with HD projector, pro sound, popcorn, cotton candy, ice cream food truck.`,
                                 "isPartOf": { "@id": "https://outdoormoviepros.com/#website" },
                                 "about": { "@id": "https://outdoormoviepros.com/#business" },
                                 "breadcrumb": {
@@ -626,50 +650,34 @@ function Locations() {
                                 "mainEntity": [
                                     {
                                         "@type": "Question",
-                                        "name": `What’s included with outdoor movie night rentals in ${data.cityShort || "the Phoenix metro"}?`,
+                                        "name": `How much does outdoor movie screen rental cost in ${data.cityShort || "Phoenix"}?`,
                                         "acceptedAnswer": {
                                             "@type": "Answer",
-                                            "text": "Every movie night includes inflatable screen sizes for small yards to large crowds, HD projector with simple laptop/streaming hookup, pro PA speakers with mixer & pre-show music, plus delivery, setup, on-site tech, and teardown."
+                                            "text": "Backyard packages start at $349. Park/HOA events from $699. Includes giant screen, HD projector, pro sound, technician, full setup & teardown."
                                         }
                                     },
                                     {
                                         "@type": "Question",
-                                        "name": "What concessions and add-ons are available?",
+                                        "name": `Do you serve ${data.cityShort || "my area in Phoenix metro"}?`,
                                         "acceptedAnswer": {
                                             "@type": "Answer",
-                                            "text": "Fresh popcorn machine with supplies, candy, cotton candy, cold drinks, generators with safe cable management, microphone, pre-show music, and sponsor slides."
+                                            "text": `Yes! We proudly serve ${data.cityShort || "the entire Phoenix metro"} including Phoenix, Scottsdale, Mesa, Chandler, Gilbert, Tempe, Glendale, Peoria, Queen Creek, San Tan Valley, Paradise Valley, Tolleson, Buckeye, Goodyear, and Anthem.`
                                         }
                                     },
                                     {
                                         "@type": "Question",
-                                        "name": "What does the ice cream & coffee food truck offer?",
+                                        "name": "Can I add popcorn, cotton candy, or the ice cream food truck?",
                                         "acceptedAnswer": {
                                             "@type": "Answer",
-                                            "text": "Premium ice cream, sundaes, novelties, espresso drinks, fast friendly uniformed staff—perfect for schools, HOAs, and corporate events."
+                                            "text": "Yes — add any concessions or our full ice cream & coffee food truck to your movie night package."
                                         }
                                     },
                                     {
                                         "@type": "Question",
-                                        "name": "Do you provide full setup and teardown?",
+                                        "name": "What’s included in a backyard movie night rental?",
                                         "acceptedAnswer": {
                                             "@type": "Answer",
-                                            "text": "Yes—delivery, complete setup, on-site technician for the entire event, and teardown after the credits are included with every rental."
-                                        }
-                                    },
-                                    {
-                                        "@type": "Question",
-                                        "name": "Can I bring my own laptop or streaming device?",
-                                        "acceptedAnswer": {
-                                            "@type": "Answer",
-                                            "text": "Absolutely. We provide simple HDMI hookup for laptops, Apple TV, Roku, Fire Stick, Blu-ray—whatever you use to play the movie."
-                                        }
-                                    },
-                                    {
-                                        "@type": "Question",
-                                        "name": `Do you serve ${data.cityShort || "my area"}?`,
-                                        "acceptedAnswer": {
-                                            "@type": "Answer",
-                                            "text": `Yes! We proudly serve ${data.cityShort || "the entire Phoenix metro area"} and surrounding communities with full delivery and setup.`
+                                            "text": "Giant inflatable screen, HD projector, concert-grade sound, Blu-ray/streaming hookup, on-site tech, delivery, full setup and teardown."
                                         }
                                     },
                                     {
@@ -691,8 +699,13 @@ function Locations() {
 
             <header className={classes.header}>
                 <Box className={classes.titleBox}>
-                    <Typography variant="h1" className={classes.title}>
+                    {/* <Typography variant="h1" className={classes.title}>
                         {data.visibleH1}
+                    </Typography> */}
+                    <Typography variant="h1" className={classes.title} itemProp="headline">
+                        {isGeneralAreaPage
+                            ? `Inflatable Movie Screen Rental Near Me – Phoenix AZ & Surrounding Cities`
+                            : `Inflatable Movie Screen Rental ${data.formattedCity} – Backyard Movie Nights & Dive-Ins`}
                     </Typography>
                     <Box className={classes.subTextBox}>
                         <Typography className={classes.subText}>{introCopy}</Typography>
@@ -725,7 +738,7 @@ function Locations() {
                                 aria-label="Share this page"
                                 style={{
                                     position: "absolute",
-                                    right: "35",
+                                    right: 35,
                                     color: "white",
                                     cursor: 'pointer',
                                 }}
@@ -814,7 +827,7 @@ function Locations() {
                                 aria-label="Share this page"
                                 style={{
                                     position: "absolute",
-                                    right: "35",
+                                    right: 35,
                                     color: "white",
                                     cursor: 'pointer',
                                 }}
@@ -902,7 +915,7 @@ function Locations() {
                                 aria-label="Share this page"
                                 style={{
                                     position: "absolute",
-                                    right: "35",
+                                    right: 35,
                                     color: "white",
                                     cursor: 'pointer',
                                 }}

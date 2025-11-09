@@ -21,6 +21,10 @@ function Contact() {
                 <meta name="keywords" content="outdoor movie quote phoenix, inflatable screen rental phoenix, backyard movie night phoenix, get quote phoenix" />
                 <link rel="canonical" href={canonicalUrl} />
 
+                {/* Voice Search */}
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="mobile-web-app-capable" content="yes" />
+
                 {/* Open Graph — MINIMAL OVERRIDE (like all other pages) */}
                 <meta property="og:url" content={canonicalUrl} />
                 <meta property="og:title" content="Get a Quote | Outdoor Movie Screen Rentals in Phoenix" />

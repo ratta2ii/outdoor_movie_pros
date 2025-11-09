@@ -20,6 +20,10 @@ function FAQs() {
                 <meta name="keywords" content="outdoor movie faq phoenix, inflatable screen rental questions, movie night setup phoenix, wind safety outdoor movie" />
                 <link rel="canonical" href={canonicalUrl} />
 
+                {/* Voice Search */}
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="mobile-web-app-capable" content="yes" />
+
                 {/* Open Graph — MINIMAL OVERRIDE */}
                 <meta property="og:url" content={canonicalUrl} />
                 <meta property="og:title" content="Outdoor Movie Rental FAQs | Phoenix Inflatable Screens" />

@@ -19,6 +19,10 @@ function Home() {
                 />
                 <link rel="Url" href={canonicalUrl} />
 
+                {/* Voice Search */}
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="mobile-web-app-capable" content="yes" />
+
                 {/* Open Graph (Minimal Override) */}
                 <meta property="og:url" content={canonicalUrl} />
                 <meta property="og:title" content="Inflatable Outdoor Movie Screen Rentals in Phoenix" />

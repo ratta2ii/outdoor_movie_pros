@@ -119,6 +119,7 @@ function MovieNightsOptions() {
 
     return (
         <main>
+            {/* JSON-LD: WebPage + OfferCatalog — SLASH BEFORE # */}
             <Helmet>
                 {/* Core SEO */}
                 <title>Inflatable Movie Screen Rental in Phoenix | Outdoor Movie Packages</title>
@@ -128,6 +129,10 @@ function MovieNightsOptions() {
                 />
                 <meta name="keywords" content="outdoor movie packages phoenix, inflatable screen rental phoenix, backyard movie night phoenix, dive in movie phoenix, movies in the park phoenix" />
                 <link rel="canonical" href={canonicalUrl} />
+
+                {/* Voice Search */}
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="mobile-web-app-capable" content="yes" />
 
                 {/* Open Graph — MINIMAL OVERRIDE */}
                 <meta property="og:url" content={canonicalUrl} />
@@ -144,7 +149,7 @@ function MovieNightsOptions() {
                     content="Choose from backyard screens to giant inflatable and double-screen setups. Projector, sound, delivery, setup, and on-site tech included."
                 />
 
-                {/* JSON-LD: WebPage + OfferCatalog — SLASH BEFORE # */}
+                {/* JSON-LD: FULL OfferCatalog RESTORED + priceCurrency FIXED */}
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
@@ -174,6 +179,7 @@ function MovieNightsOptions() {
                                         "@type": "Offer",
                                         "price": "699.00",
                                         "priceCurrency": "USD",
+                                        "availability": "https://schema.org/InStock",
                                         "itemOffered": {
                                             "@type": "Service",
                                             "name": "Outdoor Movie Night for Rent",
@@ -186,6 +192,7 @@ function MovieNightsOptions() {
                                         "@type": "Offer",
                                         "price": "479.00",
                                         "priceCurrency": "USD",
+                                        "availability": "https://schema.org/InStock",
                                         "itemOffered": {
                                             "@type": "Service",
                                             "name": "Small Event Movie Screen",
@@ -198,6 +205,7 @@ function MovieNightsOptions() {
                                         "@type": "Offer",
                                         "price": "1099.00",
                                         "priceCurrency": "USD",
+                                        "availability": "https://schema.org/InStock",
                                         "itemOffered": {
                                             "@type": "Service",
                                             "name": "Double Screen Movie Night",
@@ -210,6 +218,7 @@ function MovieNightsOptions() {
                                         "@type": "Offer",
                                         "price": "349.00",
                                         "priceCurrency": "USD",
+                                        "availability": "https://schema.org/InStock",
                                         "itemOffered": {
                                             "@type": "Service",
                                             "name": "Backyard Movie Screen Rentals",
@@ -222,6 +231,7 @@ function MovieNightsOptions() {
                                         "@type": "Offer",
                                         "price": "699.00",
                                         "priceCurrency": "USD",
+                                        "availability": "https://schema.org/InStock",
                                         "itemOffered": {
                                             "@type": "Service",
                                             "name": "Dive-In Movie Night",
@@ -234,6 +244,7 @@ function MovieNightsOptions() {
                                         "@type": "Offer",
                                         "price": "249.00",
                                         "priceCurrency": "USD",
+                                        "availability": "https://schema.org/InStock",
                                         "itemOffered": {
                                             "@type": "Service",
                                             "name": "Sound System Rental",
