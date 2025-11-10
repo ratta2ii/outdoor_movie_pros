@@ -359,15 +359,15 @@ const IceCreamFoodTruck = () => {
                 </script>
             </Helmet>
 
-            {/* sr-only heading for SEO/a11y */}
-            <h1 className="sr-only">
-                Ice cream and coffee food truck catering in Phoenix with sundaes, espresso drinks, full-service setup, and friendly staff
-            </h1>
 
             <Box className={classes.sectionLight}>
                 <Box className={classes.titleBox}>
                     <Typography variant="h1" className={classes.mainTitle}>
                         Ice Cream Sundae & Barista Coffee Food Truck for Events in Phoenix
+                        {/* sr-only heading for SEO/a11y */}
+                        <span className="sr-only">
+                            Ice cream and coffee food truck catering in Phoenix with sundaes, espresso drinks, full-service setup, and friendly staff
+                        </span>
                     </Typography>
                 </Box>
 

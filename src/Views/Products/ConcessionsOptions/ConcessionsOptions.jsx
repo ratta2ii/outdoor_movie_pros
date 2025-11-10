@@ -427,15 +427,14 @@ function ConcessionsOptions() {
                 </script>
             </Helmet>
 
-            {/* sr-only heading for SEO/a11y (not visible) */}
-            <h1 className="sr-only">
-                Concessions and add-ons for outdoor movie nights in Phoenix — popcorn, cotton candy, generators, lighting, sound, and more
-            </h1>
-
             {/* Visible page title */}
             <Box className={classes.titleBox}>
                 <h1 className={classes.title}>
                     Concessions & Add-Ons — Popcorn Machine • Cotton Candy • Cold Beverages • Generators • Lighting • Sound • And More
+                    {/* sr-only heading for SEO/a11y (not visible) */}
+                    <span className="sr-only">
+                        Concessions and add-ons for outdoor movie nights in Phoenix — popcorn, cotton candy, generators, lighting, sound, and more
+                    </span>
                 </h1>
                 <h2 className={classes.subTitle}>
                     Outdoor Movie Pros delivers everything you need to transform any gathering into an unforgettable cinematic experience — from the sizzle of fresh popcorn and the chill of ice-cold drinks to reliable power, glowing ambiance, and crystal-clear sound, all set up and managed by our expert team.

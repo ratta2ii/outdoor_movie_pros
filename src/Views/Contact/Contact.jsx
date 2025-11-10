@@ -66,15 +66,14 @@ function Contact() {
                 </script>
             </Helmet>
 
-            {/* sr-only heading for SEO/a11y */}
-            <h1 className="sr-only">
-                Contact us for inflatable outdoor movie screen rentals in Phoenix, AZ — fast quotes, full setup, HD projector, pro sound
-            </h1>
-
             <main className={classes.root}>
                 <div className={classes.titleBox}>
                     <Typography variant="h1" className={classes.title}>
                         Contact Outdoor Movie Pros — Phoenix Outdoor Movie Screen Rentals
+                        {/* sr-only heading for SEO/a11y */}
+                        <span className="sr-only">
+                            Contact us for inflatable outdoor movie screen rentals in Phoenix, AZ — fast quotes, full setup, HD projector, pro sound
+                        </span>
                     </Typography>
                     <Typography variant="h2" className={classes.subTitle}>
                         Request a quote or ask about setup options for your backyard, park, or corporate movie night. Looking for extras? See our{" "}

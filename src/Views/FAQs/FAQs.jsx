@@ -134,15 +134,14 @@ function FAQs() {
                 </script>
             </Helmet>
 
-            {/* sr-only heading for SEO/a11y */}
-            <h1 className="sr-only">
-                Outdoor movie rental FAQs in Phoenix — setup, delivery, projection, timing, and safety
-            </h1>
-
             {/* Visible page title */}
             <Box className={classes.titleBox}>
                 <Typography variant="h1" className={classes.title}>
                     Frequently Asked Questions
+                    {/* sr-only heading for SEO/a11y */}
+                    <span className="sr-only">
+                        Outdoor movie rental FAQs in Phoenix — setup, delivery, projection, timing, and safety
+                    </span>
                 </Typography>
             </Box>
 

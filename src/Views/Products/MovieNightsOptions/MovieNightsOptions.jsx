@@ -122,10 +122,10 @@ function MovieNightsOptions() {
             {/* JSON-LD: WebPage + OfferCatalog — SLASH BEFORE # */}
             <Helmet>
                 {/* Core SEO */}
-                <title>Inflatable Movie Screen Rental in Phoenix | Outdoor Movie Packages</title>
+                <title>Inflatable Movie Screen Rental Phoenix | Backyard & Park Packages</title>
                 <meta
                     name="description"
-                    content="Browse outdoor movie packages in Phoenix: backyard screens, giant inflatable screens, dive-in pool movies, and double-screen events. HD projector, pro sound, delivery, setup, on-site tech, and teardown."
+                    content="Inflatable movie screen rentals in Phoenix from $349. Backyard, park, dive-in & double-screen packages. HD projector, pro sound, tech included. Book now!"
                 />
                 <meta name="keywords" content="outdoor movie packages phoenix, inflatable screen rental phoenix, backyard movie night phoenix, dive in movie phoenix, movies in the park phoenix" />
                 <link rel="canonical" href={canonicalUrl} />
@@ -158,8 +158,8 @@ function MovieNightsOptions() {
                                 "@type": "WebPage",
                                 "@id": `${canonicalUrl}/#webpage`,
                                 "url": canonicalUrl,
-                                "name": "Inflatable Movie Screen Rental in Phoenix | Outdoor Movie Packages",
-                                "description": "Browse outdoor movie packages in Phoenix: backyard screens, giant inflatable screens, dive-in pool movies, and double-screen events. HD projector, pro sound, delivery, setup, on-site tech, and teardown.",
+                                "name": "Inflatable Movie Screen Rental Phoenix | Backyard & Park Packages",
+                                "description": "Inflatable movie screen rentals in Phoenix metro. Full-service backyard & park movie nights with giant screens, HD projector, pro sound, setup & teardown.",
                                 "isPartOf": { "@id": "https://outdoormoviepros.com/#website" },
                                 "about": { "@id": "https://outdoormoviepros.com/#business" },
                                 "breadcrumb": {
@@ -313,15 +313,14 @@ function MovieNightsOptions() {
                 </script>
             </Helmet>
 
-            {/* sr-only heading for SEO/a11y (tight, keyword-aligned) */}
-            <h1 className="sr-only">
-                Inflatable outdoor movie screen packages in Phoenix for parks, schools, churches, HOAs, backyards, and pool parties.
-            </h1>
-
             {/* Visible page title */}
             <Box className={classes.titleBox}>
                 <h1 className={classes.title}>
-                    Outdoor Movie Night Packages in Phoenix and the Surrounding Areas
+                    Inflatable Movie Screen Rental Phoenix | Backyard & Park Packages
+                    {/* sr-only heading for SEO/a11y (tight, keyword-aligned) */}
+                    <span className="sr-only">
+                        Inflatable outdoor movie screen packages in Phoenix for parks, schools, churches, HOAs, backyards, and pool parties.
+                    </span>
                 </h1>
                 <h2 className={classes.subTitle}>
                     At the park movie nights, backyard movie nights, giant inflatable screens, dive-in pool movies, and double-screen movie events. HD projector, pro sound, delivery, setup, on-site tech, and teardown included.

@@ -12,12 +12,12 @@ function Home() {
         <section>
             <Helmet>
                 {/* Core */}
-                <title>Outdoor Movie Screen Rental in Phoenix | Inflatable Movie Screen Rental</title>
+                <title>Inflatable Movie Screen Rental Phoenix | Backyard Movie Nights</title>
                 <meta
                     name="description"
-                    content="Outdoor movie screen rentals in Phoenix and nearby cities. Full-service backyard and park movie nights with giant inflatable screens, HD projector, pro sound, setup and teardown."
+                    content="Inflatable movie screen rentals in Phoenix, Scottsdale, Mesa & beyond. Full-service backyard movie nights with giant screens, HD projector, pro sound, setup & teardown included."
                 />
-                <link rel="Url" href={canonicalUrl} />
+                <link rel="canonical" href={canonicalUrl} />
 
                 {/* Voice Search */}
                 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -47,8 +47,8 @@ function Home() {
                                 "@type": "WebPage",
                                 "@id": `${canonicalUrl}/#webpage`,
                                 "url": canonicalUrl,
-                                "name": "Outdoor Movie Screen Rental in Phoenix | Inflatable Movie Screen Rental",
-                                "description": "Outdoor movie screen rentals in Phoenix and nearby cities. Full-service backyard and park movie nights with giant inflatable screens, HD projector, pro sound, setup and teardown.",
+                                "name": "Inflatable Movie Screen Rental Phoenix | Backyard Movie Nights",
+                                "description": "Inflatable movie screen rentals in Phoenix metro. Full-service backyard & park movie nights with giant screens, HD projector, pro sound, setup & teardown.",
                                 "isPartOf": { "@id": "https://outdoormoviepros.com/#website" },
                                 "about": { "@id": "https://outdoormoviepros.com/#business" },
                                 "breadcrumb": {
@@ -106,19 +106,17 @@ function Home() {
                     })}
                 </script>
             </Helmet>
-
-            {/* Accessible, SEO-aligned */}
-            <header className="sr-only">
-                Inflatable outdoor movie screen rentals with HD projection and professional audio in Phoenix, AZ and nearby cities.
-            </header>
-
             <main>
                 <Box className={classes.titleBox}>
                     <h1 className={classes.title}>
-                        Outdoor Movie Screen Rentals in Phoenix and the Surrounding Areas
+                        Inflatable Movie Screen Rental Phoenix | Backyard & Park Movie Nights
+                        {/* Accessible, SEO-aligned */}
+                        <span className="sr-only">
+                            Inflatable outdoor movie screen rentals with HD projection and professional audio in Phoenix, AZ and nearby cities.
+                        </span>
                     </h1>
                     <h2 className={classes.subTitle}>
-                        Outdoor movie rentals for backyards, parks, and corporate events featuring giant inflatable screens, HD projection, pro sound, full delivery, setup, and teardown. Serving Phoenix, Scottsdale, Mesa, Chandler, Gilbert, Tempe, Glendale, Peoria and more...
+                        Giant inflatable screens with HD projector, pro sound, full delivery, setup & teardown. Serving Phoenix, Scottsdale, Mesa, Chandler, Gilbert, Tempe, Glendale, Peoria & more.
                     </h2>
                 </Box>
 

@@ -695,17 +695,14 @@ function Locations() {
                 </script>
             </Helmet>
 
-            <h1 className="sr-only">{data.srOnlyH1}</h1>
-
             <header className={classes.header}>
                 <Box className={classes.titleBox}>
-                    {/* <Typography variant="h1" className={classes.title}>
-                        {data.visibleH1}
-                    </Typography> */}
                     <Typography variant="h1" className={classes.title} itemProp="headline">
                         {isGeneralAreaPage
                             ? `Inflatable Movie Screen Rental Near Me – Phoenix AZ & Surrounding Cities`
                             : `Inflatable Movie Screen Rental ${data.formattedCity} – Backyard Movie Nights & Dive-Ins`}
+                        {/* Accessible, SEO-aligned */}
+                        <span className="sr-only">{data.srOnlyH1}</span>
                     </Typography>
                     <Box className={classes.subTextBox}>
                         <Typography className={classes.subText}>{introCopy}</Typography>
