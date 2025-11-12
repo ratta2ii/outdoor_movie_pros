@@ -7,7 +7,7 @@ import { Button, CardActionArea, CardActions, Box, List, ListItem, ListItemIcon,
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import GiantScreenImage from './../../../Assets/Images/giant-screen.webp';
 import PoolImage from './../../../Assets/Images/pool.webp';
-import SmallScreenImage from './../../../Assets/Images/GalleryImages/gallery2.webp';
+import MidSizeScreenImage from './../../../Assets/Images/GalleryImages/gallery2.webp';
 import DoubleScreenImage from './../../../Assets/Images/double-movie-screen.webp';
 import SoundSystemImage from './../../../Assets/Images/sound.webp';
 import CallToAction from "./../../../Components/CallToAction/CallToAction";
@@ -27,7 +27,7 @@ function MovieNightsOptions() {
             to: '/movie-nights-options#giant-inflatable',
             image: GiantScreenImage,
             imageAlt: 'Giant inflatable Outdoor Movie Night in Phoenix',
-            title: 'Outdoor Movie Night for Rent',
+            title: 'Giant Inflatable Movie Night',
             price: '$699.00',
             subtitle: 'Big-crowd outdoor cinema package',
             bullets: [
@@ -38,11 +38,11 @@ function MovieNightsOptions() {
             ],
         },
         {
-            key: 'small-event',
-            to: '/movie-nights-options#small-event',
-            image: SmallScreenImage,
-            imageAlt: 'Big Inflatable outdoor movie screens for rent',
-            title: 'Small Event Movie Screen',
+            key: 'mid-size-screen',
+            to: '/movie-nights-options#mid-size-screen',
+            image: MidSizeScreenImage,
+            imageAlt: 'Mid-size inflatable movie screen rentals in Phoenix AZ',
+            title: 'Mid-Size Inflatable Movie Screen',
             price: '$479.00',
             subtitle: 'Community, school, & church friendly',
             bullets: [
@@ -72,7 +72,7 @@ function MovieNightsOptions() {
         {
             key: 'backyard',
             to: '/movie-nights-options#backyard',
-            image: SmallScreenImage,
+            image: MidSizeScreenImage,
             imageAlt: 'Inflatable Movie Screen for Rent AZ',
             title: 'Backyard Movie Screen Rentals',
             price: '$349.00',
@@ -105,7 +105,7 @@ function MovieNightsOptions() {
             to: '/movie-nights-options#sound-system',
             image: SoundSystemImage,
             imageAlt: 'Sound system for rent Scottsdale, AZ',
-            title: 'Sound System Rental',
+            title: 'Sound System Rentals',
             price: '$249.00',
             subtitle: 'Powerful audio for any event',
             bullets: [
@@ -122,12 +122,12 @@ function MovieNightsOptions() {
             {/* JSON-LD: WebPage + OfferCatalog — SLASH BEFORE # */}
             <Helmet>
                 {/* Core SEO */}
-                <title>Inflatable Movie Screen Rental Phoenix | Backyard & Park Packages</title>
+                <title>Inflatable Movie Screen Rentals Phoenix AZ | HOA, Park & Dive-In Events</title>
                 <meta
                     name="description"
                     content="Inflatable movie screen rentals in Phoenix from $349. Backyard, park, dive-in & double-screen packages. HD projector, pro sound, tech included. Book now!"
                 />
-                <meta name="keywords" content="outdoor movie packages phoenix, inflatable screen rental phoenix, backyard movie night phoenix, dive in movie phoenix, movies in the park phoenix" />
+                <meta name="keywords" content="outdoor movie packages phoenix az, inflatable screen rentals phoenix az, backyard movie night phoenix az, dive in movie phoenix az, movies in the park phoenix az" />
                 <link rel="canonical" href={canonicalUrl} />
 
                 {/* Voice Search */}
@@ -136,14 +136,14 @@ function MovieNightsOptions() {
 
                 {/* Open Graph — MINIMAL OVERRIDE */}
                 <meta property="og:url" content={canonicalUrl} />
-                <meta property="og:title" content="Backyard Movie Night & Inflatable Screen Packages in Phoenix" />
+                <meta property="og:title" content="Inflatable Movie Screen Rentals Phoenix AZ | Packages from $349" />
                 <meta
                     property="og:description"
                     content="Outdoor movie night packages with inflatable screens, HD projector, and pro audio. Options for backyards, parks, schools, churches, HOAs, and pool parties."
                 />
 
                 {/* Twitter — MINIMAL OVERRIDE */}
-                <meta name="twitter:title" content="Backyard Movie Night & Inflatable Screen Packages in Phoenix" />
+                <meta name="twitter:title" content="Inflatable Movie Screen Rentals Phoenix AZ | Packages from $349" />
                 <meta
                     name="twitter:description"
                     content="Choose from backyard screens to giant inflatable and double-screen setups. Projector, sound, delivery, setup, and on-site tech included."
@@ -158,8 +158,8 @@ function MovieNightsOptions() {
                                 "@type": "WebPage",
                                 "@id": `${canonicalUrl}/#webpage`,
                                 "url": canonicalUrl,
-                                "name": "Inflatable Movie Screen Rental Phoenix | Backyard & Park Packages",
-                                "description": "Inflatable movie screen rentals in Phoenix metro. Full-service backyard & park movie nights with giant screens, HD projector, pro sound, setup & teardown.",
+                                "name": "Inflatable Movie Screen Rentals Phoenix AZ | HOA, Park & Dive-In Events",
+                                "description": "Inflatable movie screen rentals in Phoenix AZ. Full-service backyard & park movie nights with giant screens, HD projector, pro sound, setup & teardown.",
                                 "isPartOf": { "@id": "https://outdoormoviepros.com/#website" },
                                 "about": { "@id": "https://outdoormoviepros.com/#business" },
                                 "breadcrumb": {
@@ -182,7 +182,7 @@ function MovieNightsOptions() {
                                         "availability": "https://schema.org/InStock",
                                         "itemOffered": {
                                             "@type": "Service",
-                                            "name": "Outdoor Movie Night for Rent",
+                                            "name": "Giant Inflatable Movie Night",
                                             "description": "Big-crowd outdoor cinema package — Giant Inflatable Movie Screen; Bright HD projector & media hookup; Concert Grade QSC Sound + Pre-Show Music; Full setup, On-Site Tech, Teardown.",
                                             "image": "https://outdoormoviepros.com/images/giant-screen.webp",
                                             "url": `${canonicalUrl}/#giant-inflatable`
@@ -195,10 +195,10 @@ function MovieNightsOptions() {
                                         "availability": "https://schema.org/InStock",
                                         "itemOffered": {
                                             "@type": "Service",
-                                            "name": "Small Event Movie Screen",
+                                            "name": "Mid-Size Inflatable Movie Screen",
                                             "description": "Community, school, & church friendly — QSC Powered Speakers; Upgraded brightness HD projection; Blu-Ray DVD Player & Mixer; Professional Staff; Plug-and-play: laptop/streaming ready.",
                                             "image": "https://outdoormoviepros.com/images/gallery2.webp",
-                                            "url": `${canonicalUrl}/#small-event`
+                                            "url": `${canonicalUrl}/#mid-size-screen`
                                         }
                                     },
                                     {
@@ -316,10 +316,10 @@ function MovieNightsOptions() {
             {/* Visible page title */}
             <Box className={classes.titleBox}>
                 <h1 className={classes.title}>
-                    Inflatable Movie Screen Rental Phoenix | Backyard & Park Packages
+                    Inflatable Movie Screen Rentals Phoenix AZ | HOA, Park & Dive-In Events
                     {/* sr-only heading for SEO/a11y (tight, keyword-aligned) */}
                     <span className="sr-only">
-                        Inflatable outdoor movie screen packages in Phoenix for parks, schools, churches, HOAs, backyards, and pool parties.
+                        Inflatable movie screen packages in Phoenix for parks, schools, churches, HOAs, backyards, and pool parties.
                     </span>
                 </h1>
                 <h2 className={classes.subTitle}>

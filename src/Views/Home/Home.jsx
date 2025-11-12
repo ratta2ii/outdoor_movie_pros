@@ -12,7 +12,8 @@ function Home() {
         <section>
             <Helmet>
                 {/* Core */}
-                <title>Inflatable Movie Screen Rental Phoenix | Backyard Movie Nights</title>
+                <title>Outdoor Movie Screen Rentals Phoenix AZ | HOA, Park & Dive-In Events
+                </title>
                 <meta
                     name="description"
                     content="Inflatable movie screen rentals in Phoenix, Scottsdale, Mesa & beyond. Full-service backyard movie nights with giant screens, HD projector, pro sound, setup & teardown included."
@@ -25,14 +26,14 @@ function Home() {
 
                 {/* Open Graph (Minimal Override) */}
                 <meta property="og:url" content={canonicalUrl} />
-                <meta property="og:title" content="Inflatable Outdoor Movie Screen Rentals in Phoenix" />
+                <meta property="og:title" content="Outdoor Movie Screen Rentals Phoenix AZ | HOA, Park & Dive-In Events" />
                 <meta
                     property="og:description"
                     content="Full-service outdoor movie night rentals—inflatable screens, HD projector, and pro audio for backyards, parks, schools, and HOAs."
                 />
 
                 {/* Twitter (Minimal Override) */}
-                <meta name="twitter:title" content="Inflatable Outdoor Movie Screen Rentals in Phoenix" />
+                <meta name="twitter:title" content="Outdoor Movie Screen Rentals Phoenix AZ | HOA, Park & Dive-In Events" />
                 <meta
                     name="twitter:description"
                     content="Backyard & park movie night packages with inflatable screens, projector, and pro sound. We deliver, set up, and run the show."
@@ -47,7 +48,7 @@ function Home() {
                                 "@type": "WebPage",
                                 "@id": `${canonicalUrl}/#webpage`,
                                 "url": canonicalUrl,
-                                "name": "Inflatable Movie Screen Rental Phoenix | Backyard Movie Nights",
+                                "name": "Outdoor Movie Screen Rentals Phoenix AZ | HOA, Park & Dive-In Events",
                                 "description": "Inflatable movie screen rentals in Phoenix metro. Full-service backyard & park movie nights with giant screens, HD projector, pro sound, setup & teardown.",
                                 "isPartOf": { "@id": "https://outdoormoviepros.com/#website" },
                                 "about": { "@id": "https://outdoormoviepros.com/#business" },
@@ -109,7 +110,7 @@ function Home() {
             <main>
                 <Box className={classes.titleBox}>
                     <h1 className={classes.title}>
-                        Inflatable Movie Screen Rental Phoenix | Backyard & Park Movie Nights
+                        Outdoor Movie Screen Rentals Phoenix AZ | HOA, Park & Dive-In Events
                         {/* Accessible, SEO-aligned */}
                         <span className="sr-only">
                             Inflatable outdoor movie screen rentals with HD projection and professional audio in Phoenix, AZ and nearby cities.

@@ -29,13 +29,13 @@ const cityData = {
         formattedCity: null,
         cityShort: "Phoenix Metro",
         regionLabel: "Phoenix Metro Area, including Maricopa, Pinal, and surrounding counties",
-        visibleH1: "Outdoor Movie Screen Rental Near Me – Phoenix Metro",
+        visibleH1: "Outdoor Movie Screen Rentals Near Me – Phoenix Metro",
         introCopy:
             "We serve the entire Phoenix Metro Area, including Maricopa, Pinal, and surrounding counties. Book an unforgettable outdoor movie night, enhance it with concessions, or bring our ice cream sundae & coffee food truck to your next gathering under the stars. Discover top-rated outdoor movie screen rentals near me for backyard cinema, community dive-in pool parties, and movies in the park across the Valley.",
         readyToSchedule: "Ready to schedule your event?",
         phoneText: "(602) 638-6510",
         srOnlyH1: "Inflatable outdoor movie screen rentals near me in the Phoenix metro area",
-        title: "Outdoor Movie Screen Rental Near Me | Phoenix Metro, AZ",
+        title: "Outdoor Movie Screen Rentals Near Me | Phoenix Metro, AZ",
         description:
             "Find inflatable outdoor movie screen rentals near you across the Phoenix metro. Full-service backyard and park movie nights with bright HD projector, pro sound, setup, on-site tech, and teardown. Ideal for dive-in pool parties, movies in the park, and outdoor cinema events in Arizona’s desert nights.",
         ogTitle: "Outdoor Movie Screen Rentals Near Me | Phoenix Metro Locations",
@@ -56,18 +56,18 @@ const cityData = {
         formattedCity: "Phoenix, AZ",
         cityShort: "Phoenix",
         regionLabel: "Phoenix, AZ and nearby communities",
-        visibleH1: "Inflatable Movie Screen Rental Phoenix, AZ – Backyard & Park",
+        visibleH1: "Inflatable Movie Screen Rentals Phoenix, AZ – Backyard & Park",
         introCopy:
             "We serve Phoenix, AZ and nearby communities. Bring the magic of outdoor movie nights to your backyard or local park with our inflatable screens, bright projectors, and pro sound systems. Add concessions for that theater vibe or our ice cream sundae & coffee food truck for a sweet twist. From downtown rooftops to North Phoenix pool parties, we tailor each setup to your space.",
         readyToSchedule: "Ready to schedule your event in Phoenix?",
         phoneText: "(602) 638-6510",
-        srOnlyH1: "Inflatable outdoor movie screen rental in Phoenix, AZ",
-        title: "Inflatable Movie Screen Rental Phoenix, AZ – Backyard & Park",
+        srOnlyH1: "Inflatable outdoor movie screen rentals in Phoenix, AZ",
+        title: "Inflatable Movie Screen Rentals Phoenix, AZ – Backyard & Park",
         description:
             "Outdoor movie screen rentals in Phoenix, AZ. Full-service backyard and park movie nights with large inflatable screens, HD projector, pro sound, setup, on-site tech, and teardown included. Perfect for dive-in movies and outdoor cinema under the desert stars.",
-        ogTitle: "Outdoor Movie Screen Rental in Phoenix, AZ",
+        ogTitle: "Outdoor Movie Screen Rentals in Phoenix, AZ",
         ogDescription:
-            "Inflatable outdoor movie screen rental in Phoenix, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for unforgettable outdoor movie nights.",
+            "Inflatable outdoor movie screen rentals in Phoenix, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for unforgettable outdoor movie nights.",
         movieSectionAlt: "Outdoor movie screen setup in Phoenix, AZ",
         movieSectionText:
             "Host an outdoor movie night in Phoenix with a package sized for your crowd and space. Our tech runs the show end-to-end—screen, projector, audio, and timing—so you can relax with your guests. Popular Phoenix spots include Encanto Park lawns, Roosevelt Row rooftops, the green spaces around Central Ave, and pool decks in Arcadia and Ahwatukee. For larger community nights near South Mountain or Papago Park, we tune audio for open fields and set long-throw projections for sharp, bright images. From backyard premieres to school fundraisers and church gatherings, we make outdoor cinema simple across the city.",
@@ -83,18 +83,18 @@ const cityData = {
         formattedCity: "Scottsdale, AZ",
         cityShort: "Scottsdale",
         regionLabel: "Scottsdale, AZ and nearby communities",
-        visibleH1: "Outdoor Movie Screen Rental Scottsdale, AZ – Resort & Dive-In",
+        visibleH1: "Outdoor Movie Screen Rentals Scottsdale, AZ – Resort & Dive-In",
         introCopy:
             "We serve Scottsdale, AZ and nearby communities. Create an elegant outdoor cinema at home, a resort, or a community green. Our team sizes the screen, tunes audio for your space, and keeps the run-of-show on track. Add concessions or our ice cream & coffee food truck for a polished experience.",
         readyToSchedule: "Ready to schedule your event in Scottsdale?",
         phoneText: "(602) 638-6510",
-        srOnlyH1: "Inflatable movie screen rental in Scottsdale, AZ",
-        title: "Outdoor Movie Screen Rental Scottsdale, AZ – Resort & Dive-In",
+        srOnlyH1: "Inflatable movie screen rentals in Scottsdale, AZ",
+        title: "Outdoor Movie Screen Rentals Scottsdale, AZ – Resort & Dive-In",
         description:
             "Inflatable movie screen rentals in Scottsdale, AZ. Full-service setups for luxury backyard parties and resort events with giant inflatable screens, HD projector, pro audio, delivery, setup, on-site tech, and teardown.",
-        ogTitle: "Inflatable Movie Screen Rental in Scottsdale, AZ",
+        ogTitle: "Inflatable Movie Screen Rentals in Scottsdale, AZ",
         ogDescription:
-            "Inflatable movie screen rental in Scottsdale, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for upscale events and dive-in movies.",
+            "Inflatable movie screen rentals in Scottsdale, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for upscale events and dive-in movies.",
         movieSectionAlt: "Outdoor movie screen setup in Scottsdale, AZ",
         movieSectionText:
             "Scottsdale screenings often mean polished spaces—pool decks, turf lawns, and resort courtyards. We plan sightlines and projector throw for clear, bright viewing. Neighborhoods and venues we frequently support include DC Ranch, McCormick Ranch, Old Town rooftops, and community greens near the McCormick-Stillman Railroad Park. For boutique resorts and private estates, our crew uses discreet cabling and quiet setup/teardown windows to keep your event refined from first frame to credits.",
@@ -110,18 +110,18 @@ const cityData = {
         formattedCity: "Mesa, AZ",
         cityShort: "Mesa",
         regionLabel: "Mesa, AZ and nearby communities",
-        visibleH1: "Backyard Movie Night Rental Mesa, AZ – Family & School",
+        visibleH1: "Backyard Movie Night Rentals Mesa, AZ – Family & School",
         introCopy:
             "We serve Mesa, AZ and nearby communities. Family-friendly neighborhoods and school fields are perfect for outdoor movies. We match the screen to your yard or park space and keep the sound comfortable for nearby homes.",
         readyToSchedule: "Ready to schedule your event in Mesa?",
         phoneText: "(602) 638-6510",
-        srOnlyH1: "Backyard movie night rental in Mesa, AZ",
-        title: "Backyard Movie Night Rental Mesa, AZ – Family & School Events",
+        srOnlyH1: "Backyard movie night rentals in Mesa, AZ",
+        title: "Backyard Movie Night Rentals Mesa, AZ – Family & School Events",
         description:
             "Backyard movie night rentals in Mesa, AZ. Complete packages for park movie nights and school events featuring large inflatable screens, HD projector, professional sound, full setup, on-site tech, and teardown.",
-        ogTitle: "Backyard Movie Night Rental in Mesa, AZ",
+        ogTitle: "Backyard Movie Night Rentals in Mesa, AZ",
         ogDescription:
-            "Backyard movie night rental in Mesa, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for family gatherings and dive-in movies.",
+            "Backyard movie night rentals in Mesa, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for family gatherings and dive-in movies.",
         movieSectionAlt: "Outdoor movie screen setup in Mesa, AZ",
         movieSectionText:
             "Mesa favorites include neighborhood greens and school lawns near Pioneer Park, Riverview, and Red Mountain Park. We bring the screen, projector, and PA, handle show timing, and take care of laptop/streaming hookups. Eastmark block parties, Downtown Mesa community nights, and church youth events all benefit from crisp images, pro audio, and full service movie nights.",
@@ -137,18 +137,18 @@ const cityData = {
         formattedCity: "Chandler, AZ",
         cityShort: "Chandler",
         regionLabel: "Chandler, AZ and nearby communities",
-        visibleH1: "Movies in the Park Rental Chandler, AZ – HOA & Dive-In",
+        visibleH1: "Movies in the Park Rentals Chandler, AZ – HOA & Dive-In",
         introCopy:
             "We serve Chandler, AZ and nearby communities. From HOA lawns to city park nights, we plan power, layout, and sightlines so every guest can see and hear clearly.",
         readyToSchedule: "Ready to schedule your event in Chandler?",
         phoneText: "(602) 638-6510",
-        srOnlyH1: "Movies in the park rental in Chandler, AZ",
-        title: "Movies in the Park Rental Chandler, AZ – HOA & Pool Dive-In",
+        srOnlyH1: "Movies in the park rentals in Chandler, AZ",
+        title: "Movies in the Park Rentals Chandler, AZ – HOA & Pool Dive-In",
         description:
             "Movies in the park rentals in Chandler, AZ. Full-service for HOA events and corporate gatherings with giant inflatable screens, HD projector, pro sound, setup, on-site tech, and teardown.",
-        ogTitle: "Movies in the Park Rental in Chandler, AZ",
+        ogTitle: "Movies in the Park Rentals in Chandler, AZ",
         ogDescription:
-            "Movies in the park rental in Chandler, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for community events and dive-ins.",
+            "Movies in the park rentals in Chandler, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for community events and dive-ins.",
         movieSectionAlt: "Outdoor movie screen setup in Chandler, AZ",
         movieSectionText:
             "For Chandler park series, HOA socials, and more, we right-size the screen, manage cable runs, and balance audio for open spaces. Ideal for Tumbleweed Park festivals, Veterans Oasis Lake evenings, and greenbelts across Ocotillo and Fulton Ranch. Corporate events along the Price Corridor benefit from sponsor slides, tight cues, and a polished pre-roll sequence.",
@@ -164,18 +164,18 @@ const cityData = {
         formattedCity: "Gilbert, AZ",
         cityShort: "Gilbert",
         regionLabel: "Gilbert, AZ and nearby communities",
-        visibleH1: "Dive-In Movie Rental Gilbert, AZ – Backyard & Pool",
+        visibleH1: "Dive-In Movie Rentals Gilbert, AZ – Backyard & Pool",
         introCopy:
             "We serve Gilbert, AZ and nearby communities. Backyard lawns and clubhouse lawns make comfortable viewing areas. We help with projector placement and screen angles so people can mingle and still see the film.",
         readyToSchedule: "Ready to schedule your event in Gilbert?",
         phoneText: "(602) 638-6510",
-        srOnlyH1: "Backyard cinema rental in Gilbert, AZ",
-        title: "Dive-In Movie Rental Gilbert, AZ – Backyard & Pool Cinema",
+        srOnlyH1: "Backyard cinema rentals in Gilbert, AZ",
+        title: "Dive-In Movie Rentals Gilbert, AZ – Backyard & Pool Cinema",
         description:
             "Backyard cinema rentals in Gilbert, AZ. Hassle-free packages for backyard movie nights and local festivals with large inflatable screens, HD projector, pro audio, delivery, setup, on-site tech, and teardown.",
-        ogTitle: "Backyard Cinema Rental in Gilbert, AZ",
+        ogTitle: "Backyard Cinema Rentals in Gilbert, AZ",
         ogDescription:
-            "Backyard cinema rental in Gilbert, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for relaxed evenings and dive-in fun.",
+            "Backyard cinema rentals in Gilbert, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for relaxed evenings and dive-in fun.",
         movieSectionAlt: "Outdoor movie screen setup in Gilbert, AZ",
         movieSectionText:
             "From Power Ranch to Agritopia and neighborhoods near Freestone Park, we set up quick and clean—screen, projector, audio, and show control. HOA socials, birthday watch parties, and small festivals get bright, sharp visuals without overwhelming nearby homes. We’ll map cable routes around walkways and keep the run-of-show on time so families can plan the night.",
@@ -191,18 +191,18 @@ const cityData = {
         formattedCity: "Tempe, AZ",
         cityShort: "Tempe",
         regionLabel: "Tempe, AZ and nearby communities",
-        visibleH1: "Outdoor Cinema Rental Tempe, AZ – ASU & Park Events",
+        visibleH1: "Outdoor Cinema Rentals Tempe, AZ – ASU & Park Events",
         introCopy:
             "We serve Tempe, AZ and nearby communities. Campus groups, clubs, and neighborhood parks use our packages for simple, reliable movie nights with plug-and-play streaming.",
         readyToSchedule: "Ready to schedule your event in Tempe?",
         phoneText: "(602) 638-6510",
-        srOnlyH1: "Outdoor cinema rental in Tempe, AZ",
-        title: "Outdoor Cinema Rental Tempe, AZ – ASU & Park Screenings",
+        srOnlyH1: "Outdoor cinema rentals in Tempe, AZ",
+        title: "Outdoor Cinema Rentals Tempe, AZ – ASU & Park Screenings",
         description:
             "Outdoor cinema rentals in Tempe, AZ. Dynamic setups for university events and park screenings with giant inflatable screens, HD projector, pro sound, setup, on-site tech, and teardown.",
-        ogTitle: "Outdoor Cinema Rental in Tempe, AZ",
+        ogTitle: "Outdoor Cinema Rentals in Tempe, AZ",
         ogDescription:
-            "Outdoor cinema rental in Tempe, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for energetic gatherings and dive-ins.",
+            "Outdoor cinema rentals in Tempe, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for energetic gatherings and dive-ins.",
         movieSectionAlt: "Outdoor movie screen setup in Tempe, AZ",
         movieSectionText:
             "We support student orgs and community groups with easy tech: HDMI from our laptop/console, clear audio for open lawns, and a tech to keep timing tight. Great for Tempe Beach Park series, Kiwanis Park, and ASU club events around campus greens. For neighborhood associations, we balance volume and plan neat cable paths so families can spread out comfortably.",
@@ -218,18 +218,18 @@ const cityData = {
         formattedCity: "Paradise Valley, AZ",
         cityShort: "Paradise Valley",
         regionLabel: "Paradise Valley, AZ and nearby communities",
-        visibleH1: "Luxury Movie Screen Rental Paradise Valley, AZ – Estate",
+        visibleH1: "Luxury Movie Screen Rentals Paradise Valley, AZ – Estate",
         introCopy:
             "We serve Paradise Valley, AZ and nearby communities. Private estates and resort courtyards call for careful placement, discreet cabling, and balanced audio—our crew handles every detail.",
         readyToSchedule: "Ready to schedule your event in Paradise Valley?",
         phoneText: "(602) 638-6510",
-        srOnlyH1: "Luxury outdoor movie rental in Paradise Valley, AZ",
-        title: "Luxury Movie Screen Rental Paradise Valley, AZ – Estate & Pool",
+        srOnlyH1: "Luxury outdoor movie rentals in Paradise Valley, AZ",
+        title: "Luxury Movie Screen Rentals Paradise Valley, AZ – Estate & Pool",
         description:
             "Luxury outdoor movie rentals in Paradise Valley, AZ. Tailored setups for private estates and resorts with giant inflatable screens, HD projector, refined audio, delivery, setup, on-site tech, and teardown.",
-        ogTitle: "Luxury Outdoor Movie Rental in Paradise Valley, AZ",
+        ogTitle: "Luxury Outdoor Movie Rentals in Paradise Valley, AZ",
         ogDescription:
-            "Luxury outdoor movie rental in Paradise Valley, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for upscale evenings and poolside cinema.",
+            "Luxury outdoor movie rentals in Paradise Valley, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for upscale evenings and poolside cinema.",
         movieSectionAlt: "Outdoor movie screen setup in Paradise Valley, AZ",
         movieSectionText:
             "We plan sightlines around view corridors and landscaping, optimize throw distance for crisp images, and keep audio tasteful for quiet neighborhoods. Popular settings include estate lawns off Lincoln Dr., intimate resort courtyards, and pool decks with dramatic Camelback Mountain backdrops. Our crew arrives in a tidy footprint and coordinates timing to align with sunset for a seamless, elegant experience.",
@@ -245,18 +245,18 @@ const cityData = {
         formattedCity: "Glendale, AZ",
         cityShort: "Glendale",
         regionLabel: "Glendale, AZ and nearby communities",
-        visibleH1: "Community Movie Night Rental Glendale, AZ – Sports & Park",
+        visibleH1: "Community Movie Night Rentals Glendale, AZ – Sports & Park",
         introCopy:
             "We serve Glendale, AZ and nearby communities. Sports-themed watch parties and family films both work great with our inflatable screens and tuned audio.",
         readyToSchedule: "Ready to schedule your event in Glendale?",
         phoneText: "(602) 638-6510",
-        srOnlyH1: "Dive-in movie rental in Glendale, AZ",
-        title: "Community Movie Night Rental Glendale, AZ – Sports & Parks",
+        srOnlyH1: "Dive-in movie rentals in Glendale, AZ",
+        title: "Community Movie Night Rentals Glendale, AZ – Sports & Parks",
         description:
             "Dive-in movie rentals in Glendale, AZ. Sports-friendly packages for tailgates and park events with large inflatable screens, HD projector, pro audio, delivery, setup, on-site tech, and teardown.",
-        ogTitle: "Dive-In Movie Rental in Glendale, AZ",
+        ogTitle: "Dive-In Movie Rentals in Glendale, AZ",
         ogDescription:
-            "Dive-in movie rental in Glendale, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for sports fans and outdoor movies.",
+            "Dive-in movie rentals in Glendale, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for sports fans and outdoor movies.",
         movieSectionAlt: "Outdoor movie screen setup in Glendale, AZ",
         movieSectionText:
             "We set up clear sightlines for big groups and tune audio to open fields. Great for HOA lawns, school quads, and family events near Westgate, Sahuaro Ranch Park, and more.... For pool-friendly dive-ins, we plan safe cable paths and projector placement so everyone can see—even from the shallow end.",
@@ -272,18 +272,18 @@ const cityData = {
         formattedCity: "Peoria, AZ",
         cityShort: "Peoria",
         regionLabel: "Peoria, AZ and nearby communities",
-        visibleH1: "Poolside Movie Rental Peoria, AZ – Neighborhood & Lake",
+        visibleH1: "Poolside Movie Rentals Peoria, AZ – Neighborhood & Lake",
         introCopy:
             "We serve Peoria, AZ and nearby communities. Quiet neighborhoods and lakeside parks call for thoughtful audio and smart screen placement—our team handles it for you.",
         readyToSchedule: "Ready to schedule your event in Peoria?",
         phoneText: "(602) 638-6510",
-        srOnlyH1: "Poolside movie rental in Peoria, AZ",
-        title: "Poolside Movie Rental Peoria, AZ – Neighborhood & Lake Events",
+        srOnlyH1: "Poolside movie rentals in Peoria, AZ",
+        title: "Poolside Movie Rentals Peoria, AZ – Neighborhood & Lake Events",
         description:
             "Poolside movie rentals in Peoria, AZ. Tranquil setups for neighborhood movie nights and park series with giant inflatable screens, HD projector, pro sound, setup, on-site tech, and teardown.",
-        ogTitle: "Poolside Movie Rental in Peoria, AZ",
+        ogTitle: "Poolside Movie Rentals in Peoria, AZ",
         ogDescription:
-            "Poolside movie rental in Peoria, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for serene evenings and dive-in movies.",
+            "Poolside movie rentals in Peoria, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for serene evenings and dive-in movies.",
         movieSectionAlt: "Outdoor movie screen setup in Peoria, AZ",
         movieSectionText:
             "From Vistancia to Lake Pleasant and Rio Vista Park, we tailor throw distance and volume for comfortable viewing. Church fellowships, HOA lawns, and pool decks get a cinema feel without overpowering nearby homes. Our tech keeps the schedule tight so families can wrap up on time.",
@@ -299,18 +299,18 @@ const cityData = {
         formattedCity: "Queen Creek, AZ",
         cityShort: "Queen Creek",
         regionLabel: "Queen Creek, AZ and nearby communities",
-        visibleH1: "Dive-In Pool Party Rental Queen Creek, AZ – HOA & Farm",
+        visibleH1: "Dive-In Pool Party Rentals Queen Creek, AZ – HOA & Farm",
         introCopy:
             "We serve Queen Creek, AZ and nearby communities. Larger lots and community pools are perfect for inflatable screens—our crew plans throw distance and safe cable routes.",
         readyToSchedule: "Ready to schedule your event in Queen Creek?",
         phoneText: "(602) 638-6510",
-        srOnlyH1: "Dive-in pool party rental in Queen Creek, AZ",
-        title: "Dive-In Pool Party Rental Queen Creek, AZ – HOA & Farmstead",
+        srOnlyH1: "Dive-in pool party rentals in Queen Creek, AZ",
+        title: "Dive-In Pool Party Rentals Queen Creek, AZ – HOA & Farmstead",
         description:
             "Dive-in pool party rentals in Queen Creek, AZ. Comfortable setups for farmstead movie nights and community pools with giant inflatable screens, HD projector, pro sound, setup, on-site tech, and teardown.",
-        ogTitle: "Dive-In Pool Party Rental in Queen Creek, AZ",
+        ogTitle: "Dive-In Pool Party Rentals in Queen Creek, AZ",
         ogDescription:
-            "Dive-in pool party rental in Queen Creek, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for family nights and outdoor cinema.",
+            "Dive-in pool party rentals in Queen Creek, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for family nights and outdoor cinema.",
         movieSectionAlt: "Outdoor movie screen setup in Queen Creek, AZ",
         movieSectionText:
             "We size screens for wide backyards and plan pool-safe layouts for dive-ins. Great for church picnics, PTO nights, and neighborhood socials near Schnepf Farms, Mansel Carter Oasis Park, and Founders’ Park. With careful projector placement and cable routing, everyone gets a clear view without cluttering your yard or pool deck.",
@@ -326,18 +326,18 @@ const cityData = {
         formattedCity: "San Tan Valley, AZ",
         cityShort: "San Tan Valley",
         regionLabel: "San Tan Valley, AZ and nearby communities",
-        visibleH1: "Neighborhood Movie Rental San Tan Valley, AZ – HOA & Park",
+        visibleH1: "Neighborhood Movie Rentals San Tan Valley, AZ – HOA & Park",
         introCopy:
             "We serve San Tan Valley, AZ and nearby communities. Greenbelts, clubhouses, and cul-de-sacs make great viewing areas—our crew keeps cables neat and audio comfortable.",
         readyToSchedule: "Ready to schedule your event in San Tan Valley?",
         phoneText: "(602) 638-6510",
-        srOnlyH1: "Neighborhood movie night rental in San Tan Valley, AZ",
-        title: "Neighborhood Movie Rental San Tan Valley, AZ – HOA & Park",
+        srOnlyH1: "Neighborhood movie night rentals in San Tan Valley, AZ",
+        title: "Neighborhood Movie Rentals San Tan Valley, AZ – HOA & Park",
         description:
             "Neighborhood movie night rentals in San Tan Valley, AZ. Turnkey packages for HOA and community events with inflatable screens, HD projector, pro sound, delivery, setup, on-site tech, and teardown.",
-        ogTitle: "Neighborhood Movie Night Rental in San Tan Valley, AZ",
+        ogTitle: "Neighborhood Movie Night Rentals in San Tan Valley, AZ",
         ogDescription:
-            "Neighborhood movie night rental in San Tan Valley, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for family evenings and outdoor cinema.",
+            "Neighborhood movie night rentals in San Tan Valley, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for family evenings and outdoor cinema.",
         movieSectionAlt: "Outdoor movie screen setup in San Tan Valley, AZ",
         movieSectionText:
             "We match screen size to your viewing area and plan projector throw for sharp images. Ideal for Johnson Ranch, Ironwood Crossing, Skyline Ranch, and community spaces off Hunt Highway. Our tech manages timing, pre-show content, and volume so neighbors can relax and enjoy the film.",
@@ -353,18 +353,18 @@ const cityData = {
         formattedCity: "Tolleson, AZ",
         cityShort: "Tolleson",
         regionLabel: "Tolleson, AZ and nearby communities",
-        visibleH1: "Community Movie Rental Tolleson, AZ – School & Park",
+        visibleH1: "Community Movie Rentals Tolleson, AZ – School & Park",
         introCopy:
             "We serve Tolleson, AZ and nearby communities. School fields and neighborhood parks make set-up straightforward—our tech handles timing, sound checks, and show flow.",
         readyToSchedule: "Ready to schedule your event in Tolleson?",
         phoneText: "(602) 638-6510",
-        srOnlyH1: "Community movie night rental in Tolleson, AZ",
-        title: "Community Movie Rental Tolleson, AZ – School & Park Nights",
+        srOnlyH1: "Community movie night rentals in Tolleson, AZ",
+        title: "Community Movie Rentals Tolleson, AZ – School & Park Nights",
         description:
             "Community movie night rentals in Tolleson, AZ. Simple, reliable packages for school and community events with inflatable screens, HD projector, pro audio, delivery, setup, on-site tech, and teardown.",
-        ogTitle: "Community Movie Night Rental in Tolleson, AZ",
+        ogTitle: "Community Movie Night Rentals in Tolleson, AZ",
         ogDescription:
-            "Community movie night rental in Tolleson, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for family nights and park screenings.",
+            "Community movie night rentals in Tolleson, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for family nights and park screenings.",
         movieSectionAlt: "Outdoor movie screen setup in Tolleson, AZ",
         movieSectionText:
             "We plan seating areas and viewing angles (bring blankets!) so families settle in comfortably. Great fit for neighborhood lawns, school fields, and small park gatherings near Tolleson High and Veterans Park. Our crew keeps cues tight so raffles and shout-outs don’t delay the show.",
@@ -380,18 +380,18 @@ const cityData = {
         formattedCity: "Buckeye, AZ",
         cityShort: "Buckeye",
         regionLabel: "Buckeye, AZ and nearby communities",
-        visibleH1: "Rural Movie Screen Rental Buckeye, AZ – Large Lot & Park",
+        visibleH1: "Rural Movie Screen Rentals Buckeye, AZ – Large Lot & Park",
         introCopy:
             "We serve Buckeye, AZ and nearby communities. Larger rural lots and community parks give you room for big screens—our crew sizes gear to your space.",
         readyToSchedule: "Ready to schedule your event in Buckeye?",
         phoneText: "(602) 638-6510",
-        srOnlyH1: "Rural outdoor movie rental in Buckeye, AZ",
-        title: "Rural Movie Screen Rental Buckeye, AZ – Large Lot & Park",
+        srOnlyH1: "Rural outdoor movie rentals in Buckeye, AZ",
+        title: "Rural Movie Screen Rentals Buckeye, AZ – Large Lot & Park",
         description:
             "Rural outdoor movie rentals in Buckeye, AZ. Packages for frontier-style movie nights and community events with large inflatable screens, HD projector, pro audio, delivery, setup, on-site tech, and teardown.",
-        ogTitle: "Rural Outdoor Movie Rental in Buckeye, AZ",
+        ogTitle: "Rural Outdoor Movie Rentals in Buckeye, AZ",
         ogDescription:
-            "Rural outdoor movie rental in Buckeye, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for open-sky gatherings and dive-ins.",
+            "Rural outdoor movie rentals in Buckeye, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for open-sky gatherings and dive-ins.",
         movieSectionAlt: "Outdoor movie screen setup in Buckeye, AZ",
         movieSectionText:
             "We plan for longer throw distances and wind considerations common to open areas. Perfect for homesteads, HOA greens around Verrado and Sundance, and school fields near downtown Buckeye. Our power plans and cable routes keep things tidy even for larger crowd layouts.",
@@ -407,18 +407,18 @@ const cityData = {
         formattedCity: "Goodyear, AZ",
         cityShort: "Goodyear",
         regionLabel: "Goodyear, AZ and nearby communities",
-        visibleH1: "Outdoor Movie Event Rental Goodyear, AZ – Festival & Park",
+        visibleH1: "Outdoor Movie Event Rentals Goodyear, AZ – Festival & Park",
         introCopy:
             "We serve Goodyear, AZ and nearby communities. Neighborhood festivals and park series benefit from simple logistics—clear power plans, clean cable runs, and reliable audio.",
         readyToSchedule: "Ready to schedule your event in Goodyear?",
         phoneText: "(602) 638-6510",
-        srOnlyH1: "Outdoor movie event rental in Goodyear, AZ",
-        title: "Outdoor Movie Event Rental Goodyear, AZ – Festival & Park",
+        srOnlyH1: "Outdoor movie event rentals in Goodyear, AZ",
+        title: "Outdoor Movie Event Rentals Goodyear, AZ – Festival & Park",
         description:
             "Outdoor movie event rentals in Goodyear, AZ. Packages for community festivals and park screenings with large inflatable screens, HD projector, pro audio, delivery, setup, on-site tech, and teardown.",
-        ogTitle: "Outdoor Movie Event Rental in Goodyear, AZ",
+        ogTitle: "Outdoor Movie Event Rentals in Goodyear, AZ",
         ogDescription:
-            "Outdoor movie event rental in Goodyear, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for parks and pool events.",
+            "Outdoor movie event rentals in Goodyear, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for parks and pool events.",
         movieSectionAlt: "Outdoor movie screen setup in Goodyear, AZ",
         movieSectionText:
             "We support events across Estrella and Palm Valley with screens sized for lawns and amphitheater-style slopes. Goodyear Community Park and local HOA greens are great for family nights—our tech keeps timing tight so sponsor reels and pre-show content play smoothly.",
@@ -434,18 +434,18 @@ const cityData = {
         formattedCity: "Anthem, AZ",
         cityShort: "Anthem",
         regionLabel: "Anthem, AZ and nearby communities",
-        visibleH1: "HOA Movie Night Rental Anthem, AZ – Park & Pool",
+        visibleH1: "HOA Movie Night Rentals Anthem, AZ – Park & Pool",
         introCopy:
             "We serve Anthem, AZ and nearby communities. Community parks, club lawns, and cul-de-sacs make easy venues—our team plans layout, power, and projector throw so every seat has a view.",
         readyToSchedule: "Ready to schedule your event in Anthem?",
         phoneText: "(602) 638-6510",
-        srOnlyH1: "Outdoor movie night rental in Anthem, AZ",
-        title: "HOA Movie Night Rental Anthem, AZ – Park & Pool Events",
+        srOnlyH1: "Outdoor movie night rentals in Anthem, AZ",
+        title: "HOA Movie Night Rentals Anthem, AZ – Park & Pool Events",
         description:
             "Outdoor movie night rentals in Anthem, AZ. Packages for neighborhood lawns and park events with inflatable screens, HD projector, pro audio, delivery, setup, on-site tech, and teardown.",
-        ogTitle: "Outdoor Movie Night Rental in Anthem, AZ",
+        ogTitle: "Outdoor Movie Night Rentals in Anthem, AZ",
         ogDescription:
-            "Outdoor movie night rental in Anthem, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for family nights and HOA events.",
+            "Outdoor movie night rentals in Anthem, AZ—HD projector, pro sound, delivery, setup, on-site tech, and teardown for family nights and HOA events.",
         movieSectionAlt: "Outdoor movie screen setup in Anthem, AZ",
         movieSectionText:
             "We set clear sightlines for greenbelts and plan cable paths around walkways. Great for Anthem Community Park and HOA greens throughout the area. Dive-in movies are popular—our projector placement and audio balance make it easy for families to watch from blankets or poolside without hotspots or echoes.",
@@ -539,9 +539,9 @@ function Locations() {
         }
     };
 
-    const cityKeywords = data.cityShort
-        ? `outdoor movie rental ${data.cityShort}, inflatable screen ${data.cityShort}, backyard movie night ${data.cityShort}, dive in movie ${data.cityShort}, movies in the park ${data.cityShort}`
-        : "outdoor movie rental phoenix metro, inflatable screen near me, backyard cinema phoenix, dive in pool party, movies in the park arizona";
+    const cityKeywords = isGeneralAreaPage
+        ? "inflatable outdoor movie screen rentals near me phoenix az, outdoor movie rentals phoenix metro, giant movie screen phoenix"
+        : `inflatable outdoor movie screen rentals ${data.cityShort} az, outdoor movie ${data.cityShort}, backyard movie night ${data.cityShort}`;
 
     return (
         <section className={classes.root}>
@@ -551,22 +551,16 @@ function Locations() {
                 {/* <meta name="description" content={data.description} /> */}
                 <title>
                     {isGeneralAreaPage
-                        ? `Inflatable Movie Screen Rental Near Me Phoenix AZ | Backyard Movie Night Packages`
-                        : `Inflatable Movie Screen Rental ${data.formattedCity} | Backyard Movie Night Packages`}
+                        ? `Inflatable Outdoor Movie Screen Rentals Near Me Phoenix AZ | HOA, Park & Dive-In Events`
+                        : `Inflatable Outdoor Movie Screen Rentals ${data.cityShort} AZ | HOA, Park & Dive-In Events`}
                 </title>
                 <meta name="description" content={
                     isGeneralAreaPage
-                        ? `Giant inflatable movie screen rentals near me in Phoenix metro. Full-service packages for backyards, parks, HOAs. Includes HD projector, pro sound, concessions, ice cream & coffee food truck. Serving Scottsdale, Mesa, Chandler, Gilbert & more.`
-                        : `Rent a giant inflatable movie screen in ${data.formattedCity}. Full-service backyard movie nights & dive-ins with HD projector, pro sound, popcorn, cotton candy, ice cream food truck. Setup & teardown included.`
+                        ? `Inflatable outdoor movie screen rentals Phoenix AZ. Full-service backyard & park nights. Giant screen, HD projector, pro sound, tech, setup/teardown. Serving Scottsdale, Mesa, Chandler, Gilbert & more.`
+                        : `Inflatable outdoor movie screen rentals ${data.formattedCity}. Full-service with giant screen, HD projector, pro sound, on-site tech, setup & teardown. Backyard, dive-in, HOA & park events.`
                 } />
                 <meta name="keywords" content={cityKeywords} />
                 <link rel="canonical" href={canonicalUrl} />
-
-                {/* GEO TAGS - ONLY IN LOCATIONS */}
-                <meta name="geo.placename" content={data.cityShort || "Phoenix Metro Area"} />
-                <meta name="geo.region" content="US-AZ" />
-                <meta name="geo.position" content="33.4617;-111.9146" />
-                <meta name="telephone" content="+16026386510" />
 
                 {/* Voice Search */}
                 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -574,12 +568,28 @@ function Locations() {
 
                 {/* Open Graph (Minimal Override) */}
                 <meta property="og:url" content={canonicalUrl} />
-                <meta property="og:title" content={data.ogTitle} />
-                <meta property="og:description" content={data.ogDescription} />
+                <meta property="og:title" content={
+                    isGeneralAreaPage
+                        ? `Inflatable Outdoor Movie Screen Rentals Near Me Phoenix AZ | HOA, Park & Dive-In Events`
+                        : `Inflatable Outdoor Movie Screen Rentals ${data.cityShort} AZ | HOA, Park & Dive-In Events`
+                } />
+                <meta property="og:description" content={
+                    isGeneralAreaPage
+                        ? `Inflatable outdoor movie screen rentals Phoenix AZ. Full-service backyard & park nights. Giant screen, HD projector, pro sound, tech, setup/teardown. Serving Scottsdale, Mesa, Chandler, Gilbert & more.`
+                        : `Inflatable outdoor movie screen rentals ${data.formattedCity}. Full-service with giant screen, HD projector, pro sound, on-site tech, setup & teardown. Backyard, dive-in, HOA & park events.`
+                } />
 
                 {/* Twitter (Minimal Override) */}
-                <meta name="twitter:title" content={data.ogTitle} />
-                <meta name="twitter:description" content={data.ogDescription} />
+                <meta name="twitter:title" content={
+                    isGeneralAreaPage
+                        ? `Inflatable Outdoor Movie Screen Rentals Near Me Phoenix AZ | HOA, Park & Dive-In Events`
+                        : `Inflatable Outdoor Movie Screen Rentals ${data.cityShort} AZ | HOA, Park & Dive-In Events`
+                } />
+                <meta name="twitter:description" content={
+                    isGeneralAreaPage
+                        ? `Inflatable outdoor movie screen rentals Phoenix AZ. Full-service backyard & park nights. Giant screen, HD projector, pro sound, tech, setup/teardown. Serving Scottsdale, Mesa, Chandler, Gilbert & more.`
+                        : `Inflatable outdoor movie screen rentals ${data.formattedCity}. Full-service with giant screen, HD projector, pro sound, on-site tech, setup & teardown. Backyard, dive-in, HOA & park events.`
+                } />
 
                 {/* JSON-LD: WebPage + Breadcrumb + FAQ + ItemList */}
                 <script type="application/ld+json">
@@ -591,8 +601,8 @@ function Locations() {
                                 "@id": `${canonicalUrl}/#webpage`,
                                 "url": canonicalUrl,
                                 "name": isGeneralAreaPage
-                                    ? "Inflatable Movie Screen Rental Near Me Phoenix AZ | Backyard Movie Night Packages"
-                                    : `Inflatable Movie Screen Rental ${data.formattedCity} | Backyard Movie Night Packages`,
+                                    ? "Inflatable Outdoor Movie Screen Rentals Near Me Phoenix AZ | HOA, Park & Dive-In Events"
+                                    : `Inflatable Outdoor Movie Screen Rentals ${data.cityShort} AZ | HOA, Park & Dive-In Events`,
                                 "description": isGeneralAreaPage
                                     ? "Giant inflatable movie screen rentals near me in Phoenix metro. Full-service packages for backyards, parks, HOAs. Includes HD projector, pro sound, concessions, ice cream & coffee food truck."
                                     : `Rent a giant inflatable movie screen in ${data.formattedCity}. Full-service backyard movie nights & dive-ins with HD projector, pro sound, popcorn, cotton candy, ice cream food truck.`,
@@ -650,7 +660,7 @@ function Locations() {
                                 "mainEntity": [
                                     {
                                         "@type": "Question",
-                                        "name": `How much does outdoor movie screen rental cost in ${data.cityShort || "Phoenix"}?`,
+                                        "name": `How much does outdoor movie screen rentals cost in ${data.cityShort || "Phoenix"}?`,
                                         "acceptedAnswer": {
                                             "@type": "Answer",
                                             "text": "Backyard packages start at $349. Park/HOA events from $699. Includes giant screen, HD projector, pro sound, technician, full setup & teardown."
@@ -699,10 +709,11 @@ function Locations() {
                 <Box className={classes.titleBox}>
                     <Typography variant="h1" className={classes.title} itemProp="headline">
                         {isGeneralAreaPage
-                            ? `Inflatable Movie Screen Rental Near Me – Phoenix AZ & Surrounding Cities`
-                            : `Inflatable Movie Screen Rental ${data.formattedCity} – Backyard Movie Nights & Dive-Ins`}
-                        {/* Accessible, SEO-aligned */}
-                        <span className="sr-only">{data.srOnlyH1}</span>
+                            ? `Inflatable Outdoor Movie Screen Rentals Near Me – Phoenix AZ & Surrounding Cities`
+                            : `Inflatable Outdoor Movie Screen Rentals ${data.formattedCity}`}
+                        <span className="sr-only">
+                            {" "}serving Phoenix, Scottsdale, Mesa, Chandler, Gilbert, Tempe, Glendale, Peoria, and the entire Valley with full-service backyard movie nights, dive-ins, and park events.
+                        </span>
                     </Typography>
                     <Box className={classes.subTextBox}>
                         <Typography className={classes.subText}>{introCopy}</Typography>
