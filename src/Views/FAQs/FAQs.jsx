@@ -12,7 +12,7 @@ function FAQs() {
         <section className={classes.root}>
             <Helmet>
                 {/* Core SEO */}
-                <title>Outdoor Movie Rental FAQs | Phoenix Inflatable Movie Screens</title>
+                <title>Outdoor Movie Screen Rental FAQs | Outdoor Movie Pros Phoenix AZ</title>
                 <meta
                     name="description"
                     content="Answers to common outdoor movie rental questions in Phoenix: delivery and setup, projector and screen, start times at sunset, front vs rear projection, and wind safety."
@@ -26,14 +26,14 @@ function FAQs() {
 
                 {/* Open Graph — MINIMAL OVERRIDE */}
                 <meta property="og:url" content={canonicalUrl} />
-                <meta property="og:title" content="Outdoor Movie Rental FAQs | Phoenix Inflatable Screens" />
+                <meta property="og:title" content="Outdoor Movie Screen Rental FAQs | Outdoor Movie Pros Phoenix AZ" />
                 <meta
                     property="og:description"
                     content="Get answers on delivery, setup, start times, projection options, and wind safety for outdoor movie rentals in Phoenix."
                 />
 
                 {/* Twitter — MINIMAL OVERRIDE */}
-                <meta name="twitter:title" content="Outdoor Movie Rental FAQs | Phoenix Inflatable Screens" />
+                <meta name="twitter:title" content="Outdoor Movie Screen Rental FAQs | Outdoor Movie Pros Phoenix AZ" />
                 <meta
                     name="twitter:description"
                     content="Answers to top questions about outdoor movie rentals in Phoenix: setup, timing, projection, and safety."
@@ -48,7 +48,7 @@ function FAQs() {
                                 "@type": "WebPage",
                                 "@id": `${canonicalUrl}/#webpage`,
                                 "url": canonicalUrl,
-                                "name": "Outdoor Movie Rental FAQs | Phoenix Inflatable Movie Screens",
+                                "name": "Outdoor Movie Screen Rental FAQs | Outdoor Movie Pros Phoenix AZ",
                                 "description": "Answers to common outdoor movie rental questions in Phoenix: delivery and setup, projector and screen, start times at sunset, front vs rear projection, and wind safety.",
                                 "isPartOf": { "@id": "https://outdoormoviepros.com/#website" },
                                 "about": { "@id": "https://outdoormoviepros.com/#business" },

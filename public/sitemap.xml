@@ -3,67 +3,67 @@
   <!-- Core pages -->
   <url>
     <loc>https://outdoormoviepros.com</loc>
-    <lastmod>2025-11-08</lastmod>
+    <lastmod>2025-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://outdoormoviepros.com/locations</loc>
-    <lastmod>2025-11-08</lastmod>
+    <lastmod>2025-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://outdoormoviepros.com/faqs</loc>
-    <lastmod>2025-11-08</lastmod>
+    <lastmod>2025-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://outdoormoviepros.com/gallery</loc>
-    <lastmod>2025-11-08</lastmod>
+    <lastmod>2025-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://outdoormoviepros.com/contact</loc>
-    <lastmod>2025-11-08</lastmod>
+    <lastmod>2025-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://outdoormoviepros.com/ice-cream-food-truck</loc>
-    <lastmod>2025-11-08</lastmod>
+    <lastmod>2025-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://outdoormoviepros.com/concessions-options</loc>
-    <lastmod>2025-11-08</lastmod>
+    <lastmod>2025-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://outdoormoviepros.com/movie-nights-options</loc>
-    <lastmod>2025-11-08</lastmod>
+    <lastmod>2025-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Location pages -->
-  <url><loc>https://outdoormoviepros.com/phoenix</loc><lastmod>2025-11-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://outdoormoviepros.com/mesa</loc><lastmod>2025-11-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://outdoormoviepros.com/scottsdale</loc><lastmod>2025-11-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://outdoormoviepros.com/gilbert</loc><lastmod>2025-11-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://outdoormoviepros.com/chandler</loc><lastmod>2025-11-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://outdoormoviepros.com/tempe</loc><lastmod>2025-11-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://outdoormoviepros.com/paradise-valley</loc><lastmod>2025-11-08</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://outdoormoviepros.com/glendale</loc><lastmod>2025-11-08</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://outdoormoviepros.com/peoria</loc><lastmod>2025-11-08</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://outdoormoviepros.com/queen-creek</loc><lastmod>2025-11-08</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://outdoormoviepros.com/san-tan-valley</loc><lastmod>2025-11-08</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://outdoormoviepros.com/tolleson</loc><lastmod>2025-11-08</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://outdoormoviepros.com/buckeye</loc><lastmod>2025-11-08</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://outdoormoviepros.com/goodyear</loc><lastmod>2025-11-08</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://outdoormoviepros.com/anthem</loc><lastmod>2025-11-08</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://outdoormoviepros.com/phoenix</loc><lastmod>2025-11-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://outdoormoviepros.com/mesa</loc><lastmod>2025-11-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://outdoormoviepros.com/scottsdale</loc><lastmod>2025-11-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://outdoormoviepros.com/gilbert</loc><lastmod>2025-11-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://outdoormoviepros.com/chandler</loc><lastmod>2025-11-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://outdoormoviepros.com/tempe</loc><lastmod>2025-11-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://outdoormoviepros.com/paradise-valley</loc><lastmod>2025-11-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://outdoormoviepros.com/glendale</loc><lastmod>2025-11-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://outdoormoviepros.com/peoria</loc><lastmod>2025-11-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://outdoormoviepros.com/queen-creek</loc><lastmod>2025-11-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://outdoormoviepros.com/san-tan-valley</loc><lastmod>2025-11-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://outdoormoviepros.com/tolleson</loc><lastmod>2025-11-13</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://outdoormoviepros.com/buckeye</loc><lastmod>2025-11-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://outdoormoviepros.com/goodyear</loc><lastmod>2025-11-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://outdoormoviepros.com/anthem</loc><lastmod>2025-11-13</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
 </urlset>

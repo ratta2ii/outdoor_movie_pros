@@ -521,8 +521,6 @@ function Locations() {
         const title = data.visibleH1 || "Outdoor Movie Pros";
         const text = "Check this out from Outdoor Movie Pros";
 
-        console.log("Testing in Locations...");
-
         if (navigator.share) {
             try {
                 await navigator.share({ title, text, url: canonicalUrl });
