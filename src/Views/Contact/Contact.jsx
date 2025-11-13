@@ -21,6 +21,12 @@ function Contact() {
                 <meta name="keywords" content="outdoor movie quote phoenix, inflatable screen rental phoenix, backyard movie night phoenix, get quote phoenix" />
                 <link rel="canonical" href={canonicalUrl} />
 
+                {/* GEO TAGS (Phoenix metro center - long lat) */}
+                <meta name="geo.position" content="33.4484;-112.0740" />
+                <meta name="geo.placename" content="Phoenix, AZ" />
+                <meta name="geo.region" content="US-AZ" />
+                <meta name="ICBM" content="33.4484, -112.0740" />
+
                 {/* Voice Search */}
                 <meta name="apple-mobile-web-app-capable" content="yes" />
                 <meta name="mobile-web-app-capable" content="yes" />
