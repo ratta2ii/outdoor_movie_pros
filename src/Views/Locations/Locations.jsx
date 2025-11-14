@@ -626,7 +626,16 @@ function Locations() {
                                             "name": "Outdoor Movie Night Rental",
                                             "description": data.movieSectionText,
                                             "image": "https://outdoormoviepros.com/images/gallery6.webp",
-                                            "url": `${canonicalUrl}#movie-section`
+                                            "url": `${canonicalUrl}/#movie-section`,
+                                            "areaServed": {
+                                                "@type": "City",
+                                                "name": data.cityShort || "Phoenix",
+                                                "address": {
+                                                    "@type": "PostalAddress",
+                                                    "addressLocality": data.cityShort || "Phoenix",
+                                                    "addressRegion": "AZ"
+                                                }
+                                            }
                                         }
                                     },
                                     {
@@ -637,7 +646,16 @@ function Locations() {
                                             "name": "Concessions & Add-Ons",
                                             "description": data.concessionsText,
                                             "image": "https://outdoormoviepros.com/images/concession-booth.webp",
-                                            "url": `${canonicalUrl}#concessions-section`
+                                            "url": `${canonicalUrl}/#concessions-section`,
+                                            "areaServed": {
+                                                "@type": "City",
+                                                "name": data.cityShort || "Phoenix",
+                                                "address": {
+                                                    "@type": "PostalAddress",
+                                                    "addressLocality": data.cityShort || "Phoenix",
+                                                    "addressRegion": "AZ"
+                                                }
+                                            }
                                         }
                                     },
                                     {
@@ -648,7 +666,16 @@ function Locations() {
                                             "name": "Ice Cream & Coffee Food Truck",
                                             "description": data.foodTruckText,
                                             "image": "https://outdoormoviepros.com/images/ice-cream-truck-two.webp",
-                                            "url": `${canonicalUrl}#food-truck-section`
+                                            "url": `${canonicalUrl}/#food-truck-section`,
+                                            "areaServed": {
+                                                "@type": "City",
+                                                "name": data.cityShort || "Phoenix",
+                                                "address": {
+                                                    "@type": "PostalAddress",
+                                                    "addressLocality": data.cityShort || "Phoenix",
+                                                    "addressRegion": "AZ"
+                                                }
+                                            }
                                         }
                                     }
                                 ]
