@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
     ctaImage: {
         width: 100, 
         height: 100,
+        display: 'block',
     },
     ctaButton: {
         fontSize: ".7em",

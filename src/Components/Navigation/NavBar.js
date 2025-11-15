@@ -21,8 +21,6 @@ import CoffeeIcon from '@mui/icons-material/EmojiFoodBeverageRounded';
 import FaqsIcon from '@mui/icons-material/LiveHelpRounded';
 import GalleryIcon from '@mui/icons-material/CollectionsRounded';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
-// import IceCreamIcon from '@mui/icons-material/IcecreamRounded';
-// import CancelIcon from '@mui/icons-material/Cancel';
 import { Link, useLocation } from 'react-router-dom';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -43,8 +41,14 @@ function NavBar(props) {
             <img
                 src={WhiteCompanyLogo}
                 alt='Outdoor Movie Pros logo'
-                style={{ width: '90px', marginTop: 20, marginBottom: 10 }}
                 loading="lazy"
+                data-ratio="434 / 265"
+                style={{
+                    margin: '20px auto 20px auto',
+                    width: 90,
+                    height: 'auto',
+                    display: 'block',
+                }}
             />
             <Divider />
             <Box sx={{ backgroundColor: '#f5f5f5' }}>
@@ -250,9 +254,14 @@ function NavBar(props) {
                             <Link to="/">
                                 <img
                                     src={CompanyLogo}
-                                    width="75"
                                     alt="Outdoor Movie Pros logo"
                                     loading="lazy"
+                                    data-ratio="407 / 247"
+                                    style={{
+                                        width: 75,
+                                        height: 'auto',
+                                        display: 'block',
+                                    }}
                                 />
                             </Link>
                         </Box>
@@ -263,10 +272,15 @@ function NavBar(props) {
                             <Link to='/'>
                                 <img
                                     src={CompanyLogo}
-                                    width="90"
                                     alt='Outdoor Movie Pros logo'
-                                    style={{ margin: "15px 25px 25px 10px" }}
                                     loading="lazy"
+                                    data-ratio='407 / 247'
+                                    style={{
+                                        width: 90,
+                                        height: 'auto',
+                                        margin: "15px 25px 25px 10px",
+                                        display: 'block',
+                                    }}
                                 />
                             </Link>
                             <Typography variant="body1" style={{ fontFamily: "sans-serif", fontSize: "1.2em" }}>

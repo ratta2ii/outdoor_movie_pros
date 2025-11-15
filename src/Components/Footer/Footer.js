@@ -10,6 +10,12 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Button, Menu, MenuItem, Divider } from "@mui/material";
 import VoiceSearchMic from "../VoiceSearchMic/VoiceSearchMic";
 
+// MUI ICONS (replacing Font Awesome)
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import PhoneIcon from '@mui/icons-material/Phone';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import SendIcon from '@mui/icons-material/Send';
+
 const useStyles = makeStyles((theme) => ({
     root: {
         width: "100%",
@@ -139,7 +145,6 @@ const Footer = (props) => {
         <>
             {showCarousel && <LogoCarousel />}
 
-            {/* ←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←← */}
             {/* ROOT GRID NOW HAS position: relative */}
             <Grid container className={classes.root}>
                 {/* Left side */}
@@ -162,7 +167,7 @@ const Footer = (props) => {
                     <Box className={classes.cardBox}>
                         {/* Email */}
                         <Box className={classes.infoLine}>
-                            <i className={`fas fa-envelope ${classes.infoIcon}`}></i>
+                            <MailOutlineIcon className={classes.infoIcon} />
                             <Typography className={classes.infoText}>
                                 <a href="mailto:info@outdoormoviepros.com" style={{ color: "#efefef", textDecoration: "none", fontSize: 18 }}>
                                     info@outdoormoviepros.com
@@ -172,7 +177,7 @@ const Footer = (props) => {
 
                         {/* Phone */}
                         <Box className={classes.infoLine}>
-                            <i className={`fas fa-phone ${classes.infoIcon}`}></i>
+                            <PhoneIcon className={classes.infoIcon} />
                             <Typography className={classes.infoText}>
                                 <a href="tel:+16026386510" style={{ color: "#efefef", textDecoration: "none", fontSize: 18 }}>
                                     602-638-6510
@@ -182,7 +187,7 @@ const Footer = (props) => {
 
                         {/* Locations */}
                         <Box className={classes.infoLine}>
-                            <i className={`fas fa-map-marker-alt ${classes.infoIcon}`}></i>
+                            <LocationOnIcon className={classes.infoIcon} />
                             <Typography className={classes.infoText} component="span">
                                 <Button
                                     id="service-areas-button"
@@ -224,7 +229,7 @@ const Footer = (props) => {
 
                         {/* Get a Quote Now */}
                         <Box className={classes.infoLine} style={{ marginBottom: 0 }}>
-                            <i className={`fas fa-paper-plane ${classes.infoIcon}`}></i>
+                            <SendIcon className={classes.infoIcon} />
                             <Typography className={classes.infoText}>
                                 <a href="/contact" style={{ color: "#efefef", textDecoration: "underline", fontSize: 18 }}>
                                     Get a Quote Now

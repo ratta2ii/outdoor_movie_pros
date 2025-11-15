@@ -20,6 +20,8 @@ function CallToAction() {
                         src={InsuranceSeal}
                         alt="Outdoor Movie Pros is Licensed and Insured"
                         className={classes.ctaImage}
+                        loading="lazy"
+                        data-ratio='407 / 247'
                     />
                 </Grid>
                 <Grid item>

@@ -788,6 +788,8 @@ function Locations() {
                                 src={GiantScreenImage}
                                 alt={data.movieSectionAlt}
                                 className={classes.imageStyles}
+                                loading="lazy"
+                                data-ratio='600 / 450'
                             />
                         </Grid>
                         {/* Main Content */}
@@ -877,6 +879,8 @@ function Locations() {
                                 src={ConcessionBoothImage}
                                 alt={data.concessionsSectionAlt}
                                 className={classes.imageStyles}
+                                loading="lazy"
+                                data-ratio='598 / 480'
                             />
                         </Grid>
                         {/* Main Content */}
@@ -940,7 +944,7 @@ function Locations() {
                                 style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}
                                 aria-label="View options for ice cream food truck"
                             >
-                                <span className={classes.viewOptions}>LEARN MORE</span>
+                                <span className={classes.viewOptions}>GO TO OPTIONS</span>
                                 <ArrowForwardIosIcon style={{ cursor: 'pointer' }} />
                             </Box>
                             <ShareIcon
@@ -965,6 +969,8 @@ function Locations() {
                                 src={FoodTruckImage}
                                 alt={data.foodTruckAlt}
                                 className={classes.imageStyles}
+                                loading="lazy"
+                                data-ratio='564 / 423'
                             />
                         </Grid>
                         {/* Main Content */}
@@ -997,13 +1003,12 @@ function Locations() {
                                     <Box className={classes.buttonGroup}>
                                         <Button
                                             className={classes.viewOptionsButton}
-
-                                            name="Learn More"
+                                            name="View Options"
                                             startIcon={<IceCreamIcon />}
                                             component={Link}
                                             to="/ice-cream-food-truck"
                                         >
-                                            Learn More
+                                            View Options
                                         </Button>
                                     </Box>
                                 </Grid>

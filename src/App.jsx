@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import NavBar from './Components/Navigation/NavBar';
 import Footer from './Components/Footer/Footer';
@@ -12,23 +12,23 @@ import IceCreamFoodTruck from "./Views/Products/IceCreamFoodTruck/IceCreamFoodTr
 import Error from './Components/Error/Error';
 import ScrollToTop from "./Components/ScrollToTop";
 import FAQs from "./Views/FAQs/FAQs";
-import Loader from "./Components/Loader";
+// import Loader from "./Components/Loader";
 
 function App() {
-    const [isLoaded, setIsLoaded] = useState(false);
+    // const [isLoaded, setIsLoaded] = useState(false);
 
-    useEffect(() => {
-        // Simulate minimal load delay or use actual asset check
-        const timer = setTimeout(() => {
-            setIsLoaded(true);
-        }, 300); // or check for images/fonts
+    // useEffect(() => {
+    //     // Simulate minimal load delay or use actual asset check
+    //     const timer = setTimeout(() => {
+    //         setIsLoaded(true);
+    //     }, 300); // or check for images/fonts
 
-        return () => clearTimeout(timer);
-    }, []);
+    //     return () => clearTimeout(timer);
+    // }, []);
 
-    if (!isLoaded) {
-        return <Loader />;
-    }
+    // if (!isLoaded) {
+    //     return <Loader />;
+    // }
 
     return (
         <main style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>

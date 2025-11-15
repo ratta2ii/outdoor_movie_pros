@@ -33,6 +33,7 @@ function Services() {
                                     image={GiantScreenImage}
                                     alt="Giant inflatable outdoor movie screen rental in Phoenix"
                                     loading="lazy"
+                                    sx={{ aspectRatio: '600 / 450', width: '100%', height: 'auto' }}
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h2" component="h2" className={classes.cardTitle} style={{ fontFamily: 'inherit' }}>
@@ -89,6 +90,7 @@ function Services() {
                                     image={ConcessionsImage}
                                     alt="Popcorn machine and concession stand for outdoor movie events"
                                     loading="lazy"
+                                    sx={{ aspectRatio: '600 / 375', width: '100%', height: 'auto' }}
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h2" component="h2" className={classes.cardTitle} style={{ fontFamily: 'inherit' }}>
@@ -132,7 +134,7 @@ function Services() {
                     </Card>
                 </Grid>
 
-                {/* System Inspection Card */}
+                {/* Ice Cream Food Truck Card */}
                 <Grid item xs={12} md={6} lg={4}>
                     <Card className={classes.card}>
                         <Link
@@ -146,6 +148,7 @@ function Services() {
                                     image={IceCreamFoodTruckImage}
                                     alt="Ice cream sundae and coffee food truck for events in Phoenix"
                                     loading="lazy"
+                                    sx={{ aspectRatio: '615 / 400', width: '100%', height: 'auto' }}
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h2" component="h2" className={classes.cardTitle} style={{ fontFamily: 'inherit' }}>

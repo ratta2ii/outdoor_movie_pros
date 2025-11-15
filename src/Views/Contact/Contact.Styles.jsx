@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         fontSize: '1.7em',
         color: '#fff',
-        fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+        fontFamily: '"Segoe UI", "Helvetica", "Arial", sans-serif',
         fontWeight: 600,
         [theme.breakpoints.down('sm')]: {
             fontSize: '1.5em'
@@ -51,12 +51,13 @@ const useStyles = makeStyles((theme) => ({
     },
     subTitle: {
         fontStyle: 'italic',
-        fontSize: '1.2em',
+        fontSize: '1.3em',
         textAlign: 'center',
         marginBottom: 30,
         marginTop: 20,
         width: '80%',
         marginLeft: '10%',
+        fontFamily: '"Segoe UI", "Helvetica", "Arial", sans-serif',
         [theme.breakpoints.down('xs')]: {
             width: '100%',
             marginLeft: 0,

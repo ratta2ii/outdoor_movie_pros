@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         fontSize: '1.8em',
         color: '#fff',
-        fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+        fontFamily: '"Segoe UI", "Helvetica", "Arial", sans-serif',
         fontWeight: 600,
         lineHeight: 'normal',
         [theme.breakpoints.down('sm')]: {
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
         color: '#fff',
         width: '70%',
         marginLeft: '15%',
-        fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+        fontFamily: '"Segoe UI", "Helvetica", "Arial", sans-serif',
         marginTop: 10,
         marginBottom: 20,
         fontWeight: 200,
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             width: '90%',
             marginLeft: '5%',
-            fontSize: '1.1em',
+            fontSize: '1.2em',
         },
         [theme.breakpoints.down('xs')]: {
             width: '100%',

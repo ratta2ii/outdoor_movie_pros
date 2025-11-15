@@ -93,19 +93,20 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         borderRadius: 8,
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-        height: 339,
+        height: "275px !important",
         objectFit: 'cover',
         objectPosition: 'center',
         [theme.breakpoints.down('lg')]: {
-            height: 270,
+            height: "252px !important",
         },
         [theme.breakpoints.down('md')]: {
-            height: 285,
+            height: "285px !important",
         },
         [theme.breakpoints.down('sm')]: {
+            height: "325px !important",
         },
         [theme.breakpoints.down('xs')]: {
-            height: 220,
+            height: "225px !important",
         },
     },
 }));
