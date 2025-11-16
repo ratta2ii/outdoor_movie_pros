@@ -7,7 +7,7 @@ import { Button, CardActionArea, CardActions, Box, List, ListItem, ListItemIcon,
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import GiantScreenImage from './../../../Assets/Images/giant-screen.webp';
 import PoolImage from './../../../Assets/Images/pool.webp';
-import MidSizeScreenImage from './../../../Assets/Images/GalleryImages/gallery2.webp';
+import SmallScreenImage from './../../../Assets/Images/GalleryImages/gallery2.webp';
 import DoubleScreenImage from './../../../Assets/Images/double-movie-screen.webp';
 import SoundSystemImage from './../../../Assets/Images/sound.webp';
 import CallToAction from "./../../../Components/CallToAction/CallToAction";
@@ -38,18 +38,18 @@ function MovieNightsOptions() {
             ],
         },
         {
-            key: 'mid-size-screen',
-            to: '/movie-nights-options#mid-size-screen',
-            image: MidSizeScreenImage,
-            imageAlt: 'Mid-size inflatable movie screen rentals in Phoenix AZ',
-            title: 'Mid-Size Inflatable Movie Screen',
+            key: 'small-event',
+            to: '/movie-nights-options#small-event',
+            image: SmallScreenImage,
+            imageAlt: 'Small size inflatable movie screen rentals in Phoenix AZ',
+            title: 'Small Event Movie Night',
             price: '$479.00',
             subtitle: 'Community, school, & church friendly',
             bullets: [
+                'On-Site Tech Included',
                 'QSC Powered Speakers',
                 'Upgraded brightness HD projection',
                 'Blu-Ray DVD Player & Mixer',
-                'Professional Staff for Event',
                 'Plug-and-play: laptop/streaming ready',
             ],
         },
@@ -72,7 +72,7 @@ function MovieNightsOptions() {
         {
             key: 'backyard',
             to: '/movie-nights-options#backyard',
-            image: MidSizeScreenImage,
+            image: SmallScreenImage,
             imageAlt: 'Inflatable Movie Screen for Rent AZ',
             title: 'Backyard Movie Screen Rentals',
             price: '$349.00',
