@@ -21,14 +21,12 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     title: {
-        fontSize: "3.5em",
+        fontSize: "2em",
         fontWeight: 600,
         color: "#fff",
         textAlign: "center",
         marginBottom: 50,
-        [theme.breakpoints.down("sm")]: {
-            fontSize: "3em",
-        },
+        textDecoration: "underline",
         [theme.breakpoints.down("xs")]: {
             fontSize: "2em",
             marginTop: 40,
@@ -37,8 +35,9 @@ const useStyles = makeStyles((theme) => ({
     },
     subheading: {
         fontWeight: 600,
-        fontSize: "2em",
+        fontSize: "1.6em",
         marginTop: 35,
+        marginBottom: 5,
         [theme.breakpoints.down("sm")]: {
             fontSize: "1.5em",
         },
@@ -55,12 +54,9 @@ const useStyles = makeStyles((theme) => ({
     },
     ctaText: {
         fontWeight: 600,
-        fontSize: "1.8em",
+        fontSize: "1.6em",
         marginTop: 20,
         marginBottom: 15,
-        [theme.breakpoints.down("sm")]: {
-            fontSize: "1.5em",
-        },
         [theme.breakpoints.down("sm")]: {
             marginTop: 60,
             fontSize: "1.5em",

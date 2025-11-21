@@ -27,22 +27,24 @@ function Services() {
                             aria-label="Outdoor Movie Night Packages - View Options"
                             style={{ textDecoration: 'none' }}>
                             <CardActionArea>
-                                <CardMedia
-                                    component="img"
-                                    className={classes.images}
-                                    image={GiantScreenImage}
-                                    alt="Giant inflatable outdoor movie screen rental in Phoenix"
-                                    loading="lazy"
-                                    sx={{ aspectRatio: '600 / 450', width: '100%', height: 'auto' }}
-                                />
+                                <Box className={classes.imageContainer}>
+                                    <CardMedia
+                                        component="img"
+                                        className={classes.images}
+                                        image={GiantScreenImage}
+                                        alt="Giant inflatable outdoor movie screen rental in Phoenix"
+                                        loading="lazy"
+                                        sx={{ aspectRatio: '600 / 450', width: '100%', height: 'auto' }}
+                                    />
+                                </Box>
                                 <CardContent>
                                     <Typography gutterBottom variant="h2" component="h2" className={classes.cardTitle} style={{ fontFamily: 'inherit' }}>
                                         Outdoor Movie Nights
                                     </Typography>
                                     <Typography variant="h3" component="h3" className={classes.cardSubtitle}>
-                                        Backyard & Outdoor Screen Rentals
+                                        Backyard & Park Movie Night Packages
                                     </Typography>
-                                    <Divider style={{ height: 3, marginTop: 14 }} />
+                                    <Divider className={classes.divider} />
                                     <List className={classes.bulletList}>
                                         {[
                                             "Screen sizes for any crowd",
@@ -84,14 +86,16 @@ function Services() {
                             aria-label="Concessions & Add-Ons – View Options"
                             style={{ textDecoration: 'none' }}>
                             <CardActionArea>
-                                <CardMedia
-                                    component="img"
-                                    className={classes.images}
-                                    image={ConcessionsImage}
-                                    alt="Popcorn machine and concession stand for outdoor movie events"
-                                    loading="lazy"
-                                    sx={{ aspectRatio: '600 / 375', width: '100%', height: 'auto' }}
-                                />
+                                <Box className={classes.imageContainer}>
+                                    <CardMedia
+                                        component="img"
+                                        className={classes.images}
+                                        image={ConcessionsImage}
+                                        alt="Popcorn machine and concession stand for outdoor movie events"
+                                        loading="lazy"
+                                        sx={{ aspectRatio: '600 / 375', width: '100%', height: 'auto' }}
+                                    />
+                                </Box>
                                 <CardContent>
                                     <Typography gutterBottom variant="h2" component="h2" className={classes.cardTitle} style={{ fontFamily: 'inherit' }}>
                                         Concessions & Add-Ons
@@ -99,7 +103,7 @@ function Services() {
                                     <Typography variant="h3" component="h3" className={classes.cardSubtitle}>
                                         Popcorn, Candy & Drinks
                                     </Typography>
-                                    <Divider style={{ height: 3, marginTop: 14 }} />
+                                    <Divider className={classes.divider} />
                                     <List className={classes.bulletList}>
                                         {[
                                             "Fresh popcorn machine & supplies",
@@ -142,14 +146,16 @@ function Services() {
                             aria-label="Ice Cream Sundae & Coffee Food Truck – Learn More"
                             style={{ textDecoration: 'none' }}>
                             <CardActionArea>
-                                <CardMedia
-                                    component="img"
-                                    className={classes.images}
-                                    image={IceCreamFoodTruckImage}
-                                    alt="Ice cream sundae and coffee food truck for events in Phoenix"
-                                    loading="lazy"
-                                    sx={{ aspectRatio: '615 / 400', width: '100%', height: 'auto' }}
-                                />
+                                <Box className={classes.imageContainer}>
+                                    <CardMedia
+                                        component="img"
+                                        className={classes.images}
+                                        image={IceCreamFoodTruckImage}
+                                        alt="Ice cream sundae and coffee food truck for events in Phoenix"
+                                        loading="lazy"
+                                        sx={{ aspectRatio: '615 / 400', width: '100%', height: 'auto' }}
+                                    />
+                                </Box>
                                 <CardContent>
                                     <Typography gutterBottom variant="h2" component="h2" className={classes.cardTitle} style={{ fontFamily: 'inherit' }}>
                                         Ice Cream Sundaes & Coffee Food Truck
@@ -157,7 +163,7 @@ function Services() {
                                     <Typography variant="h3" component="h3" className={classes.cardSubtitle}>
                                         Sundae Bars & Ice Cream Socials
                                     </Typography>
-                                    <Divider style={{ height: 3, marginTop: 14 }} />
+                                    <Divider className={classes.divider} />
                                     <List className={classes.bulletList}>
                                         {[
                                             "Premium ice cream & toppings",

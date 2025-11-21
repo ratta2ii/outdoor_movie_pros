@@ -20,16 +20,17 @@ const useStyles = makeStyles((theme) => ({
             padding: 40
         },
         [theme.breakpoints.down('xs')]: {
-            padding: 20
+            padding: 10
         },
     },
     cardTitle: {
+        fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Liberation Sans', Arial, sans-serif !important",
         fontWeight: "600 !important",
         fontSize: '2em !important',
         marginBottom: '6px !important',
-        color: "#212121",
+        color: "#2b2b2b",
         [theme.breakpoints.down('xs')]: {
-            fontSize: '1.9em !important',
+            fontSize: '2em !important',
 
         },
     },
@@ -37,6 +38,9 @@ const useStyles = makeStyles((theme) => ({
         color: '#ba4419',
         fontSize: '1.3em !important',
         fontWeight: 600,
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '1.2em !important',
+        },
     },
     bulletList: {
         marginBottom: 25,
@@ -103,12 +107,34 @@ const useStyles = makeStyles((theme) => ({
             height: "285px !important",
         },
         [theme.breakpoints.down('sm')]: {
-            height: "325px !important",
+            height: '100% !important',
+            minHeight: '250px !important',
         },
         [theme.breakpoints.down('xs')]: {
-            height: "225px !important",
+            minHeight: '200px !important',
         },
     },
+    imageContainer: {
+        padding: 12,
+        paddingBottom: 5,
+    },
+    divider: {
+        height: 2,
+        backgroundColor: '#e0e0e0',
+        margin: '20px 0px 5px 0px',
+        // [theme.breakpoints.down('lg')]: {
+
+        // },
+        // [theme.breakpoints.down('md')]: {
+
+        // },
+        // [theme.breakpoints.down('sm')]: {
+
+        // },
+        [theme.breakpoints.down('xs')]: {
+            margin: '18px 0px 3px 0px',
+        },
+    }
 }));
 
 export default useStyles;

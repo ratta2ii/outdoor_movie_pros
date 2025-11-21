@@ -40,10 +40,10 @@ const useStyles = makeStyles((theme) => ({
         color: '#fff',
         width: '70%',
         marginLeft: '15%',
-        fontFamily: '"Segoe UI", "Helvetica", "Arial", sans-serif',
         marginTop: 10,
         marginBottom: 20,
-        fontWeight: 200,
+        fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Liberation Sans', Arial, sans-serif",
+        fontWeight: 400,
         fontSize: '1.3em',
         fontStyle: 'italic',
         [theme.breakpoints.down('sm')]: {

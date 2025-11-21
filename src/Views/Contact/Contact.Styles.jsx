@@ -55,9 +55,10 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         marginBottom: 30,
         marginTop: 20,
-        width: '80%',
-        marginLeft: '10%',
-        fontFamily: '"Segoe UI", "Helvetica", "Arial", sans-serif',
+        width: '84%',
+        marginLeft: '8%',
+        fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Liberation Sans', Arial, sans-serif",
+        fontWeight: 400,
         [theme.breakpoints.down('xs')]: {
             width: '100%',
             marginLeft: 0,

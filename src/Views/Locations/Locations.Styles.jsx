@@ -82,11 +82,11 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     subText: {
+        fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Liberation Sans', Arial, sans-serif",
         fontSize: '1.3em',
         fontStyle: 'italic',
-        fontWeight: 300,
+        fontWeight: 400,
         marginTop: 40,
-        fontFamily: '"Segoe UI", "Helvetica", "Arial", sans-serif',
         [theme.breakpoints.down('xs')]: {
             fontSize: '1.2em',
             textAlign: 'left',

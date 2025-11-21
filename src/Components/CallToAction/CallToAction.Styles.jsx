@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('xs')]: {
             margin: "50px auto 50px auto",
             width: "100%",
-            maxWidth: 350,
+            maxWidth: 380,
         },
     },
     ctaText: {
