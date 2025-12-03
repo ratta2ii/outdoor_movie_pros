@@ -760,7 +760,7 @@ function Locations() {
                             <Box
                                 component={Link}
                                 to="/movie-nights-options"
-                                style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}
+                                style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none', color: '#858a94' }}
                                 aria-label="View options for movie nights"
                             >
                                 <span className={classes.viewOptions}>GO TO OPTIONS</span>
@@ -772,7 +772,7 @@ function Locations() {
                                 style={{
                                     position: "absolute",
                                     right: 35,
-                                    color: "white",
+                                    color: "#858a94",
                                     cursor: 'pointer',
                                 }}
                             />
@@ -851,7 +851,7 @@ function Locations() {
                             <Box
                                 component={Link}
                                 to="/concessions-options"
-                                style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}
+                                style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none', color: '#858a94' }}
                                 aria-label="View options for concessions and add-ons"
                             >
                                 <span className={classes.viewOptions}>GO TO OPTIONS</span>
@@ -863,7 +863,7 @@ function Locations() {
                                 style={{
                                     position: "absolute",
                                     right: 35,
-                                    color: "white",
+                                    color: "#858a94",
                                     cursor: 'pointer',
                                 }}
                             />
@@ -941,7 +941,7 @@ function Locations() {
                             <Box
                                 component={Link}
                                 to="/ice-cream-food-truck"
-                                style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}
+                                style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none', color: '#858a94' }}
                                 aria-label="View options for ice cream food truck"
                             >
                                 <span className={classes.viewOptions}>GO TO OPTIONS</span>
@@ -953,7 +953,7 @@ function Locations() {
                                 style={{
                                     position: "absolute",
                                     right: 35,
-                                    color: "white",
+                                    color: "#858a94",
                                     cursor: 'pointer',
                                 }}
                             />

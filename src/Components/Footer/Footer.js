@@ -207,6 +207,7 @@ const Footer = (props) => {
                                 open={Boolean(anchorEl)}
                                 onClose={handleCloseLocations}
                                 keepMounted
+                                disableScrollLock
                                 MenuListProps={{ "aria-labelledby": "service-areas-button" }}
                             >
                                 <MenuItem onClick={handleCloseLocations} component={Link} to="/anthem">Anthem</MenuItem>

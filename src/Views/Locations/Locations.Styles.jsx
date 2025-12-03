@@ -66,7 +66,6 @@ const useStyles = makeStyles((theme) => ({
     phoneLink: {
         color: '#fff',
         textDecoration: 'none',
-        fontSize: '1.5em',
         fontWeight: 600,
         fontFamily: 'serif',
         [theme.breakpoints.down('xs')]: {
@@ -113,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
     },
     topGridItem: {
         backgroundColor: 'white',
-        background: 'linear-gradient(90deg, #2063cc 0%, #2166d3 40%, #2c85ea 100%)',
+        // background: 'linear-gradient(90deg, #2063cc 0%, #2166d3 40%, #2c85ea 100%)',
         padding: '20px 30px',
         borderBottom: '2px solid #efefef',
         color: '#ecececff',
@@ -123,13 +122,12 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative',
         fontSize: '.8rem',
         [theme.breakpoints.down('xs')]: {
-            // padding: '20px 20px',
-            // height: 60,
             display: 'none',
         },
     },
     viewOptions: {
         cursor: 'pointer',
+        color: '#858a94',
         [theme.breakpoints.down('xs')]: {
             fontSize: 'smaller'
         },
@@ -140,13 +138,14 @@ const useStyles = makeStyles((theme) => ({
         padding: 50,
         backgroundColor: 'white',
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         [theme.breakpoints.down('md')]: {
-            padding: '25px 25px 10px'
+            padding: '25px 25px 10px',
         },
         [theme.breakpoints.down('sm')]: {
-            padding: '50px 50px 10px'
+            padding: '50px 50px 10px',
         },
         [theme.breakpoints.down('xs')]: {
             padding: '25px 25px 0px',
@@ -159,6 +158,9 @@ const useStyles = makeStyles((theme) => ({
         objectFit: 'contain',
         borderRadius: '8px !important',
         display: 'block',
+        [theme.breakpoints.down('xs')]: {
+            borderRadius: '3px !important',
+        },
     },
     descriptionContainer: {
         fontFamily: 'Raleway, sans-serif',
@@ -176,13 +178,14 @@ const useStyles = makeStyles((theme) => ({
     },
     /* sectionTitle used inside each card */
     sectionTitle: {
-        color: '#000000',
+        color: '#222222',
         fontFamily: 'Raleway, sans-serif',
         fontWeight: '600',
         paddingTop: '15px',
         margin: '0',
         fontSize: '2rem',
         lineHeight: '1',
+        marginBottom: 7,
         [theme.breakpoints.down('sm')]: {
             fontSize: '2rem',
         },
@@ -196,16 +199,14 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Raleway, sans-serif',
         fontSize: '.8rem',
         color: '#515151',
-        fontStyle: 'italic',
     },
     description: {
         fontFamily: 'Raleway, sans-serif',
         paddingLeft: "0px !important",
         paddingRight: "0px !important",
-        paddingBottom: 8,
-        fontSize: '1rem',
+        paddingBottom: 0,
+        fontSize: '1.1rem',
     },
-
     /* bullets within cards */
     bulletList: {
         marginBottom: 0,
@@ -228,6 +229,7 @@ const useStyles = makeStyles((theme) => ({
         padding: 0,
         paddingBottom: 5,
         alignItems: 'center',
+        fontSize: '1.1em',
         '& .MuiListItemText-primary': {
             lineHeight: '1.2em',
             fontSize: '1em',
@@ -251,6 +253,11 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyItems: 'center',
         alignItems: 'center',
+        background: "linear-gradient(rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.9)), url('/images/film.webp')",
+        backgroundAttachment: 'scroll',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'bottom',
     },
     buttonGroup: {
         display: 'flex',
