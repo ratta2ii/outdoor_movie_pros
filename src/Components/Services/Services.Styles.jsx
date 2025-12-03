@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '2em !important',
         marginBottom: '6px !important',
         color: "#2b2b2b",
+        textAlign: 'center',
         [theme.breakpoints.down('xs')]: {
             fontSize: '2em !important',
 
@@ -38,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
         color: '#ba4419',
         fontSize: '1.3em !important',
         fontWeight: 600,
+        textAlign: 'center',
         [theme.breakpoints.down('xs')]: {
             fontSize: '1.2em !important',
         },

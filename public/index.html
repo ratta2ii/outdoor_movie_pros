@@ -9,14 +9,9 @@
 
     <title>Outdoor Movie Screen Rentals Phoenix AZ | HOA, Park & Dive-In Events</title>
     <meta name="description"
-        content="Inflatable movie screen rentals in Phoenix, Scottsdale, Mesa & beyond. Full-service backyard movie nights with giant screens, HD projector, pro sound, setup & teardown included." />
-    <meta name="keywords" content="
-        outdoor movie rentals phoenix, inflatable movie screen rentals phoenix, backyard movie night phoenix, outdoor movie screen rentals scottsdale, inflatable movie screen mesa az, backyard movie night gilbert, dive in movie chandler, movie in the park tempe, outdoor cinema paradise valley, inflatable screen rentals glendale, outdoor movie peoria az, backyard movie queen creek,
-        movie night package san tan valley, outdoor movie tolleson, inflatable screen buckeye,
-        movie rentals goodyear az, backyard movie anthem, concession rentals phoenix,
-        popcorn machine rentals phoenix, cotton candy rentals phoenix, ice cream food truck phoenix,
-        coffee food truck rentals phoenix, outdoor movie with popcorn scottsdale, movie night with food truck mesa
-    " />
+        content="Inflatable movie screen rentals in Phoenix, Scottsdale, Mesa & beyond. Full-service HOA, park and backyard movie nights with giant screens, HD projector, pro sound, setup & teardown included." />
+    <meta name="keywords"
+        content="outdoor movie rentals phoenix, inflatable movie screen phoenix, backyard movie night az, dive in movie phoenix, hoa movie events phoenix, park movie screen rental, projector rental phoenix, sound rental phoenix, concession rentals phoenix" />
 
     <!-- Icons / Manifest -->
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -42,13 +37,13 @@
         body {
             margin: 0;
             min-height: 100vh;
-            background-color: #000000 !important;
+            background-color: rgb(9, 11, 17) !important;
             font-family: Arial, sans-serif;
         }
 
         @media (min-width: 768px) {
             body {
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/background-stars.webp');
+                background: linear-gradient(rgba(9, 11, 17, 0.7), rgba(9, 11, 17, 0.7)), url('/background-stars.webp');
                 background-attachment: fixed;
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -58,114 +53,165 @@
         #root {
             min-height: 95vh;
         }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
     </style>
 
     <script type="application/ld+json">
         {
-        "@context": "https://schema.org",
-        "@graph": [
+        "@context":"https://schema.org",
+        "@graph":[
             {
-            "@type": "LocalBusiness",
-            "@id": "https://outdoormoviepros.com/#business",
-            "name": "Outdoor Movie Pros",
-            "description": "Inflatable outdoor movie screen rentals across the Phoenix metro area. Full-service packages include giant screens, HD projection, pro audio, delivery, setup, on-site tech, and teardown.",
-            "url": "https://outdoormoviepros.com",
-            "telephone": "+16026386510",
-            "priceRange": "$$",
-            "email": "info@outdoormoviepros.com",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "7726 E Portland St",
-                "addressLocality": "Scottsdale",
-                "addressRegion": "AZ",
-                "postalCode": "85257",
-                "addressCountry": "US"
+            "@type": ["LocalBusiness", "EntertainmentBusiness"],
+            "@id":"https://outdoormoviepros.com/#business",
+            "name":"Outdoor Movie Pros",
+            "description":"Inflatable outdoor movie screen rentals across the Phoenix metro area. Full-service packages include giant screens, HD projection, pro audio, delivery, setup, on-site tech, and teardown.",
+            "url":"https://outdoormoviepros.com",
+            "telephone":"+16026386510",
+            "priceRange":"$$",
+            "email":"info@outdoormoviepros.com",
+            "areaServed":[
+                {
+                "@type":"GeoCircle",
+                "geoMidpoint":{
+                    "latitude":33.4484,
+                    "longitude":-112.0740
+                },
+                "geoRadius":96561
+                },
+                { "@type": "Place", "name": "Anthem" },
+                { "@type": "City", "name": "Buckeye" },
+                { "@type": "City", "name": "Chandler" },
+                { "@type": "City", "name": "Gilbert" },
+                { "@type": "City", "name": "Glendale" },
+                { "@type": "City", "name": "Goodyear" },
+                { "@type": "City", "name": "Mesa" },
+                { "@type": "City", "name": "Peoria" },
+                { "@type": "City", "name": "Phoenix" },
+                { "@type": "City", "name": "Queen Creek" },
+                { "@type": "Place", "name": "San Tan Valley" },
+                { "@type": "City", "name": "Scottsdale" },
+                { "@type": "City", "name": "Tempe" },
+                { "@type": "City", "name": "Tolleson" },
+
+                { "@type": "Place", "name": "Ahwatukee" },
+                { "@type": "Place", "name": "Alhambra" },
+                { "@type": "City", "name": "Apache Junction" },
+                { "@type": "City", "name": "Avondale" },
+                { "@type": "Place", "name": "Balsz" },
+                { "@type": "City", "name": "Carefree" },
+                { "@type": "Place", "name": "Cartwright" },
+                { "@type": "City", "name": "Cave Creek" },
+                { "@type": "Place", "name": "Citrus Park" },
+                { "@type": "City", "name": "Coolidge" },
+                { "@type": "Place", "name": "Desert Hills" },
+                { "@type": "City", "name": "El Mirage" },
+                { "@type": "City", "name": "Eloy" },
+                { "@type": "Place", "name": "Encanto" },
+                { "@type": "Place", "name": "Estrella" },
+                { "@type": "City", "name": "Fountain Hills" },
+                { "@type": "City", "name": "Gila Bend" },
+                { "@type": "Place", "name": "Gold Canyon" },
+                { "@type": "City", "name": "Guadalupe" },
+                { "@type": "Place", "name": "Laveen" },
+                { "@type": "City", "name": "Litchfield Park" },
+                { "@type": "City", "name": "Maricopa" },
+                { "@type": "Place", "name": "Maricopa Colony" },
+                { "@type": "Place", "name": "Maryvale" },
+                { "@type": "Place", "name": "New River" },
+                { "@type": "City", "name": "Paradise Valley" },
+                { "@type": "Place", "name": "Paradise Valley Village" },
+                { "@type": "Place", "name": "Rio Verde" },
+                { "@type": "Place", "name": "Rio Vista" },
+                { "@type": "Place", "name": "Rio Vista Community" },
+                { "@type": "Place", "name": "Sacaton" },
+                { "@type": "Place", "name": "Salt River" },
+                { "@type": "Place", "name": "Santa Cruz" },
+                { "@type": "Place", "name": "South Mountain" },
+                { "@type": "Place", "name": "Sun City" },
+                { "@type": "Place", "name": "Sun City West" },
+                { "@type": "Place", "name": "Sun Lakes" },
+                { "@type": "Place", "name": "Superstition Springs" },
+                { "@type": "City", "name": "Surprise" },
+                { "@type": "Place", "name": "Sweetwater" },
+                { "@type": "Place", "name": "Wade" },
+                { "@type": "Place", "name": "West Valley" },
+                { "@type": "Place", "name": "Wiest" },
+                { "@type": "Place", "name": "Willo" },
+                { "@type": "City", "name": "Youngtown" },
+                { "@type": "Place", "name": "Zona" }
+            ],
+            "openingHoursSpecification":[
+                {
+                "@type":"OpeningHoursSpecification",
+                "dayOfWeek":[
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday"
+                ],
+                "opens":"08:00",
+                "closes":"18:00"
+                }
+            ],
+            "contactPoint":{
+                "@type":"ContactPoint",
+                "telephone":"+16026386510",
+                "contactType":"Customer Service",
+                "email":"info@outdoormoviepros.com"
             },
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 33.4617,
-                "longitude": -111.9146
+            "sameAs":[
+                "https://maps.app.goo.gl/J3aHdnvoZg1eGmrSA"
+            ],
+            "image":"https://outdoormoviepros.com/company-logo.webp",
+            "logo":{
+                "@type":"ImageObject",
+                "url":"https://outdoormoviepros.com/company-logo.webp"
             },
-            "areaServed": [
+            "knowsAbout":[
+                "outdoor movie screen rentals",
+                "inflatable movie screen rentals",
+                "backyard movie night",
+                "dive-in movie",
+                "projector and sound rentals",
+                "movies in the park",
+                "giant movie screen phoenix",
+                "phoenix outdoor cinema"
+            ]
+            },
             {
-              "@type": "GeoCircle",
-                    "geoMidpoint": {
-                    "latitude": 33.4484,
-                    "longitude": -112.0740
-                    },
-              "geoRadius": 80467
-            },
-            { "@type": "City", "name": "Phoenix" },
-            { "@type": "City", "name": "Scottsdale" },
-            { "@type": "City", "name": "Mesa" },
-            { "@type": "City", "name": "Chandler" },
-            { "@type": "City", "name": "Gilbert" },
-            { "@type": "City", "name": "Tempe" },
-            { "@type": "City", "name": "Glendale" },
-            { "@type": "City", "name": "Peoria" },
-            { "@type": "City", "name": "Queen Creek" },
-            { "@type": "City", "name": "San Tan Valley" },
-            { "@type": "City", "name": "Tolleson" },
-            { "@type": "City", "name": "Buckeye" },
-            { "@type": "City", "name": "Goodyear" },
-            { "@type": "City", "name": "Anthem" }
-          ],
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": [
-                "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
-              ],
-              "opens": "08:00",
-              "closes": "18:00"
+            "@type":"Organization",
+            "@id":"https://outdoormoviepros.com/#organization",
+            "name":"Outdoor Movie Pros",
+            "url":"https://outdoormoviepros.com",
+            "logo":{
+                "@type":"ImageObject",
+                "url":"https://outdoormoviepros.com/company-logo.webp"
             }
-          ],
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+16026386510",
-            "contactType": "Customer Service",
-            "email": "info@outdoormoviepros.com"
-          },
-          "sameAs": [
-            "https://maps.app.goo.gl/J3aHdnvoZg1eGmrSA"
-          ],
-          "image": "https://outdoormoviepros.com/company-logo.webp",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://outdoormoviepros.com/company-logo.webp"
-          },
-          "knowsAbout": [
-            "outdoor movie screen rentals",
-            "inflatable movie screen rentals",
-            "backyard movie night",
-            "dive-in movie",
-            "projector and sound rentals",
-            "movies in the park",
-            "giant movie screen phoenix",
-            "phoenix outdoor cinema"
-          ]
-        },
-        {
-          "@type": "Organization",
-          "@id": "https://outdoormoviepros.com/#organization",
-          "name": "Outdoor Movie Pros",
-          "url": "https://outdoormoviepros.com",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://outdoormoviepros.com/company-logo.webp"
-          }
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://outdoormoviepros.com/#website",
-          "url": "https://outdoormoviepros.com",
-          "name": "Outdoor Movie Pros",
-          "publisher": {
-            "@id": "https://outdoormoviepros.com/#organization"
-          }
+            },
+            {
+            "@type":"WebSite",
+            "@id":"https://outdoormoviepros.com/#website",
+            "url":"https://outdoormoviepros.com",
+            "name":"Outdoor Movie Pros",
+            "publisher":{
+                "@id":"https://outdoormoviepros.com/#organization"
+            }
+            }
+        ]
         }
-      ]
-    }
     </script>
 </head>
 

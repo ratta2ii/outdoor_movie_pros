@@ -155,7 +155,7 @@ const Footer = (props) => {
                         </Typography>
                         <Box className={classes.signatureCon}>
                             <Typography className={classes.signature} component="span">
-                                — Sandra, Pheonix
+                                — Sandra, Phoenix
                             </Typography>
                             <span className={classes.stars}>★★★★★</span>
                         </Box>
@@ -185,20 +185,24 @@ const Footer = (props) => {
                             </Typography>
                         </Box>
 
-                        {/* Locations */}
+                        {/* Service Areas */}
                         <Box className={classes.infoLine}>
                             <LocationOnIcon className={classes.infoIcon} />
                             <Typography className={classes.infoText} component="span">
                                 <Button
                                     id="service-areas-button"
                                     onClick={handleOpenLocations}
+                                    aria-haspopup="true"
+                                    aria-controls={Boolean(anchorEl) ? "service-areas-menu" : undefined}
+                                    aria-expanded={Boolean(anchorEl) ? "true" : undefined}
                                     sx={{ color: "#efefef", textTransform: "none", p: 0, minWidth: 0, fontSize: 18 }}
                                 >
-                                    Locations
+                                    Service Areas
                                 </Button>
                             </Typography>
 
                             <Menu
+                                id="service-areas-menu"
                                 anchorEl={anchorEl}
                                 open={Boolean(anchorEl)}
                                 onClose={handleCloseLocations}
